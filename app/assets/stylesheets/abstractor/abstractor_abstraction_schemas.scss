@@ -1,0 +1,15 @@
+#abstractor_abstraction_schemas {
+  a.current {
+    padding-right: 2em;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  a.asc {
+    background-image: asset_url("drop25.png");
+  }
+
+  a.desc {
+    background-image: asset_url("drop27.png");
+  }
+}

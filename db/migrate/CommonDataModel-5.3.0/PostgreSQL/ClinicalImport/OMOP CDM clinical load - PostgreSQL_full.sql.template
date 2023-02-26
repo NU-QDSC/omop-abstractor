@@ -1,0 +1,88 @@
+/*********************************************************************************
+# Copyright 2014 Observational Health Data Sciences and Informatics
+#
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+********************************************************************************/
+
+/************************
+
+ ####### #     # ####### ######      #####  ######  #     #           #######
+ #     # ##   ## #     # #     #    #     # #     # ##   ##    #    # #
+ #     # # # # # #     # #     #    #       #     # # # # #    #    # #
+ #     # #  #  # #     # ######     #       #     # #  #  #    #    # ######
+ #     # #     # #     # #          #       #     # #     #    #    #       #
+ #     # #     # #     # #          #     # #     # #     #     #  #  #     #
+ ####### #     # ####### #           #####  ######  #     #      ##    #####
+
+
+Script to load the common data model, version 5.0 vocabulary tables for PostgreSQL database on Windows (MS-DOS style file paths)
+The database account running this script must have the "superuser" permission in the database.
+
+Notes
+
+1) There is no data file load for the SOURCE_TO_CONCEPT_MAP table because that table is deprecated in CDM version 5.0
+2) This script assumes the CDM version 5 vocabulary zip file has been unzipped into the "C:\CDMV5VOCAB" directory.
+3) If you unzipped your CDM version 5 vocabulary files into a different directory then replace all file paths below, with your directory path.
+4) Truncate each table that will be lodaed below, before running this script.
+
+last revised: 5 Dec 2014
+
+author:  Lee Evans
+
+
+*************************/
+
+SET session_replication_role = 'replica';
+
+\COPY CONDITION_ERA FROM 'CLINICAL_DATA/CONDITION_ERA.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY CONDITION_OCCURRENCE FROM 'CLINICAL_DATA/CONDITION_OCCURRENCE.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY DEATH FROM 'CLINICAL_DATA/DEATH.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY DRUG_ERA FROM 'CLINICAL_DATA/DRUG_ERA.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY DRUG_EXPOSURE FROM 'CLINICAL_DATA/DRUG_EXPOSURE.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY FACT_RELATIONSHIP FROM 'CLINICAL_DATA/FACT_RELATIONSHIP.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+--\COPY MEASUREMENT FROM 'CLINICAL_DATA/MEASUREMENT.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+--\COPY NOTE_STABLE_IDENTIFIER_FULL FROM 'CLINICAL_DATA/NOTE_STABLE_IDENTIFIER.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY OBSERVATION_PERIOD FROM 'CLINICAL_DATA/OBSERVATION_PERIOD.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY OBSERVATION FROM 'CLINICAL_DATA/OBSERVATION.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PERSON FROM 'CLINICAL_DATA/PERSON.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PII_ADDRESS FROM 'CLINICAL_DATA/PII_ADDRESS.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PII_EMAIL FROM 'CLINICAL_DATA/PII_EMAIL.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PII_MRN FROM 'CLINICAL_DATA/PII_MRN.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PII_NAME FROM 'CLINICAL_DATA/PII_NAME.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PII_PHONE_NUMBER FROM 'CLINICAL_DATA/PII_PHONE_NUMBER.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+--\COPY PROCEDURE_OCCURRENCE_STABLE_IDENTIFIER FROM 'CLINICAL_DATA/PROCEDURE_OCCURRENCE_STABLE_IDENTIFIER.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PROCEDURE_OCCURRENCE FROM 'CLINICAL_DATA//PROCEDURE_OCCURRENCE.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY PROVIDER FROM 'CLINICAL_DATA/PROVIDER.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+\COPY VISIT_OCCURRENCE FROM 'CLINICAL_DATA/VISIT_OCCURRENCE.csv' WITH DELIMITER E',' CSV HEADER  ;
+
+SET session_replication_role = 'origin';

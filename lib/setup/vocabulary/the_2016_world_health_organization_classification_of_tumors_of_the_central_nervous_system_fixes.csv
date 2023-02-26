@@ -1,0 +1,13 @@
+icdo3_description,icdo3_code,icdo3_code_old,icdo3_description_old,category_old,Comment_MG,category,Comment_XL
+pilomyxoid astrocytoma,9425/3,9424/3,,,was 9424/3,other astrocytic tumors,Updated - Code
+subependymal giant cell astrocytoma,9384/1,9424/3,,,was 9424/3,other astrocytic tumors,Updated - Code
+perineurioma,9571/0,,,,add row,tumors of the cranial and paraspinal nerves,Added - whole row
+leiomyosarcoma,8890/3,8900/3,leomyosarcoma,,Updated - name and code,mesenchymal and non-meningothelial tumors,Updated - name and code
+chondrosarcoma,9220/3,,,,add row,mesenchymal and non-meningothelial tumors,Added - whole row
+meningeal melanocytosis,8728/0,,,melancytic tumors,update category,melanocytic tumors,Updated - category
+meningeal melanocytoma,8728/1,,,melancytic tumors,update category,melanocytic tumors,Updated - category
+meningeal melanoma,8720/3,,,melancytic tumors,update category,melanocytic tumors,Updated - category
+meningeal melanomatosis,8728/3,,,melancytic tumors,update category,melanocytic tumors,Updated - category
+,,,,choroid plexus,,choroid plexus tumors,Updated - category
+,,,,diffuse astocytic and oligodendroglial tumors,,diffuse astrocytic and oligodendroglial tumors,Updated - category
+,,,,histicytic tumors,,histiocytic tumors,Updated - category

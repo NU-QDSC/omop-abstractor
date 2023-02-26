@@ -1,0 +1,83 @@
+- abstractor_abstraction ||= @abstractor_abstraction
+- abstraction_schema = abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema
+
+.abstractor_abstraction_edit
+  = form_for abstractor_abstraction, url: Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_path(abstractor_abstraction)), method: :put, :remote => true, data: { action: 'ajax:success->abstractor-abstraction#save ajax:error->abstractor-abstraction#saveError' } do |f|
+    .abstractor_abstraction_schema_name
+      %h5
+        = abstraction_schema.display_name
+    .abstraction_edit_abstraction_value
+      - case abstraction_schema.abstractor_object_type.value
+      - when 'date'
+        = f.text_field :value, class: 'abstractor_datepicker'
+        - if validation_errors?(abstractor_abstraction, :value)
+          %span.helper-text{ 'data-error' => "#{format_validation_errors(abstractor_abstraction, :value)}"}
+      - when 'text'
+        .input-field
+          = f.text_area :value, class: 'materialize-textarea'
+          - if validation_errors?(abstractor_abstraction, :value)
+            %span.helper-text{ 'data-error' => "#{format_validation_errors(abstractor_abstraction, :value)}"}
+      - when 'string'
+        = f.text_field :value
+        - if validation_errors?(abstractor_abstraction, :value)
+          %span.helper-text{ 'data-error' => "#{format_validation_errors(abstractor_abstraction, :value)}"}
+      - when 'number'
+        = f.number_field :value, step: :any
+        - if validation_errors?(abstractor_abstraction, :value)
+          %span.helper-text{ 'data-error' => "#{format_validation_errors(abstractor_abstraction, :value)}"}
+      - when 'radio button list'
+        - values = abstraction_schema.abstractor_object_values.not_deleted.order('abstractor_abstraction_schema_object_values.display_order, abstractor_object_values.value')
+        -  values.each do |value|
+          %label
+            = f.radio_button :value, value.value, required: 'required'
+            %span
+              = value.value
+        = f.radio_button :value, '', {:style => 'display:none;' }
+        &nbsp;
+      - when 'list'
+        - values = abstraction_schema.abstractor_object_values.not_deleted.order('abstractor_abstraction_schema_object_values.display_order, abstractor_object_values.value')
+        = f.select :value, options_for_select(values.map{|s| [s.value, s.value]}, selected: f.object.value), { include_blank: true }
+        - if validation_errors?(abstractor_abstraction, :value)
+          %span.helper-text{ 'data-error' => "#{format_validation_errors(abstractor_abstraction, :value)}"}
+      - when 'dynamic list'
+        - values = abstractor_abstraction.about.send(abstractor_abstraction.abstractor_subject.dynamic_list_method).sort_by { |l| l[:value] }
+        = f.select :value, values.map{|s| [s[:value], s[:id]]}, {:include_blank => true}, :class => "combobox"
+      - when 'boolean'
+        - ['true', 'false'].each do |value|
+          = f.radio_button :value, value
+          = f.label :value, value
+        = f.radio_button :value, '', {:style => 'display:none;'}
+        &nbsp;
+      - else
+        = f.text_field :value
+      - if show_abstractor_edit_other_values?
+        %br
+        %label
+          = f.check_box :not_applicable
+          %span
+            Not Applicable
+        &nbsp;
+        %label
+          = f.check_box :unknown
+          %span
+            Unknown
+    .abstraction_edit_abstraction_actions
+      = f.submit 'Save', class: 'waves-effect waves-light btn'
+      = link_to 'Cancel', abstractor_abstraction_path(abstractor_abstraction), :remote => true, data: { action: 'ajax:complete->abstractor-abstraction#render' }
+    .clear
+    .indirect_sources
+      - abstraction_sources = abstractor_abstraction.abstractor_subject.abstractor_abstraction_sources.select { |s| s.abstractor_abstraction_source_type.name == 'indirect' }
+      = f.fields_for :abstractor_indirect_sources, f.object.abstractor_indirect_sources do |abstractor_indirect_source_form|
+        .indirect_source
+          - abstraction_source = abstraction_sources.select { |abstraction_source| abstraction_source.id == abstractor_indirect_source_form.object.abstractor_abstraction_source_id }.first
+          - source_setup = abstractor_abstraction.about.send(abstraction_source.from_method)
+          - sources = source_setup[:sources].all
+          %label
+            Indirect Source:
+            = source_setup[:source_type].tableize.humanize
+          %br
+          = abstractor_indirect_source_form.select :source_id, sources.map{ |s| [s.send(source_setup[:source_name_method]), s.id] }, { :include_blank => 'None' }, :size => "#{sources.size + 1}", class: 'indirect_source_list', rel: "#{source_setup[:source_type]}"
+          - sources.each do |source|
+            - hidden = abstractor_indirect_source_form.object.source_id == source.id ? '' : 'hidden'
+            %div{ class: "indirect_source_text #{hidden} #{source_setup[:source_type]}_#{source.id}"}
+              = format_text(ERB::Util.html_escape(source.send(source_setup[:source_method])))

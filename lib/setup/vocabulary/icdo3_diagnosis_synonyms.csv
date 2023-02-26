@@ -1,0 +1,2698 @@
+diagnosis_name,icdo3_code,synonym_name
+"neoplasm, benign",8000/0,"tumor, benign"
+"neoplasm, benign",8000/0,"unclassified tumor, benign"
+"neoplasm, benign",8000/0,benign neoplasm
+"neoplasm, benign",8000/0,neoplasm benign
+"neoplasm, benign",8000/0,benign tumor
+"neoplasm, benign",8000/0,tumor benign
+"neoplasm, benign",8000/0,benign unclassified tumor
+"neoplasm, benign",8000/0,unclassified tumor benign
+"neoplasm, uncertain whether benign or malignant",8000/1,"unclassified tumor, uncertain whether benign or malignant"
+"neoplasm, uncertain whether benign or malignant",8000/1,"unclassified tumor, borderline malignancy"
+"neoplasm, uncertain whether benign or malignant",8000/1,uncertain whether benign or malignant neoplasm
+"neoplasm, uncertain whether benign or malignant",8000/1,neoplasm uncertain whether benign or malignant
+"neoplasm, uncertain whether benign or malignant",8000/1,uncertain whether benign or malignant unclassified tumor
+"neoplasm, uncertain whether benign or malignant",8000/1,unclassified tumor uncertain whether benign or malignant
+"neoplasm, uncertain whether benign or malignant",8000/1,borderline malignancy unclassified tumor
+"neoplasm, uncertain whether benign or malignant",8000/1,unclassified tumor borderline malignancy
+"neoplasm, malignant",8000/3,"tumor, malignant, nos"
+"neoplasm, malignant",8000/3,"unclassified tumor, malignant"
+"neoplasm, malignant",8000/3,"blastoma, nos"
+"neoplasm, malignant",8000/3,malignant neoplasm
+"neoplasm, malignant",8000/3,neoplasm malignant
+"neoplasm, malignant",8000/3,malignant tumor
+"neoplasm, malignant",8000/3,tumor malignant
+"neoplasm, malignant",8000/3,malignant unclassified tumor
+"neoplasm, malignant",8000/3,unclassified tumor malignant
+"neoplasm, malignant",8000/3,blastoma
+"neoplasm, malignant",8000/3,glioneuronal tumor
+"neoplasm, metastatic",8000/6,metastatic
+"neoplasm, metastatic",8000/6,"neoplasm, secondary"
+"neoplasm, metastatic",8000/6,"tumor, metastatic"
+"neoplasm, metastatic",8000/6,"tumor, secondary"
+"neoplasm, metastatic",8000/6,tumor embolus
+"neoplasm, metastatic",8000/6,metastatic neoplasm
+"neoplasm, metastatic",8000/6,neoplasm metastatic
+"neoplasm, metastatic",8000/6,secondary neoplasm
+"neoplasm, metastatic",8000/6,neoplasm secondary
+"neoplasm, metastatic",8000/6,metastatic tumor
+"neoplasm, metastatic",8000/6,tumor metastatic
+"neoplasm, metastatic",8000/6,secondary tumor
+"neoplasm, metastatic",8000/6,tumor secondary
+"neoplasm, malignant, uncertain whether primary or metastatic",8000/9,"unclassified tumor, malignant, uncertain whether primary or metastatic"
+"neoplasm, malignant, uncertain whether primary or metastatic",8000/9,uncertain whether primary or metastatic malignant neoplasm
+"neoplasm, malignant, uncertain whether primary or metastatic",8000/9,neoplasm malignant uncertain whether primary or metastatic
+"neoplasm, malignant, uncertain whether primary or metastatic",8000/9,uncertain whether primary or metastatic malignant unclassified tumor
+"neoplasm, malignant, uncertain whether primary or metastatic",8000/9,unclassified tumor malignant uncertain whether primary or metastatic
+"tumor cells, benign",8001/0,benign tumor cells
+"tumor cells, benign",8001/0,tumor cells benign
+"tumor cells, uncertain whether benign or malignant",8001/1,"tumor cells, nos"
+"tumor cells, uncertain whether benign or malignant",8001/1,uncertain whether benign or malignant tumor cells
+"tumor cells, uncertain whether benign or malignant",8001/1,tumor cells uncertain whether benign or malignant
+"tumor cells, uncertain whether benign or malignant",8001/1,tumor cells
+"tumor cells, malignant",8001/3,malignant tumor cells
+"tumor cells, malignant",8001/3,tumor cells malignant
+"malignant tumor, small cell type",8002/3,small cell type malignant tumor
+"malignant tumor, small cell type",8002/3,malignant tumor small cell type
+"malignant tumor, giant cell type",8003/3,giant cell type malignant tumor
+"malignant tumor, giant cell type",8003/3,malignant tumor giant cell type
+"malignant tumor, spindle cell type",8004/3,"malignant tumor, fusiform cell type"
+"malignant tumor, spindle cell type",8004/3,spindle cell type malignant tumor
+"malignant tumor, spindle cell type",8004/3,malignant tumor spindle cell type
+"malignant tumor, spindle cell type",8004/3,fusiform cell type malignant tumor
+"malignant tumor, spindle cell type",8004/3,malignant tumor fusiform cell type
+"clear cell tumor, nos",8005/0,clear cell tumor
+"malignant tumor, clear cell type",8005/3,clear cell type malignant tumor
+"malignant tumor, clear cell type",8005/3,malignant tumor clear cell type
+"epithelial tumor, benign",8010/0,benign epithelial tumor
+"epithelial tumor, benign",8010/0,epithelial tumor benign
+"carcinoma in situ, nos",8010/2,"intraepithelial carcinoma, nos"
+"carcinoma in situ, nos",8010/2,carcinoma in situ
+"carcinoma in situ, nos",8010/2,intraepithelial carcinoma
+"carcinoma, nos",8010/3,"epithelial tumor, malignant"
+"carcinoma, nos",8010/3,carcinoma
+"carcinoma, nos",8010/3,malignant epithelial tumor
+"carcinoma, nos",8010/3,epithelial tumor malignant
+"carcinoma, metastatic, nos",8010/6,secondary carcinoma
+"carcinoma, metastatic, nos",8010/6,metastatic carcinoma
+"carcinoma, metastatic, nos",8010/6,carcinoma metastatic
+"epithelioma, benign",8011/0,benign epithelioma
+"epithelioma, benign",8011/0,epithelioma benign
+"epithelioma, malignant",8011/3,"epithelioma, nos"
+"epithelioma, malignant",8011/3,malignant epithelioma
+"epithelioma, malignant",8011/3,epithelioma malignant
+"epithelioma, malignant",8011/3,epithelioma
+"large cell carcinoma, nos",8012/3,large cell carcinoma
+"carcinoma, undifferentiated, nos",8020/3,undifferentiated carcinoma
+"carcinoma, undifferentiated, nos",8020/3,carcinoma undifferentiated
+"carcinoma, anaplastic, nos",8021/3,anaplastic carcinoma
+"carcinoma, anaplastic, nos",8021/3,carcinoma anaplastic
+"spindle cell carcinoma, nos",8032/3,spindle cell carcinoma
+pseudosarcomatous carcinoma,8033/3,sarcomatoid carcinoma
+"tumorlet, benign",8040/0,benign tumorlet
+"tumorlet, benign",8040/0,tumorlet benign
+"tumorlet, nos",8040/1,tumorlet
+"small cell carcinoma, nos",8041/3,reserve cell carcinoma
+"small cell carcinoma, nos",8041/3,round cell carcinoma
+"small cell carcinoma, nos",8041/3,small cell neuroendocrine carcinoma
+"small cell carcinoma, nos",8041/3,small cell carcinoma
+"small cell carcinoma, fusiform cell",8043/3,fusiform cell small cell carcinoma
+"small cell carcinoma, fusiform cell",8043/3,small cell carcinoma fusiform cell
+"small cell carcinoma, intermediate cell",8044/3,intermediate cell small cell carcinoma
+"small cell carcinoma, intermediate cell",8044/3,small cell carcinoma intermediate cell
+combined small cell carcinoma,8045/3,mixed small cell carcinoma
+combined small cell carcinoma,8045/3,combined small cell-large cell carcinoma
+combined small cell carcinoma,8045/3,combined small cell-adenocarcinoma
+combined small cell carcinoma,8045/3,combined small cell-squamous cell carcinoma
+"papilloma, nos",8050/0,papilloma
+"papillary carcinoma, nos",8050/3,papillary carcinoma
+"verrucous carcinoma, nos",8051/3,condylomatous carcinoma
+"verrucous carcinoma, nos",8051/3,verrucous squamous cell carcinoma
+"verrucous carcinoma, nos",8051/3,verrucous epidermoid carcinoma
+"verrucous carcinoma, nos",8051/3,warty carcinoma
+"verrucous carcinoma, nos",8051/3,verrucous carcinoma
+"squamous cell papilloma, nos",8052/0,squamous papilloma
+"squamous cell papilloma, nos",8052/0,keratotic papilloma
+"squamous cell papilloma, nos",8052/0,squamous cell papilloma
+"papillary squamous cell carcinoma,  non-invasive",8052/2,papillary squamous cell carcinoma in situ
+"papillary squamous cell carcinoma,  non-invasive",8052/2,non-invasive papillary squamous cell carcinoma
+"papillary squamous cell carcinoma,  non-invasive",8052/2,papillary squamous cell carcinoma non-invasive
+papillary squamous cell carcinoma,8052/3,papillary epidermoid carcinoma
+"squamous cell papilloma, inverted",8053/0,inverted squamous cell papilloma
+"squamous cell papilloma, inverted",8053/0,squamous cell papilloma inverted
+squamous papillomatosis,8060/0,"papillomatosis, nos"
+squamous papillomatosis,8060/0,papillomatosis
+"squamous cell carcinoma in situ, nos",8070/2,"epidermoid carcinoma in situ, nos"
+"squamous cell carcinoma in situ, nos",8070/2,"intraepidermal carcinoma, nos"
+"squamous cell carcinoma in situ, nos",8070/2,intraepithelial squamous cell carcinoma
+"squamous cell carcinoma in situ, nos",8070/2,squamous cell carcinoma in situ
+"squamous cell carcinoma in situ, nos",8070/2,epidermoid carcinoma in situ
+"squamous cell carcinoma in situ, nos",8070/2,intraepidermal carcinoma
+"squamous cell carcinoma, nos",8070/3,"epidermoid carcinoma, nos"
+"squamous cell carcinoma, nos",8070/3,squamous carcinoma
+"squamous cell carcinoma, nos",8070/3,squamous cell epithelioma
+"squamous cell carcinoma, nos",8070/3,squamous cell carcinoma
+"squamous cell carcinoma, nos",8070/3,epidermoid carcinoma
+"squamous cell carcinoma, metastatic, nos",8070/6,metastatic squamous cell carcinoma
+"squamous cell carcinoma, metastatic, nos",8070/6,squamous cell carcinoma metastatic
+"squamous cell carcinoma, keratinizing, nos",8071/3,"squamous cell carcinoma, large cell, keratinizing"
+"squamous cell carcinoma, keratinizing, nos",8071/3,"epidermoid carcinoma, keratinizing"
+"squamous cell carcinoma, keratinizing, nos",8071/3,keratinizing squamous cell carcinoma
+"squamous cell carcinoma, keratinizing, nos",8071/3,squamous cell carcinoma keratinizing
+"squamous cell carcinoma, keratinizing, nos",8071/3,keratinizing large cell squamous cell carcinoma
+"squamous cell carcinoma, keratinizing, nos",8071/3,squamous cell carcinoma large cell keratinizing
+"squamous cell carcinoma, keratinizing, nos",8071/3,keratinizing epidermoid carcinoma
+"squamous cell carcinoma, keratinizing, nos",8071/3,epidermoid carcinoma keratinizing
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,"squamous cell carcinoma, nonkeratinizing, nos"
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,"epidermoid carcinoma, large cell, nonkeratinizing"
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,nonkeratinizing large cell squamous cell carcinoma
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,squamous cell carcinoma large cell nonkeratinizing
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,nonkeratinizing squamous cell carcinoma
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,squamous cell carcinoma nonkeratinizing
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,nonkeratinizing large cell epidermoid carcinoma
+"squamous cell carcinoma, large cell, nonkeratinizing, nos",8072/3,epidermoid carcinoma large cell nonkeratinizing
+"squamous cell carcinoma, small cell, nonkeratinizing",8073/3,"epidermoid carcinoma, small cell, nonkeratinizing"
+"squamous cell carcinoma, small cell, nonkeratinizing",8073/3,nonkeratinizing small cell squamous cell carcinoma
+"squamous cell carcinoma, small cell, nonkeratinizing",8073/3,squamous cell carcinoma small cell nonkeratinizing
+"squamous cell carcinoma, small cell, nonkeratinizing",8073/3,nonkeratinizing small cell epidermoid carcinoma
+"squamous cell carcinoma, small cell, nonkeratinizing",8073/3,epidermoid carcinoma small cell nonkeratinizing
+"squamous cell carcinoma, spindle cell",8074/3,"epidermoid carcinoma, spindle cell"
+"squamous cell carcinoma, spindle cell",8074/3,"squamous cell carcinoma, sarcomatoid"
+"squamous cell carcinoma, spindle cell",8074/3,spindle cell squamous cell carcinoma
+"squamous cell carcinoma, spindle cell",8074/3,squamous cell carcinoma spindle cell
+"squamous cell carcinoma, spindle cell",8074/3,spindle cell epidermoid carcinoma
+"squamous cell carcinoma, spindle cell",8074/3,epidermoid carcinoma spindle cell
+"squamous cell carcinoma, spindle cell",8074/3,sarcomatoid squamous cell carcinoma
+"squamous cell carcinoma, spindle cell",8074/3,squamous cell carcinoma sarcomatoid
+"squamous cell carcinoma, adenoid",8075/3,"squamous cell carcinoma, pseudoglandular"
+"squamous cell carcinoma, adenoid",8075/3,"squamous cell carcinoma, acantholytic"
+"squamous cell carcinoma, adenoid",8075/3,adenoid squamous cell carcinoma
+"squamous cell carcinoma, adenoid",8075/3,squamous cell carcinoma adenoid
+"squamous cell carcinoma, adenoid",8075/3,pseudoglandular squamous cell carcinoma
+"squamous cell carcinoma, adenoid",8075/3,squamous cell carcinoma pseudoglandular
+"squamous cell carcinoma, adenoid",8075/3,acantholytic squamous cell carcinoma
+"squamous cell carcinoma, adenoid",8075/3,squamous cell carcinoma acantholytic
+squamous cell carcinoma in situ with questionable stromal invasion,8076/2,epidermoid carcinoma in situ with questionable stromal invasion
+"squamous cell carcinoma, microinvasive",8076/3,microinvasive squamous cell carcinoma
+"squamous cell carcinoma, microinvasive",8076/3,squamous cell carcinoma microinvasive
+"squamous intraepithelial neoplasia, grade iii",8077/2,"cervical intraepithelial neoplasia, grade iii"
+"squamous intraepithelial neoplasia, grade iii",8077/2,"cin iii, nos"
+"squamous intraepithelial neoplasia, grade iii",8077/2,cin iii with severe dysplasia
+"squamous intraepithelial neoplasia, grade iii",8077/2,"vaginal intraepithelial neoplasia, grade iii"
+"squamous intraepithelial neoplasia, grade iii",8077/2,vain iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,"vulvar intraepithelial neoplasia, grade iii"
+"squamous intraepithelial neoplasia, grade iii",8077/2,vin iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,"anal intraepithelial neoplasia, grade iii"
+"squamous intraepithelial neoplasia, grade iii",8077/2,ain iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,grade iii squamous intraepithelial neoplasia
+"squamous intraepithelial neoplasia, grade iii",8077/2,squamous intraepithelial neoplasia grade iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,grade iii cervical intraepithelial neoplasia
+"squamous intraepithelial neoplasia, grade iii",8077/2,cervical intraepithelial neoplasia grade iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,cin iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,grade iii vaginal intraepithelial neoplasia
+"squamous intraepithelial neoplasia, grade iii",8077/2,vaginal intraepithelial neoplasia grade iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,grade iii vulvar intraepithelial neoplasia
+"squamous intraepithelial neoplasia, grade iii",8077/2,vulvar intraepithelial neoplasia grade iii
+"squamous intraepithelial neoplasia, grade iii",8077/2,grade iii anal intraepithelial neoplasia
+"squamous intraepithelial neoplasia, grade iii",8077/2,anal intraepithelial neoplasia grade iii
+bowen disease,8081/2,"intraepidermal squamous cell carcinoma, bowen type"
+bowen disease,8081/2,bowen type intraepidermal squamous cell carcinoma
+bowen disease,8081/2,intraepidermal squamous cell carcinoma bowen type
+lymphoepithelial carcinoma,8082/3,lymphoepithelioma
+lymphoepithelial carcinoma,8082/3,lymphoepithelioma-like carcinoma
+lymphoepithelial carcinoma,8082/3,schmincke tumor
+"squamous cell carcinoma, clear cell type",8084/3,clear cell type squamous cell carcinoma
+"squamous cell carcinoma, clear cell type",8084/3,squamous cell carcinoma clear cell type
+"basal cell carcinoma, nos",8090/3,basal cell epithelioma
+"basal cell carcinoma, nos",8090/3,rodent ulcer
+"basal cell carcinoma, nos",8090/3,pigmented basal cell carcinoma
+"basal cell carcinoma, nos",8090/3,basal cell carcinoma
+multifocal superficial basal cell carcinoma,8091/3,multicentric basal cell carcinoma
+"infiltrating basal cell carcinoma, nos",8092/3,"infiltrating basal cell carcinoma, non-sclerosing"
+"infiltrating basal cell carcinoma, nos",8092/3,"infiltrating basal cell carcinoma, sclerosing"
+"infiltrating basal cell carcinoma, nos",8092/3,"basal cell carcinoma, morpheic"
+"infiltrating basal cell carcinoma, nos",8092/3,"basal cell carcinoma, desmoplastic type"
+"infiltrating basal cell carcinoma, nos",8092/3,infiltrating basal cell carcinoma
+"infiltrating basal cell carcinoma, nos",8092/3,non-sclerosing infiltrating basal cell carcinoma
+"infiltrating basal cell carcinoma, nos",8092/3,infiltrating basal cell carcinoma non-sclerosing
+"infiltrating basal cell carcinoma, nos",8092/3,sclerosing infiltrating basal cell carcinoma
+"infiltrating basal cell carcinoma, nos",8092/3,infiltrating basal cell carcinoma sclerosing
+"infiltrating basal cell carcinoma, nos",8092/3,morpheic basal cell carcinoma
+"infiltrating basal cell carcinoma, nos",8092/3,basal cell carcinoma morpheic
+"infiltrating basal cell carcinoma, nos",8092/3,desmoplastic type basal cell carcinoma
+"infiltrating basal cell carcinoma, nos",8092/3,basal cell carcinoma desmoplastic type
+"basal cell carcinoma, fibroepithelial",8093/3,fibroepithelioma of pinkus type
+"basal cell carcinoma, fibroepithelial",8093/3,"fibroepithelial basal cell carcinoma, pinkus type"
+"basal cell carcinoma, fibroepithelial",8093/3,pinkus tumor
+"basal cell carcinoma, fibroepithelial",8093/3,"fibroepithelioma, nos"
+"basal cell carcinoma, fibroepithelial",8093/3,fibroepithelial basal cell carcinoma
+"basal cell carcinoma, fibroepithelial",8093/3,basal cell carcinoma fibroepithelial
+"basal cell carcinoma, fibroepithelial",8093/3,pinkus type fibroepithelial basal cell carcinoma
+"basal cell carcinoma, fibroepithelial",8093/3,fibroepithelial basal cell carcinoma pinkus type
+"basal cell carcinoma, fibroepithelial",8093/3,fibroepithelioma
+basosquamous carcinoma,8094/3,mixed basal-squamous cell carcinoma
+"basal cell carcinoma, nodular",8097/3,"basal cell carcinoma, micronodular"
+"basal cell carcinoma, nodular",8097/3,nodular basal cell carcinoma
+"basal cell carcinoma, nodular",8097/3,basal cell carcinoma nodular
+"basal cell carcinoma, nodular",8097/3,micronodular basal cell carcinoma
+"basal cell carcinoma, nodular",8097/3,basal cell carcinoma micronodular
+trichoepithelioma,8100/0,brooke tumor
+trichoepithelioma,8100/0,epithelioma adenoides cysticum
+trichilemmocarcinoma,8102/3,trichilemmal carcinoma
+pilar tumor,8103/0,proliferating trichilemmal cyst
+pilar tumor,8103/0,proliferating trichilemmal tumor
+"pilomatrixoma, nos",8110/0,calcifying epithelioma of malherbe
+"pilomatrixoma, nos",8110/0,"pilomatricoma, nos"
+"pilomatrixoma, nos",8110/0,pilomatrixoma
+"pilomatrixoma, nos",8110/0,pilomatricoma
+pilomatrix carcinoma,8110/3,"pilomatrixoma, malignant"
+pilomatrix carcinoma,8110/3,"pilomatricoma, malignant"
+pilomatrix carcinoma,8110/3,matrical carcinoma
+pilomatrix carcinoma,8110/3,malignant pilomatrixoma
+pilomatrix carcinoma,8110/3,pilomatrixoma malignant
+pilomatrix carcinoma,8110/3,malignant pilomatricoma
+pilomatrix carcinoma,8110/3,pilomatricoma malignant
+"transitional cell papilloma, benign",8120/0,transitional papilloma
+"transitional cell papilloma, benign",8120/0,benign transitional cell papilloma
+"transitional cell papilloma, benign",8120/0,transitional cell papilloma benign
+"urothelial papilloma, nos",8120/1,papilloma of bladder
+"urothelial papilloma, nos",8120/1,"transitional cell papilloma, nos"
+"urothelial papilloma, nos",8120/1,urothelial papilloma
+"urothelial papilloma, nos",8120/1,transitional cell papilloma
+transitional cell carcinoma in situ,8120/2,urothelial carcinoma in situ
+"transitional cell carcinoma, nos",8120/3,"urothelial carcinoma, nos"
+"transitional cell carcinoma, nos",8120/3,transitional carcinoma
+"transitional cell carcinoma, nos",8120/3,transitional cell carcinoma
+"transitional cell carcinoma, nos",8120/3,urothelial carcinoma
+"schneiderian papilloma, nos",8121/0,"sinonasal papilloma, nos"
+"schneiderian papilloma, nos",8121/0,"sinonasal papilloma, exophytic"
+"schneiderian papilloma, nos",8121/0,"sinonasal papilloma, fungiform"
+"schneiderian papilloma, nos",8121/0,"transitional cell papilloma, inverted, benign"
+"schneiderian papilloma, nos",8121/0,"transitional papilloma, inverted, benign"
+"schneiderian papilloma, nos",8121/0,schneiderian papilloma
+"schneiderian papilloma, nos",8121/0,sinonasal papilloma
+"schneiderian papilloma, nos",8121/0,exophytic sinonasal papilloma
+"schneiderian papilloma, nos",8121/0,sinonasal papilloma exophytic
+"schneiderian papilloma, nos",8121/0,fungiform sinonasal papilloma
+"schneiderian papilloma, nos",8121/0,sinonasal papilloma fungiform
+"schneiderian papilloma, nos",8121/0,benign inverted transitional cell papilloma
+"schneiderian papilloma, nos",8121/0,transitional cell papilloma inverted benign
+"schneiderian papilloma, nos",8121/0,benign inverted transitional papilloma
+"schneiderian papilloma, nos",8121/0,transitional papilloma inverted benign
+"transitional cell papilloma, inverted, nos",8121/1,"transitional papilloma, inverted, nos"
+"transitional cell papilloma, inverted, nos",8121/1,"schneiderian papilloma, inverted"
+"transitional cell papilloma, inverted, nos",8121/1,columnar cell papilloma
+"transitional cell papilloma, inverted, nos",8121/1,cylindrical cell papilloma
+"transitional cell papilloma, inverted, nos",8121/1,oncocytic schneiderian papilloma
+"transitional cell papilloma, inverted, nos",8121/1,inverted transitional cell papilloma
+"transitional cell papilloma, inverted, nos",8121/1,transitional cell papilloma inverted
+"transitional cell papilloma, inverted, nos",8121/1,inverted transitional papilloma
+"transitional cell papilloma, inverted, nos",8121/1,transitional papilloma inverted
+"transitional cell papilloma, inverted, nos",8121/1,inverted schneiderian papilloma
+"transitional cell papilloma, inverted, nos",8121/1,schneiderian papilloma inverted
+schneiderian carcinoma,8121/3,cylindrical cell carcinoma
+"transitional cell carcinoma, spindle cell",8122/3,"transitional cell carcinoma, sarcomatoid"
+"transitional cell carcinoma, spindle cell",8122/3,spindle cell transitional cell carcinoma
+"transitional cell carcinoma, spindle cell",8122/3,transitional cell carcinoma spindle cell
+"transitional cell carcinoma, spindle cell",8122/3,sarcomatoid transitional cell carcinoma
+"transitional cell carcinoma, spindle cell",8122/3,transitional cell carcinoma sarcomatoid
+papillary transitional cell neoplasm of low malignant potential,8130/1,papillary urothelial neoplasm of low malignant potential
+"papillary transitional cell carcinoma,  non-invasive",8130/2,"papillary urothelial carcinoma, non-invasive"
+"papillary transitional cell carcinoma,  non-invasive",8130/2,non-invasive papillary transitional cell carcinoma
+"papillary transitional cell carcinoma,  non-invasive",8130/2,papillary transitional cell carcinoma non-invasive
+"papillary transitional cell carcinoma,  non-invasive",8130/2,non-invasive papillary urothelial carcinoma
+"papillary transitional cell carcinoma,  non-invasive",8130/2,papillary urothelial carcinoma non-invasive
+papillary transitional cell carcinoma,8130/3,papillary urothelial carcinoma
+"transitional cell carcinoma, micropapillary",8131/3,micropapillary transitional cell carcinoma
+"transitional cell carcinoma, micropapillary",8131/3,transitional cell carcinoma micropapillary
+"adenoma, nos",8140/0,adenoma
+atypical adenoma,8140/1,"bronchial adenoma, nos"
+atypical adenoma,8140/1,bronchial adenoma
+"adenocarcinoma in situ, nos",8140/2,adenocarcinoma in situ
+"adenocarcinoma, nos",8140/3,adenocarcinoma
+"adenocarcinoma, metastatic, nos",8140/6,metastatic adenocarcinoma
+"adenocarcinoma, metastatic, nos",8140/6,adenocarcinoma metastatic
+"adenocarcinoma, metastatic, nos",8140/6,adenoid cystic carcinoma
+scirrhous adenocarcinoma,8141/3,scirrhous carcinoma
+scirrhous adenocarcinoma,8141/3,carcinoma with productive fibrosis
+"adenocarcinoma, intestinal type",8144/3,"carcinoma, intestinal type"
+"adenocarcinoma, intestinal type",8144/3,intestinal type adenocarcinoma
+"adenocarcinoma, intestinal type",8144/3,adenocarcinoma intestinal type
+"adenocarcinoma, intestinal type",8144/3,intestinal type carcinoma
+"adenocarcinoma, intestinal type",8144/3,carcinoma intestinal type
+"carcinoma, diffuse type",8145/3,"adenocarcinoma, diffuse type"
+"carcinoma, diffuse type",8145/3,diffuse type carcinoma
+"carcinoma, diffuse type",8145/3,carcinoma diffuse type
+"carcinoma, diffuse type",8145/3,diffuse type adenocarcinoma
+"carcinoma, diffuse type",8145/3,adenocarcinoma diffuse type
+"glandular intraepithelial neoplasia, grade iii",8148/2,"prostatic intraepithelial neoplasia, grade iii"
+"glandular intraepithelial neoplasia, grade iii",8148/2,pin iii
+"glandular intraepithelial neoplasia, grade iii",8148/2,grade iii glandular intraepithelial neoplasia
+"glandular intraepithelial neoplasia, grade iii",8148/2,glandular intraepithelial neoplasia grade iii
+"glandular intraepithelial neoplasia, grade iii",8148/2,grade iii prostatic intraepithelial neoplasia
+"glandular intraepithelial neoplasia, grade iii",8148/2,prostatic intraepithelial neoplasia grade iii
+islet cell adenoma,8150/0,"islet cell tumor, benign"
+islet cell adenoma,8150/0,nesidioblastoma
+islet cell adenoma,8150/0,islet cell adenomatosis
+islet cell adenoma,8150/0,benign islet cell tumor
+islet cell adenoma,8150/0,islet cell tumor benign
+"islet cell tumor, nos",8150/1,islet cell tumor
+islet cell carcinoma,8150/3,islet cell adenocarcinoma
+"insulinoma, nos",8151/0,beta cell adenoma
+"insulinoma, nos",8151/0,insulinoma
+"insulinoma, malignant",8151/3,"beta cell tumor, malignant"
+"insulinoma, malignant",8151/3,malignant insulinoma
+"insulinoma, malignant",8151/3,insulinoma malignant
+"insulinoma, malignant",8151/3,malignant beta cell tumor
+"insulinoma, malignant",8151/3,beta cell tumor malignant
+"glucagonoma, nos",8152/1,"alpha cell tumor, nos"
+"glucagonoma, nos",8152/1,glucagonoma
+"glucagonoma, nos",8152/1,alpha cell tumor
+"glucagonoma, malignant",8152/3,"alpha cell tumor, malignant"
+"glucagonoma, malignant",8152/3,malignant glucagonoma
+"glucagonoma, malignant",8152/3,glucagonoma malignant
+"glucagonoma, malignant",8152/3,malignant alpha cell tumor
+"glucagonoma, malignant",8152/3,alpha cell tumor malignant
+"gastrinoma, nos",8153/1,"g cell tumor, nos"
+"gastrinoma, nos",8153/1,gastrin cell tumor
+"gastrinoma, nos",8153/1,gastrinoma
+"gastrinoma, nos",8153/1,g cell tumor
+"gastrinoma, malignant",8153/3,"g cell tumor, malignant"
+"gastrinoma, malignant",8153/3,"gastrin cell tumor, malignant"
+"gastrinoma, malignant",8153/3,malignant gastrinoma
+"gastrinoma, malignant",8153/3,gastrinoma malignant
+"gastrinoma, malignant",8153/3,malignant g cell tumor
+"gastrinoma, malignant",8153/3,g cell tumor malignant
+"gastrinoma, malignant",8153/3,malignant gastrin cell tumor
+"gastrinoma, malignant",8153/3,gastrin cell tumor malignant
+mixed islet cell and exocrine adenocarcinoma,8154/3,mixed acinar-endocrine carcinoma
+mixed islet cell and exocrine adenocarcinoma,8154/3,mixed ductal-endocrine carcinoma
+"vipoma, nos",8155/1,vipoma
+"vipoma, malignant",8155/3,malignant vipoma
+"vipoma, malignant",8155/3,vipoma malignant
+"somatostatinoma, nos",8156/1,"somatostatin cell tumor, nos"
+"somatostatinoma, nos",8156/1,somatostatinoma
+"somatostatinoma, nos",8156/1,somatostatin cell tumor
+"somatostatinoma, malignant",8156/3,"somatostatin cell tumor, malignant"
+"somatostatinoma, malignant",8156/3,malignant somatostatinoma
+"somatostatinoma, malignant",8156/3,somatostatinoma malignant
+"somatostatinoma, malignant",8156/3,malignant somatostatin cell tumor
+"somatostatinoma, malignant",8156/3,somatostatin cell tumor malignant
+"enteroglucagonoma, nos",8157/1,enteroglucagonoma
+"enteroglucagonoma, malignant",8157/3,malignant enteroglucagonoma
+"enteroglucagonoma, malignant",8157/3,enteroglucagonoma malignant
+bile duct adenoma,8160/0,cholangioma
+cholangiocarcinoma,8160/3,bile duct carcinoma
+cholangiocarcinoma,8160/3,bile duct adenocarcinoma
+liver cell adenoma,8170/0,hepatocellular adenoma
+liver cell adenoma,8170/0,"hepatoma, benign"
+liver cell adenoma,8170/0,benign hepatoma
+liver cell adenoma,8170/0,hepatoma benign
+"hepatocellular carcinoma, nos",8170/3,liver cell carcinoma
+"hepatocellular carcinoma, nos",8170/3,hepatocarcinoma
+"hepatocellular carcinoma, nos",8170/3,"hepatoma, malignant"
+"hepatocellular carcinoma, nos",8170/3,"hepatoma, nos"
+"hepatocellular carcinoma, nos",8170/3,hepatocellular carcinoma
+"hepatocellular carcinoma, nos",8170/3,malignant hepatoma
+"hepatocellular carcinoma, nos",8170/3,hepatoma malignant
+"hepatocellular carcinoma, nos",8170/3,hepatoma
+"hepatocellular carcinoma, fibrolamellar",8171/3,fibrolamellar hepatocellular carcinoma
+"hepatocellular carcinoma, fibrolamellar",8171/3,hepatocellular carcinoma fibrolamellar
+"hepatocellular carcinoma, scirrhous",8172/3,sclerosing hepatic carcinoma
+"hepatocellular carcinoma, scirrhous",8172/3,scirrhous hepatocellular carcinoma
+"hepatocellular carcinoma, scirrhous",8172/3,hepatocellular carcinoma scirrhous
+"hepatocellular carcinoma, spindle cell variant",8173/3,"hepatocellular carcinoma, sarcomatoid"
+"hepatocellular carcinoma, spindle cell variant",8173/3,spindle cell variant hepatocellular carcinoma
+"hepatocellular carcinoma, spindle cell variant",8173/3,hepatocellular carcinoma spindle cell variant
+"hepatocellular carcinoma, spindle cell variant",8173/3,sarcomatoid hepatocellular carcinoma
+"hepatocellular carcinoma, spindle cell variant",8173/3,hepatocellular carcinoma sarcomatoid
+"hepatocellular carcinoma, clear cell type",8174/3,clear cell type hepatocellular carcinoma
+"hepatocellular carcinoma, clear cell type",8174/3,hepatocellular carcinoma clear cell type
+"hepatocellular carcinoma, pleomorphic type",8175/3,pleomorphic type hepatocellular carcinoma
+"hepatocellular carcinoma, pleomorphic type",8175/3,hepatocellular carcinoma pleomorphic type
+combined hepatocellular carcinoma and cholangiocarcinoma,8180/3,mixed hepatocellular and bile duct carcinoma
+combined hepatocellular carcinoma and cholangiocarcinoma,8180/3,hepatocholangiocarcinoma
+trabecular adenocarcinoma,8190/3,trabecular carcinoma
+eccrine dermal cylindroma,8200/0,turban tumor
+eccrine dermal cylindroma,8200/0,cylindroma of skin
+adenoid cystic carcinoma,8200/3,adenocystic carcinoma
+adenoid cystic carcinoma,8200/3,"cylindroma, nos"
+adenoid cystic carcinoma,8200/3,"adenocarcinoma, cylindroid"
+adenoid cystic carcinoma,8200/3,"bronchial adenoma, cylindroid"
+adenoid cystic carcinoma,8200/3,cylindroma
+adenoid cystic carcinoma,8200/3,cylindroid adenocarcinoma
+adenoid cystic carcinoma,8200/3,adenocarcinoma cylindroid
+adenoid cystic carcinoma,8200/3,cylindroid bronchial adenoma
+adenoid cystic carcinoma,8200/3,bronchial adenoma cylindroid
+cribriform carcinoma in situ,8201/2,"ductal carcinoma in situ, cribriform type"
+cribriform carcinoma in situ,8201/2,cribriform type ductal carcinoma in situ
+cribriform carcinoma in situ,8201/2,ductal carcinoma in situ cribriform type
+"cribriform carcinoma, nos",8201/3,"ductal carcinoma, cribriform type"
+"cribriform carcinoma, nos",8201/3,cribriform carcinoma
+"cribriform carcinoma, nos",8201/3,cribriform type ductal carcinoma
+"cribriform carcinoma, nos",8201/3,ductal carcinoma cribriform type
+"adenomatous polyp, nos",8210/0,polypoid adenoma
+"adenomatous polyp, nos",8210/0,adenomatous polyp
+adenocarcinoma in situ in adenomatous polyp,8210/2,adenocarcinoma in situ in tubular adenoma
+adenocarcinoma in situ in adenomatous polyp,8210/2,carcinoma in situ in adenomatous polyp
+adenocarcinoma in situ in adenomatous polyp,8210/2,adenocarcinoma in situ in polypoid adenoma
+adenocarcinoma in situ in adenomatous polyp,8210/2,"adenocarcinoma in situ in a polyp, nos"
+adenocarcinoma in situ in adenomatous polyp,8210/2,"carcinoma in situ in a polyp, nos"
+adenocarcinoma in situ in adenomatous polyp,8210/2,adenocarcinoma in situ in a polyp
+adenocarcinoma in situ in adenomatous polyp,8210/2,carcinoma in situ in a polyp
+adenocarcinoma in adenomatous polyp,8210/3,adenocarcinoma in tubular adenoma
+adenocarcinoma in adenomatous polyp,8210/3,carcinoma in adenomatous polyp
+adenocarcinoma in adenomatous polyp,8210/3,adenocarcinoma in polypoid adenoma
+adenocarcinoma in adenomatous polyp,8210/3,"adenocarcinoma in a polyp, nos"
+adenocarcinoma in adenomatous polyp,8210/3,"carcinoma in a polyp, nos"
+adenocarcinoma in adenomatous polyp,8210/3,adenocarcinoma in a polyp
+adenocarcinoma in adenomatous polyp,8210/3,carcinoma in a polyp
+"tubular adenoma, nos",8211/0,tubular adenoma
+tubular adenocarcinoma,8211/3,tubular carcinoma
+serrated adenoma,8213/0,mixed adenomatous and hyperplastic polyp
+parietal cell carcinoma,8214/3,parietal cell adenocarcinoma
+adenocarcinoma of anal glands,8215/3,adenocarcinoma of anal ducts
+adenomatous polyposis coli,8220/0,familial polyposis coli
+adenomatous polyposis coli,8220/0,"adenomatosis, nos"
+adenomatous polyposis coli,8220/0,adenomatosis
+"ductal carcinoma in situ, solid type",8230/2,"intraductal carcinoma, solid type"
+"ductal carcinoma in situ, solid type",8230/2,solid type ductal carcinoma in situ
+"ductal carcinoma in situ, solid type",8230/2,ductal carcinoma in situ solid type
+"ductal carcinoma in situ, solid type",8230/2,solid type intraductal carcinoma
+"ductal carcinoma in situ, solid type",8230/2,intraductal carcinoma solid type
+"solid carcinoma, nos",8230/3,solid carcinoma with mucin formation
+"solid carcinoma, nos",8230/3,solid adenocarcinoma with mucin formation
+"solid carcinoma, nos",8230/3,solid carcinoma
+carcinoid tumor of uncertain malignant potential,8240/1,"carcinoid tumor, nos, of appendix"
+carcinoid tumor of uncertain malignant potential,8240/1,"carcinoid, nos, of appendix"
+carcinoid tumor of uncertain malignant potential,8240/1,"carcinoid tumor, argentaffin, nos"
+carcinoid tumor of uncertain malignant potential,8240/1,"argentaffinoma, nos"
+carcinoid tumor of uncertain malignant potential,8240/1,of appendix carcinoid tumor
+carcinoid tumor of uncertain malignant potential,8240/1,carcinoid tumor of appendix
+carcinoid tumor of uncertain malignant potential,8240/1,of appendix carcinoid
+carcinoid tumor of uncertain malignant potential,8240/1,carcinoid of appendix
+carcinoid tumor of uncertain malignant potential,8240/1,argentaffin carcinoid tumor
+carcinoid tumor of uncertain malignant potential,8240/1,carcinoid tumor argentaffin
+carcinoid tumor of uncertain malignant potential,8240/1,argentaffinoma
+"carcinoid tumor, nos",8240/3,"carcinoid, nos"
+"carcinoid tumor, nos",8240/3,typical carcinoid
+"carcinoid tumor, nos",8240/3,"bronchial adenoma, carcinoid"
+"carcinoid tumor, nos",8240/3,carcinoid tumor
+"carcinoid tumor, nos",8240/3,carcinoid
+"carcinoid tumor, nos",8240/3,carcinoid bronchial adenoma
+"carcinoid tumor, nos",8240/3,bronchial adenoma carcinoid
+enterochromaffin cell carcinoid,8241/3,"carcinoid tumor, argentaffin, malignant"
+enterochromaffin cell carcinoid,8241/3,"argentaffinoma, malignant"
+enterochromaffin cell carcinoid,8241/3,ec cell carcinoid
+enterochromaffin cell carcinoid,8241/3,serotonin producing carcinoid
+enterochromaffin cell carcinoid,8241/3,malignant argentaffin carcinoid tumor
+enterochromaffin cell carcinoid,8241/3,carcinoid tumor argentaffin malignant
+enterochromaffin cell carcinoid,8241/3,malignant argentaffinoma
+enterochromaffin cell carcinoid,8241/3,argentaffinoma malignant
+"enterochromaffin-like cell carcinoid, nos",8242/1,"ecl cell carcinoid, nos"
+"enterochromaffin-like cell carcinoid, nos",8242/1,enterochromaffin-like cell carcinoid
+"enterochromaffin-like cell carcinoid, nos",8242/1,ecl cell carcinoid
+"enterochromaffin-like cell tumor, malignant",8242/3,"ecl cell carcinoid, malignant"
+"enterochromaffin-like cell tumor, malignant",8242/3,malignant enterochromaffin-like cell tumor
+"enterochromaffin-like cell tumor, malignant",8242/3,enterochromaffin-like cell tumor malignant
+"enterochromaffin-like cell tumor, malignant",8242/3,malignant ecl cell carcinoid
+"enterochromaffin-like cell tumor, malignant",8242/3,ecl cell carcinoid malignant
+goblet cell carcinoid,8243/3,mucocarcinoid tumor
+goblet cell carcinoid,8243/3,mucinous carcinoid
+composite carcinoid,8244/3,combined carcinoid and adenocarcinoma
+composite carcinoid,8244/3,mixed carcinoid-adenocarcinoma
+"neuroendocrine carcinoma, nos",8246/3,neuroendocrine carcinoma
+merkel cell carcinoma,8247/3,merkel cell tumor
+merkel cell carcinoma,8247/3,primary cutaneous neuroendocrine carcinoma
+"bronchiolo-alveolar adenocarcinoma, nos",8250/3,"bronchiolo-alveolar carcinoma, nos"
+"bronchiolo-alveolar adenocarcinoma, nos",8250/3,bronchiolar adenocarcinoma
+"bronchiolo-alveolar adenocarcinoma, nos",8250/3,bronchiolar carcinoma
+"bronchiolo-alveolar adenocarcinoma, nos",8250/3,alveolar cell carcinoma
+"bronchiolo-alveolar adenocarcinoma, nos",8250/3,bronchiolo-alveolar adenocarcinoma
+"bronchiolo-alveolar adenocarcinoma, nos",8250/3,bronchiolo-alveolar carcinoma
+alveolar adenocarcinoma,8251/3,alveolar carcinoma
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,"bronchiolo-alveolar carcinoma, clara cell"
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,"bronchiolo-alveolar carcinoma, type ii pneumocyte"
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,non- mucinous bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,bronchiolo-alveolar carcinoma non- mucinous
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,clara cell bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,bronchiolo-alveolar carcinoma clara cell
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,type ii pneumocyte bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, non- mucinous",8252/3,bronchiolo-alveolar carcinoma type ii pneumocyte
+"bronchiolo-alveolar carcinoma, mucinous",8253/3,"bronchiolo-alveolar carcinoma, goblet cell type"
+"bronchiolo-alveolar carcinoma, mucinous",8253/3,mucinous bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, mucinous",8253/3,bronchiolo-alveolar carcinoma mucinous
+"bronchiolo-alveolar carcinoma, mucinous",8253/3,goblet cell type bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, mucinous",8253/3,bronchiolo-alveolar carcinoma goblet cell type
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,"bronchiolo-alveolar carcinoma, clara cell and goblet cell type"
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,"bronchiolo-alveolar carcinoma, type ii pneumocyte and goblet cell type"
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,"bronchiolo-alveolar carcinoma, indeterminate type"
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,mixed mucinous and non-mucinous bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,bronchiolo-alveolar carcinoma mixed mucinous and non-mucinous
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,clara cell and goblet cell type bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,bronchiolo-alveolar carcinoma clara cell and goblet cell type
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,type ii pneumocyte and goblet cell type bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,bronchiolo-alveolar carcinoma type ii pneumocyte and goblet cell type
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,indeterminate type bronchiolo-alveolar carcinoma
+"bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous",8254/3,bronchiolo-alveolar carcinoma indeterminate type
+adenocarcinoma with mixed subtypes,8255/3,adenocarcinoma combined with other types of carcinoma
+"papillary adenoma, nos",8260/0,glandular papilloma
+"papillary adenoma, nos",8260/0,papillary adenoma
+"papillary adenocarcinoma, nos",8260/3,papillary carcinoma of thyroid
+"papillary adenocarcinoma, nos",8260/3,papillary renal cell carcinoma
+"papillary adenocarcinoma, nos",8260/3,papillary adenocarcinoma
+"villous adenoma, nos",8261/0,villous papilloma
+"villous adenoma, nos",8261/0,villous adenoma
+"tubulovillous adenoma, nos",8263/0,villoglandular adenoma
+"tubulovillous adenoma, nos",8263/0,papillotubular adenoma
+"tubulovillous adenoma, nos",8263/0,tubulovillous adenoma
+adenocarcinoma in tubulovillous adenoma,8263/3,papillotubular adenocarcinoma
+adenocarcinoma in tubulovillous adenoma,8263/3,tubulopapillary adenocarcinoma
+"papillomatosis, glandular",8264/0,biliary papillomatosis
+"papillomatosis, glandular",8264/0,glandular papillomatosis
+"papillomatosis, glandular",8264/0,papillomatosis glandular
+chromophobe carcinoma,8270/3,chromophobe adenocarcinoma
+"pituitary adenoma, nos",8272/0,pituitary adenoma
+"pituitary carcinoma, nos",8272/3,pituitary carcinoma
+acidophil adenoma,8280/0,eosinophil adenoma
+acidophil carcinoma,8280/3,acidophil adenocarcinoma
+acidophil carcinoma,8280/3,eosinophil carcinoma
+acidophil carcinoma,8280/3,eosinophil adenocarcinoma
+oxyphilic adenoma,8290/0,oncocytic adenoma
+oxyphilic adenoma,8290/0,oncocytoma
+oxyphilic adenoma,8290/0,hurthle cell adenoma
+oxyphilic adenoma,8290/0,hurthle cell tumor
+oxyphilic adenoma,8290/0,"follicular adenoma, oxyphilic cell"
+oxyphilic adenoma,8290/0,oxyphilic cell follicular adenoma
+oxyphilic adenoma,8290/0,follicular adenoma oxyphilic cell
+oxyphilic adenocarcinoma,8290/3,oncocytic carcinoma
+oxyphilic adenocarcinoma,8290/3,oncocytic adenocarcinoma
+oxyphilic adenocarcinoma,8290/3,hurthle cell carcinoma
+oxyphilic adenocarcinoma,8290/3,hurthle cell adenocarcinoma
+oxyphilic adenocarcinoma,8290/3,"follicular carcinoma, oxyphilic cell"
+oxyphilic adenocarcinoma,8290/3,oxyphilic cell follicular carcinoma
+oxyphilic adenocarcinoma,8290/3,follicular carcinoma oxyphilic cell
+basophil adenoma,8300/0,mucoid cell adenoma
+basophil carcinoma,8300/3,basophil adenocarcinoma
+basophil carcinoma,8300/3,mucoid cell adenocarcinoma
+"clear cell adenocarcinoma, nos",8310/3,clear cell carcinoma
+"clear cell adenocarcinoma, nos",8310/3,"clear cell adenocarcinoma, mesonephroid"
+"clear cell adenocarcinoma, nos",8310/3,clear cell adenocarcinoma
+"clear cell adenocarcinoma, nos",8310/3,mesonephroid clear cell adenocarcinoma
+"clear cell adenocarcinoma, nos",8310/3,clear cell adenocarcinoma mesonephroid
+"renal cell carcinoma, nos",8312/3,renal cell adenocarcinoma
+"renal cell carcinoma, nos",8312/3,grawitz tumor
+"renal cell carcinoma, nos",8312/3,hypernephroma
+"renal cell carcinoma, nos",8312/3,renal cell carcinoma
+clear cell adenofibroma,8313/0,clear cell cystadenofibroma
+clear cell adenofibroma of borderline malignancy,8313/1,clear cell cystadenofibroma of borderline malignancy
+clear cell adenocarcinofibroma,8313/3,clear cell cystadenocarcinofibroma
+"renal cell carcinoma, chromophobe type",8317/3,chromophobe cell renal carcinoma
+"renal cell carcinoma, chromophobe type",8317/3,chromophobe type renal cell carcinoma
+"renal cell carcinoma, chromophobe type",8317/3,renal cell carcinoma chromophobe type
+"renal cell carcinoma, sarcomatoid",8318/3,"renal cell carcinoma, spindle cell"
+"renal cell carcinoma, sarcomatoid",8318/3,sarcomatoid renal cell carcinoma
+"renal cell carcinoma, sarcomatoid",8318/3,renal cell carcinoma sarcomatoid
+"renal cell carcinoma, sarcomatoid",8318/3,spindle cell renal cell carcinoma
+"renal cell carcinoma, sarcomatoid",8318/3,renal cell carcinoma spindle cell
+collecting duct carcinoma,8319/3,bellini duct carcinoma
+collecting duct carcinoma,8319/3,"renal carcinoma, collecting duct type"
+collecting duct carcinoma,8319/3,collecting duct type renal carcinoma
+collecting duct carcinoma,8319/3,renal carcinoma collecting duct type
+granular cell carcinoma,8320/3,granular cell adenocarcinoma
+water-clear cell adenocarcinoma,8322/3,water-clear cell carcinoma
+lipoadenoma,8324/0,adenolipoma
+"follicular adenocarcinoma, nos",8330/3,"follicular carcinoma, nos"
+"follicular adenocarcinoma, nos",8330/3,follicular adenocarcinoma
+"follicular adenocarcinoma, nos",8330/3,follicular carcinoma
+"follicular adenocarcinoma, well differentiated",8331/3,"follicular carcinoma, well differentiated"
+"follicular adenocarcinoma, well differentiated",8331/3,well differentiated follicular adenocarcinoma
+"follicular adenocarcinoma, well differentiated",8331/3,follicular adenocarcinoma well differentiated
+"follicular adenocarcinoma, well differentiated",8331/3,well differentiated follicular carcinoma
+"follicular adenocarcinoma, well differentiated",8331/3,follicular carcinoma well differentiated
+"follicular adenocarcinoma, trabecular",8332/3,"follicular carcinoma, trabecular"
+"follicular adenocarcinoma, trabecular",8332/3,"follicular adenocarcinoma, moderately differentiated"
+"follicular adenocarcinoma, trabecular",8332/3,"follicular carcinoma, moderately differentiated"
+"follicular adenocarcinoma, trabecular",8332/3,trabecular follicular adenocarcinoma
+"follicular adenocarcinoma, trabecular",8332/3,follicular adenocarcinoma trabecular
+"follicular adenocarcinoma, trabecular",8332/3,trabecular follicular carcinoma
+"follicular adenocarcinoma, trabecular",8332/3,follicular carcinoma trabecular
+"follicular adenocarcinoma, trabecular",8332/3,moderately differentiated follicular adenocarcinoma
+"follicular adenocarcinoma, trabecular",8332/3,follicular adenocarcinoma moderately differentiated
+"follicular adenocarcinoma, trabecular",8332/3,moderately differentiated follicular carcinoma
+"follicular adenocarcinoma, trabecular",8332/3,follicular carcinoma moderately differentiated
+"microfollicular adenoma, nos",8333/0,fetal adenoma
+"microfollicular adenoma, nos",8333/0,microfollicular adenoma
+macrofollicular adenoma,8334/0,colloid adenoma
+"follicular carcinoma, minimally invasive",8335/3,"follicular carcinoma, encapsulated"
+"follicular carcinoma, minimally invasive",8335/3,minimally invasive follicular carcinoma
+"follicular carcinoma, minimally invasive",8335/3,follicular carcinoma minimally invasive
+"follicular carcinoma, minimally invasive",8335/3,encapsulated follicular carcinoma
+"follicular carcinoma, minimally invasive",8335/3,follicular carcinoma encapsulated
+"papillary carcinoma, follicular variant",8340/3,"papillary adenocarcinoma, follicular variant"
+"papillary carcinoma, follicular variant",8340/3,papillary and follicular adenocarcinoma
+"papillary carcinoma, follicular variant",8340/3,papillary and follicular carcinoma
+"papillary carcinoma, follicular variant",8340/3,follicular variant papillary carcinoma
+"papillary carcinoma, follicular variant",8340/3,papillary carcinoma follicular variant
+"papillary carcinoma, follicular variant",8340/3,follicular variant papillary adenocarcinoma
+"papillary carcinoma, follicular variant",8340/3,papillary adenocarcinoma follicular variant
+"papillary carcinoma, oxyphilic cell",8342/3,oxyphilic cell papillary carcinoma
+"papillary carcinoma, oxyphilic cell",8342/3,papillary carcinoma oxyphilic cell
+"papillary carcinoma, encapsulated",8343/3,encapsulated papillary carcinoma
+"papillary carcinoma, encapsulated",8343/3,papillary carcinoma encapsulated
+"papillary carcinoma, columnar cell",8344/3,"papillary carcinoma, tall cell"
+"papillary carcinoma, columnar cell",8344/3,columnar cell papillary carcinoma
+"papillary carcinoma, columnar cell",8344/3,papillary carcinoma columnar cell
+"papillary carcinoma, columnar cell",8344/3,tall cell papillary carcinoma
+"papillary carcinoma, columnar cell",8344/3,papillary carcinoma tall cell
+medullary carcinoma with amyloid stroma,8345/3,parafollicular cell carcinoma
+medullary carcinoma with amyloid stroma,8345/3,c cell carcinoma
+nonencapsulated sclerosing carcinoma,8350/3,nonencapsulated sclerosing adenocarcinoma
+nonencapsulated sclerosing carcinoma,8350/3,nonencapsulated sclerosing tumor
+nonencapsulated sclerosing carcinoma,8350/3,"papillary carcinoma, diffuse sclerosing"
+nonencapsulated sclerosing carcinoma,8350/3,diffuse sclerosing papillary carcinoma
+nonencapsulated sclerosing carcinoma,8350/3,papillary carcinoma diffuse sclerosing
+multiple endocrine adenomas,8360/1,endocrine adenomatosis
+juxtaglomerular tumor,8361/0,reninoma
+"adrenal cortical adenoma, nos",8370/0,"adrenal cortical tumor, benign"
+"adrenal cortical adenoma, nos",8370/0,"adrenal cortical tumor, nos"
+"adrenal cortical adenoma, nos",8370/0,adrenal cortical adenoma
+"adrenal cortical adenoma, nos",8370/0,benign adrenal cortical tumor
+"adrenal cortical adenoma, nos",8370/0,adrenal cortical tumor benign
+"adrenal cortical adenoma, nos",8370/0,adrenal cortical tumor
+adrenal cortical carcinoma,8370/3,adrenal cortical adenocarcinoma
+adrenal cortical carcinoma,8370/3,"adrenal cortical tumor, malignant"
+adrenal cortical carcinoma,8370/3,malignant adrenal cortical tumor
+adrenal cortical carcinoma,8370/3,adrenal cortical tumor malignant
+"adrenal cortical adenoma, compact cell",8371/0,compact cell adrenal cortical adenoma
+"adrenal cortical adenoma, compact cell",8371/0,adrenal cortical adenoma compact cell
+"adrenal cortical adenoma, pigmented",8372/0,black adenoma
+"adrenal cortical adenoma, pigmented",8372/0,pigmented adenoma
+"adrenal cortical adenoma, pigmented",8372/0,pigmented adrenal cortical adenoma
+"adrenal cortical adenoma, pigmented",8372/0,adrenal cortical adenoma pigmented
+"adrenal cortical adenoma, clear cell",8373/0,clear cell adrenal cortical adenoma
+"adrenal cortical adenoma, clear cell",8373/0,adrenal cortical adenoma clear cell
+"adrenal cortical adenoma, glomerulosa cell",8374/0,glomerulosa cell adrenal cortical adenoma
+"adrenal cortical adenoma, glomerulosa cell",8374/0,adrenal cortical adenoma glomerulosa cell
+"adrenal cortical adenoma, mixed cell",8375/0,mixed cell adrenal cortical adenoma
+"adrenal cortical adenoma, mixed cell",8375/0,adrenal cortical adenoma mixed cell
+"endometrioid adenoma, nos",8380/0,"endometrioid cystadenoma, nos"
+"endometrioid adenoma, nos",8380/0,endometrioid adenoma
+"endometrioid adenoma, nos",8380/0,endometrioid cystadenoma
+"endometrioid adenoma, borderline malignancy",8380/1,"endometrioid cystadenoma, borderline malignancy"
+"endometrioid adenoma, borderline malignancy",8380/1,endometrioid tumor of low malignant potential
+"endometrioid adenoma, borderline malignancy",8380/1,atypical proliferative endometrioid tumor
+"endometrioid adenoma, borderline malignancy",8380/1,borderline malignancy endometrioid adenoma
+"endometrioid adenoma, borderline malignancy",8380/1,endometrioid adenoma borderline malignancy
+"endometrioid adenoma, borderline malignancy",8380/1,borderline malignancy endometrioid cystadenoma
+"endometrioid adenoma, borderline malignancy",8380/1,endometrioid cystadenoma borderline malignancy
+"endometrioid adenocarcinoma, nos",8380/3,"endometrioid carcinoma, nos"
+"endometrioid adenocarcinoma, nos",8380/3,endometrioid cystadenocarcinoma
+"endometrioid adenocarcinoma, nos",8380/3,endometrioid adenocarcinoma
+"endometrioid adenocarcinoma, nos",8380/3,endometrioid carcinoma
+"endometrioid adenofibroma, nos",8381/0,"endometrioid cystadenofibroma, nos"
+"endometrioid adenofibroma, nos",8381/0,endometrioid adenofibroma
+"endometrioid adenofibroma, nos",8381/0,endometrioid cystadenofibroma
+"endometrioid adenofibroma, borderline malignancy",8381/1,"endometrioid cystadenofibroma, borderline malignancy"
+"endometrioid adenofibroma, borderline malignancy",8381/1,borderline malignancy endometrioid adenofibroma
+"endometrioid adenofibroma, borderline malignancy",8381/1,endometrioid adenofibroma borderline malignancy
+"endometrioid adenofibroma, borderline malignancy",8381/1,borderline malignancy endometrioid cystadenofibroma
+"endometrioid adenofibroma, borderline malignancy",8381/1,endometrioid cystadenofibroma borderline malignancy
+"endometrioid adenofibroma, malignant",8381/3,"endometrioid cystadenofibroma, malignant"
+"endometrioid adenofibroma, malignant",8381/3,malignant endometrioid adenofibroma
+"endometrioid adenofibroma, malignant",8381/3,endometrioid adenofibroma malignant
+"endometrioid adenofibroma, malignant",8381/3,malignant endometrioid cystadenofibroma
+"endometrioid adenofibroma, malignant",8381/3,endometrioid cystadenofibroma malignant
+"endometrioid adenocarcinoma, secretory variant",8382/3,secretory variant endometrioid adenocarcinoma
+"endometrioid adenocarcinoma, secretory variant",8382/3,endometrioid adenocarcinoma secretory variant
+"endometrioid adenocarcinoma, ciliated cell variant",8383/3,ciliated cell variant endometrioid adenocarcinoma
+"endometrioid adenocarcinoma, ciliated cell variant",8383/3,endometrioid adenocarcinoma ciliated cell variant
+"adenocarcinoma, endocervical type",8384/3,endocervical type adenocarcinoma
+"adenocarcinoma, endocervical type",8384/3,adenocarcinoma endocervical type
+skin appendage adenoma,8390/0,"skin appendage tumor, benign"
+skin appendage adenoma,8390/0,"adnexal tumor, benign"
+skin appendage adenoma,8390/0,benign skin appendage tumor
+skin appendage adenoma,8390/0,skin appendage tumor benign
+skin appendage adenoma,8390/0,benign adnexal tumor
+skin appendage adenoma,8390/0,adnexal tumor benign
+skin appendage carcinoma,8390/3,adnexal carcinoma
+follicular fibroma,8391/0,trichodiscoma
+follicular fibroma,8391/0,fibrofolliculoma
+follicular fibroma,8391/0,perifollicular fibroma
+sweat gland adenoma,8400/0,"sweat gland tumor, benign"
+sweat gland adenoma,8400/0,"hidradenoma, nos"
+sweat gland adenoma,8400/0,"syringadenoma, nos"
+sweat gland adenoma,8400/0,benign sweat gland tumor
+sweat gland adenoma,8400/0,sweat gland tumor benign
+sweat gland adenoma,8400/0,hidradenoma
+sweat gland adenoma,8400/0,syringadenoma
+"sweat gland tumor, nos",8400/1,sweat gland tumor
+sweat gland adenocarcinoma,8400/3,sweat gland carcinoma
+sweat gland adenocarcinoma,8400/3,"sweat gland tumor, malignant"
+sweat gland adenocarcinoma,8400/3,malignant sweat gland tumor
+sweat gland adenocarcinoma,8400/3,sweat gland tumor malignant
+apocrine adenoma,8401/0,apocrine cystadenoma
+nodular hidradenoma,8402/0,eccrine acrospiroma
+nodular hidradenoma,8402/0,clear cell hidradenoma
+"nodular hidradenoma, malignant",8402/3,hidradenocarcinoma
+"nodular hidradenoma, malignant",8402/3,malignant nodular hidradenoma
+"nodular hidradenoma, malignant",8402/3,nodular hidradenoma malignant
+eccrine spiradenoma,8403/0,"spiradenoma, nos"
+eccrine spiradenoma,8403/0,spiradenoma
+hidrocystoma,8404/0,eccrine cystadenoma
+papillary hidradenoma,8405/0,hidradenoma papilliferum
+papillary syringadenoma,8406/0,papillary syringocystadenoma
+papillary syringadenoma,8406/0,syringocystadenoma papilliferum
+"syringoma, nos",8407/0,syringoma
+sclerosing sweat duct carcinoma,8407/3,syringomatous carcinoma
+sclerosing sweat duct carcinoma,8407/3,microcystic adnexal carcinoma
+eccrine papillary adenocarcinoma,8408/3,digital papillary adenocarcinoma
+"eccrine poroma, malignant",8409/3,porocarcinoma
+"eccrine poroma, malignant",8409/3,malignant eccrine poroma
+"eccrine poroma, malignant",8409/3,eccrine poroma malignant
+sebaceous adenoma,8410/0,sebaceous epithelioma
+sebaceous adenocarcinoma,8410/3,sebaceous carcinoma
+ceruminous adenocarcinoma,8420/3,ceruminous carcinoma
+"cystadenoma, nos",8440/0,"cystoma, nos"
+"cystadenoma, nos",8440/0,cystadenoma
+"cystadenoma, nos",8440/0,cystoma
+"cystadenocarcinoma, nos",8440/3,cystadenocarcinoma
+"serous cystadenoma, nos",8441/0,serous cystoma
+"serous cystadenoma, nos",8441/0,serous microcystic adenoma
+"serous cystadenoma, nos",8441/0,serous cystadenoma
+"serous cystadenocarcinoma, nos",8441/3,"serous adenocarcinoma, nos"
+"serous cystadenocarcinoma, nos",8441/3,"serous carcinoma, nos"
+"serous cystadenocarcinoma, nos",8441/3,serous cystadenocarcinoma
+"serous cystadenocarcinoma, nos",8441/3,serous adenocarcinoma
+"serous cystadenocarcinoma, nos",8441/3,serous carcinoma
+"serous cystadenoma, borderline malignancy",8442/1,"serous tumor, nos, of low malignant potential"
+"serous cystadenoma, borderline malignancy",8442/1,atypical proliferating serous tumor
+"serous cystadenoma, borderline malignancy",8442/1,borderline malignancy serous cystadenoma
+"serous cystadenoma, borderline malignancy",8442/1,serous cystadenoma borderline malignancy
+"serous cystadenoma, borderline malignancy",8442/1,of low malignant potential serous tumor
+"serous cystadenoma, borderline malignancy",8442/1,serous tumor of low malignant potential
+clear cell cystic tumor of borderline malignancy,8444/1,atypical proliferating clear cell tumor
+"papillary cystadenoma, nos",8450/0,papillary cystadenoma
+"papillary cystadenocarcinoma, nos",8450/3,papillocystic adenocarcinoma
+"papillary cystadenocarcinoma, nos",8450/3,papillary cystadenocarcinoma
+"papillary cystadenoma, borderline malignancy",8451/1,borderline malignancy papillary cystadenoma
+"papillary cystadenoma, borderline malignancy",8451/1,papillary cystadenoma borderline malignancy
+solid pseudopapillary tumor,8452/1,papillary cystic tumor
+solid pseudopapillary tumor,8452/1,solid and papillary epithelial neoplasm
+solid pseudopapillary tumor,8452/1,solid and cystic tumor
+"intraductal papillary-mucinous carcinoma, non-invasive",8453/2,non-invasive intraductal papillary-mucinous carcinoma
+"intraductal papillary-mucinous carcinoma, non-invasive",8453/2,intraductal papillary-mucinous carcinoma non-invasive
+"intraductal papillary-mucinous carcinoma, invasive",8453/3,invasive intraductal papillary-mucinous carcinoma
+"intraductal papillary-mucinous carcinoma, invasive",8453/3,intraductal papillary-mucinous carcinoma invasive
+"papillary serous cystadenoma, nos",8460/0,papillary serous cystadenoma
+papillary serous cystadenocarcinoma,8460/3,papillary serous adenocarcinoma
+papillary serous cystadenocarcinoma,8460/3,micropapillary serous carcinoma
+serous surface papillary carcinoma,8461/3,primary serous papillary carcinoma of peritoneum
+serous papillary cystic tumor of borderline malignancy,8462/1,"papillary serous cystadenoma, borderline malignancy"
+serous papillary cystic tumor of borderline malignancy,8462/1,papillary serous tumor of low malignant potential
+serous papillary cystic tumor of borderline malignancy,8462/1,atypical proliferative papillary serous tumor
+serous papillary cystic tumor of borderline malignancy,8462/1,borderline malignancy papillary serous cystadenoma
+serous papillary cystic tumor of borderline malignancy,8462/1,papillary serous cystadenoma borderline malignancy
+"mucinous cystadenoma, nos",8470/0,mucinous cystoma
+"mucinous cystadenoma, nos",8470/0,"pseudomucinous cystadenoma, nos"
+"mucinous cystadenoma, nos",8470/0,mucinous cystadenoma
+"mucinous cystadenoma, nos",8470/0,pseudomucinous cystadenoma
+"mucinous cystadenocarcinoma, non-invasive",8470/2,non-invasive mucinous cystadenocarcinoma
+"mucinous cystadenocarcinoma, non-invasive",8470/2,mucinous cystadenocarcinoma non-invasive
+"mucinous cystadenocarcinoma, nos",8470/3,pseudomucinous adenocarcinoma
+"mucinous cystadenocarcinoma, nos",8470/3,"pseudomucinous cystadenocarcinoma, nos"
+"mucinous cystadenocarcinoma, nos",8470/3,mucinous cystadenocarcinoma
+"mucinous cystadenocarcinoma, nos",8470/3,pseudomucinous cystadenocarcinoma
+"papillary mucinous cystadenoma, nos",8471/0,"papillary pseudomucinous cystadenoma, nos"
+"papillary mucinous cystadenoma, nos",8471/0,papillary mucinous cystadenoma
+"papillary mucinous cystadenoma, nos",8471/0,papillary pseudomucinous cystadenoma
+papillary mucinous cystadenocarcinoma,8471/3,papillary pseudomucinous cystadenocarcinoma
+mucinous cystic tumor of borderline malignancy,8472/1,"mucinous cystadenoma, borderline malignancy"
+mucinous cystic tumor of borderline malignancy,8472/1,"pseudomucinous cystadenoma, borderline malignancy"
+mucinous cystic tumor of borderline malignancy,8472/1,"mucinous tumor, nos, of low malignant potential"
+mucinous cystic tumor of borderline malignancy,8472/1,atypical proliferative mucinous tumor
+mucinous cystic tumor of borderline malignancy,8472/1,borderline malignancy mucinous cystadenoma
+mucinous cystic tumor of borderline malignancy,8472/1,mucinous cystadenoma borderline malignancy
+mucinous cystic tumor of borderline malignancy,8472/1,borderline malignancy pseudomucinous cystadenoma
+mucinous cystic tumor of borderline malignancy,8472/1,pseudomucinous cystadenoma borderline malignancy
+mucinous cystic tumor of borderline malignancy,8472/1,of low malignant potential mucinous tumor
+mucinous cystic tumor of borderline malignancy,8472/1,mucinous tumor of low malignant potential
+"papillary mucinous cystadenoma, borderline malignancy",8473/1,"papillary pseudomucinous cystadenoma, borderline malignancy"
+"papillary mucinous cystadenoma, borderline malignancy",8473/1,papillary mucinous tumor of low malignant potential
+"papillary mucinous cystadenoma, borderline malignancy",8473/1,borderline malignancy papillary mucinous cystadenoma
+"papillary mucinous cystadenoma, borderline malignancy",8473/1,papillary mucinous cystadenoma borderline malignancy
+"papillary mucinous cystadenoma, borderline malignancy",8473/1,borderline malignancy papillary pseudomucinous cystadenoma
+"papillary mucinous cystadenoma, borderline malignancy",8473/1,papillary pseudomucinous cystadenoma borderline malignancy
+mucinous adenocarcinoma,8480/3,mucinous carcinoma
+mucinous adenocarcinoma,8480/3,colloid adenocarcinoma
+mucinous adenocarcinoma,8480/3,colloid carcinoma
+mucinous adenocarcinoma,8480/3,gelatinous adenocarcinoma
+mucinous adenocarcinoma,8480/3,gelatinous carcinoma
+mucinous adenocarcinoma,8480/3,mucoid adenocarcinoma
+mucinous adenocarcinoma,8480/3,mucoid carcinoma
+mucinous adenocarcinoma,8480/3,mucous adenocarcinoma
+mucinous adenocarcinoma,8480/3,mucous carcinoma
+mucinous adenocarcinoma,8480/3,pseudomyxoma peritonei with unknown primary site
+mucin-producing adenocarcinoma,8481/3,mucin-producing carcinoma
+mucin-producing adenocarcinoma,8481/3,mucin-secreting adenocarcinoma
+mucin-producing adenocarcinoma,8481/3,mucin-secreting carcinoma
+"mucinous adenocarcinoma, endocervical type",8482/3,endocervical type mucinous adenocarcinoma
+"mucinous adenocarcinoma, endocervical type",8482/3,mucinous adenocarcinoma endocervical type
+signet ring cell carcinoma,8490/3,signet ring cell adenocarcinoma
+metastatic signet ring cell carcinoma,8490/6,krukenberg tumor
+"intraductal carcinoma, noninfiltrating, nos",8500/2,"intraductal adenocarcinoma, noninfiltrating, nos"
+"intraductal carcinoma, noninfiltrating, nos",8500/2,"intraductal carcinoma, nos"
+"intraductal carcinoma, noninfiltrating, nos",8500/2,"ductal carcinoma in situ, nos"
+"intraductal carcinoma, noninfiltrating, nos",8500/2,"dcis, nos"
+"intraductal carcinoma, noninfiltrating, nos",8500/2,ductal intraepithelial neoplasia 3
+"intraductal carcinoma, noninfiltrating, nos",8500/2,din 3
+"intraductal carcinoma, noninfiltrating, nos",8500/2,noninfiltrating intraductal carcinoma
+"intraductal carcinoma, noninfiltrating, nos",8500/2,intraductal carcinoma noninfiltrating
+"intraductal carcinoma, noninfiltrating, nos",8500/2,noninfiltrating intraductal adenocarcinoma
+"intraductal carcinoma, noninfiltrating, nos",8500/2,intraductal adenocarcinoma noninfiltrating
+"intraductal carcinoma, noninfiltrating, nos",8500/2,intraductal carcinoma
+"intraductal carcinoma, noninfiltrating, nos",8500/2,ductal carcinoma in situ
+"intraductal carcinoma, noninfiltrating, nos",8500/2,dcis
+"infiltrating duct carcinoma, nos",8500/3,infiltrating duct adenocarcinoma
+"infiltrating duct carcinoma, nos",8500/3,"duct adenocarcinoma, nos"
+"infiltrating duct carcinoma, nos",8500/3,"duct carcinoma, nos"
+"infiltrating duct carcinoma, nos",8500/3,duct cell carcinoma
+"infiltrating duct carcinoma, nos",8500/3,"ductal carcinoma, nos"
+"infiltrating duct carcinoma, nos",8500/3,infiltrating duct carcinoma
+"infiltrating duct carcinoma, nos",8500/3,duct adenocarcinoma
+"infiltrating duct carcinoma, nos",8500/3,duct carcinoma
+"infiltrating duct carcinoma, nos",8500/3,ductal carcinoma
+"comedocarcinoma, noninfiltrating",8501/2,"ductal carcinoma in situ, comedo type"
+"comedocarcinoma, noninfiltrating",8501/2,"dcis, comedo type"
+"comedocarcinoma, noninfiltrating",8501/2,noninfiltrating comedocarcinoma
+"comedocarcinoma, noninfiltrating",8501/2,comedocarcinoma noninfiltrating
+"comedocarcinoma, noninfiltrating",8501/2,comedo type ductal carcinoma in situ
+"comedocarcinoma, noninfiltrating",8501/2,ductal carcinoma in situ comedo type
+"comedocarcinoma, noninfiltrating",8501/2,comedo type dcis
+"comedocarcinoma, noninfiltrating",8501/2,dcis comedo type
+"comedocarcinoma, nos",8501/3,comedocarcinoma
+secretory carcinoma of breast,8502/3,juvenile carcinoma of breast
+intraductal papilloma,8503/0,"duct adenoma, nos"
+intraductal papilloma,8503/0,ductal papilloma
+intraductal papilloma,8503/0,duct adenoma
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,noninfiltrating intraductal papillary carcinoma
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,"intraductal papillary adenocarcinoma, nos"
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,"intraductal papillary carcinoma, nos"
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,"ductal carcinoma in situ, papillary"
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,"dcis, papillary"
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,intraductal papillary adenocarcinoma
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,intraductal papillary carcinoma
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,papillary ductal carcinoma in situ
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,ductal carcinoma in situ papillary
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,papillary dcis
+noninfiltrating intraductal papillary adenocarcinoma,8503/2,dcis papillary
+intraductal papillary adenocarcinoma with invasion,8503/3,infiltrating papillary adenocarcinoma
+intraductal papillary adenocarcinoma with invasion,8503/3,infiltrating and papillary adenocarcinoma
+intracystic papillary adenoma,8504/0,intracystic papilloma
+"intracystic carcinoma, nos",8504/3,intracystic papillary adenocarcinoma
+"intracystic carcinoma, nos",8504/3,intracystic carcinoma
+"intraductal papillomatosis, nos",8505/0,diffuse intraductal papillomatosis
+"intraductal papillomatosis, nos",8505/0,intraductal papillomatosis
+adenoma of nipple,8506/0,subareolar duct papillomatosis
+intraductal micropapillary carcinoma,8507/2,"ductal carcinoma in situ, micropapillary"
+intraductal micropapillary carcinoma,8507/2,"intraductal carcinoma, clinging"
+intraductal micropapillary carcinoma,8507/2,micropapillary ductal carcinoma in situ
+intraductal micropapillary carcinoma,8507/2,ductal carcinoma in situ micropapillary
+intraductal micropapillary carcinoma,8507/2,clinging intraductal carcinoma
+intraductal micropapillary carcinoma,8507/2,intraductal carcinoma clinging
+"medullary carcinoma, nos",8510/3,medullary adenocarcinoma
+"medullary carcinoma, nos",8510/3,medullary carcinoma
+"duct carcinoma, desmoplastic type",8514/3,desmoplastic type duct carcinoma
+"duct carcinoma, desmoplastic type",8514/3,duct carcinoma desmoplastic type
+"lobular carcinoma in situ, nos",8520/2,"lobular carcinoma, noninfiltrating"
+"lobular carcinoma in situ, nos",8520/2,"lcis, nos"
+"lobular carcinoma in situ, nos",8520/2,lobular carcinoma in situ
+"lobular carcinoma in situ, nos",8520/2,noninfiltrating lobular carcinoma
+"lobular carcinoma in situ, nos",8520/2,lobular carcinoma noninfiltrating
+"lobular carcinoma in situ, nos",8520/2,lcis
+"lobular carcinoma, nos",8520/3,lobular adenocarcinoma
+"lobular carcinoma, nos",8520/3,"infiltrating lobular carcinoma, nos"
+"lobular carcinoma, nos",8520/3,lobular carcinoma
+"lobular carcinoma, nos",8520/3,infiltrating lobular carcinoma
+"liposarcoma, well differentiated",8851/3,"liposarcoma, differentiated"
+"liposarcoma, well differentiated",8851/3,lipoma-like liposarcoma
+"liposarcoma, well differentiated",8851/3,sclerosing  liposarcoma
+"liposarcoma, well differentiated",8851/3,inflammatory liposarcoma
+"liposarcoma, well differentiated",8851/3,well differentiated liposarcoma
+"liposarcoma, well differentiated",8851/3,liposarcoma well differentiated
+"liposarcoma, well differentiated",8851/3,differentiated liposarcoma
+"liposarcoma, well differentiated",8851/3,liposarcoma differentiated
+fibromyxolipoma,8852/0,myxolipoma
+myxoid liposarcoma,8852/3,myxoliposarcoma
+intramuscular lipoma,8856/0,infiltrating lipoma
+intramuscular lipoma,8856/0,infiltrating angiolipoma
+"angiolipoma, nos",8861/0,angiolipoma
+hibernoma,8880/0,fetal fat cell lipoma
+hibernoma,8880/0,brown fat tumor
+lipoblastomatosis,8881/0,"fetal lipoma, nos"
+lipoblastomatosis,8881/0,fetal lipomatosis
+lipoblastomatosis,8881/0,lipoblastoma
+lipoblastomatosis,8881/0,fetal lipoma
+"leiomyoma, nos",8890/0,fibroid uterus
+"leiomyoma, nos",8890/0,fibromyoma
+"leiomyoma, nos",8890/0,leiomyofibroma
+"leiomyoma, nos",8890/0,plexiform leiomyoma
+"leiomyoma, nos",8890/0,lipoleiomyoma
+"leiomyoma, nos",8890/0,leiomyoma
+"leiomyomatosis, nos",8890/1,intravascular leiomyomatosis
+"leiomyomatosis, nos",8890/1,leiomyomatosis
+"leiomyosarcoma, nos",8890/3,leiomyosarcoma
+epithelioid leiomyoma,8891/0,leiomyoblastoma
+bizarre leiomyoma,8893/0,symplastic leiomyoma
+bizarre leiomyoma,8893/0,atypical leiomyoma
+bizarre leiomyoma,8893/0,pleomorphic leiomyoma
+angiomyoma,8894/0,vascular leiomyoma
+angiomyoma,8894/0,angioleiomyoma
+smooth muscle tumor of uncertain malignant potential,8897/1,"smooth muscle tumor, nos"
+smooth muscle tumor of uncertain malignant potential,8897/1,smooth muscle tumor
+"rhabdomyoma, nos",8900/0,rhabdomyoma
+"rhabdomyosarcoma, nos",8900/3,rhabdosarcoma
+"rhabdomyosarcoma, nos",8900/3,rhabdomyosarcoma
+"pleomorphic rhabdomyosarcoma, adult type",8901/3,"pleomorphic rhabdomyosarcoma, nos"
+"pleomorphic rhabdomyosarcoma, adult type",8901/3,adult type pleomorphic rhabdomyosarcoma
+"pleomorphic rhabdomyosarcoma, adult type",8901/3,pleomorphic rhabdomyosarcoma adult type
+"pleomorphic rhabdomyosarcoma, adult type",8901/3,pleomorphic rhabdomyosarcoma
+mixed type rhabdomyosarcoma,8902/3,mixed embryonal rhabdomyosarcoma and alveolar rhabdomyosarcoma
+adult rhabdomyoma,8904/0,glycogenic rhabdomyoma
+"embryonal rhabdomyosarcoma, nos",8910/3,"embryonal rhabdomyosarcoma, pleomorphic"
+"embryonal rhabdomyosarcoma, nos",8910/3,sarcoma botryoides
+"embryonal rhabdomyosarcoma, nos",8910/3,botryoid sarcoma
+"embryonal rhabdomyosarcoma, nos",8910/3,embryonal rhabdomyosarcoma
+"embryonal rhabdomyosarcoma, nos",8910/3,pleomorphic embryonal rhabdomyosarcoma
+"embryonal rhabdomyosarcoma, nos",8910/3,embryonal rhabdomyosarcoma pleomorphic
+rhabdomyosarcoma with ganglionic differentiation,8921/3,ectomesenchymoma
+"endometrial stromal sarcoma, nos",8930/3,"endometrial sarcoma, nos"
+"endometrial stromal sarcoma, nos",8930/3,"endometrial stromal sarcoma, high grade"
+"endometrial stromal sarcoma, nos",8930/3,endometrial stromal sarcoma
+"endometrial stromal sarcoma, nos",8930/3,endometrial sarcoma
+"endometrial stromal sarcoma, nos",8930/3,high grade endometrial stromal sarcoma
+"endometrial stromal sarcoma, nos",8930/3,endometrial stromal sarcoma high grade
+"endometrial stromal sarcoma, low grade",8931/3,endolymphatic stromal myosis
+"endometrial stromal sarcoma, low grade",8931/3,endometrial stromatosis
+"endometrial stromal sarcoma, low grade",8931/3,stromal endometriosis
+"endometrial stromal sarcoma, low grade",8931/3,"stromal myosis, nos"
+"endometrial stromal sarcoma, low grade",8931/3,low grade endometrial stromal sarcoma
+"endometrial stromal sarcoma, low grade",8931/3,endometrial stromal sarcoma low grade
+"endometrial stromal sarcoma, low grade",8931/3,stromal myosis
+adenomyoma,8932/0,atypical polypoid adenomyoma
+"stromal tumor, benign",8935/0,benign stromal tumor
+"stromal tumor, benign",8935/0,stromal tumor benign
+"stromal tumor, nos",8935/1,stromal tumor
+"stromal sarcoma, nos",8935/3,stromal sarcoma
+ameloblastic odontosarcoma,9290/3,ameloblastic fibrodentinosarcoma
+ameloblastic odontosarcoma,9290/3,ameloblastic fibro-odontosarcoma
+adenomatoid odontogenic tumor,9300/0,adenoameloblastoma
+"ameloblastoma, nos",9310/0,"adamantinoma, nos"
+"ameloblastoma, nos",9310/0,ameloblastoma
+"ameloblastoma, nos",9310/0,adamantinoma
+"ameloblastoma, malignant",9310/3,"adamantinoma, malignant"
+"ameloblastoma, malignant",9310/3,malignant ameloblastoma
+"ameloblastoma, malignant",9310/3,ameloblastoma malignant
+"ameloblastoma, malignant",9310/3,malignant adamantinoma
+"ameloblastoma, malignant",9310/3,adamantinoma malignant
+odontogenic myxoma,9320/0,odontogenic myxofibroma
+central odontogenic fibroma,9321/0,"odontogenic fibroma, nos"
+central odontogenic fibroma,9321/0,odontogenic fibroma
+ameloblastic fibrosarcoma,9330/3,ameloblastic sarcoma
+ameloblastic fibrosarcoma,9330/3,odontogenic fibrosarcoma
+calcifying epithelial odontogenic tumor,9340/0,pindborg tumor
+craniopharyngioma,9350/1,rathke pouch tumor
+"craniopharyngioma, adamantinomatous",9351/1,adamantinomatous craniopharyngioma
+"craniopharyngioma, adamantinomatous",9351/1,craniopharyngioma adamantinomatous
+"craniopharyngioma, papillary",9352/1,papillary craniopharyngioma
+"craniopharyngioma, papillary",9352/1,craniopharyngioma papillary
+pineoblastoma,9362/3,mixed pineal tumor
+pineoblastoma,9362/3,mixed pineocytoma-pineoblastoma
+pineoblastoma,9362/3,pineal parenchymal tumor of intermediate differentiation
+pineoblastoma,9362/3,transitional pineal tumor
+melanotic neuroectodermal tumor,9363/0,retinal anlage tumor
+melanotic neuroectodermal tumor,9363/0,melanoameloblastoma
+melanotic neuroectodermal tumor,9363/0,melanotic progonoma
+peripheral neuroectodermal tumor,9364/3,"neuroectodermal tumor, nos"
+peripheral neuroectodermal tumor,9364/3,"peripheral primitive neuroectodermal tumor, nos"
+peripheral neuroectodermal tumor,9364/3,ppnet
+peripheral neuroectodermal tumor,9364/3,neuroectodermal tumor
+peripheral neuroectodermal tumor,9364/3,peripheral primitive neuroectodermal tumor
+"chordoma, nos",9370/3,chordoma
+"glioma, malignant",9380/3,"glioma, nos"
+"glioma, malignant",9380/3,malignant glioma
+"glioma, malignant",9380/3,glioma malignant
+"glioma, malignant",9380/3,glioma
+mixed glioma,9382/3,oligoastrocytoma
+mixed glioma,9382/3,anaplastic oligoastrocytoma
+subependymoma,9383/1,subependymal glioma
+subependymoma,9383/1,"subependymal astrocytoma, nos"
+subependymoma,9383/1,mixed subependymoma-ependymoma
+subependymoma,9383/1,subependymal astrocytoma
+"choroid plexus papilloma, nos",9390/0,choroid plexus papilloma
+choroid plexus carcinoma,9390/3,"choroid plexus papilloma, anaplastic"
+choroid plexus carcinoma,9390/3,"choroid plexus papilloma, malignant"
+choroid plexus carcinoma,9390/3,anaplastic choroid plexus papilloma
+choroid plexus carcinoma,9390/3,choroid plexus papilloma anaplastic
+choroid plexus carcinoma,9390/3,malignant choroid plexus papilloma
+choroid plexus carcinoma,9390/3,choroid plexus papilloma malignant
+"ependymoma, nos",9391/3,epithelial ependymoma
+"ependymoma, nos",9391/3,cellular ependymoma
+"ependymoma, nos",9391/3,clear cell ependymoma
+"ependymoma, nos",9391/3,tanycytic ependymoma
+"ependymoma, nos",9391/3,ependymoma
+infiltrating duct and lobular carcinoma,8522/3,lobular and ductal carcinoma
+infiltrating duct and lobular carcinoma,8522/3,infiltrating duct and lobular carcinoma in situ
+infiltrating duct and lobular carcinoma,8522/3,intraductal and lobular carcinoma
+infiltrating duct and lobular carcinoma,8522/3,infiltrating lobular carcinoma and ductal carcinoma in situ
+infiltrating duct mixed with other types of carcinoma,8523/3,infiltrating duct and cribriform carcinoma
+infiltrating duct mixed with other types of carcinoma,8523/3,infiltrating duct and mucinous carcinoma
+infiltrating duct mixed with other types of carcinoma,8523/3,infiltrating duct and tubular carcinoma
+infiltrating duct mixed with other types of carcinoma,8523/3,infiltrating duct and colloid carcinoma
+polymorphous low grade adenocarcinoma,8525/3,terminal duct adenocarcinoma
+inflammatory carcinoma,8530/3,inflammatory adenocarcinoma
+"paget disease, mammary",8540/3,paget disease of breast
+"paget disease, mammary",8540/3,mammary paget disease
+"paget disease, mammary",8540/3,paget disease mammary
+"paget disease, extramammary",8542/3,extramammary paget disease
+"paget disease, extramammary",8542/3,paget disease extramammary
+acinar cell adenoma,8550/0,acinar adenoma
+acinar cell adenoma,8550/0,acinic cell adenoma
+acinar cell tumor,8550/1,acinic cell tumor
+acinar cell carcinoma,8550/3,acinic cell adenocarcinoma
+acinar cell carcinoma,8550/3,acinar adenocarcinoma
+acinar cell carcinoma,8550/3,acinar carcinoma
+adenosquamous carcinoma,8560/3,mixed adenocarcinoma and squamous cell carcinoma
+adenosquamous carcinoma,8560/3,mixed adenocarcinoma and epidermoid carcinoma
+adenolymphoma,8561/0,papillary cystadenoma lymphomatosum
+adenolymphoma,8561/0,warthin tumor
+adenocarcinoma with squamous metaplasia,8570/3,adenoacanthoma
+adenocarcinoma with cartilaginous and osseous metaplasia,8571/3,adenocarcinoma with cartilaginous metaplasia
+adenocarcinoma with cartilaginous and osseous metaplasia,8571/3,adenocarcinoma with osseous metaplasia
+adenocarcinoma with apocrine metaplasia,8573/3,carcinoma with apocrine metaplasia
+adenocarcinoma with neuroendocrine differentiation,8574/3,carcinoma with neuroendocrine differentiation
+"metaplastic carcinoma, nos",8575/3,metaplastic carcinoma
+hepatoid adenocarcinoma,8576/3,hepatoid carcinoma
+"thymoma, benign",8580/0,benign thymoma
+"thymoma, benign",8580/0,thymoma benign
+"thymoma, nos",8580/1,thymoma
+"thymoma, malignant, nos",8580/3,malignant thymoma
+"thymoma, malignant, nos",8580/3,thymoma malignant
+"thymoma, type a, nos",8581/1,"thymoma, spindle cell, nos"
+"thymoma, type a, nos",8581/1,"thymoma, medullary, nos"
+"thymoma, type a, nos",8581/1,type a thymoma
+"thymoma, type a, nos",8581/1,thymoma type a
+"thymoma, type a, nos",8581/1,spindle cell thymoma
+"thymoma, type a, nos",8581/1,thymoma spindle cell
+"thymoma, type a, nos",8581/1,medullary thymoma
+"thymoma, type a, nos",8581/1,thymoma medullary
+"thymoma, type a, malignant",8581/3,"thymoma, spindle cell, malignant"
+"thymoma, type a, malignant",8581/3,"thymoma, medullary, malignant"
+"thymoma, type a, malignant",8581/3,malignant type a thymoma
+"thymoma, type a, malignant",8581/3,thymoma type a malignant
+"thymoma, type a, malignant",8581/3,malignant spindle cell thymoma
+"thymoma, type a, malignant",8581/3,thymoma spindle cell malignant
+"thymoma, type a, malignant",8581/3,malignant medullary thymoma
+"thymoma, type a, malignant",8581/3,thymoma medullary malignant
+"thymoma, type ab, nos",8582/1,"thymoma, mixed type, nos"
+"thymoma, type ab, nos",8582/1,type ab thymoma
+"thymoma, type ab, nos",8582/1,thymoma type ab
+"thymoma, type ab, nos",8582/1,mixed type thymoma
+"thymoma, type ab, nos",8582/1,thymoma mixed type
+"thymoma, type ab, malignant",8582/3,"thymoma, mixed type, malignant"
+"thymoma, type ab, malignant",8582/3,malignant type ab thymoma
+"thymoma, type ab, malignant",8582/3,thymoma type ab malignant
+"thymoma, type ab, malignant",8582/3,malignant mixed type thymoma
+"thymoma, type ab, malignant",8582/3,thymoma mixed type malignant
+"thymoma, type b1, nos",8583/1,"thymoma, lymphocyte-rich, nos"
+"thymoma, type b1, nos",8583/1,"thymoma, lymphocytic, nos"
+"thymoma, type b1, nos",8583/1,"thymoma, predominantly cortical, nos"
+"thymoma, type b1, nos",8583/1,"thymoma, organoid, nos"
+"thymoma, type b1, nos",8583/1,type b1 thymoma
+"thymoma, type b1, nos",8583/1,thymoma type b1
+"thymoma, type b1, nos",8583/1,lymphocyte-rich thymoma
+"thymoma, type b1, nos",8583/1,thymoma lymphocyte-rich
+"thymoma, type b1, nos",8583/1,lymphocytic thymoma
+"thymoma, type b1, nos",8583/1,thymoma lymphocytic
+"thymoma, type b1, nos",8583/1,predominantly cortical thymoma
+"thymoma, type b1, nos",8583/1,thymoma predominantly cortical
+"thymoma, type b1, nos",8583/1,organoid thymoma
+"thymoma, type b1, nos",8583/1,thymoma organoid
+"thymoma, type b1, malignant",8583/3,"thymoma, lymphocyte-rich, malignant"
+"thymoma, type b1, malignant",8583/3,"thymoma, lymphocytic, malignant"
+"thymoma, type b1, malignant",8583/3,"thymoma, predominantly cortical, malignant"
+"thymoma, type b1, malignant",8583/3,"thymoma, organoid, malignant"
+"thymoma, type b1, malignant",8583/3,malignant type b1 thymoma
+"thymoma, type b1, malignant",8583/3,thymoma type b1 malignant
+"thymoma, type b1, malignant",8583/3,malignant lymphocyte-rich thymoma
+"thymoma, type b1, malignant",8583/3,thymoma lymphocyte-rich malignant
+"thymoma, type b1, malignant",8583/3,malignant lymphocytic thymoma
+"thymoma, type b1, malignant",8583/3,thymoma lymphocytic malignant
+"thymoma, type b1, malignant",8583/3,malignant predominantly cortical thymoma
+"thymoma, type b1, malignant",8583/3,thymoma predominantly cortical malignant
+"thymoma, type b1, malignant",8583/3,malignant organoid thymoma
+"thymoma, type b1, malignant",8583/3,thymoma organoid malignant
+"thymoma, type b2, nos",8584/1,"thymoma, cortical, nos"
+"thymoma, type b2, nos",8584/1,type b2 thymoma
+"thymoma, type b2, nos",8584/1,thymoma type b2
+"thymoma, type b2, nos",8584/1,cortical thymoma
+"thymoma, type b2, nos",8584/1,thymoma cortical
+"thymoma, type b2, malignant",8584/3,"thymoma, cortical, malignant"
+"thymoma, type b2, malignant",8584/3,malignant type b2 thymoma
+"thymoma, type b2, malignant",8584/3,thymoma type b2 malignant
+"thymoma, type b2, malignant",8584/3,malignant cortical thymoma
+"thymoma, type b2, malignant",8584/3,thymoma cortical malignant
+"thymoma, type b3, nos",8585/1,"thymoma, epithelial, nos"
+"thymoma, type b3, nos",8585/1,"thymoma, atypical, nos"
+"thymoma, type b3, nos",8585/1,type b3 thymoma
+"thymoma, type b3, nos",8585/1,thymoma type b3
+"thymoma, type b3, nos",8585/1,epithelial thymoma
+"thymoma, type b3, nos",8585/1,thymoma epithelial
+"thymoma, type b3, nos",8585/1,atypical thymoma
+"thymoma, type b3, nos",8585/1,thymoma atypical
+"thymoma, type b3, malignant",8585/3,"thymoma, epithelial, malignant"
+"thymoma, type b3, malignant",8585/3,"thymoma, atypical, malignant"
+"thymoma, type b3, malignant",8585/3,well differentiated thymic carcinoma
+"thymoma, type b3, malignant",8585/3,malignant type b3 thymoma
+"thymoma, type b3, malignant",8585/3,thymoma type b3 malignant
+"thymoma, type b3, malignant",8585/3,malignant epithelial thymoma
+"thymoma, type b3, malignant",8585/3,thymoma epithelial malignant
+"thymoma, type b3, malignant",8585/3,malignant atypical thymoma
+"thymoma, type b3, malignant",8585/3,thymoma atypical malignant
+"thymic carcinoma, nos",8586/3,"thymoma, type c"
+"thymic carcinoma, nos",8586/3,thymic carcinoma
+"thymic carcinoma, nos",8586/3,type c thymoma
+"thymic carcinoma, nos",8586/3,thymoma type c
+spindle epithelial tumor with thymus-like element,8588/3,spindle epithelial tumor with thymus-like differentiation
+spindle epithelial tumor with thymus-like element,8588/3,settle
+carcinoma showing thymus-like element,8589/3,carcinoma showing thymus-like differentiation
+carcinoma showing thymus-like element,8589/3,castle
+"sex cord-gonadal stromal tumor, nos",8590/1,"gonadal stromal tumor, nos"
+"sex cord-gonadal stromal tumor, nos",8590/1,testicular stromal tumor
+"sex cord-gonadal stromal tumor, nos",8590/1,ovarian stromal tumor
+"sex cord-gonadal stromal tumor, nos",8590/1,"sex cord tumor, nos"
+"sex cord-gonadal stromal tumor, nos",8590/1,sex cord-gonadal stromal tumor
+"sex cord-gonadal stromal tumor, nos",8590/1,gonadal stromal tumor
+"sex cord-gonadal stromal tumor, nos",8590/1,sex cord tumor
+"sex cord-gonadal stromal tumor, incompletely differentiated",8591/1,incompletely differentiated sex cord-gonadal stromal tumor
+"sex cord-gonadal stromal tumor, incompletely differentiated",8591/1,sex cord-gonadal stromal tumor incompletely differentiated
+"sex cord-gonadal stromal tumor, mixed forms",8592/1,mixed forms sex cord-gonadal stromal tumor
+"sex cord-gonadal stromal tumor, mixed forms",8592/1,sex cord-gonadal stromal tumor mixed forms
+"thecoma, nos",8600/0,theca cell tumor
+"thecoma, nos",8600/0,thecoma
+"thecoma, malignant",8600/3,malignant thecoma
+"thecoma, malignant",8600/3,thecoma malignant
+"thecoma, luteinized",8601/0,luteinized thecoma
+"thecoma, luteinized",8601/0,thecoma luteinized
+"luteoma, nos",8610/0,luteinoma
+"luteoma, nos",8610/0,luteoma
+"granulosa cell tumor, adult type",8620/1,"granulosa cell tumor, nos"
+"granulosa cell tumor, adult type",8620/1,adult type granulosa cell tumor
+"granulosa cell tumor, adult type",8620/1,granulosa cell tumor adult type
+"granulosa cell tumor, adult type",8620/1,granulosa cell tumor
+"granulosa cell tumor, malignant",8620/3,granulosa cell carcinoma
+"granulosa cell tumor, malignant",8620/3,"granulosa cell tumor, sarcomatoid"
+"granulosa cell tumor, malignant",8620/3,malignant granulosa cell tumor
+"granulosa cell tumor, malignant",8620/3,granulosa cell tumor malignant
+"granulosa cell tumor, malignant",8620/3,sarcomatoid granulosa cell tumor
+"granulosa cell tumor, malignant",8620/3,granulosa cell tumor sarcomatoid
+granulosa cell-theca cell tumor,8621/1,theca cell-granulosa cell tumor
+"granulosa cell tumor, juvenile",8622/1,juvenile granulosa cell tumor
+"granulosa cell tumor, juvenile",8622/1,granulosa cell tumor juvenile
+"androblastoma, benign",8630/0,"arrhenoblastoma, benign"
+"androblastoma, benign",8630/0,benign androblastoma
+"androblastoma, benign",8630/0,androblastoma benign
+"androblastoma, benign",8630/0,benign arrhenoblastoma
+"androblastoma, benign",8630/0,arrhenoblastoma benign
+"androblastoma, nos",8630/1,"arrhenoblastoma, nos"
+"androblastoma, nos",8630/1,androblastoma
+"androblastoma, nos",8630/1,arrhenoblastoma
+"androblastoma, malignant",8630/3,"arrhenoblastoma, malignant"
+"androblastoma, malignant",8630/3,malignant androblastoma
+"androblastoma, malignant",8630/3,androblastoma malignant
+"androblastoma, malignant",8630/3,malignant arrhenoblastoma
+"androblastoma, malignant",8630/3,arrhenoblastoma malignant
+"sertoli-leydig cell tumor, well differentiated",8631/0,well differentiated sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, well differentiated",8631/0,sertoli-leydig cell tumor well differentiated
+sertoli-leydig cell tumor of intermediate differentiation,8631/1,"sertoli-leydig cell tumor, nos"
+sertoli-leydig cell tumor of intermediate differentiation,8631/1,sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, poorly differentiated",8631/3,"sertoli-leydig cell tumor, sarcomatoid"
+"sertoli-leydig cell tumor, poorly differentiated",8631/3,poorly differentiated sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, poorly differentiated",8631/3,sertoli-leydig cell tumor poorly differentiated
+"sertoli-leydig cell tumor, poorly differentiated",8631/3,sarcomatoid sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, poorly differentiated",8631/3,sertoli-leydig cell tumor sarcomatoid
+"sertoli-leydig cell tumor, retiform",8633/1,retiform sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, retiform",8633/1,sertoli-leydig cell tumor retiform
+"sertoli-leydig cell tumor, intermediate differentiation, with heterologous elements",8634/1,"sertoli-leydig cell tumor, retiform, with heterologous elements"
+"sertoli-leydig cell tumor, intermediate differentiation, with heterologous elements",8634/1,with heterologous elements intermediate differentiation sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, intermediate differentiation, with heterologous elements",8634/1,sertoli-leydig cell tumor intermediate differentiation with heterologous elements
+"sertoli-leydig cell tumor, intermediate differentiation, with heterologous elements",8634/1,with heterologous elements retiform sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, intermediate differentiation, with heterologous elements",8634/1,sertoli-leydig cell tumor retiform with heterologous elements
+"sertoli-leydig cell tumor, poorly differentiated, with heterologous elements","8634/3""",with heterologous elements poorly differentiated sertoli-leydig cell tumor
+"sertoli-leydig cell tumor, poorly differentiated, with heterologous elements","8634/3""",sertoli-leydig cell tumor poorly differentiated with heterologous elements
+"sertoli cell tumor, nos",8640/1,pick tubular adenoma
+"sertoli cell tumor, nos",8640/1,sertoli cell adenoma
+"sertoli cell tumor, nos",8640/1,"tubular androblastoma, nos"
+"sertoli cell tumor, nos",8640/1,testicular adenoma
+"sertoli cell tumor, nos",8640/1,sertoli cell tumor
+"sertoli cell tumor, nos",8640/1,tubular androblastoma
+sertoli cell tumor with lipid storage,8641/0,folliculome lipidique
+sertoli cell tumor with lipid storage,8641/0,tubular androblastoma with lipid storage
+sertoli cell tumor with lipid storage,8641/0,lipid-rich sertoli cell tumor
+"leydig cell tumor, benign",8650/0,"interstitial cell tumor, benign"
+"leydig cell tumor, benign",8650/0,benign leydig cell tumor
+"leydig cell tumor, benign",8650/0,leydig cell tumor benign
+"leydig cell tumor, benign",8650/0,benign interstitial cell tumor
+"leydig cell tumor, benign",8650/0,interstitial cell tumor benign
+"leydig cell tumor, nos",8650/1,"interstitial cell tumor, nos"
+"leydig cell tumor, nos",8650/1,leydig cell tumor
+"leydig cell tumor, nos",8650/1,interstitial cell tumor
+"leydig cell tumor, malignant",8650/3,"interstitial cell tumor, malignant"
+"leydig cell tumor, malignant",8650/3,malignant leydig cell tumor
+"leydig cell tumor, malignant",8650/3,leydig cell tumor malignant
+"leydig cell tumor, malignant",8650/3,malignant interstitial cell tumor
+"leydig cell tumor, malignant",8650/3,interstitial cell tumor malignant
+hilus cell tumor,8660/0,hilar cell tumor
+lipid cell tumor of ovary,8670/0,lipoid cell tumor of ovary
+lipid cell tumor of ovary,8670/0,"steroid cell tumor, nos"
+lipid cell tumor of ovary,8670/0,masculinovoblastoma
+lipid cell tumor of ovary,8670/0,steroid cell tumor
+"steroid cell tumor, malignant",8670/3,malignant steroid cell tumor
+"steroid cell tumor, malignant",8670/3,steroid cell tumor malignant
+"paraganglioma, benign",8680/0,benign paraganglioma
+"paraganglioma, benign",8680/0,paraganglioma benign
+"paraganglioma, nos",8680/1,paraganglioma
+"paraganglioma, malignant",8680/3,malignant paraganglioma
+"paraganglioma, malignant",8680/3,paraganglioma malignant
+"glomus jugulare tumor, nos",8690/1,jugular paraganglioma
+"glomus jugulare tumor, nos",8690/1,jugulotympanic paraganglioma
+"glomus jugulare tumor, nos",8690/1,glomus jugulare tumor
+aortic body tumor,8691/1,aortic body paraganglioma
+aortic body tumor,8691/1,aorticopulmonary paraganglioma
+carotid body tumor,8692/1,carotid body paraganglioma
+"extra-adrenal paraganglioma, nos",8693/1,"nonchromaffin paraganglioma, nos"
+"extra-adrenal paraganglioma, nos",8693/1,chemodectoma
+"extra-adrenal paraganglioma, nos",8693/1,extra-adrenal paraganglioma
+"extra-adrenal paraganglioma, nos",8693/1,nonchromaffin paraganglioma
+"extra-adrenal paraganglioma, malignant",8693/3,"nonchromaffin paraganglioma, malignant"
+"extra-adrenal paraganglioma, malignant",8693/3,malignant extra-adrenal paraganglioma
+"extra-adrenal paraganglioma, malignant",8693/3,extra-adrenal paraganglioma malignant
+"extra-adrenal paraganglioma, malignant",8693/3,malignant nonchromaffin paraganglioma
+"extra-adrenal paraganglioma, malignant",8693/3,nonchromaffin paraganglioma malignant
+"pheochromocytoma, nos",8700/0,adrenal medullary paraganglioma
+"pheochromocytoma, nos",8700/0,chromaffin paraganglioma
+"pheochromocytoma, nos",8700/0,chromaffin tumor
+"pheochromocytoma, nos",8700/0,chromaffinoma
+"pheochromocytoma, nos",8700/0,pheochromocytoma
+"pheochromocytoma, malignant",8700/3,"adrenal medullary paraganglioma, malignant"
+"pheochromocytoma, malignant",8700/3,pheochromoblastoma
+"pheochromocytoma, malignant",8700/3,malignant pheochromocytoma
+"pheochromocytoma, malignant",8700/3,pheochromocytoma malignant
+"pheochromocytoma, malignant",8700/3,malignant adrenal medullary paraganglioma
+"pheochromocytoma, malignant",8700/3,adrenal medullary paraganglioma malignant
+glomangiosarcoma,8710/3,glomoid sarcoma
+"glomus tumor, nos",8711/0,glomus tumor
+"glomus tumor, malignant",8711/3,malignant glomus tumor
+"glomus tumor, malignant",8711/3,glomus tumor malignant
+"pigmented nevus, nos",8720/0,"nevus, nos"
+"pigmented nevus, nos",8720/0,melanocytic nevus
+"pigmented nevus, nos",8720/0,hairy nevus
+"pigmented nevus, nos",8720/0,pigmented nevus
+"pigmented nevus, nos",8720/0,nevus
+"malignant melanoma, nos",8720/3,"melanoma, nos"
+"malignant melanoma, nos",8720/3,malignant melanoma
+"malignant melanoma, nos",8720/3,melanoma
+halo nevus,8723/0,regressing nevus
+"malignant melanoma, regressing",8723/3,regressing malignant melanoma
+"malignant melanoma, regressing",8723/3,malignant melanoma regressing
+magnocellular nevus,8726/0,"melanocytoma, eyeball"
+magnocellular nevus,8726/0,"melanocytoma, nos"
+magnocellular nevus,8726/0,eyeball melanocytoma
+magnocellular nevus,8726/0,melanocytoma eyeball
+magnocellular nevus,8726/0,melanocytoma
+nonpigmented nevus,8730/0,achromic nevus
+"junctional nevus, nos",8740/0,junction nevus
+"junctional nevus, nos",8740/0,intraepidermal nevus
+"junctional nevus, nos",8740/0,junctional nevus
+"precancerous melanosis, nos",8741/2,precancerous melanosis
+lentigo maligna,8742/2,"hutchinson melanotic freckle, nos"
+lentigo maligna,8742/2,hutchinson melanotic freckle
+lentigo maligna melanoma,8742/3,malignant melanoma in hutchinson melanotic freckle
+"acral lentiginous melanoma, malignant",8744/3,malignant acral lentiginous melanoma
+"acral lentiginous melanoma, malignant",8744/3,acral lentiginous melanoma malignant
+"desmoplastic melanoma, malignant",8745/3,"neurotropic melanoma, malignant"
+"desmoplastic melanoma, malignant",8745/3,"desmoplastic melanoma, amelanotic"
+"desmoplastic melanoma, malignant",8745/3,malignant desmoplastic melanoma
+"desmoplastic melanoma, malignant",8745/3,desmoplastic melanoma malignant
+"desmoplastic melanoma, malignant",8745/3,malignant neurotropic melanoma
+"desmoplastic melanoma, malignant",8745/3,neurotropic melanoma malignant
+"desmoplastic melanoma, malignant",8745/3,amelanotic desmoplastic melanoma
+"desmoplastic melanoma, malignant",8745/3,desmoplastic melanoma amelanotic
+intradermal nevus,8750/0,dermal nevus
+compound nevus,8760/0,dermal and epidermal nevus
+"giant pigmented nevus, nos",8761/1,intermediate and giant congenital nevus
+"giant pigmented nevus, nos",8761/1,giant pigmented nevus
+malignant melanoma in giant pigmented nevus,8761/3,malignant melanoma in congenital melanocytic nevus
+epithelioid and spindle cell nevus,8770/0,juvenile nevus
+epithelioid and spindle cell nevus,8770/0,juvenile melanoma
+epithelioid and spindle cell nevus,8770/0,spitz nevus
+epithelioid and spindle cell nevus,8770/0,pigmented spindle cell nevus of reed
+"spindle cell nevus, nos",8772/0,spindle cell nevus
+"spindle cell melanoma, nos",8772/3,spindle cell melanoma
+"spindle cell melanoma, type a",8773/3,type a spindle cell melanoma
+"spindle cell melanoma, type a",8773/3,spindle cell melanoma type a
+"spindle cell melanoma, type b",8774/3,type b spindle cell melanoma
+"spindle cell melanoma, type b",8774/3,spindle cell melanoma type b
+"blue nevus, nos",8780/0,jadassohn blue nevus
+"blue nevus, nos",8780/0,blue nevus
+"blue nevus, malignant",8780/3,malignant blue nevus
+"blue nevus, malignant",8780/3,blue nevus malignant
+"soft tissue tumor, benign",8800/0,benign soft tissue tumor
+"soft tissue tumor, benign",8800/0,soft tissue tumor benign
+"sarcoma, nos",8800/3,soft tissue sarcoma
+"sarcoma, nos",8800/3,"soft tissue tumor, malignant"
+"sarcoma, nos",8800/3,"mesenchymal tumor, malignant"
+"sarcoma, nos",8800/3,sarcoma
+"sarcoma, nos",8800/3,malignant soft tissue tumor
+"sarcoma, nos",8800/3,soft tissue tumor malignant
+"sarcoma, nos",8800/3,malignant mesenchymal tumor
+"sarcoma, nos",8800/3,mesenchymal tumor malignant
+"sarcomatosis, nos",8800/9,sarcomatosis
+giant cell sarcoma,8802/3,pleomorphic cell sarcoma
+small cell sarcoma,8803/3,round cell sarcoma
+epithelioid sarcoma,8804/3,epithelioid cell sarcoma
+"fibroma, nos",8810/0,fibroma
+"fibrosarcoma, nos",8810/3,fibrosarcoma
+fibromyxoma,8811/0,myxoid fibroma
+fibromyxoma,8811/0,"myxofibroma, nos"
+fibromyxoma,8811/0,myxofibroma
+periosteal fibrosarcoma,8812/3,"periosteal sarcoma, nos"
+periosteal fibrosarcoma,8812/3,periosteal sarcoma
+infantile fibrosarcoma,8814/3,congenital fibrosarcoma
+solitary fibrous tumor,8815/0,localized fibrous tumor
+"solitary fibrous tumor, malignant",8815/3,malignant solitary fibrous tumor
+"solitary fibrous tumor, malignant",8815/3,solitary fibrous tumor malignant
+aggressive fibromatosis,8821/1,extra-abdominal desmoid
+aggressive fibromatosis,8821/1,"desmoid, nos"
+aggressive fibromatosis,8821/1,invasive fibroma
+aggressive fibromatosis,8821/1,desmoid
+abdominal fibromatosis,8822/1,abdominal desmoid
+abdominal fibromatosis,8822/1,mesenteric fibromatosis
+abdominal fibromatosis,8822/1,retroperitoneal fibromatosis
+myofibromatosis,8824/1,congenital generalized fibromatosis
+myofibromatosis,8824/1,infantile myofibromatosis
+"myofibroblastic tumor, nos",8825/1,inflammatory myofibroblastic tumor
+"myofibroblastic tumor, nos",8825/1,myofibroblastic tumor
+"myofibroblastic tumor, peribronchial",8827/1,congenital peribronchial myofibroblastic tumor
+"myofibroblastic tumor, peribronchial",8827/1,peribronchial myofibroblastic tumor
+"myofibroblastic tumor, peribronchial",8827/1,myofibroblastic tumor peribronchial
+benign fibrous histiocytoma,8830/0,"fibrous histiocytoma, nos"
+benign fibrous histiocytoma,8830/0,"fibroxanthoma, nos"
+benign fibrous histiocytoma,8830/0,xanthofibroma
+benign fibrous histiocytoma,8830/0,fibrous histiocytoma
+benign fibrous histiocytoma,8830/0,fibroxanthoma
+atypical fibrous histiocytoma,8830/1,atypical fibroxanthoma
+malignant fibrous histiocytoma,8830/3,"fibroxanthoma, malignant"
+malignant fibrous histiocytoma,8830/3,malignant fibroxanthoma
+malignant fibrous histiocytoma,8830/3,fibroxanthoma malignant
+"histiocytoma, nos",8831/0,deep histiocytoma
+"histiocytoma, nos",8831/0,juvenile histiocytoma
+"histiocytoma, nos",8831/0,reticulohistiocytoma
+"histiocytoma, nos",8831/0,histiocytoma
+"dermatofibroma, nos",8832/0,sclerosing hemangioma
+"dermatofibroma, nos",8832/0,"cutaneous histiocytoma, nos"
+"dermatofibroma, nos",8832/0,subepidermal nodular fibrosis
+"dermatofibroma, nos",8832/0,dermatofibroma lenticulare
+"dermatofibroma, nos",8832/0,dermatofibroma
+"dermatofibroma, nos",8832/0,cutaneous histiocytoma
+"dermatofibrosarcoma, nos",8832/3,"dermatofibrosarcoma protuberans, nos"
+"dermatofibrosarcoma, nos",8832/3,dermatofibrosarcoma
+"dermatofibrosarcoma, nos",8832/3,dermatofibrosarcoma protuberans
+pigmented dermatofibrosarcoma protuberans,8833/3,bednar tumor
+"myxoma, nos",8840/0,myxoma
+angiomyxoma,8841/1,aggressive angiomyxoma
+"lipoma, nos",8850/0,lipoma
+atypical lipoma/j,8850/1,superficial well differentated liposarcoma
+atypical lipoma/j,8850/1,well differentiated liposarcoma of superficial soft tissue
+"liposarcoma, nos",8850/3,fibroliposarcoma
+"liposarcoma, nos",8850/3,liposarcoma
+"gastrointestinal stromal tumor, benign",8936/0,"gist, benign"
+"gastrointestinal stromal tumor, benign",8936/0,benign gastrointestinal stromal tumor
+"gastrointestinal stromal tumor, benign",8936/0,gastrointestinal stromal tumor benign
+"gastrointestinal stromal tumor, benign",8936/0,benign gist
+"gastrointestinal stromal tumor, benign",8936/0,gist benign
+"gastrointestinal stromal tumor, nos",8936/1,"gist, nos"
+"gastrointestinal stromal tumor, nos",8936/1,"gastrointestinal stromal tumor, uncertain malignant potential"
+"gastrointestinal stromal tumor, nos",8936/1,gastrointestinal autonomic nerve tumor
+"gastrointestinal stromal tumor, nos",8936/1,gant
+"gastrointestinal stromal tumor, nos",8936/1,gastrointestinal pacemaker cell tumor
+"gastrointestinal stromal tumor, nos",8936/1,gastrointestinal stromal tumor
+"gastrointestinal stromal tumor, nos",8936/1,gist
+"gastrointestinal stromal tumor, nos",8936/1,uncertain malignant potential gastrointestinal stromal tumor
+"gastrointestinal stromal tumor, nos",8936/1,gastrointestinal stromal tumor uncertain malignant potential
+gastrointestinal stromal sarcoma,8936/3,"gastrointestinal stromal tumor, malignant"
+gastrointestinal stromal sarcoma,8936/3,"gist, malignant"
+gastrointestinal stromal sarcoma,8936/3,malignant gastrointestinal stromal tumor
+gastrointestinal stromal sarcoma,8936/3,gastrointestinal stromal tumor malignant
+gastrointestinal stromal sarcoma,8936/3,malignant gist
+gastrointestinal stromal sarcoma,8936/3,gist malignant
+pleomorphic adenoma,8940/0,"mixed tumor, nos"
+pleomorphic adenoma,8940/0,"mixed tumor, salivary gland type, nos"
+pleomorphic adenoma,8940/0,chondroid syringoma
+pleomorphic adenoma,8940/0,mixed tumor
+pleomorphic adenoma,8940/0,salivary gland type mixed tumor
+pleomorphic adenoma,8940/0,mixed tumor salivary gland type
+"mixed tumor, malignant, nos",8940/3,"mixed tumor, salivary gland type, malignant"
+"mixed tumor, malignant, nos",8940/3,malignant chondroid syringoma
+"mixed tumor, malignant, nos",8940/3,malignant mixed tumor
+"mixed tumor, malignant, nos",8940/3,mixed tumor malignant
+"mixed tumor, malignant, nos",8940/3,malignant salivary gland type mixed tumor
+"mixed tumor, malignant, nos",8940/3,mixed tumor salivary gland type malignant
+malignant cystic nephroma,8959/3,malignant multilocular cystic nephroma
+"nephroblastoma, nos",8960/3,wilms tumor
+"nephroblastoma, nos",8960/3,"nephroma, nos"
+"nephroblastoma, nos",8960/3,nephroblastoma
+"nephroblastoma, nos",8960/3,nephroma
+malignant rhabdoid tumor,8963/3,rhabdoid sarcoma
+malignant rhabdoid tumor,8963/3,"rhabdoid tumor, nos"
+malignant rhabdoid tumor,8963/3,rhabdoid tumor
+renomedullary interstitial cell tumor,8966/0,renomedullary fibroma
+hepatoblastoma,8970/3,embryonal hepatoma
+pulmonary blastoma,8972/3,pneumoblastoma
+"carcinosarcoma, nos",8980/3,carcinosarcoma
+"carcinosarcoma, embryonal",8981/3,embryonal carcinosarcoma
+"carcinosarcoma, embryonal",8981/3,carcinosarcoma embryonal
+myoepithelioma,8982/0,myoepithelial tumor
+myoepithelioma,8982/0,myoepithelial adenoma
+malignant myoepithelioma,8982/3,myoepithelial carcinoma
+"mesenchymoma, benign",8990/0,benign mesenchymoma
+"mesenchymoma, benign",8990/0,mesenchymoma benign
+"mesenchymoma, nos",8990/1,mixed mesenchymal tumor
+"mesenchymoma, nos",8990/1,mesenchymoma
+"mesenchymoma, malignant",8990/3,mixed mesenchymal sarcoma
+"mesenchymoma, malignant",8990/3,malignant mesenchymoma
+"mesenchymoma, malignant",8990/3,mesenchymoma malignant
+"brenner tumor, nos",9000/0,brenner tumor
+"brenner tumor, borderline malignancy",9000/1,"brenner tumor, proliferating"
+"brenner tumor, borderline malignancy",9000/1,borderline malignancy brenner tumor
+"brenner tumor, borderline malignancy",9000/1,brenner tumor borderline malignancy
+"brenner tumor, borderline malignancy",9000/1,proliferating brenner tumor
+"brenner tumor, borderline malignancy",9000/1,brenner tumor proliferating
+"brenner tumor, malignant",9000/3,malignant brenner tumor
+"brenner tumor, malignant",9000/3,brenner tumor malignant
+"fibroadenoma, nos",9010/0,fibroadenoma
+"adenofibroma, nos",9013/0,"cystadenofibroma, nos"
+"adenofibroma, nos",9013/0,papillary adenofibroma
+"adenofibroma, nos",9013/0,adenofibroma
+"adenofibroma, nos",9013/0,cystadenofibroma
+"serous adenofibroma, nos",9014/0,"serous cystadenofibroma, nos"
+"serous adenofibroma, nos",9014/0,serous adenofibroma
+"serous adenofibroma, nos",9014/0,serous cystadenofibroma
+serous adenofibroma of borderline malignancy,9014/1,serous cystadenofibroma of borderline malignancy
+serous adenocarcinofibroma,9014/3,malignant serous adenofibroma
+serous adenocarcinofibroma,9014/3,serous cystadenocarcinofibroma
+serous adenocarcinofibroma,9014/3,malignant serous cystadenofibroma
+"mucinous adenofibroma, nos",9015/0,"mucinous cystadenofibroma, nos"
+"mucinous adenofibroma, nos",9015/0,mucinous adenofibroma
+"mucinous adenofibroma, nos",9015/0,mucinous cystadenofibroma
+mucinous adenofibroma of borderline malignancy,9015/1,mucinous cystadenofibroma of borderline malignancy
+mucinous adenocarcinofibroma,9015/3,malignant mucinous adenofibroma
+mucinous adenocarcinofibroma,9015/3,mucinous cystadenocarcinofibroma
+mucinous adenocarcinofibroma,9015/3,malignant mucinous cystadenofibroma
+"phyllodes tumor, benign",9020/0,"cystosarcoma phyllodes, benign"
+"phyllodes tumor, benign",9020/0,benign phyllodes tumor
+"phyllodes tumor, benign",9020/0,phyllodes tumor benign
+"phyllodes tumor, benign",9020/0,benign cystosarcoma phyllodes
+"phyllodes tumor, benign",9020/0,cystosarcoma phyllodes benign
+"phyllodes tumor, borderline",9020/1,"cystosarcoma phyllodes, nos"
+"phyllodes tumor, borderline",9020/1,"phyllodes tumor, nos"
+"phyllodes tumor, borderline",9020/1,borderline phyllodes tumor
+"phyllodes tumor, borderline",9020/1,phyllodes tumor borderline
+"phyllodes tumor, borderline",9020/1,cystosarcoma phyllodes
+"phyllodes tumor, borderline",9020/1,phyllodes tumor
+"phyllodes tumor, malignant",9020/3,"cystosarcoma phyllodes, malignant"
+"phyllodes tumor, malignant",9020/3,malignant phyllodes tumor
+"phyllodes tumor, malignant",9020/3,phyllodes tumor malignant
+"phyllodes tumor, malignant",9020/3,malignant cystosarcoma phyllodes
+"phyllodes tumor, malignant",9020/3,cystosarcoma phyllodes malignant
+"synovioma, benign",9040/0,benign synovioma
+"synovioma, benign",9040/0,synovioma benign
+"synovial sarcoma, nos",9040/3,"synovioma, nos"
+"synovial sarcoma, nos",9040/3,"synovioma, malignant"
+"synovial sarcoma, nos",9040/3,synovial sarcoma
+"synovial sarcoma, nos",9040/3,synovioma
+"synovial sarcoma, nos",9040/3,malignant synovioma
+"synovial sarcoma, nos",9040/3,synovioma malignant
+"synovial sarcoma, spindle cell",9041/3,"synovial sarcoma, monophasic fibrous"
+"synovial sarcoma, spindle cell",9041/3,spindle cell synovial sarcoma
+"synovial sarcoma, spindle cell",9041/3,synovial sarcoma spindle cell
+"synovial sarcoma, spindle cell",9041/3,monophasic fibrous synovial sarcoma
+"synovial sarcoma, spindle cell",9041/3,synovial sarcoma monophasic fibrous
+"synovial sarcoma, epithelioid cell",9042/3,epithelioid cell synovial sarcoma
+"synovial sarcoma, epithelioid cell",9042/3,synovial sarcoma epithelioid cell
+"synovial sarcoma, biphasic",9043/3,biphasic synovial sarcoma
+"synovial sarcoma, biphasic",9043/3,synovial sarcoma biphasic
+"clear cell sarcoma, nos",9044/3,"clear cell sarcoma, of tendons and aponeuroses"
+"clear cell sarcoma, nos",9044/3,"melanoma, malignant, of soft parts"
+"clear cell sarcoma, nos",9044/3,clear cell sarcoma
+"clear cell sarcoma, nos",9044/3,of tendons and aponeuroses clear cell sarcoma
+"clear cell sarcoma, nos",9044/3,clear cell sarcoma of tendons and aponeuroses
+"clear cell sarcoma, nos",9044/3,of soft parts malignant melanoma
+"clear cell sarcoma, nos",9044/3,melanoma malignant of soft parts
+"mesothelioma, benign",9050/0,benign mesothelioma
+"mesothelioma, benign",9050/0,mesothelioma benign
+"mesothelioma, malignant",9050/3,"mesothelioma, nos"
+"mesothelioma, malignant",9050/3,malignant mesothelioma
+"mesothelioma, malignant",9050/3,mesothelioma malignant
+"mesothelioma, malignant",9050/3,mesothelioma
+"fibrous mesothelioma, benign",9051/0,benign fibrous mesothelioma
+"fibrous mesothelioma, benign",9051/0,fibrous mesothelioma benign
+"fibrous mesothelioma, malignant",9051/3,"fibrous mesothelioma, nos"
+"fibrous mesothelioma, malignant",9051/3,spindled mesothelioma
+"fibrous mesothelioma, malignant",9051/3,sarcomatoid mesothelioma
+"fibrous mesothelioma, malignant",9051/3,desmoplastic mesothelioma
+"fibrous mesothelioma, malignant",9051/3,malignant fibrous mesothelioma
+"fibrous mesothelioma, malignant",9051/3,fibrous mesothelioma malignant
+"fibrous mesothelioma, malignant",9051/3,fibrous mesothelioma
+"epithelioid mesothelioma, benign",9052/0,"well differentiated papillary mesothelioma, benign"
+"epithelioid mesothelioma, benign",9052/0,mesothelial papilloma
+"epithelioid mesothelioma, benign",9052/0,benign epithelioid mesothelioma
+"epithelioid mesothelioma, benign",9052/0,epithelioid mesothelioma benign
+"epithelioid mesothelioma, benign",9052/0,benign well differentiated papillary mesothelioma
+"epithelioid mesothelioma, benign",9052/0,well differentiated papillary mesothelioma benign
+"epithelioid mesothelioma, malignant",9052/3,"epithelioid mesothelioma, nos"
+"epithelioid mesothelioma, malignant",9052/3,malignant epithelioid mesothelioma
+"epithelioid mesothelioma, malignant",9052/3,epithelioid mesothelioma malignant
+"epithelioid mesothelioma, malignant",9052/3,epithelioid mesothelioma
+"mesothelioma, biphasic, malignant",9053/3,"mesothelioma, biphasic, nos"
+"mesothelioma, biphasic, malignant",9053/3,malignant biphasic mesothelioma
+"mesothelioma, biphasic, malignant",9053/3,mesothelioma biphasic malignant
+"mesothelioma, biphasic, malignant",9053/3,biphasic mesothelioma
+"mesothelioma, biphasic, malignant",9053/3,mesothelioma biphasic
+"adenomatoid tumor, nos",9054/0,adenomatoid tumor
+"multicystic mesothelioma, benign",9055/0,"cystic mesothelioma, benign"
+"multicystic mesothelioma, benign",9055/0,benign multicystic mesothelioma
+"multicystic mesothelioma, benign",9055/0,multicystic mesothelioma benign
+"multicystic mesothelioma, benign",9055/0,benign cystic mesothelioma
+"multicystic mesothelioma, benign",9055/0,cystic mesothelioma benign
+"cystic mesothelioma, nos",9055/1,cystic mesothelioma
+"seminoma, nos",9061/3,seminoma
+"seminoma, anaplastic",9062/3,seminoma with high mitotic index
+"seminoma, anaplastic",9062/3,anaplastic seminoma
+"seminoma, anaplastic",9062/3,seminoma anaplastic
+spermatocytic seminoma,9063/3,spermatocytoma
+intratubular malignant germ cells,9064/2,intratubular germ cell neoplasia
+germinoma,9064/3,"germ cell tumor, nos"
+germinoma,9064/3,germ cell tumor
+"germ cell tumor, nonseminomatous",9065/3,nonseminomatous germ cell tumor
+"germ cell tumor, nonseminomatous",9065/3,germ cell tumor nonseminomatous
+"embryonal carcinoma, nos",9070/3,embryonal adenocarcinoma
+"embryonal carcinoma, nos",9070/3,embryonal carcinoma
+yolk sac tumor,9071/3,endodermal sinus tumor
+yolk sac tumor,9071/3,polyvesicular vitelline tumor
+yolk sac tumor,9071/3,orchioblastoma
+yolk sac tumor,9071/3,"embryonal carcinoma, infantile"
+yolk sac tumor,9071/3,hepatoid yolk sac tumor
+yolk sac tumor,9071/3,infantile embryonal carcinoma
+yolk sac tumor,9071/3,embryonal carcinoma infantile
+polyembryoma,9072/3,"embryonal carcinoma, polyembryonal type"
+polyembryoma,9072/3,polyembryonal type embryonal carcinoma
+polyembryoma,9072/3,embryonal carcinoma polyembryonal type
+gonadoblastoma,9073/1,gonocytoma
+"teratoma, benign",9080/0,adult cystic teratoma
+"teratoma, benign",9080/0,"adult teratoma, nos"
+"teratoma, benign",9080/0,"cystic teratoma, nos"
+"teratoma, benign",9080/0,"teratoma, differentiated"
+"teratoma, benign",9080/0,mature teratoma
+"teratoma, benign",9080/0,benign teratoma
+"teratoma, benign",9080/0,teratoma benign
+"teratoma, benign",9080/0,adult teratoma
+"teratoma, benign",9080/0,cystic teratoma
+"teratoma, benign",9080/0,differentiated teratoma
+"teratoma, benign",9080/0,teratoma differentiated
+"teratoma, nos",9080/1,solid teratoma
+"teratoma, nos",9080/1,teratoma
+"teratoma, malignant, nos",9080/3,embryonal teratoma
+"teratoma, malignant, nos",9080/3,"teratoblastoma, malignant"
+"teratoma, malignant, nos",9080/3,"immature teratoma, malignant"
+"teratoma, malignant, nos",9080/3,"immature teratoma, nos"
+"teratoma, malignant, nos",9080/3,malignant teratoma
+"teratoma, malignant, nos",9080/3,teratoma malignant
+"teratoma, malignant, nos",9080/3,malignant teratoblastoma
+"teratoma, malignant, nos",9080/3,teratoblastoma malignant
+"teratoma, malignant, nos",9080/3,malignant immature teratoma
+"teratoma, malignant, nos",9080/3,immature teratoma malignant
+"teratoma, malignant, nos",9080/3,immature teratoma
+teratocarcinoma,9081/3,mixed embryonal carcinoma and teratoma
+"malignant teratoma, undifferentiated",9082/3,"malignant teratoma, anaplastic"
+"malignant teratoma, undifferentiated",9082/3,undifferentiated malignant teratoma
+"malignant teratoma, undifferentiated",9082/3,malignant teratoma undifferentiated
+"malignant teratoma, undifferentiated",9082/3,anaplastic malignant teratoma
+"malignant teratoma, undifferentiated",9082/3,malignant teratoma anaplastic
+"malignant teratoma, intermediate",9083/3,intermediate malignant teratoma
+"malignant teratoma, intermediate",9083/3,malignant teratoma intermediate
+"dermoid cyst, nos",9084/0,"dermoid, nos"
+"dermoid cyst, nos",9084/0,dermoid cyst
+"dermoid cyst, nos",9084/0,dermoid
+teratoma with malignant transformation,9084/3,dermoid cyst with malignant transformation
+teratoma with malignant transformation,9084/3,dermoid cyst with secondary tumor
+mixed germ cell tumor,9085/3,mixed teratoma and seminoma
+"struma ovarii, nos",9090/0,struma ovarii
+"struma ovarii, malignant",9090/3,malignant struma ovarii
+"struma ovarii, malignant",9090/3,struma ovarii malignant
+strumal carcinoid,9091/1,struma ovarii and carcinoid
+"hydatidiform mole, nos",9100/0,hydatid mole
+"hydatidiform mole, nos",9100/0,complete hydatidiform mole
+"hydatidiform mole, nos",9100/0,hydatidiform mole
+invasive hydatidiform mole,9100/1,chorioadenoma destruens
+invasive hydatidiform mole,9100/1,chorioadenoma
+invasive hydatidiform mole,9100/1,"invasive mole, nos"
+invasive hydatidiform mole,9100/1,malignant hydatidiform mole
+invasive hydatidiform mole,9100/1,invasive mole
+"choriocarcinoma, nos",9100/3,chorionepithelioma
+"choriocarcinoma, nos",9100/3,chorioepithelioma
+"choriocarcinoma, nos",9100/3,choriocarcinoma
+choriocarcinoma combined with other germ cell elements,9101/3,choriocarcinoma combined with teratoma
+choriocarcinoma combined with other germ cell elements,9101/3,choriocarcinoma combined with embryonal carcinoma
+"malignant teratoma, trophoblastic",9102/3,trophoblastic malignant teratoma
+"malignant teratoma, trophoblastic",9102/3,malignant teratoma trophoblastic
+"trophoblastic tumor, epithelioid",9105/3,epithelioid trophoblastic tumor
+"trophoblastic tumor, epithelioid",9105/3,trophoblastic tumor epithelioid
+"mesonephroma, benign",9110/0,mesonephric adenoma
+"mesonephroma, benign",9110/0,wolffian duct adenoma
+"mesonephroma, benign",9110/0,benign mesonephroma
+"mesonephroma, benign",9110/0,mesonephroma benign
+"mesonephric tumor, nos",9110/1,wolffian duct tumor
+"mesonephric tumor, nos",9110/1,mesonephric tumor
+"mesonephroma, malignant",9110/3,mesonephric adenocarcinoma
+"mesonephroma, malignant",9110/3,"mesonephroma, nos"
+"mesonephroma, malignant",9110/3,wolffian duct carcinoma
+"mesonephroma, malignant",9110/3,malignant mesonephroma
+"mesonephroma, malignant",9110/3,mesonephroma malignant
+"mesonephroma, malignant",9110/3,mesonephroma
+"hemangioma, nos",9120/0,"angioma, nos"
+"hemangioma, nos",9120/0,chorioangioma
+"hemangioma, nos",9120/0,hemangioma
+"hemangioma, nos",9120/0,angioma
+hemangiosarcoma,9120/3,angiosarcoma
+racemose hemangioma,9123/0,arteriovenous hemangioma
+epithelioid hemangioma,9125/0,histiocytoid hemangioma
+"hemangioendothelioma, benign",9130/0,benign hemangioendothelioma
+"hemangioendothelioma, benign",9130/0,hemangioendothelioma benign
+"hemangioendothelioma, nos",9130/1,angioendothelioma
+"hemangioendothelioma, nos",9130/1,kaposiform hemangioendothelioma
+"hemangioendothelioma, nos",9130/1,hemangioendothelioma
+"hemangioendothelioma, malignant",9130/3,hemangioendothelial sarcoma
+"hemangioendothelioma, malignant",9130/3,malignant hemangioendothelioma
+"hemangioendothelioma, malignant",9130/3,hemangioendothelioma malignant
+capillary hemangioma,9131/0,hemangioma simplex
+capillary hemangioma,9131/0,infantile hemangioma
+capillary hemangioma,9131/0,plexiform hemangioma
+capillary hemangioma,9131/0,juvenile hemangioma
+"epithelioid hemangioendothelioma, nos",9133/1,epithelioid hemangioendothelioma
+"epithelioid hemangioendothelioma, malignant",9133/3,intravascular bronchial alveolar tumor
+"epithelioid hemangioendothelioma, malignant",9133/3,malignant epithelioid hemangioendothelioma
+"epithelioid hemangioendothelioma, malignant",9133/3,epithelioid hemangioendothelioma malignant
+endovascular papillary angioendothelioma,9135/1,dabska tumor
+spindle cell hemangioendothelioma,9136/1,spindle cell angioendothelioma
+kaposi sarcoma,9140/3,multiple hemorrhagic sarcoma
+"hemangiopericytoma, benign",9150/0,benign hemangiopericytoma
+"hemangiopericytoma, benign",9150/0,hemangiopericytoma benign
+"hemangiopericytoma, nos",9150/1,hemangiopericytic meningioma
+"hemangiopericytoma, nos",9150/1,hemangiopericytoma
+"hemangiopericytoma, malignant",9150/3,malignant hemangiopericytoma
+"hemangiopericytoma, malignant",9150/3,hemangiopericytoma malignant
+"angiofibroma, nos",9160/0,juvenile angiofibroma
+"angiofibroma, nos",9160/0,fibrous papule of nose
+"angiofibroma, nos",9160/0,involuting nevus
+"angiofibroma, nos",9160/0,giant cell angiofibroma
+"angiofibroma, nos",9160/0,cellular angiofibroma
+"angiofibroma, nos",9160/0,angiofibroma
+hemangioblastoma,9161/1,angioblastoma
+"lymphangioma, nos",9170/0,"lymphangioendothelioma, nos"
+"lymphangioma, nos",9170/0,lymphangioma
+"lymphangioma, nos",9170/0,lymphangioendothelioma
+lymphangiosarcoma,9170/3,lymphangioendothelial sarcoma
+lymphangiosarcoma,9170/3,"lymphangioendothelioma, malignant"
+lymphangiosarcoma,9170/3,malignant lymphangioendothelioma
+lymphangiosarcoma,9170/3,lymphangioendothelioma malignant
+cystic lymphangioma,9173/0,"hygroma, nos"
+cystic lymphangioma,9173/0,cystic hygroma
+cystic lymphangioma,9173/0,hygroma
+lymphangiomyomatosis,9174/1,lymphangioleiomyomatosis
+"osteoma, nos",9180/0,osteoma
+"osteosarcoma, nos",9180/3,"osteogenic sarcoma, nos"
+"osteosarcoma, nos",9180/3,osteochondrosarcoma
+"osteosarcoma, nos",9180/3,osteoblastic sarcoma
+"osteosarcoma, nos",9180/3,osteosarcoma
+"osteosarcoma, nos",9180/3,osteogenic sarcoma
+fibroblastic osteosarcoma,9182/3,osteofibrosarcoma
+small cell osteosarcoma,9185/3,round cell osteosarcoma
+central osteosarcoma,9186/3,conventional central osteosarcoma
+central osteosarcoma,9186/3,medullary osteosarcoma
+intraosseous well differentiated osteosarcoma,9187/3,intraosseous low grade osteosarcoma
+"osteoid osteoma, nos",9191/0,osteoid osteoma
+parosteal osteosarcoma,9192/3,juxtacortical osteosarcoma
+"osteoblastoma, nos",9200/0,giant osteoid osteoma
+"osteoblastoma, nos",9200/0,osteoblastoma
+osteochondroma,9210/0,cartilaginous exostosis
+osteochondroma,9210/0,osteocartilaginous exostosis
+osteochondroma,9210/0,ecchondroma
+"osteochondromatosis, nos",9210/1,ecchondrosis
+"osteochondromatosis, nos",9210/1,osteochondromatosis
+"chondroma, nos",9220/0,enchondroma
+"chondroma, nos",9220/0,chondroma
+"chondromatosis, nos",9220/1,chondromatosis
+"chondrosarcoma, nos",9220/3,fibrochondrosarcoma
+"chondrosarcoma, nos",9220/3,chondrosarcoma
+juxtacortical chondroma,9221/0,periosteal chondroma
+juxtacortical chondrosarcoma,9221/3,periosteal chondrosarcoma
+"chondroblastoma, nos",9230/0,chondromatous giant cell tumor
+"chondroblastoma, nos",9230/0,codman tumor
+"chondroblastoma, nos",9230/0,chondroblastoma
+"chondroblastoma, malignant",9230/3,malignant chondroblastoma
+"chondroblastoma, malignant",9230/3,chondroblastoma malignant
+"giant cell tumor of bone, nos",9250/1,"osteoclastoma, nos"
+"giant cell tumor of bone, nos",9250/1,giant cell tumor of bone
+"giant cell tumor of bone, nos",9250/1,osteoclastoma
+"giant cell tumor of bone, malignant",9250/3,"osteoclastoma, malignant"
+"giant cell tumor of bone, malignant",9250/3,giant cell sarcoma of bone
+"giant cell tumor of bone, malignant",9250/3,malignant giant cell tumor of bone
+"giant cell tumor of bone, malignant",9250/3,giant cell tumor of bone malignant
+"giant cell tumor of bone, malignant",9250/3,malignant osteoclastoma
+"giant cell tumor of bone, malignant",9250/3,osteoclastoma malignant
+"giant cell tumor of soft parts, nos",9251/1,giant cell tumor of soft parts
+tenosynovial giant cell tumor,9252/0,fibrous histiocytoma of tendon sheath
+tenosynovial giant cell tumor,9252/0,giant cell tumor of tendon sheath
+malignant tenosynovial giant cell tumor,9252/3,"giant cell tumor of tendon sheath, malignant"
+malignant tenosynovial giant cell tumor,9252/3,malignant giant cell tumor of tendon sheath
+malignant tenosynovial giant cell tumor,9252/3,giant cell tumor of tendon sheath malignant
+ewing sarcoma,9260/3,ewing tumor
+adamantinoma of long bones,9261/3,tibial adamantinoma
+ossifying fibroma,9262/0,fibro-osteoma
+ossifying fibroma,9262/0,osteofibroma
+"odontogenic tumor, benign",9270/0,benign odontogenic tumor
+"odontogenic tumor, benign",9270/0,odontogenic tumor benign
+"odontogenic tumor, nos",9270/1,odontogenic tumor
+"odontogenic tumor, malignant",9270/3,odontogenic carcinoma
+"odontogenic tumor, malignant",9270/3,odontogenic sarcoma
+"odontogenic tumor, malignant",9270/3,primary intraosseous carcinoma
+"odontogenic tumor, malignant",9270/3,ameloblastic carcinoma
+"odontogenic tumor, malignant",9270/3,malignant odontogenic tumor
+"odontogenic tumor, malignant",9270/3,odontogenic tumor malignant
+ameloblastic fibrodentinoma,9271/0,dentinoma
+"cementoma, nos",9272/0,periapical cemental dysplasia
+"cementoma, nos",9272/0,periapical cemento-osseous dysplasia
+"cementoma, nos",9272/0,cementoma
+"cementoblastoma, benign",9273/0,benign cementoblastoma
+"cementoblastoma, benign",9273/0,cementoblastoma benign
+cementifying fibroma,9274/0,cemento-ossifying fibroma
+gigantiform cementoma,9275/0,florid osseous dysplasia
+"odontoma, nos",9280/0,odontoma
+ameloblastic fibro-odontoma,9290/0,fibroameloblastic odontoma
+"ependymoma, anaplastic",9392/3,ependymoblastoma
+"ependymoma, anaplastic",9392/3,anaplastic ependymoma
+"ependymoma, anaplastic",9392/3,ependymoma anaplastic
+"astrocytoma, nos",9400/3,astrocytic glioma
+"astrocytoma, nos",9400/3,astroglioma
+"astrocytoma, nos",9400/3,diffuse astrocytoma
+"astrocytoma, nos",9400/3,"astrocytoma, low grade"
+"astrocytoma, nos",9400/3,"diffuse astrocytoma, low grade"
+"astrocytoma, nos",9400/3,cystic astrocytoma
+"astrocytoma, nos",9400/3,astrocytoma
+"astrocytoma, nos",9400/3,low grade astrocytoma
+"astrocytoma, nos",9400/3,astrocytoma low grade
+"astrocytoma, nos",9400/3,low grade diffuse astrocytoma
+"astrocytoma, nos",9400/3,diffuse astrocytoma low grade
+"astrocytoma, nos",9400/3,diffuse infiltrating astrocytoma
+"astrocytoma, nos",9400/3,"diffuse infiltrating astrocytoma, idh-mutant"
+"astrocytoma, anaplastic",9401/3,anaplastic astrocytoma
+"astrocytoma, anaplastic",9401/3,astrocytoma anaplastic
+"astrocytoma, anaplastic",9401/3,"anaplastic astrocytoma, idh1 mutant"
+gemistocytic astrocytoma,9411/3,gemistocytoma
+desmoplastic infantile astrocytoma,9412/1,desmoplastic infantile ganglioglioma
+fibrillary astrocytoma,9420/3,fibrous astrocytoma
+pilocytic astrocytoma,9421/1,piloid astrocytoma
+pilocytic astrocytoma,9421/1,juvenile astrocytoma
+pilocytic astrocytoma,9421/1,"spongioblastoma, nos"
+pilocytic astrocytoma,9421/1,spongioblastoma
+polar spongioblastoma,9423/3,spongioblastoma polare
+polar spongioblastoma,9423/3,primitive polar spongioblastoma
+"glioblastoma, nos",9440/3,glioblastoma multiforme
+"glioblastoma, nos",9440/3,spongioblastoma multiforme
+"glioblastoma, nos",9440/3,glioblastoma
+giant cell glioblastoma,9441/3,monstrocellular sarcoma
+gliosarcoma,9442/3,glioblastoma with sarcomatous component
+chordoid glioma,9444/1,chordoid glioma of third ventricle
+"oligodendroglioma, nos",9450/3,oligodendroglioma
+"oligodendroglioma, anaplastic",9451/3,anaplastic oligodendroglioma
+"oligodendroglioma, anaplastic",9451/3,oligodendroglioma anaplastic
+"medulloblastoma, nos",9470/3,melanotic medulloblastoma
+"medulloblastoma, nos",9470/3,medulloblastoma
+desmoplastic nodular medulloblastoma,9471/3,desmoplastic medulloblastoma
+desmoplastic nodular medulloblastoma,9471/3,circumscribed arachnoidal cerebellar sarcoma
+"primitive neuroectodermal tumor, nos",9473/3,"pnet, nos"
+"primitive neuroectodermal tumor, nos",9473/3,"central primitive neuroectodermal tumor, nos"
+"primitive neuroectodermal tumor, nos",9473/3,cpnet
+"primitive neuroectodermal tumor, nos",9473/3,supratentorial pnet
+"primitive neuroectodermal tumor, nos",9473/3,primitive neuroectodermal tumor
+"primitive neuroectodermal tumor, nos",9473/3,pnet
+"primitive neuroectodermal tumor, nos",9473/3,central primitive neuroectodermal tumor
+"cerebellar sarcoma, nos",9480/3,cerebellar sarcoma
+"neuroblastoma, nos",9500/3,sympathicoblastoma
+"neuroblastoma, nos",9500/3,central neuroblastoma
+"neuroblastoma, nos",9500/3,neuroblastoma
+"medulloepithelioma, benign",9501/0,"diktyoma, benign"
+"medulloepithelioma, benign",9501/0,benign medulloepithelioma
+"medulloepithelioma, benign",9501/0,medulloepithelioma benign
+"medulloepithelioma, benign",9501/0,benign diktyoma
+"medulloepithelioma, benign",9501/0,diktyoma benign
+"medulloepithelioma, nos",9501/3,"diktyoma, malignant"
+"medulloepithelioma, nos",9501/3,medulloepithelioma
+"medulloepithelioma, nos",9501/3,malignant diktyoma
+"medulloepithelioma, nos",9501/3,diktyoma malignant
+"teratoid medulloepithelioma, benign",9502/0,benign teratoid medulloepithelioma
+"teratoid medulloepithelioma, benign",9502/0,teratoid medulloepithelioma benign
+"neuroepithelioma, nos",9503/3,neuroepithelioma
+"ganglioglioma, nos",9505/1,glioneuroma
+"ganglioglioma, nos",9505/1,neuroastrocytoma
+"ganglioglioma, nos",9505/1,ganglioglioma
+"ganglioglioma, anaplastic",9505/3,anaplastic ganglioglioma
+"ganglioglioma, anaplastic",9505/3,ganglioglioma anaplastic
+central neurocytoma,9506/1,neurocytoma
+central neurocytoma,9506/1,cerebellar liponeurocytoma
+central neurocytoma,9506/1,lipomatous medulloblastoma
+central neurocytoma,9506/1,neurolipocytoma
+central neurocytoma,9506/1,medullocytoma
+"retinoblastoma, nos",9510/3,retinoblastoma
+"retinoblastoma, differentiated",9511/3,differentiated retinoblastoma
+"retinoblastoma, differentiated",9511/3,retinoblastoma differentiated
+"retinoblastoma, undifferentiated",9512/3,undifferentiated retinoblastoma
+"retinoblastoma, undifferentiated",9512/3,retinoblastoma undifferentiated
+"retinoblastoma, diffuse",9513/3,diffuse retinoblastoma
+"retinoblastoma, diffuse",9513/3,retinoblastoma diffuse
+"retinoblastoma, spontaneously regressed",9514/1,spontaneously regressed retinoblastoma
+"retinoblastoma, spontaneously regressed",9514/1,retinoblastoma spontaneously regressed
+olfactory neurocytoma,9521/3,esthesioneurocytoma
+olfactory neuroblastoma,9522/3,esthesioneuroblastoma
+olfactory neuroepithelioma,9523/3,esthesioneuroepithelioma
+"meningioma, nos",9530/0,microcystic meningioma
+"meningioma, nos",9530/0,secretory meningioma
+"meningioma, nos",9530/0,lymphoplasmacyte-rich meningioma
+"meningioma, nos",9530/0,metaplastic meningioma
+"meningioma, nos",9530/0,meningioma
+"meningioma, nos",9530/0,meninigoma
+"meningiomatosis, nos",9530/1,diffuse meningiomatosis
+"meningiomatosis, nos",9530/1,multiple meningiomas
+"meningiomatosis, nos",9530/1,meningiomatosis
+"meningioma, malignant",9530/3,"meningioma, anaplastic"
+"meningioma, malignant",9530/3,leptomeningeal sarcoma
+"meningioma, malignant",9530/3,meningeal sarcoma
+"meningioma, malignant",9530/3,meningothelial sarcoma
+"meningioma, malignant",9530/3,malignant meningioma
+"meningioma, malignant",9530/3,meningioma malignant
+"meningioma, malignant",9530/3,anaplastic meningioma
+"meningioma, malignant",9530/3,meningioma anaplastic
+meningothelial meningioma,9531/0,endotheliomatous meningioma
+meningothelial meningioma,9531/0,syncytial meningioma
+fibrous meningioma,9532/0,fibroblastic meningioma
+hemangioblastic meningioma,9535/0,angioblastic meningioma
+transitional meningioma,9537/0,mixed meningioma
+clear cell meningioma,9538/1,chordoid meningioma
+papillary meningioma,9538/3,rhabdoid meningioma
+"neurofibroma, nos",9540/0,neurofibroma
+"neurofibromatosis, nos",9540/1,multiple neurofibromatosis
+"neurofibromatosis, nos",9540/1,von recklinghausen disease
+"neurofibromatosis, nos",9540/1,recklinghausen disease
+"neurofibromatosis, nos",9540/1,neurofibromatosis
+malignant peripheral nerve sheath tumor,9540/3,"mpnst, nos"
+malignant peripheral nerve sheath tumor,9540/3,neurofibrosarcoma
+malignant peripheral nerve sheath tumor,9540/3,neurogenic sarcoma
+malignant peripheral nerve sheath tumor,9540/3,neurosarcoma
+malignant peripheral nerve sheath tumor,9540/3,mpnst with glandular differentiation
+malignant peripheral nerve sheath tumor,9540/3,epithelioid mpnst
+malignant peripheral nerve sheath tumor,9540/3,mpnst with mesenchymal differentiation
+malignant peripheral nerve sheath tumor,9540/3,melanotic mpnst
+malignant peripheral nerve sheath tumor,9540/3,melanotic psammomatous mpnst
+malignant peripheral nerve sheath tumor,9540/3,mpnst
+plexiform neurofibroma,9550/0,plexiform neuroma
+"neurilemoma, nos",9560/0,"schwannoma, nos"
+"neurilemoma, nos",9560/0,neurinoma
+"neurilemoma, nos",9560/0,acoustic neuroma
+"neurilemoma, nos",9560/0,pigmented schwannoma
+"neurilemoma, nos",9560/0,melanotic schwannoma
+"neurilemoma, nos",9560/0,plexiform schwannoma
+"neurilemoma, nos",9560/0,cellular schwannoma
+"neurilemoma, nos",9560/0,degenerated schwannoma
+"neurilemoma, nos",9560/0,ancient schwannoma
+"neurilemoma, nos",9560/0,psammomatous schwannoma
+"neurilemoma, nos",9560/0,neurilemoma
+"neurilemoma, nos",9560/0,schwannoma
+"neurilemoma, malignant",9560/3,"malignant schwannoma, nos"
+"neurilemoma, malignant",9560/3,neurilemosarcoma
+"neurilemoma, malignant",9560/3,malignant neurilemoma
+"neurilemoma, malignant",9560/3,neurilemoma malignant
+"neurilemoma, malignant",9560/3,malignant schwannoma
+malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation,9561/3,mpnst with rhabdomyoblastic differentiation
+malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation,9561/3,"triton tumor, malignant"
+malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation,9561/3,malignant schwannoma with rhabdomyoblastic differentiation
+malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation,9561/3,malignant triton tumor
+malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation,9561/3,triton tumor malignant
+neurothekeoma,9562/0,nerve sheath myxoma
+"neuroma, nos",9570/0,neuroma
+"perineurioma, nos",9571/0,intraneural perineurioma
+"perineurioma, nos",9571/0,soft tissue perineurioma
+"perineurioma, nos",9571/0,perineurioma
+"perineurioma, malignant",9571/3,perineural mpnst
+"perineurioma, malignant",9571/3,malignant perineurioma
+"perineurioma, malignant",9571/3,perineurioma malignant
+"granular cell tumor, nos",9580/0,"granular cell myoblastoma, nos"
+"granular cell tumor, nos",9580/0,granular cell tumor
+"granular cell tumor, nos",9580/0,granular cell myoblastoma
+"granular cell tumor, malignant",9580/3,"granular cell myoblastoma, malignant"
+"granular cell tumor, malignant",9580/3,malignant granular cell tumor
+"granular cell tumor, malignant",9580/3,granular cell tumor malignant
+"granular cell tumor, malignant",9580/3,malignant granular cell myoblastoma
+"granular cell tumor, malignant",9580/3,granular cell myoblastoma malignant
+"malignant lymphoma, nos",9590/3,"lymphoma, nos"
+"malignant lymphoma, nos",9590/3,microglioma
+"malignant lymphoma, nos",9590/3,malignant lymphoma
+"malignant lymphoma, nos",9590/3,lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,"non-hodgkin lymphoma, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"b cell lymphoma, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, non-cleaved cell, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, diffuse, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, lymphocytic, intermediate differentiation, nodular"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, small cell, noncleaved, diffuse"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, undifferentiated cell, non-burkitt"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, undifferentiated cell type, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"lymphosarcoma, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"lymphosarcoma, diffuse"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"reticulum cell sarcoma, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"reticulum cell sarcoma, diffuse"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"reticulosarcoma, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"reticulosarcoma, diffuse"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, small cleaved cell, diffuse"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, lymphocytic, poorly differentiated, diffuse"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, small cleaved cell, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,"malignant lymphoma, cleaved cell, nos"
+"malignant lymphoma, non-hodgkin, nos",9591/3,non-hodgkin malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma non-hodgkin
+"malignant lymphoma, non-hodgkin, nos",9591/3,non-hodgkin lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,b cell lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,non-cleaved cell malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma non-cleaved cell
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,nodular intermediate differentiation lymphocytic malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma lymphocytic intermediate differentiation nodular
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse noncleaved small cell malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma small cell noncleaved diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,non-burkitt undifferentiated cell malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma undifferentiated cell non-burkitt
+"malignant lymphoma, non-hodgkin, nos",9591/3,undifferentiated cell type malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma undifferentiated cell type
+"malignant lymphoma, non-hodgkin, nos",9591/3,lymphosarcoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse lymphosarcoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,lymphosarcoma diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,reticulum cell sarcoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse reticulum cell sarcoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,reticulum cell sarcoma diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,reticulosarcoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse reticulosarcoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,reticulosarcoma diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse small cleaved cell malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma small cleaved cell diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,diffuse poorly differentiated lymphocytic malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma lymphocytic poorly differentiated diffuse
+"malignant lymphoma, non-hodgkin, nos",9591/3,small cleaved cell malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma small cleaved cell
+"malignant lymphoma, non-hodgkin, nos",9591/3,cleaved cell malignant lymphoma
+"malignant lymphoma, non-hodgkin, nos",9591/3,malignant lymphoma cleaved cell
+"hodgkin lymphoma, nos",9650/3,"hodgkin disease, nos"
+"hodgkin lymphoma, nos",9650/3,"malignant lymphoma, hodgkin"
+"hodgkin lymphoma, nos",9650/3,hodgkin lymphoma
+"hodgkin lymphoma, nos",9650/3,hodgkin disease
+"hodgkin lymphoma, nos",9650/3,hodgkin malignant lymphoma
+"hodgkin lymphoma, nos",9650/3,malignant lymphoma hodgkin
+"hodgkin lymphoma, lymphocyte-rich",9651/3,"classical hodgkin lymphoma, lymphocyte- rich"
+"hodgkin lymphoma, lymphocyte-rich",9651/3,"hodgkin disease, lymphocyte predominance, nos"
+"hodgkin lymphoma, lymphocyte-rich",9651/3,"hodgkin disease, lymphocytic-histiocytic predominance"
+"hodgkin lymphoma, lymphocyte-rich",9651/3,"hodgkin disease, lymphocyte predominance, diffuse"
+"hodgkin lymphoma, lymphocyte-rich",9651/3,lymphocyte-rich hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte-rich",9651/3,hodgkin lymphoma lymphocyte-rich
+"hodgkin lymphoma, lymphocyte-rich",9651/3,lymphocyte- rich classical hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte-rich",9651/3,classical hodgkin lymphoma lymphocyte- rich
+"hodgkin lymphoma, lymphocyte-rich",9651/3,lymphocyte predominance hodgkin disease
+"hodgkin lymphoma, lymphocyte-rich",9651/3,hodgkin disease lymphocyte predominance
+"hodgkin lymphoma, lymphocyte-rich",9651/3,lymphocytic-histiocytic predominance hodgkin disease
+"hodgkin lymphoma, lymphocyte-rich",9651/3,hodgkin disease lymphocytic-histiocytic predominance
+"hodgkin lymphoma, lymphocyte-rich",9651/3,diffuse lymphocyte predominance hodgkin disease
+"hodgkin lymphoma, lymphocyte-rich",9651/3,hodgkin disease lymphocyte predominance diffuse
+"hodgkin lymphoma, mixed cellularity, nos",9652/3,"classical hodgkin lymphoma, mixed cellularity, nos"
+"hodgkin lymphoma, mixed cellularity, nos",9652/3,mixed cellularity hodgkin lymphoma
+"hodgkin lymphoma, mixed cellularity, nos",9652/3,hodgkin lymphoma mixed cellularity
+"hodgkin lymphoma, mixed cellularity, nos",9652/3,mixed cellularity classical hodgkin lymphoma
+"hodgkin lymphoma, mixed cellularity, nos",9652/3,classical hodgkin lymphoma mixed cellularity
+"hodgkin lymphoma, lymphocyte depletion, nos",9653/3,"classical hodgkin lymphoma, lymphocyte depletion, nos"
+"hodgkin lymphoma, lymphocyte depletion, nos",9653/3,lymphocyte depletion hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte depletion, nos",9653/3,hodgkin lymphoma lymphocyte depletion
+"hodgkin lymphoma, lymphocyte depletion, nos",9653/3,lymphocyte depletion classical hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte depletion, nos",9653/3,classical hodgkin lymphoma lymphocyte depletion
+"hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis",9654/3,"classical hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis"
+"hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis",9654/3,diffuse fibrosis lymphocyte depletion hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis",9654/3,hodgkin lymphoma lymphocyte depletion diffuse fibrosis
+"hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis",9654/3,diffuse fibrosis lymphocyte depletion classical hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis",9654/3,classical hodgkin lymphoma lymphocyte depletion diffuse fibrosis
+"hodgkin lymphoma, lymphocyte depletion, reticular",9655/3,"classical hodgkin lymphoma, lymphocyte depletion, reticular"
+"hodgkin lymphoma, lymphocyte depletion, reticular",9655/3,reticular lymphocyte depletion hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte depletion, reticular",9655/3,hodgkin lymphoma lymphocyte depletion reticular
+"hodgkin lymphoma, lymphocyte depletion, reticular",9655/3,reticular lymphocyte depletion classical hodgkin lymphoma
+"hodgkin lymphoma, lymphocyte depletion, reticular",9655/3,classical hodgkin lymphoma lymphocyte depletion reticular
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,"hodgkin lymphoma, lymphocyte predominance, nodular"
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,"hodgkin paragranuloma, nos"
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,"hodgkin paragranuloma, nodular"
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,nodular lymphocyte predominance hodgkin lymphoma
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,hodgkin lymphoma nodular lymphocyte predominance
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,hodgkin lymphoma lymphocyte predominance nodular
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,hodgkin paragranuloma
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,nodular hodgkin paragranuloma
+"hodgkin lymphoma, nodular lymphocyte predominance",9659/3,hodgkin paragranuloma nodular
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,"classical hodgkin lymphoma, nodular sclerosis, nos"
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,"hodgkin disease, nodular sclerosis, nos"
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,nodular sclerosis hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,hodgkin lymphoma nodular sclerosis
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,nodular sclerosis classical hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,classical hodgkin lymphoma nodular sclerosis
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,nodular sclerosis hodgkin disease
+"hodgkin lymphoma, nodular sclerosis, nos",9663/3,hodgkin disease nodular sclerosis
+"hodgkin lymphoma, nodular sclerosis, cellular phase",9664/3,"classical hodgkin lymphoma, nodular sclerosis, cellular phase"
+"hodgkin lymphoma, nodular sclerosis, cellular phase",9664/3,cellular phase nodular sclerosis hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis, cellular phase",9664/3,hodgkin lymphoma nodular sclerosis cellular phase
+"hodgkin lymphoma, nodular sclerosis, cellular phase",9664/3,cellular phase nodular sclerosis classical hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis, cellular phase",9664/3,classical hodgkin lymphoma nodular sclerosis cellular phase
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,"classical hodgkin lymphoma, nodular sclerosis, grade 1"
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,"hodgkin disease, nodular sclerosis, lymphocyte predominance"
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,"hodgkin disease, nodular sclerosis, mixed cellularity"
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,grade 1 nodular sclerosis hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,hodgkin lymphoma nodular sclerosis grade 1
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,grade 1 nodular sclerosis classical hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,classical hodgkin lymphoma nodular sclerosis grade 1
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,lymphocyte predominance nodular sclerosis hodgkin disease
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,hodgkin disease nodular sclerosis lymphocyte predominance
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,mixed cellularity nodular sclerosis hodgkin disease
+"hodgkin lymphoma, nodular sclerosis,  grade 1",9665/3,hodgkin disease nodular sclerosis mixed cellularity
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,"classical hodgkin lymphoma, nodular sclerosis, grade 2"
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,"hodgkin disease, nodular sclerosis, lymphocyte depletion"
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,"hodgkin disease, nodular sclerosis, syncytial variant"
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,grade 2 nodular sclerosis hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,hodgkin lymphoma nodular sclerosis grade 2
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,grade 2 nodular sclerosis classical hodgkin lymphoma
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,classical hodgkin lymphoma nodular sclerosis grade 2
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,lymphocyte depletion nodular sclerosis hodgkin disease
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,hodgkin disease nodular sclerosis lymphocyte depletion
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,syncytial variant nodular sclerosis hodgkin disease
+"hodgkin lymphoma, nodular sclerosis,  grade 2",9667/3,hodgkin disease nodular sclerosis syncytial variant
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, small lymphocytic, nos"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, lymphocytic, well differentiated, diffuse"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, lymphocytic, nos"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, lymphocytic, diffuse, nos"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, small cell, nos"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, small lymphocytic, diffuse"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,"malignant lymphoma, small cell diffuse"
+"malignant lymphoma, small b lymphocytic, nos",9670/3,small b lymphocytic malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma small b lymphocytic
+"malignant lymphoma, small b lymphocytic, nos",9670/3,small lymphocytic malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma small lymphocytic
+"malignant lymphoma, small b lymphocytic, nos",9670/3,diffuse well differentiated lymphocytic malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma lymphocytic well differentiated diffuse
+"malignant lymphoma, small b lymphocytic, nos",9670/3,lymphocytic malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma lymphocytic
+"malignant lymphoma, small b lymphocytic, nos",9670/3,diffuse lymphocytic malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma lymphocytic diffuse
+"malignant lymphoma, small b lymphocytic, nos",9670/3,small cell malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma small cell
+"malignant lymphoma, small b lymphocytic, nos",9670/3,diffuse small lymphocytic malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma small lymphocytic diffuse
+"malignant lymphoma, small b lymphocytic, nos",9670/3,small cell diffuse malignant lymphoma
+"malignant lymphoma, small b lymphocytic, nos",9670/3,malignant lymphoma small cell diffuse
+"malignant lymphoma, lymphoplasmacytic",9671/3,"malignant lymphoma, lymphoplasmacytoid"
+"malignant lymphoma, lymphoplasmacytic",9671/3,immunocytoma
+"malignant lymphoma, lymphoplasmacytic",9671/3,"malignant lymphoma, plasmacytoid"
+"malignant lymphoma, lymphoplasmacytic",9671/3,plasmacytic lymphoma
+"malignant lymphoma, lymphoplasmacytic",9671/3,lymphoplasmacytic malignant lymphoma
+"malignant lymphoma, lymphoplasmacytic",9671/3,malignant lymphoma lymphoplasmacytic
+"malignant lymphoma, lymphoplasmacytic",9671/3,lymphoplasmacytoid malignant lymphoma
+"malignant lymphoma, lymphoplasmacytic",9671/3,malignant lymphoma lymphoplasmacytoid
+"malignant lymphoma, lymphoplasmacytic",9671/3,plasmacytoid malignant lymphoma
+"malignant lymphoma, lymphoplasmacytic",9671/3,malignant lymphoma plasmacytoid
+mantle cell lymphoma,9673/3,mantle zone lymphoma
+mantle cell lymphoma,9673/3,"malignant lymphoma, lymphocytic, intermediate differentiation, diffuse"
+mantle cell lymphoma,9673/3,"malignant lymphoma, centrocytic"
+mantle cell lymphoma,9673/3,malignant lymphomatous polyposis
+mantle cell lymphoma,9673/3,diffuse intermediate differentiation lymphocytic malignant lymphoma
+mantle cell lymphoma,9673/3,malignant lymphoma lymphocytic intermediate differentiation diffuse
+mantle cell lymphoma,9673/3,centrocytic malignant lymphoma
+mantle cell lymphoma,9673/3,malignant lymphoma centrocytic
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,"malignant lymphoma, mixed lymphocytic-histiocytic, diffuse"
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,"malignant lymphoma, mixed cell type, diffuse"
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,"malignant lymphoma, centroblastic- centrocytic,  nos"
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,"malignant lymphoma, centroblastic- centrocytic, diffuse"
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,diffuse mixed small and large cell malignant lymphoma
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,malignant lymphoma mixed small and large cell diffuse
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,diffuse mixed lymphocytic-histiocytic malignant lymphoma
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,malignant lymphoma mixed lymphocytic-histiocytic diffuse
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,diffuse mixed cell type malignant lymphoma
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,malignant lymphoma mixed cell type diffuse
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,centroblastic- centrocytic malignant lymphoma
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,malignant lymphoma centroblastic- centrocytic
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,diffuse centroblastic- centrocytic malignant lymphoma
+"malignant lymphoma, mixed small and large cell, diffuse",9675/3,malignant lymphoma centroblastic- centrocytic diffuse
+mediastinal large b-cell lymphoma,9679/3,thymic large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"diffuse large b-cell lymphoma, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large b-cell, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, histiocytic, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, histiocytic, diffuse"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell, cleaved and noncleaved"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell, diffuse, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cleaved cell, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell, cleaved, diffuse"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell, cleaved, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell,  noncleaved, diffuse"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large cell, noncleaved, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, noncleaved, diffuse, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, noncleaved, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, large b-cell, diffuse, centroblastic, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, centroblastic, nos"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,"malignant lymphoma, centroblastic, diffuse"
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,intravascular large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,intravascular b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,angioendotheliomatosis
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,angiotropic lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,t-cell rich large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,histiocyte-rich large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,t-cell rich/histiocyte-rich large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,anaplastic large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse large b-cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large b-cell diffuse
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse large b-cell lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,large b-cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large b-cell
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,histiocytic malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma histiocytic
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse histiocytic malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma histiocytic diffuse
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,cleaved and noncleaved large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell cleaved and noncleaved
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell diffuse
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,large cleaved cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cleaved cell
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse cleaved large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell cleaved diffuse
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,cleaved large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell cleaved
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse noncleaved large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell noncleaved diffuse
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,noncleaved large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large cell noncleaved
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse noncleaved malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma noncleaved diffuse
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,noncleaved malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma noncleaved
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,centroblastic diffuse large b-cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma large b-cell diffuse centroblastic
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,centroblastic malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma centroblastic
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,diffuse centroblastic malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, nos",9680/3,malignant lymphoma centroblastic diffuse
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,"malignant lymphoma, immunoblastic, nos"
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,immunoblastic sarcoma
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,"malignant lymphoma, large cell, immunoblastic"
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,plasmablastic lymphoma
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,immunoblastic diffuse large b-cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,malignant lymphoma large b-cell diffuse immunoblastic
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,immunoblastic malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,malignant lymphoma immunoblastic
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,immunoblastic large cell malignant lymphoma
+"malignant lymphoma, large b-cell, diffuse, immunoblastic, nos",9684/3,malignant lymphoma large cell immunoblastic
+"burkitt lymphoma, nos",9687/3,burkitt tumor
+"burkitt lymphoma, nos",9687/3,"malignant lymphoma, undifferentiated, burkitt type"
+"burkitt lymphoma, nos",9687/3,"malignant lymphoma, small noncleaved, burkitt type"
+"burkitt lymphoma, nos",9687/3,burkitt-like lymphoma
+"burkitt lymphoma, nos",9687/3,burkitt lymphoma
+"burkitt lymphoma, nos",9687/3,burkitt type undifferentiated malignant lymphoma
+"burkitt lymphoma, nos",9687/3,malignant lymphoma undifferentiated burkitt type
+"burkitt lymphoma, nos",9687/3,burkitt type small noncleaved malignant lymphoma
+"burkitt lymphoma, nos",9687/3,malignant lymphoma small noncleaved burkitt type
+splenic marginal zone b-cell lymphoma,9689/3,"splenic marginal zone lymphoma, nos"
+splenic marginal zone b-cell lymphoma,9689/3,splenic lymphoma with villous lymphocytes
+splenic marginal zone b-cell lymphoma,9689/3,splenic marginal zone lymphoma
+"follicular lymphoma, nos",9690/3,"malignant lymphoma, follicular, nos"
+"follicular lymphoma, nos",9690/3,"malignant lymphoma, follicle center, follicular"
+"follicular lymphoma, nos",9690/3,"malignant lymphoma, follicle center, nos"
+"follicular lymphoma, nos",9690/3,"malignant lymphoma, centroblastic- centrocytic, follicular"
+"follicular lymphoma, nos",9690/3,"malignant lymphoma, nodular, nos"
+"follicular lymphoma, nos",9690/3,"malignant lymphoma, lymphocytic, nodular, nos"
+"follicular lymphoma, nos",9690/3,follicular lymphoma
+"follicular lymphoma, nos",9690/3,follicular malignant lymphoma
+"follicular lymphoma, nos",9690/3,malignant lymphoma follicular
+"follicular lymphoma, nos",9690/3,follicular follicle center malignant lymphoma
+"follicular lymphoma, nos",9690/3,malignant lymphoma follicle center follicular
+"follicular lymphoma, nos",9690/3,follicle center malignant lymphoma
+"follicular lymphoma, nos",9690/3,malignant lymphoma follicle center
+"follicular lymphoma, nos",9690/3,follicular centroblastic- centrocytic malignant lymphoma
+"follicular lymphoma, nos",9690/3,malignant lymphoma centroblastic- centrocytic follicular
+"follicular lymphoma, nos",9690/3,nodular malignant lymphoma
+"follicular lymphoma, nos",9690/3,malignant lymphoma nodular
+"follicular lymphoma, nos",9690/3,nodular lymphocytic malignant lymphoma
+"follicular lymphoma, nos",9690/3,malignant lymphoma lymphocytic nodular
+"follicular lymphoma, grade 2",9691/3,"malignant lymphoma, mixed small cleaved and large cell, follicular"
+"follicular lymphoma, grade 2",9691/3,"malignant lymphoma, mixed lymphocytic-histiocytic, nodular"
+"follicular lymphoma, grade 2",9691/3,"malignant lymphoma, mixed cell type, follicular"
+"follicular lymphoma, grade 2",9691/3,"malignant lymphoma, mixed cell type, nodular"
+"follicular lymphoma, grade 2",9691/3,grade 2 follicular lymphoma
+"follicular lymphoma, grade 2",9691/3,follicular lymphoma grade 2
+"follicular lymphoma, grade 2",9691/3,follicular mixed small cleaved and large cell malignant lymphoma
+"follicular lymphoma, grade 2",9691/3,malignant lymphoma mixed small cleaved and large cell follicular
+"follicular lymphoma, grade 2",9691/3,nodular mixed lymphocytic-histiocytic malignant lymphoma
+"follicular lymphoma, grade 2",9691/3,malignant lymphoma mixed lymphocytic-histiocytic nodular
+"follicular lymphoma, grade 2",9691/3,follicular mixed cell type malignant lymphoma
+"follicular lymphoma, grade 2",9691/3,malignant lymphoma mixed cell type follicular
+"follicular lymphoma, grade 2",9691/3,nodular mixed cell type malignant lymphoma
+"follicular lymphoma, grade 2",9691/3,malignant lymphoma mixed cell type nodular
+"follicular lymphoma, grade 1",9695/3,"malignant lymphoma, small cleaved cell, follicular"
+"follicular lymphoma, grade 1",9695/3,"follicular lymphoma, small cleaved cell"
+"follicular lymphoma, grade 1",9695/3,"malignant lymphoma, lymphocytic, poorly differentiated, nodular"
+"follicular lymphoma, grade 1",9695/3,grade 1 follicular lymphoma
+"follicular lymphoma, grade 1",9695/3,follicular lymphoma grade 1
+"follicular lymphoma, grade 1",9695/3,follicular small cleaved cell malignant lymphoma
+"follicular lymphoma, grade 1",9695/3,malignant lymphoma small cleaved cell follicular
+"follicular lymphoma, grade 1",9695/3,small cleaved cell follicular lymphoma
+"follicular lymphoma, grade 1",9695/3,follicular lymphoma small cleaved cell
+"follicular lymphoma, grade 1",9695/3,nodular poorly differentiated lymphocytic malignant lymphoma
+"follicular lymphoma, grade 1",9695/3,malignant lymphoma lymphocytic poorly differentiated nodular
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, large cell, follicular, nos"
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, large cell, noncleaved, follicular"
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, histiocytic, nodular"
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, noncleaved cell, follicular, nos"
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, large cleaved cell, follicular"
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, centroblastic, follicular"
+"follicular lymphoma, grade 3",9698/3,"malignant lymphoma, lymphocytic, well differentiated, nodular"
+"follicular lymphoma, grade 3",9698/3,grade 3 follicular lymphoma
+"follicular lymphoma, grade 3",9698/3,follicular lymphoma grade 3
+"follicular lymphoma, grade 3",9698/3,follicular large cell malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma large cell follicular
+"follicular lymphoma, grade 3",9698/3,follicular noncleaved large cell malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma large cell noncleaved follicular
+"follicular lymphoma, grade 3",9698/3,nodular histiocytic malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma histiocytic nodular
+"follicular lymphoma, grade 3",9698/3,follicular noncleaved cell malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma noncleaved cell follicular
+"follicular lymphoma, grade 3",9698/3,follicular large cleaved cell malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma large cleaved cell follicular
+"follicular lymphoma, grade 3",9698/3,follicular centroblastic malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma centroblastic follicular
+"follicular lymphoma, grade 3",9698/3,nodular well differentiated lymphocytic malignant lymphoma
+"follicular lymphoma, grade 3",9698/3,malignant lymphoma lymphocytic well differentiated nodular
+"marginal zone b-cell lymphoma, nos",9699/3,"marginal zone lymphoma, nos"
+"marginal zone b-cell lymphoma, nos",9699/3,mucosal-associated lymphoid tissue lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,malt lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,bronchial-associated lymphoid tissue lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,balt lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,skin-associated lymphoid tissue lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,salt lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,monocytoid b-cell lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,nodal marginal zone lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,marginal zone b-cell lymphoma
+"marginal zone b-cell lymphoma, nos",9699/3,marginal zone lymphoma
+mycosis fungoides,9700/3,pagetoid reticulosis
+sezary syndrome,9701/3,sezary disease
+"mature t-cell lymphoma, nos",9702/3,"peripheral t-cell lymphoma, nos"
+"mature t-cell lymphoma, nos",9702/3,"t-cell lymphoma, nos"
+"mature t-cell lymphoma, nos",9702/3,"peripheral t-cell lymphoma, pleomorphic small cell"
+"mature t-cell lymphoma, nos",9702/3,"peripheral t-cell lymphoma, pleomorphic medium and large cell"
+"mature t-cell lymphoma, nos",9702/3,"peripheral t-cell lymphoma, large cell"
+"mature t-cell lymphoma, nos",9702/3,t-zone lymphoma
+"mature t-cell lymphoma, nos",9702/3,lymphoepithelioid lymphoma
+"mature t-cell lymphoma, nos",9702/3,lennert lymphoma
+"mature t-cell lymphoma, nos",9702/3,mature t-cell lymphoma
+"mature t-cell lymphoma, nos",9702/3,peripheral t-cell lymphoma
+"mature t-cell lymphoma, nos",9702/3,t-cell lymphoma
+"mature t-cell lymphoma, nos",9702/3,pleomorphic small cell peripheral t-cell lymphoma
+"mature t-cell lymphoma, nos",9702/3,peripheral t-cell lymphoma pleomorphic small cell
+"mature t-cell lymphoma, nos",9702/3,pleomorphic medium and large cell peripheral t-cell lymphoma
+"mature t-cell lymphoma, nos",9702/3,peripheral t-cell lymphoma pleomorphic medium and large cell
+"mature t-cell lymphoma, nos",9702/3,large cell peripheral t-cell lymphoma
+"mature t-cell lymphoma, nos",9702/3,peripheral t-cell lymphoma large cell
+angioimmunoblastic t-cell lymphoma,9705/3,"peripheral t-cell lymphoma, aild (angioimmunoblastic"
+angioimmunoblastic t-cell lymphoma,9705/3,angioimmunoblastic lymphoma
+angioimmunoblastic t-cell lymphoma,9705/3,aild (angioimmunoblastic peripheral t-cell lymphoma
+angioimmunoblastic t-cell lymphoma,9705/3,peripheral t-cell lymphoma aild (angioimmunoblastic
+"cutaneous t-cell lymphoma, nos",9709/3,"cutaneous lymphoma, nos"
+"cutaneous t-cell lymphoma, nos",9709/3,cutaneous t-cell lymphoma
+"cutaneous t-cell lymphoma, nos",9709/3,cutaneous lymphoma
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,large cell (ki-1+) lymphoma
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,"anaplastic large cell lymphoma, nos"
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,"anaplastic large cell lymphoma, cd30+"
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,t cell and null cell type anaplastic large cell lymphoma
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,anaplastic large cell lymphoma t cell and null cell type
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,anaplastic large cell lymphoma
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,cd30+ anaplastic large cell lymphoma
+"anaplastic large cell lymphoma, t cell and null cell type",9714/3,anaplastic large cell lymphoma cd30+
+intestinal t-cell lymphoma,9717/3,enteropathy type intestinal t-cell lymphoma
+intestinal t-cell lymphoma,9717/3,enteropathy associated t-cell lymphoma
+primary cutaneous cd30+ t-cell lymphoproliferative disorder,9718/3,lymphomatoid papulosis
+primary cutaneous cd30+ t-cell lymphoproliferative disorder,9718/3,primary cutaneous anaplastic large cell lymphoma
+primary cutaneous cd30+ t-cell lymphoproliferative disorder,9718/3,primary cutaneous cd30+ large t-cell lymphoma
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,t/nk-cell lymphoma
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,angiocentric t-cell lymphoma
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,"malignant reticulosis, nos"
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,malignant midline reticulosis
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,polymorphic reticulosis
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,nasal and nasal-type nk/t-cell lymphoma
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,nk/t-cell lymphoma nasal and nasal-type
+"nk/t-cell lymphoma, nasal and nasal-type",9719/3,malignant reticulosis
+"precursor cell lymphoblastic lymphoma, nos",9727/3,"malignant lymphoma, lymphoblastic, nos"
+"precursor cell lymphoblastic lymphoma, nos",9727/3,"malignant lymphoma, convoluted cell"
+"precursor cell lymphoblastic lymphoma, nos",9727/3,lymphoblastoma
+"precursor cell lymphoblastic lymphoma, nos",9727/3,precursor cell lymphoblastic lymphoma
+"precursor cell lymphoblastic lymphoma, nos",9727/3,lymphoblastic malignant lymphoma
+"precursor cell lymphoblastic lymphoma, nos",9727/3,malignant lymphoma lymphoblastic
+"precursor cell lymphoblastic lymphoma, nos",9727/3,convoluted cell malignant lymphoma
+"precursor cell lymphoblastic lymphoma, nos",9727/3,malignant lymphoma convoluted cell
+"plasmacytoma, nos",9731/3,plasmacytoma of bone
+"plasmacytoma, nos",9731/3,plasma cell tumor
+"plasmacytoma, nos",9731/3,solitary myeloma
+"plasmacytoma, nos",9731/3,solitary plasmacytoma
+"plasmacytoma, nos",9731/3,plasmacytoma
+multiple myeloma,9732/3,"myeloma, nos"
+multiple myeloma,9732/3,myelomatosis
+multiple myeloma,9732/3,plasma cell myeloma
+multiple myeloma,9732/3,myeloma
+plasma cell leukemia,9733/3,plasmacytic leukemia
+"plasmacytoma, extramedullary (not occurring in bone)",9734/3,extramedullary (not occurring in bone) plasmacytoma
+"plasmacytoma, extramedullary (not occurring in bone)",9734/3,plasmacytoma extramedullary (not occurring in bone)
+"mastocytoma, nos",9740/1,"mast cell tumor, nos"
+"mastocytoma, nos",9740/1,mastocytoma
+"mastocytoma, nos",9740/1,mast cell tumor
+mast cell sarcoma,9740/3,malignant mast cell tumor
+mast cell sarcoma,9740/3,malignant mastocytoma
+malignant mastocytosis,9741/3,systemic tissue mast cell disease
+malignant histiocytosis,9750/3,histiocytic medullary reticulosis
+"langerhans cell histiocytosis, nos",9751/1,langerhans cell granulomatosis
+"langerhans cell histiocytosis, nos",9751/1,"histiocytosis x, nos"
+"langerhans cell histiocytosis, nos",9751/1,langerhans cell histiocytosis
+"langerhans cell histiocytosis, nos",9751/1,histiocytosis x
+"langerhans cell histiocytosis, unifocal",9752/1,"langerhans cell granulomatosis, unifocal"
+"langerhans cell histiocytosis, unifocal",9752/1,"langerhans cell histiocytosis, mono-ostotic"
+"langerhans cell histiocytosis, unifocal",9752/1,eosinophilic granuloma
+"langerhans cell histiocytosis, unifocal",9752/1,unifocal langerhans cell histiocytosis
+"langerhans cell histiocytosis, unifocal",9752/1,langerhans cell histiocytosis unifocal
+"langerhans cell histiocytosis, unifocal",9752/1,unifocal langerhans cell granulomatosis
+"langerhans cell histiocytosis, unifocal",9752/1,langerhans cell granulomatosis unifocal
+"langerhans cell histiocytosis, unifocal",9752/1,mono-ostotic langerhans cell histiocytosis
+"langerhans cell histiocytosis, unifocal",9752/1,langerhans cell histiocytosis mono-ostotic
+"langerhans cell histiocytosis, multifocal",9753/1,"langerhans cell histiocytosis, poly-ostotic"
+"langerhans cell histiocytosis, multifocal",9753/1,hand-schuller-christian disease
+"langerhans cell histiocytosis, multifocal",9753/1,multifocal langerhans cell histiocytosis
+"langerhans cell histiocytosis, multifocal",9753/1,langerhans cell histiocytosis multifocal
+"langerhans cell histiocytosis, multifocal",9753/1,poly-ostotic langerhans cell histiocytosis
+"langerhans cell histiocytosis, multifocal",9753/1,langerhans cell histiocytosis poly-ostotic
+"langerhans cell histiocytosis, disseminated",9754/3,"langerhans cell histiocytosis, generalized"
+"langerhans cell histiocytosis, disseminated",9754/3,letterer-siwe disease
+"langerhans cell histiocytosis, disseminated",9754/3,acute progressive histiocytosis x
+"langerhans cell histiocytosis, disseminated",9754/3,nonlipid reticuloendotheliosis
+"langerhans cell histiocytosis, disseminated",9754/3,disseminated langerhans cell histiocytosis
+"langerhans cell histiocytosis, disseminated",9754/3,langerhans cell histiocytosis disseminated
+"langerhans cell histiocytosis, disseminated",9754/3,generalized langerhans cell histiocytosis
+"langerhans cell histiocytosis, disseminated",9754/3,langerhans cell histiocytosis generalized
+histiocytic sarcoma,9755/3,true histiocytic lymphoma
+interdigitating dendritic cell sarcoma,9757/3,interdigitating cell sarcoma
+interdigitating dendritic cell sarcoma,9757/3,"dendritic cell sarcoma, nos"
+interdigitating dendritic cell sarcoma,9757/3,dendritic cell sarcoma
+follicular dendritic cell sarcoma,9758/3,follicular dendritic cell tumor
+"immunoproliferative disease, nos",9760/3,immunoproliferative disease
+"heavy chain disease, nos",9762/3,alpha heavy chain disease
+"heavy chain disease, nos",9762/3,mu heavy chain disease
+"heavy chain disease, nos",9762/3,gamma heavy chain disease
+"heavy chain disease, nos",9762/3,franklin disease
+"heavy chain disease, nos",9762/3,heavy chain disease
+immunoproliferative small intestinal  disease,9764/3,mediterranean lymphoma
+monoclonal gammopathy of undetermined significance,9765/1,mgus
+monoclonal gammopathy of undetermined significance,9765/1,"monoclonal gammopathy, nos"
+monoclonal gammopathy of undetermined significance,9765/1,monoclonal gammopathy
+angiocentric immunoproliferative lesion,9766/1,lymphoid granulomatosis
+angioimmunoblastic lymphadenopathy (aic),9767/1,immunoblastic lymphadenopathy (ibl) [obs]
+immunoglobulin deposition disease,9769/1,systemic light chain disease
+immunoglobulin deposition disease,9769/1,primary amyloidosis
+"leukemia, nos",9800/3,"subacute leukemia, nos"
+"leukemia, nos",9800/3,"chronic leukemia, nos"
+"leukemia, nos",9800/3,"aleukemic leukemia, nos"
+"leukemia, nos",9800/3,leukemia
+"leukemia, nos",9800/3,subacute leukemia
+"leukemia, nos",9800/3,chronic leukemia
+"leukemia, nos",9800/3,aleukemic leukemia
+"acute leukemia, nos",9801/3,blast cell leukemia
+"acute leukemia, nos",9801/3,undifferentiated leukemia
+"acute leukemia, nos",9801/3,stem cell leukemia
+"acute leukemia, nos",9801/3,acute leukemia
+acute biphenotypic leukemia,9805/3,acute mixed lineage leukemia
+acute biphenotypic leukemia,9805/3,acute bilineal leukemia
+"lymphoid leukemia, nos",9820/3,"lymphocytic leukemia, nos"
+"lymphoid leukemia, nos",9820/3,"lymphatic leukemia, nos"
+"lymphoid leukemia, nos",9820/3,subacute lymphoid leukemia
+"lymphoid leukemia, nos",9820/3,subacute lymphocytic leukemia
+"lymphoid leukemia, nos",9820/3,subacute lymphatic leukemia
+"lymphoid leukemia, nos",9820/3,aleukemic lymphoid leukemia
+"lymphoid leukemia, nos",9820/3,aleukemic lymphocytic leukemia
+"lymphoid leukemia, nos",9820/3,aleukemic lymphatic leukemia
+"lymphoid leukemia, nos",9820/3,lymphosarcoma cell leukemia
+"lymphoid leukemia, nos",9820/3,lymphoid leukemia
+"lymphoid leukemia, nos",9820/3,lymphocytic leukemia
+"lymphoid leukemia, nos",9820/3,lymphatic leukemia
+b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma,9823/3,"chronic lymphocytic leukemia, b-cell type"
+b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma,9823/3,chronic lymphocytic leukemia
+b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma,9823/3,chronic lymphoid leukemia
+b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma,9823/3,chronic lymphatic leukemia
+b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma,9823/3,b-cell type chronic lymphocytic leukemia
+b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma,9823/3,chronic lymphocytic leukemia b-cell type
+burkitt cell leukemia,9826/3,"acute leukemia, burkitt type"
+burkitt cell leukemia,9826/3,b-all
+burkitt cell leukemia,9826/3,fab l3
+burkitt cell leukemia,9826/3,"acute lymphoblastic leukemia, mature b-cell type"
+burkitt cell leukemia,9826/3,burkitt type acute leukemia
+burkitt cell leukemia,9826/3,acute leukemia burkitt type
+burkitt cell leukemia,9826/3,mature b-cell type acute lymphoblastic leukemia
+burkitt cell leukemia,9826/3,acute lymphoblastic leukemia mature b-cell type
+adult t-cell leukemia/lymphoma (htlv-1 positive),9827/3,adult t-cell lymphoma/leukemia
+adult t-cell leukemia/lymphoma (htlv-1 positive),9827/3,adult t-cell lymphoma
+adult t-cell leukemia/lymphoma (htlv-1 positive),9827/3,adult t-cell leukemia
+t-cell large granular lymphocytic leukemia,9831/1,t-cell large granular lymphocytosis
+t-cell large granular lymphocytic leukemia,9831/1,nk-cell large granular lymphocytic leukemia
+t-cell large granular lymphocytic leukemia,9831/1,"large granular lymphocytosis, nos"
+t-cell large granular lymphocytic leukemia,9831/1,large granular lymphocytosis
+"prolymphocytic leukemia, nos",9832/3,prolymphocytic leukemia
+"prolymphocytic leukemia, b-cell type",9833/3,b-cell type prolymphocytic leukemia
+"prolymphocytic leukemia, b-cell type",9833/3,prolymphocytic leukemia b-cell type
+"prolymphocytic leukemia, t-cell type",9834/3,t-cell type prolymphocytic leukemia
+"prolymphocytic leukemia, t-cell type",9834/3,prolymphocytic leukemia t-cell type
+"precursor cell lymphoblastic leukemia, nos",9835/3,"precursor cell lymphoblastic leukemia, not phenotyped"
+"precursor cell lymphoblastic leukemia, nos",9835/3,"acute lymphoblastic leukemia, nos"
+"precursor cell lymphoblastic leukemia, nos",9835/3,"acute lymphoblastic leukemia, precursor-cell type"
+"precursor cell lymphoblastic leukemia, nos",9835/3,"acute lymphoblastic leukemia-lymphoma, nos"
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphocytic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphoid leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphatic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,"lymphoblastic leukemia, nos"
+"precursor cell lymphoblastic leukemia, nos",9835/3,fab l1
+"precursor cell lymphoblastic leukemia, nos",9835/3,"acute lymphoblastic leukemia, l2 type, nos"
+"precursor cell lymphoblastic leukemia, nos",9835/3,fab l2
+"precursor cell lymphoblastic leukemia, nos",9835/3,precursor cell lymphoblastic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,not phenotyped precursor cell lymphoblastic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,precursor cell lymphoblastic leukemia not phenotyped
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphoblastic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,precursor-cell type acute lymphoblastic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphoblastic leukemia precursor-cell type
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphoblastic leukemia-lymphoma
+"precursor cell lymphoblastic leukemia, nos",9835/3,lymphoblastic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,l2 type acute lymphoblastic leukemia
+"precursor cell lymphoblastic leukemia, nos",9835/3,acute lymphoblastic leukemia l2 type
+precursor b-cell lymphoblastic leukemia,9836/3,pro-b all
+precursor b-cell lymphoblastic leukemia,9836/3,common precursor b all
+precursor b-cell lymphoblastic leukemia,9836/3,pre-b all
+precursor b-cell lymphoblastic leukemia,9836/3,pre-pre-b all
+precursor b-cell lymphoblastic leukemia,9836/3,common all
+precursor b-cell lymphoblastic leukemia,9836/3,c-all
+precursor t-cell lymphoblastic leukemia,9837/3,pro-t all
+precursor t-cell lymphoblastic leukemia,9837/3,pre-t all
+precursor t-cell lymphoblastic leukemia,9837/3,cortical t all
+precursor t-cell lymphoblastic leukemia,9837/3,mature t all
+"acute myeloid leukemia, m6 type",9840/3,acute erythroid leukemia
+"acute myeloid leukemia, m6 type",9840/3,m6a
+"acute myeloid leukemia, m6 type",9840/3,m6b
+"acute myeloid leukemia, m6 type",9840/3,erythroleukemia
+"acute myeloid leukemia, m6 type",9840/3,fab m6
+"acute myeloid leukemia, m6 type",9840/3,aml m6
+"acute myeloid leukemia, m6 type",9840/3,"erythremic myelosis, nos"
+"acute myeloid leukemia, m6 type",9840/3,acute erythremia
+"acute myeloid leukemia, m6 type",9840/3,di guglielmo disease
+"acute myeloid leukemia, m6 type",9840/3,acute erythremic myelosis
+"acute myeloid leukemia, m6 type",9840/3,m6 type acute myeloid leukemia
+"acute myeloid leukemia, m6 type",9840/3,acute myeloid leukemia m6 type
+"acute myeloid leukemia, m6 type",9840/3,erythremic myelosis
+"myeloid leukemia, nos",9860/3,"non-lymphocytic leukemia, nos"
+"myeloid leukemia, nos",9860/3,"granulocytic leukemia, nos"
+"myeloid leukemia, nos",9860/3,"myelogenous leukemia, nos"
+"myeloid leukemia, nos",9860/3,"myelomonocytic leukemia, nos"
+"myeloid leukemia, nos",9860/3,"myelocytic leukemia, nos"
+"myeloid leukemia, nos",9860/3,subacute myeloid leukemia
+"myeloid leukemia, nos",9860/3,subacute granulocytic leukemia
+"myeloid leukemia, nos",9860/3,subacute myelogenous leukemia
+"myeloid leukemia, nos",9860/3,aleukemic myeloid leukemia
+"myeloid leukemia, nos",9860/3,aleukemic granulocytic leukemia
+"myeloid leukemia, nos",9860/3,aleukemic myelogenous leukemia
+"myeloid leukemia, nos",9860/3,eosinophilic leukemia
+"myeloid leukemia, nos",9860/3,"monocytic leukemia, nos"
+"myeloid leukemia, nos",9860/3,subacute monocytic leukemia
+"myeloid leukemia, nos",9860/3,chronic monocytic leukemia
+"myeloid leukemia, nos",9860/3,aleukemic monocytic leukemia
+"myeloid leukemia, nos",9860/3,myeloid leukemia
+"myeloid leukemia, nos",9860/3,non-lymphocytic leukemia
+"myeloid leukemia, nos",9860/3,granulocytic leukemia
+"myeloid leukemia, nos",9860/3,myelogenous leukemia
+"myeloid leukemia, nos",9860/3,myelomonocytic leukemia
+"myeloid leukemia, nos",9860/3,myelocytic leukemia
+"myeloid leukemia, nos",9860/3,monocytic leukemia
+"acute myeloid leukemia, nos",9861/3,acute non-lymphocytic leukemia
+"acute myeloid leukemia, nos",9861/3,acute granulocytic leukemia
+"acute myeloid leukemia, nos",9861/3,acute myelogenous leukemia
+"acute myeloid leukemia, nos",9861/3,acute myelocytic leukemia
+"acute myeloid leukemia, nos",9861/3,acute myeloid leukemia
+"chronic myeloid leukemia, nos",9863/3,"chronic granulocytic leukemia, nos"
+"chronic myeloid leukemia, nos",9863/3,"chronic myelogenous leukemia, nos"
+"chronic myeloid leukemia, nos",9863/3,"chronic myelocytic leukemia, nos"
+"chronic myeloid leukemia, nos",9863/3,chronic myeloid leukemia
+"chronic myeloid leukemia, nos",9863/3,chronic granulocytic leukemia
+"chronic myeloid leukemia, nos",9863/3,chronic myelogenous leukemia
+"chronic myeloid leukemia, nos",9863/3,chronic myelocytic leukemia
+acute promyelocytic leukemia,9866/3,"acute promyelocytic leukemia, pml/rar- alpha"
+acute promyelocytic leukemia,9866/3,"acute myeloid leukemia, t(15:17)(q22"
+acute promyelocytic leukemia,9866/3,"acute myeloid leukemia, pml/rar-alpha"
+acute promyelocytic leukemia,9866/3,"acute promyelocytic leukemia, nos"
+acute promyelocytic leukemia,9866/3,fab m3
+acute promyelocytic leukemia,9866/3,pml/rar- alpha acute promyelocytic leukemia
+acute promyelocytic leukemia,9866/3,acute promyelocytic leukemia pml/rar- alpha
+acute promyelocytic leukemia,9866/3,t(15:17)(q22 acute myeloid leukemia
+acute promyelocytic leukemia,9866/3,acute myeloid leukemia t(15:17)(q22
+acute promyelocytic leukemia,9866/3,pml/rar-alpha acute myeloid leukemia
+acute promyelocytic leukemia,9866/3,acute myeloid leukemia pml/rar-alpha
+acute myelomonocytic leukemia,9867/3,fab m4
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,"acute myeloid leukemia, inv(16)(p13;q22)"
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,"acute myeloid leukemia, t(16;16)(p13;q11)"
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,"acute myeloid leukemia, cbf-beta/myh11"
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,acute myelomonocytic leukemia with abnormal eosinophils
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,fab m4eo
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,inv(16)(p13;q22) acute myeloid leukemia
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,acute myeloid leukemia inv(16)(p13;q22)
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,t(16;16)(p13;q11) acute myeloid leukemia
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,acute myeloid leukemia t(16;16)(p13;q11)
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,cbf-beta/myh11 acute myeloid leukemia
+acute myeloid leukemia with abnormal marrow eosinophils,9871/3,acute myeloid leukemia cbf-beta/myh11
+"acute myeloid leukemia, minimal differentiation",9872/3,acute myeloblastic leukemia
+"acute myeloid leukemia, minimal differentiation",9872/3,fab m0
+"acute myeloid leukemia, minimal differentiation",9872/3,minimal differentiation acute myeloid leukemia
+"acute myeloid leukemia, minimal differentiation",9872/3,acute myeloid leukemia minimal differentiation
+acute myeloid leukemia without maturation,9873/3,fab m1
+acute myeloid leukemia with maturation,9874/3,"fab m2, nos"
+acute myeloid leukemia with maturation,9874/3,fab m2
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,"chronic myelogenous leukemia, philadelphia chromosome (ph1) positive"
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,"chronic myelogenous leukemia, t(9"
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,"chronic granulocytic leukemia, philadelphia chromosome (ph1) positive"
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,"chronic granulocytic leukemia, t(9"
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,"chronic granulocytic leukemia, bcr/abl"
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,bcr/abl  positive chronic myelogenous leukemia
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,chronic myelogenous leukemia bcr/abl  positive
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,philadelphia chromosome (ph1) positive chronic myelogenous leukemia
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,chronic myelogenous leukemia philadelphia chromosome (ph1) positive
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,t(9 chronic myelogenous leukemia
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,chronic myelogenous leukemia t(9
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,philadelphia chromosome (ph1) positive chronic granulocytic leukemia
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,chronic granulocytic leukemia philadelphia chromosome (ph1) positive
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,t(9 chronic granulocytic leukemia
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,chronic granulocytic leukemia t(9
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,bcr/abl chronic granulocytic leukemia
+"chronic myelogenous leukemia, bcr/abl  positive",9875/3,chronic granulocytic leukemia bcr/abl
+"atypical chronic myeloid leukemia, bcr/abl negative",9876/3,"atypical chronic myeloid leukemia, philadelphia chromosome (ph1) negative"
+"atypical chronic myeloid leukemia, bcr/abl negative",9876/3,bcr/abl negative atypical chronic myeloid leukemia
+"atypical chronic myeloid leukemia, bcr/abl negative",9876/3,atypical chronic myeloid leukemia bcr/abl negative
+"atypical chronic myeloid leukemia, bcr/abl negative",9876/3,philadelphia chromosome (ph1) negative atypical chronic myeloid leukemia
+"atypical chronic myeloid leukemia, bcr/abl negative",9876/3,atypical chronic myeloid leukemia philadelphia chromosome (ph1) negative
+acute monocytic leukemia,9891/3,acute monoblastic leukemia
+acute monocytic leukemia,9891/3,"monoblastic leukemia, nos"
+acute monocytic leukemia,9891/3,fab m5
+acute monocytic leukemia,9891/3,monoblastic leukemia
+acute myeloid leukemia with multilineage dysplasia,9895/3,acute myeloid leukemia with prior myelodysplastic syndrome
+acute myeloid leukemia with multilineage dysplasia,9895/3,acute myeloid leukemia without prior myelodysplastic syndrome
+"acute myeloid leukemia, t(8",9896/3,"acute myeloid leukemia, aml1(cbf- alpha)/eto"
+"acute myeloid leukemia, t(8",9896/3,"fab m2, t(8"
+"acute myeloid leukemia, t(8",9896/3,"fab m2, aml1(cbf-alpha)/eto"
+"acute myeloid leukemia, t(8",9896/3,t(8 acute myeloid leukemia
+"acute myeloid leukemia, t(8",9896/3,acute myeloid leukemia t(8
+"acute myeloid leukemia, t(8",9896/3,aml1(cbf- alpha)/eto acute myeloid leukemia
+"acute myeloid leukemia, t(8",9896/3,acute myeloid leukemia aml1(cbf- alpha)/eto
+"acute myeloid leukemia, t(8",9896/3,t(8 fab m2
+"acute myeloid leukemia, t(8",9896/3,fab m2 t(8
+"acute myeloid leukemia, t(8",9896/3,aml1(cbf-alpha)/eto fab m2
+"acute myeloid leukemia, t(8",9896/3,fab m2 aml1(cbf-alpha)/eto
+"acute myeloid leukemia, 11q23 abnormalities",9897/3,"acute myeloid leukemia, mll"
+"acute myeloid leukemia, 11q23 abnormalities",9897/3,11q23 abnormalities acute myeloid leukemia
+"acute myeloid leukemia, 11q23 abnormalities",9897/3,acute myeloid leukemia 11q23 abnormalities
+"acute myeloid leukemia, 11q23 abnormalities",9897/3,mll acute myeloid leukemia
+"acute myeloid leukemia, 11q23 abnormalities",9897/3,acute myeloid leukemia mll
+acute megakaryoblastic leukemia,9910/3,megakaryocytic leukemia
+acute megakaryoblastic leukemia,9910/3,fab m7
+"therapy-related acute myeloid leukemia, nos",9920/3,"therapy-related acute myeloid leukemia, alkylating agent related"
+"therapy-related acute myeloid leukemia, nos",9920/3,"therapy-related acute myeloid leukemia, epipodophyllotoxin-related"
+"therapy-related acute myeloid leukemia, nos",9920/3,therapy-related acute myeloid leukemia
+"therapy-related acute myeloid leukemia, nos",9920/3,alkylating agent related therapy-related acute myeloid leukemia
+"therapy-related acute myeloid leukemia, nos",9920/3,therapy-related acute myeloid leukemia alkylating agent related
+"therapy-related acute myeloid leukemia, nos",9920/3,epipodophyllotoxin-related therapy-related acute myeloid leukemia
+"therapy-related acute myeloid leukemia, nos",9920/3,therapy-related acute myeloid leukemia epipodophyllotoxin-related
+myeloid sarcoma,9930/3,granulocytic sarcoma
+myeloid sarcoma,9930/3,chloroma
+acute panmyelosis with myelofibrosis,9931/3,"acute panmyelosis, nos"
+acute panmyelosis with myelofibrosis,9931/3,acute myelofibrosis
+acute panmyelosis with myelofibrosis,9931/3,"acute myelosclerosis, nos"
+acute panmyelosis with myelofibrosis,9931/3,malignant myelosclerosis
+acute panmyelosis with myelofibrosis,9931/3,acute panmyelosis
+acute panmyelosis with myelofibrosis,9931/3,acute myelosclerosis
+hairy cell leukemia,9940/3,hairy cell leukemia variant
+hairy cell leukemia,9940/3,leukemic reticuloendotheliosis
+"chronic myelomonocytic leukemia, nos",9945/3,"chronic myelomonocytic leukemia, type i"
+"chronic myelomonocytic leukemia, nos",9945/3,"chronic myelomonocytic leukemia, type ii"
+"chronic myelomonocytic leukemia, nos",9945/3,chronic myelomonocytic leukemia in transformation
+"chronic myelomonocytic leukemia, nos",9945/3,chronic myelomonocytic leukemia
+"chronic myelomonocytic leukemia, nos",9945/3,type i chronic myelomonocytic leukemia
+"chronic myelomonocytic leukemia, nos",9945/3,chronic myelomonocytic leukemia type i
+"chronic myelomonocytic leukemia, nos",9945/3,type ii chronic myelomonocytic leukemia
+"chronic myelomonocytic leukemia, nos",9945/3,chronic myelomonocytic leukemia type ii
+juvenile myelomonocytic leukemia,9946/3,juvenile chronic myelomonocytic leukemia
+polycythemia vera,9950/3,polycythemia rubra vera
+polycythemia vera,9950/3,proliferative polycythemia
+polycythemia vera,9950/3,chronic erythremia
+"chronic myeloproliferative disease, nos",9960/3,chronic myeloproliferative disorder
+"chronic myeloproliferative disease, nos",9960/3,chronic myeloproliferative disease
+myelosclerosis with myeloid metaplasia,9961/3,myelofibrosis as a result of myeloproliferative disease
+myelosclerosis with myeloid metaplasia,9961/3,chronic idiopathic myelofibrosis
+myelosclerosis with myeloid metaplasia,9961/3,agnogenic myeloid metaplasia
+myelosclerosis with myeloid metaplasia,9961/3,megakaryocytic myelosclerosis
+myelosclerosis with myeloid metaplasia,9961/3,myelofibrosis with myeloid metaplasia
+essential thrombocythemia,9962/3,idiopathic thrombocythemia
+essential thrombocythemia,9962/3,essential hemorrhagic thrombocythemia
+essential thrombocythemia,9962/3,idiopathic hemorrhagic thrombocythemia
+hypereosinophilic syndrome,9964/3,chronic eosinophilic leukemia
+"lymphoproliferative disorder, nos",9970/1,"lymphoproliferative disease, nos"
+"lymphoproliferative disorder, nos",9970/1,lymphoproliferative disorder
+"lymphoproliferative disorder, nos",9970/1,lymphoproliferative disease
+"myeloproliferative disease, nos",9975/1,myeloproliferative disease
+refractory anemia,9980/3,refractory anemia without sideroblasts
+refractory anemia with sideroblasts,9982/3,refractory anemia with ringed sideroblasts
+refractory anemia with sideroblasts,9982/3,rars
+refractory anemia with excess blasts,9983/3,raeb
+refractory anemia with excess blasts,9983/3,raeb i
+refractory anemia with excess blasts,9983/3,raeb ii
+refractory anemia with excess blasts in transformation,9984/3,raeb-t
+"therapy-related myelodysplastic syndrome, nos",9987/3,"therapy-related myelodysplastic syndrome, alkylating agent related"
+"therapy-related myelodysplastic syndrome, nos",9987/3,"therapy-related myelodysplastic syndrome, epipodophyllotoxin-related"
+"therapy-related myelodysplastic syndrome, nos",9987/3,therapy-related myelodysplastic syndrome
+"therapy-related myelodysplastic syndrome, nos",9987/3,alkylating agent related therapy-related myelodysplastic syndrome
+"therapy-related myelodysplastic syndrome, nos",9987/3,therapy-related myelodysplastic syndrome alkylating agent related
+"therapy-related myelodysplastic syndrome, nos",9987/3,epipodophyllotoxin-related therapy-related myelodysplastic syndrome
+"therapy-related myelodysplastic syndrome, nos",9987/3,therapy-related myelodysplastic syndrome epipodophyllotoxin-related
+"myelodysplastic syndrome, nos",9989/3,preleukemia
+"myelodysplastic syndrome, nos",9989/3,preleukemic syndrome
+"myelodysplastic syndrome, nos",9989/3,myelodysplastic syndrome

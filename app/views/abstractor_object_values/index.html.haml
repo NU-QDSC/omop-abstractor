@@ -1,0 +1,48 @@
+- content_for(:title) do
+  Object Values
+.row
+  #abstractor_object_values.col.s12
+    .abstractor_object_values_header
+      %h1
+        = @abstractor_abstraction_schema.display_name
+        Values
+      .row
+        = link_to 'Schemas', abstractor_abstraction_schemas_url, class: 'waves-effect'
+      .row
+        = form_tag abstractor_abstraction_schema_abstractor_object_values_url(), method: :get, id: 'search_abstractor_object_values_form' do
+          .row
+            .search.input-field.col.s12
+              = label_tag :search, 'Search'
+              = text_field_tag :search, (params[:search].nil? ? '' : params[:search]), type: 'search'
+          .row
+            .navigation.col.l4.push-l8.s6.push-s6.right-align
+              %button{ :type => 'submit', :id => 'search_abstractor_object_values_button', class: 'waves-effect waves-light btn' }
+                Search
+              = link_to 'Clear', abstractor_abstraction_schema_abstractor_object_values_url()
+    .abstractor_object_values_list.col.s12.right-align
+      .row
+        = will_paginate @abstractor_object_values, renderer: MaterializePagination::Rails
+        %table
+          %thead
+            %tr
+              %th.abstractor_object_value_value{ width: 200 }
+                = sortable 'value'
+              %th.abstractor_object_value_vocabulary_code{ width: 100 }
+                = sortable 'vocabulary_code'
+              %th.abstractor_object_value_edit{ width: 300 }
+              %th.abstractor_object_value_delete{ width: 300 }
+          %tbody
+            - @abstractor_object_values.each_with_index do |abstractor_object_value, i|
+              = content_tag_for(:tr, abstractor_object_value ) do
+                %td.abstractor_object_value_value
+                  = abstractor_object_value.value
+                %td.abstractor_object_value_vocabulary_code
+                  = abstractor_object_value.vocabulary_code
+                %td.abstractor_object_value_edit.right-align
+                  = link_to 'Edit', Abstractor::UserInterface.abstractor_relative_path(edit_abstractor_abstraction_schema_abstractor_object_value_path(@abstractor_abstraction_schema, abstractor_object_value)), class: 'edit_abstraction_schema_abstractor_object_value_link waves-effect waves-light btn'
+                %td.abstractor_object_value_delete.right-align
+                  = link_to 'Delete', Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_schema_abstractor_object_value_path(@abstractor_abstraction_schema, abstractor_object_value)), method: :delete, class: 'delete_abstractor_abstraction_schema_abstractor_object_value_link waves-effect waves-light btn red', data: { confirm: 'Are you sure?' }
+        = will_paginate @abstractor_object_values, renderer: MaterializePagination::Rails
+    .row
+      .col.s12.left-align
+        = link_to 'New', Abstractor::UserInterface.abstractor_relative_path(new_abstractor_abstraction_schema_abstractor_object_value_path(@abstractor_abstraction_schema)), class: 'new_abstractor_abstraction_schema_abstractor_object_value_link waves-effect waves-light btn'

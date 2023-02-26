@@ -1,0 +1,32 @@
+- about ||= @about
+- namespace_type ||= @namespace_type
+- namespace_id ||= @namespace_id
+
+
+.wrapper
+  .abstractor_footer.sticky
+    .abstractor_sources_tabs
+      - about.sources.each_with_index do |source, i|
+        .abstractor_source_tab{ id: "#{Abstractor::UserInterface.generate_source_id(source)}" }
+          = radio_button_tag "abstractor_source_tab", i,  name: "abstractor_source_tabs", checked: nil
+          = label_tag "abstractor_source_tab_#{i}", "#{source[:source_method].to_s.humanize}", for: "abstractor_source_tab_#{i}"
+          .abstractor_source_tab_content
+            - abstractor_text = Abstractor::AbstractorAbstractionSource.abstractor_text(source)
+            - if abstractor_text
+              - unless source[:abstractor_suggestion_sources].blank?
+                - source[:abstractor_suggestion_sources].each do |abstractor_suggestion_source|
+                  - unless abstractor_suggestion_source[:sentence_match_value].blank?
+                    - hashed_sentence = abstractor_suggestion_source[:sentence_match_value].hash
+                    - abstractor_text = Abstractor::UserInterface.highlight(ERB::Util.html_escape(abstractor_text), ERB::Util.html_escape(abstractor_suggestion_source[:sentence_match_value].strip), highlighter: %{<strong class="abstractor_highlight #{hashed_sentence.to_s}">\\1</strong>})
+              = format_text(ERB::Util.html_escape(abstractor_text))
+  .abstractor_abstractions
+    - if show_abstractor_all_links?
+      .abstractor_all_links
+        = link_to 'Not applicable all', Abstractor::UserInterface.abstractor_relative_path(update_all_abstractor_abstractions_path(about_type: about.class, about_id: about.id, abstractor_abstraction_value: 'not applicable')), data: { confirm: 'Are you sure?'}, method: :put, class: 'abstractor_not_applicable_all_link waves-effect waves-light btn'
+        = link_to 'Unknown all', Abstractor::UserInterface.abstractor_relative_path(update_all_abstractor_abstractions_path(about_type: about.class, about_id: about.id, abstractor_abstraction_value: 'unknown')), data: { confirm: 'Are you sure?'}, method: :put,  class: 'abstractor_unknown_all_link waves-effect waves-light btn'
+    - if flash[:abstractor_errors]
+      %div{ :id => "abstractor_error", :class => "message"}
+        - flash[:abstractor_errors].each do |error|
+          = error
+    = render partial: 'abstractor_abstractions/grouped_abstractions_list',   locals: { about: about, namespace_type: namespace_type, namespace_id: namespace_id}
+    = render partial: 'abstractor_abstractions/ungrouped_abstractions_list', locals: { about: about, namespace_type: namespace_type, namespace_id: namespace_id}

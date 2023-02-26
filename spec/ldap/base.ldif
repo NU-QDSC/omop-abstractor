@@ -1,0 +1,123 @@
+# ldapadd -x -h localhost -p 3389 -D "cn=admin,dc=test,dc=com" -w secret -f base.ldif
+
+dn: dc=test,dc=com
+objectClass: dcObject
+objectClass: organizationalUnit
+dc: test
+ou: Test
+
+dn: ou=people,dc=test,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: cn=jwr057,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: jwr057
+mail: jmathews@northwestern.edu
+uid: jwr057
+cn: jwr057
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=mjg994,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: mjg994
+mail: m-gurley@northwestern.edu
+uid: mjg994
+cn: mjg994
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=tds704,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: tds704
+mail: t-shamaly@northwestern.edu
+uid: tds704
+cn: tds704
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=yab944,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: yab944
+mail: y-bushmanova@northwestern.edu
+uid: yab944
+cn: yab944
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=jrp156,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: jrp156
+mail: jalpa-patel@northwestern.edu
+uid: jrp156
+cn: jrp156
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=ssf5957,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: ssf5957
+mail: samer.sharba@northwestern.edu
+uid: ssf5957
+cn: ssf5957
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=fhw108,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: fhw108
+mail: firas.wehbe@northwestern.edu
+uid: fhw108
+cn: fhw108
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =
+
+dn: cn=nkj5125,ou=people,dc=test,dc=com
+objectClass: inetOrgPerson
+objectClass: authorizations
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: nkj5125
+mail: neelima.katam@northwestern.edu
+uid: nkj5125
+cn: nkj5125
+authorizationRole: blogUser
+userPassword:: e1NTSEF9ZXRYaE9NcjRjOGFiTjlqYUxyczZKSll5MFlaZUF1NURCVWhhY0E9PQ=
+ =

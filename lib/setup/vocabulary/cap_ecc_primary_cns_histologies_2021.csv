@@ -1,0 +1,125 @@
+icdo3_code,name
+94403,"9440/3 Glioblastoma, IDH-wildtype"
+94211,"9421/1 Diffuse astrocytoma, MYB- or MYBL1-altered"
+94311,9431/1 Angiocentric glioma
+94130,9413/0 Polymorphous low-grade neuroepithelial tumor of the young
+94211,"9421/1 Diffuse low-grade glioma, MAPK pathway-altered"
+93853,"9385/3 Diffuse midline glioma, H3 K27-altered"
+93853,"9385/3 Diffuse hemispheric glioma, H3 G34-mutant"
+93853,"9385/3 Diffuse pediatric-type high-grade glioma, H3-wildtype and IDH-wildtype"
+93853,9385/3 Infant-type hemispheric glioma
+94211,9421/1 Pilocytic astrocytoma
+94213,9421/3 High-grade astrocytoma with piloid features
+94243,9424/3 Pleomorphic xanthoastrocytoma
+93841,9384/1 Subependymal giant cell astrocytoma
+94441,9444/1 Chordoid glioma
+94303,"9430/3 Astroblastoma, MN1-altered"
+95051,9505/1 Ganglioglioma
+94920,9492/0 Gangliocytoma
+94121,9412/1 Desmoplastic infantile ganglioglioma
+94121,9412/1 Desmoplastic infantile astrocytoma
+94130,9413/0 Dysembryoplastic neuroepithelial tumor
+95091,9509/1 Papillary glioneuronal tumor
+95091,9509/1 Rosette-forming glioneuronal tumor
+95091,9509/1 Myxoid glioneuronal tumor
+95093,9509/3 Diffuse leptomeningeal glioneuronal tumor
+94090,9409/0 Multinodular and vacuolating neuronal tumor
+94930,9493/0 Dysplastic cerebellar gangliocytoma (Lhermitte-Duclos disease)
+95061,9506/1 Central neurocytoma
+95061,9506/1 Extraventricular neurocytoma
+95061,9506/1 Cerebellar liponeurocytoma
+93913,"9391/3 Supratentorial ependymoma, NOS"
+93963,"9396/3 Supratentorial ependymoma, ZFTA fusion-positive"
+93963,"9396/3 Supratentorial ependymoma, YAP1 fusion-positive"
+93913,"9391/3 Posterior fossa ependymoma, NOS"
+93963,9396/3 Posterior fossa group A (PFA) ependymoma
+93963,9396/3 Posterior fossa group B (PFB) ependymoma
+93913,"9391/3 Spinal ependymoma, NOS"
+93963,"9396/3 Spinal ependymoma, MYCN-amplified"
+93941,9394/1 Myxopapillary ependymoma
+93831,9383/1 Subependymoma
+93900,9390/0 Choroid plexus papilloma
+93901,9390/1 Atypical choroid plexus papilloma
+93903,9390/3 Choroid plexus carcinoma
+94753,"9475/3 Medulloblastoma, WNT-activated"
+94713,"9471/3 Medulloblastoma, SHH-activated and TP53-wildtype"
+94763,"9476/3 Medulloblastoma, SHH-activated and TP53-mutant"
+94773,"9477/3  Medulloblastoma, non-WNT/non-SHH"
+94703,"9470/3 Medulloblastoma, histologically defined"
+94713,9471/3 Desmoplastic nodular medulloblastoma
+94713,9471/3 Medulloblastoma with extensive nodularity
+94743,9474/3 Large cell medulloblastoma
+95083,9508/3 Atypical teratoid/rhabdoid tumor
+94783,9478/3  Embryonal tumor with multilayered rosettes
+95003,"9500/3 CNS neuroblastoma, FOXR2-activated"
+95003,9500/3 CNS tumor with BCOR internal tandem duplication
+94733,"9473/3 CNS embryonal tumor, NEC/NOS"
+93611,9361/1 Pineocytoma
+93623,9362/3 Pineal parenchymal tumor of intermediate differentiation
+93623,9362/3 Pineoblastoma
+93953,9395/3 Papillary tumor of the pineal region
+95600,9560/0 Schwannoma
+95400,9540/0 Neurofibroma
+95500,9550/0 Plexiform neurofibroma
+95710,9571/0 Perineurioma
+95630,9563/0  Hybrid nerve sheath tumor
+95403,9540/3 Malignant melanotic nerve sheath tumor
+95403,9540/3 Malignant peripheral nerve sheath tumor
+86933,8693/3 Cauda equina neuroendocrine tumor (previously paraganglioma)
+95300,9530/0 Meningioma
+88151,8815/1 Solitary fibrous tumor
+91210,9121/0 Cavernous hemangioma
+91230,9123/0 Arteriovenous malformation
+91310,9131/0 Capillary hemangioma
+91611,9161/1 Hemangioblastoma
+89103,8910/3 Embryonal rhabdomyosarcoma
+89203,8920/3 Alveolar rhabdomyosarcoma
+89013,"8901/3 Rhabdomyosarcoma, pleomorphic-type"
+89123,8912/3 Spindle cell rhabdomyosarcoma
+98673,9867/3 CIC-rearranged sarcoma
+94803,"9480/3 Primary intracranial sarcoma, DICER1-mutant"
+93643,9364/3 Ewing sarcoma
+92403,9240/3 Mesenchymal chondrosarcoma
+92203,9220/3 Chondrosarcoma
+92433,9243/3 Dedifferentiated chondrosarcoma
+93703,9370/3 Chordoma
+87280,8728/0 Meningeal melanocytosis
+87283,8728/3 Meningeal melanomatosis
+87281,8728/1 Meningeal melanocytoma
+87203,8720/3 Meningeal melanoma
+96803,9680/3 Primary diffuse large B-cell lymphoma of the CNS
+97661,9766/1 Lymphomatoid granulomatosis
+97123,9712/3 Intravascular large B-cell lymphoma
+96993,9699/3 MALT lymphoma of the dura
+97143,9714/3 Anaplastic large cell lymphoma (ALK+/ALK_)
+97023,9702/3 T-cell lymphoma
+97193,9719/3 NK/T-cell lymphoma
+97493,9749/3 Erdheim-Chester disease
+97493,9749/3 Rosai-Dorfman disease
+97491,9749/1 Juvenile xanthogranuloma
+97511,9751/1 Langerhans cell histiocytosis
+97553,9755/3 Histiocytic sarcoma
+90800,9080/0 Mature teratoma
+90803,9080/3 Immature teratoma
+90843,9084/3 Teratoma with somatic-type malignancy
+90643,9064/3 Germinoma
+90703,9070/3 Embryonal carcinoma
+90713,9071/3 Yolk sac tumor
+91003,9100/3 Choriocarcinoma
+90853,9085/3 Mixed germ cell tumor
+93511,9351/1 Adamantinomatous craniopharyngioma
+93521,9352/1 Papillary craniopharyngioma
+94321,9432/1 Pituicytoma
+95820,9582/0 Granular cell tumor of the sellar region
+82900,8290/0 Spindle cell oncocytoma
+82723,8272/3 Pituitary adenoma / pituitary neuroendocrine tumor (PitNET)
+82733,8273/3 Pituitary blastoma
+,"Astrocytoma, IDH-mutant"
+,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted"
+,Diffuse glioneuronal tumor with oligodendroglioma-like features and nuclear clusters
+,Cribriform neuroepithelial tumor 
+,"Desmoplastic myxoid tumor of the pineal region, SMARCB1-mutant "
+,Hemangioma
+,"Intracranial mesenchymal tumor, FET::CREB fusion-positive "
+,Immunodeficiency-associated CNS lymphoma
+,Other low-grade B-cell lymphomas of the CNS

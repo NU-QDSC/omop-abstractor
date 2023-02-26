@@ -1,0 +1,69 @@
+.highlighted_suggestion {
+  background-color: yellow;
+}
+.wrapper {
+  position: relative;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.abstractor_footer {
+  width: 50%;
+  margin-left: 55%;
+}
+
+.abstractor_abstractions {
+  width: 50%;
+}
+
+.abstractor_source_tab label {
+  font-weight: 400;
+  color: black;
+  line-height: 110%;
+  font-size: 2.28rem;
+}
+
+.abstractor_abstractions fieldset .abstractor_abstraction_source_tooltip_img {
+  padding: .40rem .25rem;
+}
+
+.abstractor_abstractions fieldset .abstractor_abstraction_source_tooltip_img i {
+  background: asset_url('abstractor/page.png') no-repeat;
+  vertical-align: text-bottom;
+  padding: .15rem .55rem;
+  vertical-align: middle;
+}
+
+.abstractor_not_applicable_all_link, .abstractor_unknown_all_link {
+  margin-bottom: 1rem;
+}
+
+.abstractor_group_delete_link {
+  margin-top: 1rem;
+}
+
+.abstractor_group_not_applicable_all_link, .abstractor_group_unknown_all_link{
+  margin-top: 1rem;
+}
+
+.abstractor_group_add_link {
+  margin-top: 1rem;
+}
+
+.abstraction_edit_abstraction_actions {
+  margin-top: 1rem;
+}
+
+.abstractor_abstractions_ungrouped {
+  margin-top: 1rem;
+}
+
+.abstractor_suggestion_values
+{
+  float: right;
+}

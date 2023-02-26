@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+require 'erb'
+require 'fileutils'
+
+FileUtils.chdir(File.dirname(__FILE__))
+
+## For OSX:
+ENV['PATH'] = "#{ENV['PATH']}:/usr/libexec"
+
+template = File.read('slapd-test.conf.erb')
+normal_out = 'slapd-test.conf'
+ssl_out = 'slapd-ssl-test.conf'
+
+File.open(normal_out, 'w') do |f|
+  @ssl = false
+  f.write ERB.new(template).result(binding)
+end
+File.open(ssl_out, 'w') do |f|
+  @ssl = true
+  f.write ERB.new(template).result(binding)
+end
+
+if ARGV.first == '--ssl'
+  cmd = "slapd -d 1 -f #{ssl_out} -h ldaps://localhost:3389"
+else
+  cmd = "slapd -d 1 -f #{normal_out} -h ldap://localhost:3389"
+end
+
+puts(cmd)
+exec(cmd)

@@ -1,0 +1,163 @@
+#note.row
+  .row
+    %h1.col.l12
+      Note
+  .row
+    .navigation.col.l12
+      = link_to 'Back', controller.back_from_note_edit, class: 'back-note-link'
+      |
+      = link_to 'Notes', notes_path, class: 'notes-link'
+      |
+      = link_to 'Previous', previous_note_notes_path(namespace_type: @namespace_type, namespace_id: @namespace_id), class: 'previous-note-link'
+      |
+      = link_to 'Next', next_note_notes_path(index: params[:index], previous_note_id: @note.note_id, namespace_type: @namespace_type, namespace_id: @namespace_id), class: 'next-note-link'
+  .row
+    .patient.col.s12.l2
+      %b
+        Patient
+      %br
+      = @person.full_name
+    .mrns.col.s12.l2
+      %b
+        MRN(s):
+      - @mrns.each do |mrn|
+        .mrn
+          %b
+            = mrn.health_system
+          = mrn.mrn
+    .note_date.col.s12.l2
+      %b
+        Note Date
+      %br
+      = @note.note_date.to_s(:date)
+    .note_type.col.s12.l1
+      %b
+        Note Type
+      %br
+      = @note.note_type.concept_name
+    .note_class.col.s12.l1
+      %b
+        Note Class
+      %br
+      = @note.note_class.concept_name
+    .note_title.col.s12.l2
+      %b
+        Title
+      %br
+      = @note.note_title
+    .provider.col.s12.l2
+      %b
+        Provider
+      %br
+      = @provider.provider_name if @provider.present?
+  #procedure_occurrences.row
+    .row
+      %h4.col.l12
+        Procedures
+    .row
+      .procedure_concept.col.s12.l2
+        %b
+          Procedure
+      .procedure_date.col.s12.l2
+        %b
+          Date
+      .provider.col.s12.l2
+        %b
+          Provider
+      .specimens.col.s12.l3
+        %b
+          Specimens
+      .notes.col.s12.l3.center-align
+        %b
+          Notes
+    - procedure_occurences = @note.procedure_occurences(username: current_user.username)
+    - if procedure_occurences.any?
+      - procedure_occurences.each do |procedure_occurence|
+        .row.procedure_occurrence
+          .procedure_concept.col.s12.l2
+            - if procedure_occurence.procedure_concept
+              = procedure_occurence.procedure_concept.concept_name
+          .procedure_date.col.s12.l2
+            = procedure_occurence.procedure_date.to_s(:date)
+          .provider.col.s12.l2
+            = procedure_occurence.provider.provider_name if procedure_occurence.provider.present?
+          .specimens.col.s12.l3
+            - specimens = procedure_occurence.specimens(username: current_user.username)
+            - if specimens.any?
+              - specimens.each do |specimen|
+                .row
+                  .specimen_concept.col.s6.l6
+                    %b
+                      Specimen
+                  .specimen_date.col.s6.l6
+                    %b
+                      Date
+                .row
+                  .specimen_concept.col.s6.l6
+                    = specimen.specimen_concept.concept_name
+                  .specimen_date.col.s6l6
+                    = specimen.specimen_date.to_s(:date)
+          .notes.col.s12.l3.center-align
+            - notes = procedure_occurence.notes(username: current_user.username, except_notes: [@note])
+            - if notes.any?
+              - notes.each do |note|
+                .row.note
+                  .note_title.center-align.col.s6.l6
+                    = note.note_title
+                  .note_view.center-align.col.s6.l6
+                    = link_to 'View', "#note_id_#{note.note_id}", class: 'waves-effect waves-light btn modal-trigger'
+                    %div{id: "note_id_#{note.note_id}", class: 'modal' }
+                      .modal-content.left-align
+                        = render partial: 'note', locals: { note: note}
+  #other_notes.row
+  .row
+    %h4.col.l12
+      Other Notes
+  .row
+    .other_note_note_date.col.s12.l2
+      %b
+        Note Date
+    .other_note_note_type.col.s12.l2
+      %b
+        Note Type
+    .other_note_note_class.col.s12.l2
+      %b
+        Note Class
+    .other_note_note_title.col.s12.l2
+      %b
+        Title
+    .other_note_note_provider.col.s12.l2
+      %b
+        Provider
+    .other_note_review.col.s12.l2
+
+  - other_notes = @note.other_notes
+  - if other_notes.any?
+    - other_notes.each do |other_note|
+      .row
+        .other_note_note_date.col.s12.l2
+          = other_note.note.note_date.to_s(:date)
+        .other_note_note_type.col.s12.l2
+          = @note.note_type.concept_name
+        .other_note_note_class.col.s12.l2
+          = @note.note_class.concept_name
+        .other_note_note_title.col.s12.l2
+          = @note.note_title
+        .other_note_note_provider.col.s12.l2
+          = @provider.provider_name if @provider.present?
+        .other_note_review.col.s12.l2
+          - other_note.abstractor_namespaces.each do |abstractor_namespace|
+            = link_to "#{abstractor_namespace.name}:Review", edit_note_path(other_note.note.note_id, previous_note_id: other_note.note.note_id, index: 0, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id), { class: 'note_review_link' }
+  #note_abstractions
+    = render :partial => '/abstractor_abstractions/list', :locals => {:about => @note.note_stable_identifier, namespace_type: params[:namespace_type], namespace_id: params[:namespace_id] }
+  .note_actions
+    .actions
+      - if @note.note_stable_identifier.submitted?
+        = button_to 'Remove', Abstractor::UserInterface.abstractor_relative_path(update_wokflow_status_abstractor_abstractions_path()), data: { confirm: 'Are you sure?', controller: 'abstractor-abstraction', action: 'click->abstractor-abstraction#validateWorkflowStatus'}, method: :put, class: "abstractor_update_workflow_status_link_pend abstractor_update_workflow_status_link", remote: false, params: { about_type: @note.note_stable_identifier.class, about_id: @note.note_stable_identifier.id, abstraction_workflow_status: Abstractor::Enum::ABSTRACTION_WORKFLOW_STATUS_PENDING }, disabled: false, form_class: 'abstraction_workflow_status_form'
+      - else
+        = button_to 'Submit', Abstractor::UserInterface.abstractor_relative_path(update_wokflow_status_abstractor_abstractions_path()), data: { confirm: 'Are you sure?', controller: 'abstractor-abstraction', action: 'click->abstractor-abstraction#validateWorkflowStatus' }, method: :put, class: "abstractor_update_workflow_status_link_submit abstractor_update_workflow_status_link #{ @note.note_stable_identifier.fully_set? ? 'abstractor_update_workflow_status_link_enabled' : 'abstractor_update_workflow_status_link_disabled' }", remote: false, params: { about_type: @note.note_stable_identifier.class, about_id: @note.note_stable_identifier.id, abstraction_workflow_status: Abstractor::Enum::ABSTRACTION_WORKFLOW_STATUS_SUBMITTED }, disabled: !@note.note_stable_identifier.fully_set?, form_class: 'abstraction_workflow_status_form'
+      |
+      - if @note.note_stable_identifier.discarded?
+        = link_to 'Undiscard', Abstractor::UserInterface.abstractor_relative_path(undiscard_abstractor_abstractions_path(about_type: @note.note_stable_identifier.class, about_id: @note.note_stable_identifier.id)), data: { confirm: 'Are you sure?'}, method: :put, class: 'abstractor_undiscard_case_link'
+      - else
+        = link_to 'Discard', Abstractor::UserInterface.abstractor_relative_path(discard_abstractor_abstractions_path(about_type: @note.note_stable_identifier.class, about_id: @note.note_stable_identifier.id)), data: { confirm: 'Are you sure?'}, method: :put, class: 'abstractor_discard_case_link'

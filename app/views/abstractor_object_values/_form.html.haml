@@ -1,0 +1,47 @@
+= form_for @abstractor_object_value, url: @path, local: false, id: 'abstractor-object-value-form', data: { controller: 'abstractor-object-values' } do |f|
+  .abstractor_object_value_value.input-field.col.s12
+    = f.text_field :value, disabled: @abstractor_object_value.used?
+    = label_tag :value, "Value *", for: 'abstractor_abstractor_object_value_value'
+    - if validation_errors?(@abstractor_object_value, :value)
+      %p.error= format_validation_errors(@abstractor_object_value, :value)
+  .abstractor_object_value_vocabulary_code.input-field.col.s12
+    = f.text_field :vocabulary_code, disabled: @abstractor_object_value.used?
+    = label_tag :vocabulary_code, 'Vocabulary Code *', for: 'abstractor_abstractor_object_value_vocabulary_code'
+    - if validation_errors?(@abstractor_object_value, :vocabulary_code)
+      %p.error= format_validation_errors(@abstractor_object_value, :vocabulary_code)
+  .abstractor_object_value_case_sensitive.col.s12
+    %label
+      = f.check_box :case_sensitive, disabled:  @abstractor_object_value.used?
+      %span
+        Case Sensitive?
+  .abstractor_object_value_comments.input-field.col.s12
+    = f.text_area :comments, class: 'materialize-textarea'
+    = label_tag :comments, nil, for: 'abstractor_abstractor_object_value_comments'
+  .abstractor_object_value_variants
+    %h3
+      Variant Values
+    %div{ data: { controller: 'abstractor-object-value-variants' } }
+      %template{ data: { target: 'abstractor-object-value-variants.template' } }
+        = f.fields_for :abstractor_object_value_variants, Abstractor::AbstractorObjectValueVariant.new, child_index: 'NEW_RECORD' do |abstractor_object_value_variant|
+          = render 'abstractor_object_value_variant_fields', form: abstractor_object_value_variant
+      %table.s12
+        %thead
+          %tr
+            %th.variant_value{ width: 200 }
+              Variant Value
+              %span{ class: 'required' }
+            %th.case_sensitive{ width: 200 }
+              Case Sensitive?
+            %th.remove.right-align{ width: 100 }
+        %tbody.abstractor_object_value_variants_list{ data: { target: 'abstractor-object-value-variants.list' }}
+          = f.fields_for :abstractor_object_value_variants, @abstractor_object_value.abstractor_object_value_variants.order(value: :asc) do |abstractor_object_value_variant|
+            = render 'abstractor_object_value_variant_fields', form: abstractor_object_value_variant
+      %div
+        = link_to 'Add Variant Value', '#', id: 'add-abstractor-object-value-variant', class: 'btn wave-effect waves-light', data: { action: 'click->abstractor-object-value-variants#add_association'  }
+  .row
+    .navigation.col.offset-l9.l3
+      %p.help-text
+        %span{ class: 'required' }
+        Indicates required field
+      = f.submit 'Save', class: 'btn wave-effect waves-light'
+      = link_to 'Cancel', Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_schema_abstractor_object_values_path(@abstractor_abstraction_schema)), class: 'abstractor_abstraction_schema_values_index_link'

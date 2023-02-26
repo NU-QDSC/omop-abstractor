@@ -1,0 +1,40 @@
+- content_for(:title) do
+  Schemas
+.row
+  #abstractor_abstraction_schemas
+    .abstractor_abstraction_schemas_header
+      %h2
+        Schemas
+      .row
+        = form_tag abstractor_abstraction_schemas_url, method: :get, id: 'search_abstractor_abstraction_schemas_form' do
+          .row
+            .search.input-field.col.s12
+              = label_tag :search, 'Search'
+              = text_field_tag :search, (params[:search].nil? ? '' : params[:search]), type: 'search'
+          .row
+            .navigation.col.l4.push-l8.s6.push-s6.right-align
+              %button{ :type => 'submit', :id => 'search_abstractor_abstraction_schemas_button', class: 'waves-effect waves-light btn' }
+                Search
+              = link_to 'Clear', abstractor_abstraction_schemas_url()
+
+    .abstractor_abstraction_schemas_list.col.s12.right-align
+      .row
+        = will_paginate @abstractor_abstraction_schemas, renderer: MaterializePagination::Rails
+        %table
+          %thead
+            %tr
+              %th{ width: 200 }
+                = sortable 'display_name', 'Name'
+              %th{ width: 400 }
+                = sortable 'predicate'
+              %th{ width: 300 }
+          %tbody
+            - @abstractor_abstraction_schemas.each do |abstractor_abstraction_schema|
+              = content_tag_for(:tr, abstractor_abstraction_schema) do
+                %td.abstractor_abstraction_schema_display_name
+                  = abstractor_abstraction_schema.display_name
+                %td.abstractor_abstraction_schema_predicate
+                  = abstractor_abstraction_schema.predicate
+                %td.abstractor_abstraction_schema_controls.right-align
+                  = link_to 'Values', Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_schema_abstractor_object_values_path(abstractor_abstraction_schema)), class: 'abstractor_abstraction_schema_values_index_link waves-effect waves-light btn'
+        = will_paginate @abstractor_abstraction_schemas, renderer: MaterializePagination::Rails

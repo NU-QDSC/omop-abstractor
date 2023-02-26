@@ -1,0 +1,2 @@
+class ComparePsporeSurgery < ApplicationRecord
+end

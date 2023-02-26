@@ -1,0 +1,2 @@
+class BatchNuChersPathologyReportSection < ApplicationRecord
+end

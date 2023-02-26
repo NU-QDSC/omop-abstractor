@@ -1,0 +1,38 @@
+- namespace_type ||= @namespace_type
+- namespace_id ||= @namespace_id
+
+- abstractor_abstraction_group ||= @abstractor_abstraction_group
+.abstractor_abstraction_group
+  .abstractor_abstraction_group_member{class: "workflow_status_#{abstractor_abstraction_group.workflow_status.join('_')}"}
+    - abstractor_abstractions = abstractor_abstraction_group.abstractor_abstractions.not_deleted.joins(:abstractor_subject => :abstractor_subject_group_member)
+    - unless namespace_type.blank? || namespace_id.blank?
+      - abstractor_abstractions = abstractor_abstractions.where(abstractor_subjects: { namespace_type: namespace_type, namespace_id: namespace_id})
+    - abstractor_abstractions.order('abstractor_subject_group_members.display_order').each_with_index do |abstractor_abstraction, index|
+      %div{ class: "abstractor_abstraction #{Abstractor::Utility.dehumanize(abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate)} #{'abstractor_bottom_border' if index < abstractor_abstractions.length - 1}", data: { controller: 'abstractor-abstraction' } }
+        = render :partial => 'abstractor_abstractions/fields', :locals => { abstractor_abstraction: abstractor_abstraction, read_only: abstractor_abstraction_group.read_only? }
+    .abstractor_abstraction_group_actions.abstractor_abstraction_actions
+      - if show_abstractor_group_all_links?
+        = link_to 'Not applicable group ', Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_group_path(abstractor_abstraction_group, abstractor_abstraction_value: 'not applicable')), method: :put, class: "abstractor_group_not_applicable_all_link waves-effect waves-light btn", remote: true,  data: { confirm: 'Are you sure?', action: 'ajax:complete->abstractor-abstraction-groups#not_applicable_all' }
+        = link_to 'Unknown group ', Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_group_path(abstractor_abstraction_group, abstractor_abstraction_value: 'unknown')), method: :put, class: 'abstractor_group_unknown_all_link waves-effect waves-light btn', remote: true, data: { confirm: 'Are you sure?', action: 'ajax:complete->abstractor-abstraction-groups#unknown_all' }
+      - if abstractor_abstraction_group.abstractor_subject_group.enable_workflow_status && show_abstractor_group_workflow_status_links? && !abstractor_abstraction_group.discarded?
+        - if abstractor_abstraction_group.fully_set?
+          - if abstractor_abstraction_group.submitted?
+            - pending_disabled = false
+            - submitted_disabled = true
+            - pending_disabled_class = 'abstractor_group_update_workflow_status_link_enabled'
+            - submitted_disabled_class = 'abstractor_group_update_workflow_status_link_disabled hide'
+          - else
+            - pending_disabled = true
+            - submitted_disabled = false
+            - pending_disabled_class = 'abstractor_group_update_workflow_status_link_disabled hide'
+            - submitted_disabled_class = 'abstractor_group_update_workflow_status_link_enabled'
+        - else
+          - pending_disabled = true
+          - submitted_disabled = true
+          - pending_disabled_class = 'abstractor_group_update_workflow_status_link_disabled hide'
+          - submitted_disabled_class = 'abstractor_group_update_workflow_status_link_disabled'
+        = button_to abstractor_abstraction_group.abstractor_subject_group.workflow_status_pend, Abstractor::UserInterface.abstractor_relative_path(update_wokflow_status_abstractor_abstraction_group_path(abstractor_abstraction_group)), method: :put, class: "abstractor_group_update_workflow_status_link_pend abstractor_group_update_workflow_status_link #{pending_disabled_class}", remote: true, params: { abstraction_workflow_status: Abstractor::Enum::ABSTRACTION_WORKFLOW_STATUS_PENDING }, disabled: pending_disabled, form_class: 'abstraction_workflow_status_form', form: { data: { confirm: 'Are you sure?', action: 'ajax:complete->abstractor-abstraction-groups#submit_abstractor_workflow_status' } }
+        = button_to abstractor_abstraction_group.abstractor_subject_group.workflow_status_submit, Abstractor::UserInterface.abstractor_relative_path(update_wokflow_status_abstractor_abstraction_group_path(abstractor_abstraction_group)), method: :put, class: "abstractor_group_update_workflow_status_link_submit abstractor_group_update_workflow_status_link #{submitted_disabled_class}", remote: true, params: { abstraction_workflow_status: Abstractor::Enum::ABSTRACTION_WORKFLOW_STATUS_SUBMITTED }, disabled: submitted_disabled, form_class: 'abstraction_workflow_status_form', form: { data: { confirm: 'Are you sure?', action: 'ajax:complete->abstractor-abstraction-groups#submit_abstractor_workflow_status' } }
+      - if abstractor_abstraction_group.removable? && !abstractor_abstraction_group.submitted?
+        = link_to "Delete #{abstractor_abstraction_group.abstractor_subject_group.name}", Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_group_path(abstractor_abstraction_group)), method: :delete, class: "abstractor_group_delete_link waves-effect waves-light btn red", remote: true, data: { confirm: 'Are you sure?', action: 'ajax:complete->abstractor-abstraction-groups#delete' }
+  %hr

@@ -1,0 +1,2 @@
+class CaseNumber < ApplicationRecord
+end

@@ -1,0 +1,100 @@
+- content_for(:title) do
+  Notes
+.row
+  #notes.col.s12{"data-controller" => "notes"}
+    .notes_header
+      %h2
+        Notes
+      = form_tag notes_path(), method: 'get', :id => 'search_notes_form'  do
+        .row
+          .abstraction_status.input-field.col.s2
+            = select_tag :abstraction_status, options_for_select(['all'].concat(Abstractor::Enum::ABSTRACTION_STATUSES), selected = @abstractor_abstraction_status)
+            = label_tag :abstraction_status, 'Reviewed?'
+          .namespace_id.input-field.col.s3
+            = select_tag :namespace_id, options_for_select(@abstractor_namespaces.map { |abstractor_namespace| [abstractor_namespace.name, abstractor_namespace.id] }, (params[:namespace_id].blank? ? '' : params[:namespace_id])), { include_blank: '', class: 'select '}
+            = label_tag :namespace_id, 'Namespace'
+          .search.input-field.col.s3
+            = label_tag :search, 'Search'
+            = text_field_tag :search, (params[:search].nil? ? '' : params[:search]), type: 'search'
+          .date_from.input-field.col.s2
+            = label_tag :date_from, 'From'
+            = text_field_tag :date_from, (params[:date_from].nil? ? '' : params[:date_from]), :class => 'datepicker'
+          .date_to.input-field.col.s2
+            = label_tag :date_to, 'To'
+            = text_field_tag :date_to, (params[:date_from].nil? ? '' : params[:date_to]), :class => 'datepicker'
+        .row
+          .provider.col.s3
+            = link_to '', providers_url(), class: 'hide', id: 'providers_url'
+            = label_tag :provider, 'Provider'
+            = select_tag 'provider[]', options_for_select(@providers.map { |provider| [provider.provider_name, provider.provider_name] }, selected: @providers.map { |provider| provider.provider_name }), { include_blank: '', class: 'browser-default provider-select2', multiple: 'multiple' }
+          .secondary_provider.col.s3
+            = link_to '', providers_url(), class: 'hide', id: 'providers_url'
+            = label_tag :provider, 'Secondary Provider'
+            = select_tag 'secondary_provider[]', options_for_select(@secondary_providers.map { |provider| [provider.provider_name, provider.provider_name] }, selected: @secondary_providers.map { |provider| provider.provider_name }), { include_blank: '', class: 'browser-default provider-select2', multiple: 'multiple' }
+          .abstraction_site_status.input-field.col.s2
+            = select_tag :abstraction_site_status, options_for_select(['all'].concat(Note::ABSTRACTOR_SITE_STATUSES), selected = @abstractor_site_status)
+            = label_tag :abstraction_site_status, 'Site Status'
+          .abstraction_histology_status.input-field.col.s2
+            = select_tag :abstraction_histology_status, options_for_select(['all'].concat(Note::ABSTRACTOR_HISTOLOGY_STATUSES), selected = @abstractor_histology_status)
+            = label_tag :abstraction_histology_status, 'Histology Status'
+          .navigation.col.l2.s6.right-align
+            %button{ :type => 'submit', :id => 'search_notes_button', class: 'waves-effect waves-light btn' }
+              Search
+            = link_to 'Clear', notes_path()
+        .row
+          .provider_speciality.col.s3
+            = link_to '', provider_specialties_url(), class: 'hide', id: 'provider_specialties_url'
+            = label_tag :provider_speciality, 'Provider Speciality'
+            = select_tag 'provider_speciality[]', options_for_select(@provider_specialties.map { |provider_specialty| [provider_specialty.concept_name, provider_specialty.concept_id] }, selected: @provider_specialties.map { |provider_specialty| provider_specialty.concept_id }), { include_blank: '', class: 'browser-default provider-speciality-select2', multiple: 'multiple' }
+          .secondary_provider_speciality.col.s3
+            = link_to '', provider_specialties_url(), class: 'hide', id: 'provider_specialties_url'
+            = label_tag :secondary_provider_speciality, 'Secondary Provider Speciality'
+            = select_tag 'secondary_provider_speciality[]', options_for_select(@secondary_provider_specialties.map { |provider_specialty| [provider_specialty.concept_name, provider_specialty.concept_id] }, selected: @secondary_provider_specialties.map { |provider_specialty| provider_specialty.concept_id }), { include_blank: '', class: 'browser-default provider-speciality-select2', multiple: 'multiple' }
+          .abstraction_site.col.s2
+            = label_tag :abstraction_site, 'Site'
+            = select_tag 'abstraction_site[]', options_for_select(@sites.map { |site| [site.value, site.value] }, selected: params[:abstraction_site]), { include_blank: '', class: 'browser-default abstraction-site-select2', multiple: 'multiple' }
+          .abstraction_histology.col.s2
+            = label_tag :abstraction_histology, 'Histology'
+            = select_tag 'abstraction_histology[]', options_for_select(@histologies.map { |histology| [histology.value, histology.value] }, selected: params[:abstraction_histology]), { include_blank: '', class: 'browser-default abstraction-histology-select2', multiple: 'multiple' }
+    .notes_list.col.s12.right-align
+      = will_paginate @note_stable_identifiers, renderer: MaterializePagination::Rails
+      %table
+        %thead
+          %tr
+            %th.note_note_date{ width: 200 }
+              = sortable 'note_date'
+            %th.note_note_type{ width: 100 }
+              = sortable 'note_type'
+            %th.note_note_title{ width: 300 }
+              = sortable 'note_title'
+            %th.pii_name_first_name{ width: 300 }
+              = sortable 'first_name'
+            %th.pii_name_last_name{ width: 300 }
+              = sortable 'last_name'
+            %th.mrns{ width: 300 }
+              MRN(s)
+            %th.review{ width: 100 }
+        %tbody
+          - @note_stable_identifiers.each_with_index do |note_stable_identifier, i|
+            - index = generate_index(params[:page], i)
+            = content_tag_for(:tr, note_stable_identifier ) do
+              %td.note_note_date
+                = note_stable_identifier.note_date.to_s(:date)
+              %td.note_note_type
+                = note_stable_identifier.note_type
+              %td.note_note_title
+                = note_stable_identifier.note_title
+              %td.pii_name_first_name
+                = note_stable_identifier.first_name
+              %td.pii_name_last_name
+                = note_stable_identifier.last_name
+              %td.mrns
+                - if note_stable_identifier.note.person.present?
+                  - note_stable_identifier.note.person.mrns.each do |mrn|
+                    .mrn
+                      %b
+                        = mrn.health_system
+                      = mrn.mrn
+              %td.review
+                = link_to 'Review', edit_note_path(note_stable_identifier.note_id, previous_note_id: note_stable_identifier.note_id, index: index, namespace_type: @namespace_type, namespace_id: @namespace_id), { class: 'note_review_link waves-effect waves-light btn' }
+      = will_paginate @note_stable_identifiers, renderer: MaterializePagination::Rails

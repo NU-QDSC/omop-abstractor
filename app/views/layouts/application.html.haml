@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title= content_for?(:title) ? "OMOP Abstractor | #{yield(:title)}" : "OMOP Abstractor"
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'abstractor/application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %body{ class: "#{controller_name} #{action_name}"}
+    %nav
+      .nav-wrapper
+        = link_to 'OMOP Abstractor', root_url, class: 'brand-logo left'
+    %ul#slide-out.sidenav
+      %li
+        = link_to 'Notes', notes_url, class: 'waves-effect'
+      %li
+        = link_to 'Schemas', abstractor_abstraction_schemas_url, class: 'waves-effect'
+      - if user_signed_in?
+        %li.log_out.menu-text
+          = link_to "Log out", destroy_user_session_path, method: :delete
+        %li.profile.menu-text{ class: active?('active', controller: '/users', action: 'show', id: current_user.id) }
+          = link_to "Profile", user_url(current_user)
+      - else
+        %li.login.menu-text{ class: active?('active', controller: 'devise/sessions', action: 'new') }
+          = link_to 'Login', new_user_session_url
+    %a.sidenav-trigger.right{"data-target" => "slide-out", :href => "#"}
+      %i.medium.material-icons menu
+    .container
+      %h1
+      = render 'shared/flash'
+      = yield

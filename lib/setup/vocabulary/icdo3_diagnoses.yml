@@ -1,0 +1,2066 @@
+---
+- :name: neoplasm, benign
+  :icdo3_code: 8000/0
+- :name: neoplasm, uncertain whether benign or malignant
+  :icdo3_code: 8000/1
+- :name: neoplasm, malignant
+  :icdo3_code: 8000/3
+- :name: neoplasm, metastatic
+  :icdo3_code: 8000/6
+- :name: neoplasm, malignant, uncertain whether primary or metastatic
+  :icdo3_code: 8000/9
+- :name: tumor cells, benign
+  :icdo3_code: 8001/0
+- :name: tumor cells, uncertain whether benign or malignant
+  :icdo3_code: 8001/1
+- :name: tumor cells, malignant
+  :icdo3_code: 8001/3
+- :name: malignant tumor, small cell type
+  :icdo3_code: 8002/3
+- :name: malignant tumor, giant cell type
+  :icdo3_code: 8003/3
+- :name: malignant tumor, spindle cell type
+  :icdo3_code: 8004/3
+- :name: clear cell tumor, nos
+  :icdo3_code: 8005/0
+- :name: malignant tumor, clear cell type
+  :icdo3_code: 8005/3
+- :name: epithelial tumor, benign
+  :icdo3_code: 8010/0
+- :name: carcinoma in situ, nos
+  :icdo3_code: 8010/2
+- :name: carcinoma, nos
+  :icdo3_code: 8010/3
+- :name: carcinoma, metastatic, nos
+  :icdo3_code: 8010/6
+- :name: carcinomatosis
+  :icdo3_code: 8010/9
+- :name: epithelioma, benign
+  :icdo3_code: 8011/0
+- :name: epithelioma, malignant
+  :icdo3_code: 8011/3
+- :name: large cell carcinoma, nos
+  :icdo3_code: 8012/3
+- :name: large cell neuroendocrine carcinoma
+  :icdo3_code: 8013/3
+- :name: large cell carcinoma with rhabdoid phenotype
+  :icdo3_code: 8014/3
+- :name: glassy cell carcinoma
+  :icdo3_code: 8015/3
+- :name: carcinoma, undifferentiated, nos
+  :icdo3_code: 8020/3
+- :name: carcinoma, anaplastic, nos
+  :icdo3_code: 8021/3
+- :name: pleomorphic carcinoma
+  :icdo3_code: 8022/3
+- :name: giant cell and spindle cell carcinoma
+  :icdo3_code: 8030/3
+- :name: giant cell carcinoma
+  :icdo3_code: 8031/3
+- :name: spindle cell carcinoma, nos
+  :icdo3_code: 8032/3
+- :name: pseudosarcomatous carcinoma
+  :icdo3_code: 8033/3
+- :name: polygonal cell carcinoma
+  :icdo3_code: 8034/3
+- :name: carcinoma with osteoclast-like giant cells
+  :icdo3_code: 8035/3
+- :name: tumorlet, benign
+  :icdo3_code: 8040/0
+- :name: tumorlet, nos
+  :icdo3_code: 8040/1
+- :name: small cell carcinoma, nos
+  :icdo3_code: 8041/3
+- :name: oat cell carcinoma
+  :icdo3_code: 8042/3
+- :name: small cell carcinoma, fusiform cell
+  :icdo3_code: 8043/3
+- :name: small cell carcinoma, intermediate cell
+  :icdo3_code: 8044/3
+- :name: combined small cell carcinoma
+  :icdo3_code: 8045/3
+- :name: non-small cell carcinoma
+  :icdo3_code: 8046/3
+- :name: papilloma, nos
+  :icdo3_code: 8050/0
+- :name: papillary carcinoma in situ
+  :icdo3_code: 8050/2
+- :name: papillary carcinoma, nos
+  :icdo3_code: 8050/3
+- :name: verrucous papilloma
+  :icdo3_code: 8051/0
+- :name: verrucous carcinoma, nos
+  :icdo3_code: 8051/3
+- :name: squamous cell papilloma, nos
+  :icdo3_code: 8052/0
+- :name: papillary squamous cell carcinoma,  non-invasive
+  :icdo3_code: 8052/2
+- :name: papillary squamous cell carcinoma
+  :icdo3_code: 8052/3
+- :name: squamous cell papilloma, inverted
+  :icdo3_code: 8053/0
+- :name: squamous papillomatosis
+  :icdo3_code: 8060/0
+- :name: squamous cell carcinoma in situ, nos
+  :icdo3_code: 8070/2
+- :name: squamous cell carcinoma, nos
+  :icdo3_code: 8070/3
+- :name: squamous cell carcinoma, metastatic, nos
+  :icdo3_code: 8070/6
+- :name: squamous cell carcinoma, keratinizing, nos
+  :icdo3_code: 8071/3
+- :name: squamous cell carcinoma, large cell, nonkeratinizing, nos
+  :icdo3_code: 8072/3
+- :name: squamous cell carcinoma, small cell, nonkeratinizing
+  :icdo3_code: 8073/3
+- :name: squamous cell carcinoma, spindle cell
+  :icdo3_code: 8074/3
+- :name: squamous cell carcinoma, adenoid
+  :icdo3_code: 8075/3
+- :name: squamous cell carcinoma in situ with questionable stromal invasion
+  :icdo3_code: 8076/2
+- :name: squamous cell carcinoma, microinvasive
+  :icdo3_code: 8076/3
+- :name: squamous intraepithelial neoplasia, grade iii
+  :icdo3_code: 8077/2
+- :name: squamous cell carcinoma with horn formation
+  :icdo3_code: 8078/3
+- :name: queyrat erythroplasia
+  :icdo3_code: 8080/2
+- :name: bowen disease
+  :icdo3_code: 8081/2
+- :name: lymphoepithelial carcinoma
+  :icdo3_code: 8082/3
+- :name: basaloid squamous cell carcinoma
+  :icdo3_code: 8083/3
+- :name: squamous cell carcinoma, clear cell type
+  :icdo3_code: 8084/3
+- :name: basal cell tumor
+  :icdo3_code: 8090/1
+- :name: basal cell carcinoma, nos
+  :icdo3_code: 8090/3
+- :name: multifocal superficial basal cell carcinoma
+  :icdo3_code: 8091/3
+- :name: infiltrating basal cell carcinoma, nos
+  :icdo3_code: 8092/3
+- :name: basal cell carcinoma, fibroepithelial
+  :icdo3_code: 8093/3
+- :name: basosquamous carcinoma
+  :icdo3_code: 8094/3
+- :name: metatypical carcinoma
+  :icdo3_code: 8095/3
+- :name: intraepidermal epithelioma of jadassohn
+  :icdo3_code: 8096/0
+- :name: basal cell carcinoma, nodular
+  :icdo3_code: 8097/3
+- :name: adenoid basal carcinoma
+  :icdo3_code: 8098/3
+- :name: trichoepithelioma
+  :icdo3_code: 8100/0
+- :name: trichofolliculoma
+  :icdo3_code: 8101/0
+- :name: trichilemmoma
+  :icdo3_code: 8102/0
+- :name: trichilemmocarcinoma
+  :icdo3_code: 8102/3
+- :name: pilar tumor
+  :icdo3_code: 8103/0
+- :name: pilomatrixoma, nos
+  :icdo3_code: 8110/0
+- :name: pilomatrix carcinoma
+  :icdo3_code: 8110/3
+- :name: transitional cell papilloma, benign
+  :icdo3_code: 8120/0
+- :name: urothelial papilloma, nos
+  :icdo3_code: 8120/1
+- :name: transitional cell carcinoma in situ
+  :icdo3_code: 8120/2
+- :name: transitional cell carcinoma, nos
+  :icdo3_code: 8120/3
+- :name: schneiderian papilloma, nos
+  :icdo3_code: 8121/0
+- :name: transitional cell papilloma, inverted, nos
+  :icdo3_code: 8121/1
+- :name: schneiderian carcinoma
+  :icdo3_code: 8121/3
+- :name: transitional cell carcinoma, spindle cell
+  :icdo3_code: 8122/3
+- :name: basaloid carcinoma
+  :icdo3_code: 8123/3
+- :name: cloacogenic carcinoma
+  :icdo3_code: 8124/3
+- :name: papillary transitional cell neoplasm of low malignant potential
+  :icdo3_code: 8130/1
+- :name: papillary transitional cell carcinoma,  non-invasive
+  :icdo3_code: 8130/2
+- :name: papillary transitional cell carcinoma
+  :icdo3_code: 8130/3
+- :name: transitional cell carcinoma, micropapillary
+  :icdo3_code: 8131/3
+- :name: adenoma, nos
+  :icdo3_code: 8140/0
+- :name: atypical adenoma
+  :icdo3_code: 8140/1
+- :name: adenocarcinoma in situ, nos
+  :icdo3_code: 8140/2
+- :name: adenocarcinoma, nos
+  :icdo3_code: 8140/3
+- :name: adenocarcinoma, metastatic, nos
+  :icdo3_code: 8140/6
+- :name: scirrhous adenocarcinoma
+  :icdo3_code: 8141/3
+- :name: linitis plastica
+  :icdo3_code: 8142/3
+- :name: superficial spreading adenocarcinoma
+  :icdo3_code: 8143/3
+- :name: adenocarcinoma, intestinal type
+  :icdo3_code: 8144/3
+- :name: carcinoma, diffuse type
+  :icdo3_code: 8145/3
+- :name: monomorphic adenoma
+  :icdo3_code: 8146/0
+- :name: basal cell adenoma
+  :icdo3_code: 8147/0
+- :name: basal cell adenocarcinoma
+  :icdo3_code: 8147/3
+- :name: glandular intraepithelial neoplasia, grade iii
+  :icdo3_code: 8148/2
+- :name: canalicular adenoma
+  :icdo3_code: 8149/0
+- :name: islet cell adenoma
+  :icdo3_code: 8150/0
+- :name: islet cell tumor, nos
+  :icdo3_code: 8150/1
+- :name: islet cell carcinoma
+  :icdo3_code: 8150/3
+- :name: insulinoma, nos
+  :icdo3_code: 8151/0
+- :name: insulinoma, malignant
+  :icdo3_code: 8151/3
+- :name: glucagonoma, nos
+  :icdo3_code: 8152/1
+- :name: glucagonoma, malignant
+  :icdo3_code: 8152/3
+- :name: gastrinoma, nos
+  :icdo3_code: 8153/1
+- :name: gastrinoma, malignant
+  :icdo3_code: 8153/3
+- :name: mixed islet cell and exocrine adenocarcinoma
+  :icdo3_code: 8154/3
+- :name: vipoma, nos
+  :icdo3_code: 8155/1
+- :name: vipoma, malignant
+  :icdo3_code: 8155/3
+- :name: somatostatinoma, nos
+  :icdo3_code: 8156/1
+- :name: somatostatinoma, malignant
+  :icdo3_code: 8156/3
+- :name: enteroglucagonoma, nos
+  :icdo3_code: 8157/1
+- :name: enteroglucagonoma, malignant
+  :icdo3_code: 8157/3
+- :name: bile duct adenoma
+  :icdo3_code: 8160/0
+- :name: cholangiocarcinoma
+  :icdo3_code: 8160/3
+- :name: bile duct cystadenoma
+  :icdo3_code: 8161/0
+- :name: bile duct cystadenocarcinoma
+  :icdo3_code: 8161/3
+- :name: klatskin tumor
+  :icdo3_code: 8162/3
+- :name: liver cell adenoma
+  :icdo3_code: 8170/0
+- :name: hepatocellular carcinoma, nos
+  :icdo3_code: 8170/3
+- :name: hepatocellular carcinoma, fibrolamellar
+  :icdo3_code: 8171/3
+- :name: hepatocellular carcinoma, scirrhous
+  :icdo3_code: 8172/3
+- :name: hepatocellular carcinoma, spindle cell variant
+  :icdo3_code: 8173/3
+- :name: hepatocellular carcinoma, clear cell type
+  :icdo3_code: 8174/3
+- :name: hepatocellular carcinoma, pleomorphic type
+  :icdo3_code: 8175/3
+- :name: combined hepatocellular carcinoma and cholangiocarcinoma
+  :icdo3_code: 8180/3
+- :name: trabecular adenoma
+  :icdo3_code: 8190/0
+- :name: trabecular adenocarcinoma
+  :icdo3_code: 8190/3
+- :name: embryonal adenoma
+  :icdo3_code: 8191/0
+- :name: eccrine dermal cylindroma
+  :icdo3_code: 8200/0
+- :name: adenoid cystic carcinoma
+  :icdo3_code: 8200/3
+- :name: cribriform carcinoma in situ
+  :icdo3_code: 8201/2
+- :name: cribriform carcinoma, nos
+  :icdo3_code: 8201/3
+- :name: microcystic adenoma
+  :icdo3_code: 8202/0
+- :name: lactating adenoma
+  :icdo3_code: 8204/0
+- :name: adenomatous polyp, nos
+  :icdo3_code: 8210/0
+- :name: adenocarcinoma in situ in adenomatous polyp
+  :icdo3_code: 8210/2
+- :name: adenocarcinoma in adenomatous polyp
+  :icdo3_code: 8210/3
+- :name: tubular adenoma, nos
+  :icdo3_code: 8211/0
+- :name: tubular adenocarcinoma
+  :icdo3_code: 8211/3
+- :name: flat adenoma
+  :icdo3_code: 8212/0
+- :name: serrated adenoma
+  :icdo3_code: 8213/0
+- :name: parietal cell carcinoma
+  :icdo3_code: 8214/3
+- :name: adenocarcinoma of anal glands
+  :icdo3_code: 8215/3
+- :name: adenomatous polyposis coli
+  :icdo3_code: 8220/0
+- :name: adenocarcinoma in adenomatous polyposis coli
+  :icdo3_code: 8220/3
+- :name: multiple adenomatous polyps
+  :icdo3_code: 8221/0
+- :name: adenocarcinoma in multiple adenomatous polyps
+  :icdo3_code: 8221/3
+- :name: ductal carcinoma in situ, solid type
+  :icdo3_code: 8230/2
+- :name: solid carcinoma, nos
+  :icdo3_code: 8230/3
+- :name: carcinoma simplex
+  :icdo3_code: 8231/3
+- :name: carcinoid tumor of uncertain malignant potential
+  :icdo3_code: 8240/1
+- :name: carcinoid tumor, nos
+  :icdo3_code: 8240/3
+- :name: enterochromaffin cell carcinoid
+  :icdo3_code: 8241/3
+- :name: enterochromaffin-like cell carcinoid, nos
+  :icdo3_code: 8242/1
+- :name: enterochromaffin-like cell tumor, malignant
+  :icdo3_code: 8242/3
+- :name: goblet cell carcinoid
+  :icdo3_code: 8243/3
+- :name: composite carcinoid
+  :icdo3_code: 8244/3
+- :name: tubular carcinoid
+  :icdo3_code: 8245/1
+- :name: adenocarcinoid tumor
+  :icdo3_code: 8245/3
+- :name: neuroendocrine carcinoma, nos
+  :icdo3_code: 8246/3
+- :name: merkel cell carcinoma
+  :icdo3_code: 8247/3
+- :name: apudoma
+  :icdo3_code: 8248/1
+- :name: atypical carcinoid tumor
+  :icdo3_code: 8249/3
+- :name: pulmonary adenomatosis
+  :icdo3_code: 8250/1
+- :name: bronchiolo-alveolar adenocarcinoma, nos
+  :icdo3_code: 8250/3
+- :name: alveolar adenoma
+  :icdo3_code: 8251/0
+- :name: alveolar adenocarcinoma
+  :icdo3_code: 8251/3
+- :name: bronchiolo-alveolar carcinoma, non- mucinous
+  :icdo3_code: 8252/3
+- :name: bronchiolo-alveolar carcinoma, mucinous
+  :icdo3_code: 8253/3
+- :name: bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous
+  :icdo3_code: 8254/3
+- :name: adenocarcinoma with mixed subtypes
+  :icdo3_code: 8255/3
+- :name: papillary adenoma, nos
+  :icdo3_code: 8260/0
+- :name: papillary adenocarcinoma, nos
+  :icdo3_code: 8260/3
+- :name: villous adenoma, nos
+  :icdo3_code: 8261/0
+- :name: adenocarcinoma in situ in villous adenoma
+  :icdo3_code: 8261/2
+- :name: adenocarcinoma in villous adenoma
+  :icdo3_code: 8261/3
+- :name: villous adenocarcinoma
+  :icdo3_code: 8262/3
+- :name: tubulovillous adenoma, nos
+  :icdo3_code: 8263/0
+- :name: adenocarcinoma in situ in tubulovillous adenoma
+  :icdo3_code: 8263/2
+- :name: adenocarcinoma in tubulovillous adenoma
+  :icdo3_code: 8263/3
+- :name: papillomatosis, glandular
+  :icdo3_code: 8264/0
+- :name: chromophobe adenoma
+  :icdo3_code: 8270/0
+- :name: chromophobe carcinoma
+  :icdo3_code: 8270/3
+- :name: prolactinoma
+  :icdo3_code: 8271/0
+- :name: pituitary adenoma, nos
+  :icdo3_code: 8272/0
+- :name: pituitary carcinoma, nos
+  :icdo3_code: 8272/3
+- :name: acidophil adenoma
+  :icdo3_code: 8280/0
+- :name: acidophil carcinoma
+  :icdo3_code: 8280/3
+- :name: mixed acidophil-basophil adenoma
+  :icdo3_code: 8281/0
+- :name: mixed acidophil-basophil carcinoma
+  :icdo3_code: 8281/3
+- :name: oxyphilic adenoma
+  :icdo3_code: 8290/0
+- :name: oxyphilic adenocarcinoma
+  :icdo3_code: 8290/3
+- :name: basophil adenoma
+  :icdo3_code: 8300/0
+- :name: basophil carcinoma
+  :icdo3_code: 8300/3
+- :name: clear cell adenoma
+  :icdo3_code: 8310/0
+- :name: clear cell adenocarcinoma, nos
+  :icdo3_code: 8310/3
+- :name: hypernephroid tumor
+  :icdo3_code: 8311/1
+- :name: renal cell carcinoma, nos
+  :icdo3_code: 8312/3
+- :name: clear cell adenofibroma
+  :icdo3_code: 8313/0
+- :name: clear cell adenofibroma of borderline malignancy
+  :icdo3_code: 8313/1
+- :name: clear cell adenocarcinofibroma
+  :icdo3_code: 8313/3
+- :name: lipid-rich carcinoma
+  :icdo3_code: 8314/3
+- :name: glycogen-rich carcinoma
+  :icdo3_code: 8315/3
+- :name: cyst-associated renal cell carcinoma
+  :icdo3_code: 8316/3
+- :name: renal cell carcinoma, chromophobe type
+  :icdo3_code: 8317/3
+- :name: renal cell carcinoma, sarcomatoid
+  :icdo3_code: 8318/3
+- :name: collecting duct carcinoma
+  :icdo3_code: 8319/3
+- :name: granular cell carcinoma
+  :icdo3_code: 8320/3
+- :name: chief cell adenoma
+  :icdo3_code: 8321/0
+- :name: water-clear cell adenoma
+  :icdo3_code: 8322/0
+- :name: water-clear cell adenocarcinoma
+  :icdo3_code: 8322/3
+- :name: mixed cell adenoma
+  :icdo3_code: 8323/0
+- :name: mixed cell adenocarcinoma
+  :icdo3_code: 8323/3
+- :name: lipoadenoma
+  :icdo3_code: 8324/0
+- :name: metanephric adenoma
+  :icdo3_code: 8325/0
+- :name: follicular adenoma
+  :icdo3_code: 8330/0
+- :name: atypical follicular adenoma
+  :icdo3_code: 8330/1
+- :name: follicular adenocarcinoma, nos
+  :icdo3_code: 8330/3
+- :name: follicular adenocarcinoma, well differentiated
+  :icdo3_code: 8331/3
+- :name: follicular adenocarcinoma, trabecular
+  :icdo3_code: 8332/3
+- :name: microfollicular adenoma, nos
+  :icdo3_code: 8333/0
+- :name: fetal adenocarcinoma
+  :icdo3_code: 8333/3
+- :name: macrofollicular adenoma
+  :icdo3_code: 8334/0
+- :name: follicular carcinoma, minimally invasive
+  :icdo3_code: 8335/3
+- :name: hyalinizing trabecular adenoma
+  :icdo3_code: 8336/0
+- :name: insular carcinoma
+  :icdo3_code: 8337/3
+- :name: papillary carcinoma, follicular variant
+  :icdo3_code: 8340/3
+- :name: papillary microcarcinoma
+  :icdo3_code: 8341/3
+- :name: papillary carcinoma, oxyphilic cell
+  :icdo3_code: 8342/3
+- :name: papillary carcinoma, encapsulated
+  :icdo3_code: 8343/3
+- :name: papillary carcinoma, columnar cell
+  :icdo3_code: 8344/3
+- :name: medullary carcinoma with amyloid stroma
+  :icdo3_code: 8345/3
+- :name: mixed medullary-follicular carcinoma
+  :icdo3_code: 8346/3
+- :name: mixed medullary-papillary carcinoma
+  :icdo3_code: 8347/3
+- :name: nonencapsulated sclerosing carcinoma
+  :icdo3_code: 8350/3
+- :name: multiple endocrine adenomas
+  :icdo3_code: 8360/1
+- :name: juxtaglomerular tumor
+  :icdo3_code: 8361/0
+- :name: adrenal cortical adenoma, nos
+  :icdo3_code: 8370/0
+- :name: adrenal cortical carcinoma
+  :icdo3_code: 8370/3
+- :name: adrenal cortical adenoma, compact cell
+  :icdo3_code: 8371/0
+- :name: adrenal cortical adenoma, pigmented
+  :icdo3_code: 8372/0
+- :name: adrenal cortical adenoma, clear cell
+  :icdo3_code: 8373/0
+- :name: adrenal cortical adenoma, glomerulosa cell
+  :icdo3_code: 8374/0
+- :name: adrenal cortical adenoma, mixed cell
+  :icdo3_code: 8375/0
+- :name: endometrioid adenoma, nos
+  :icdo3_code: 8380/0
+- :name: endometrioid adenoma, borderline malignancy
+  :icdo3_code: 8380/1
+- :name: endometrioid adenocarcinoma, nos
+  :icdo3_code: 8380/3
+- :name: endometrioid adenofibroma, nos
+  :icdo3_code: 8381/0
+- :name: endometrioid adenofibroma, borderline malignancy
+  :icdo3_code: 8381/1
+- :name: endometrioid adenofibroma, malignant
+  :icdo3_code: 8381/3
+- :name: endometrioid adenocarcinoma, secretory variant
+  :icdo3_code: 8382/3
+- :name: endometrioid adenocarcinoma, ciliated cell variant
+  :icdo3_code: 8383/3
+- :name: adenocarcinoma, endocervical type
+  :icdo3_code: 8384/3
+- :name: skin appendage adenoma
+  :icdo3_code: 8390/0
+- :name: skin appendage carcinoma
+  :icdo3_code: 8390/3
+- :name: follicular fibroma
+  :icdo3_code: 8391/0
+- :name: syringofibroadenoma
+  :icdo3_code: 8392/0
+- :name: sweat gland adenoma
+  :icdo3_code: 8400/0
+- :name: sweat gland tumor, nos
+  :icdo3_code: 8400/1
+- :name: sweat gland adenocarcinoma
+  :icdo3_code: 8400/3
+- :name: apocrine adenoma
+  :icdo3_code: 8401/0
+- :name: apocrine adenocarcinoma
+  :icdo3_code: 8401/3
+- :name: nodular hidradenoma
+  :icdo3_code: 8402/0
+- :name: nodular hidradenoma, malignant
+  :icdo3_code: 8402/3
+- :name: eccrine spiradenoma
+  :icdo3_code: 8403/0
+- :name: malignant eccrine spiradenoma
+  :icdo3_code: 8403/3
+- :name: hidrocystoma
+  :icdo3_code: 8404/0
+- :name: papillary hidradenoma
+  :icdo3_code: 8405/0
+- :name: papillary syringadenoma
+  :icdo3_code: 8406/0
+- :name: syringoma, nos
+  :icdo3_code: 8407/0
+- :name: sclerosing sweat duct carcinoma
+  :icdo3_code: 8407/3
+- :name: eccrine papillary adenoma
+  :icdo3_code: 8408/0
+- :name: aggressive digital papillary adenoma
+  :icdo3_code: 8408/1
+- :name: eccrine papillary adenocarcinoma
+  :icdo3_code: 8408/3
+- :name: eccrine poroma
+  :icdo3_code: 8409/0
+- :name: eccrine poroma, malignant
+  :icdo3_code: 8409/3
+- :name: sebaceous adenoma
+  :icdo3_code: 8410/0
+- :name: sebaceous adenocarcinoma
+  :icdo3_code: 8410/3
+- :name: eccrine adenocarcinoma
+  :icdo3_code: 8413/3
+- :name: ceruminous adenoma
+  :icdo3_code: 8420/0
+- :name: ceruminous adenocarcinoma
+  :icdo3_code: 8420/3
+- :name: mucoepidermoid tumor
+  :icdo3_code: 8430/1
+- :name: mucoepidermoid carcinoma
+  :icdo3_code: 8430/3
+- :name: cystadenoma, nos
+  :icdo3_code: 8440/0
+- :name: cystadenocarcinoma, nos
+  :icdo3_code: 8440/3
+- :name: serous cystadenoma, nos
+  :icdo3_code: 8441/0
+- :name: serous cystadenocarcinoma, nos
+  :icdo3_code: 8441/3
+- :name: serous cystadenoma, borderline malignancy
+  :icdo3_code: 8442/1
+- :name: clear cell cystadenoma
+  :icdo3_code: 8443/0
+- :name: clear cell cystic tumor of borderline malignancy
+  :icdo3_code: 8444/1
+- :name: papillary cystadenoma, nos
+  :icdo3_code: 8450/0
+- :name: papillary cystadenocarcinoma, nos
+  :icdo3_code: 8450/3
+- :name: papillary cystadenoma, borderline malignancy
+  :icdo3_code: 8451/1
+- :name: solid pseudopapillary tumor
+  :icdo3_code: 8452/1
+- :name: solid pseudopapillary carcinoma
+  :icdo3_code: 8452/3
+- :name: intraductal papillary-mucinous adenoma
+  :icdo3_code: 8453/0
+- :name: intraductal papillary-mucinous tumor with moderate dysplasia
+  :icdo3_code: 8453/1
+- :name: intraductal papillary-mucinous carcinoma, non-invasive
+  :icdo3_code: 8453/2
+- :name: intraductal papillary-mucinous carcinoma, invasive
+  :icdo3_code: 8453/3
+- :name: cystic tumor of atrio-ventricular node
+  :icdo3_code: 8454/0
+- :name: papillary serous cystadenoma, nos
+  :icdo3_code: 8460/0
+- :name: papillary serous cystadenocarcinoma
+  :icdo3_code: 8460/3
+- :name: serous surface papilloma
+  :icdo3_code: 8461/0
+- :name: serous surface papillary carcinoma
+  :icdo3_code: 8461/3
+- :name: serous papillary cystic tumor of borderline malignancy
+  :icdo3_code: 8462/1
+- :name: serous surface papillary tumor of borderline malignancy
+  :icdo3_code: 8463/1
+- :name: mucinous cystadenoma, nos
+  :icdo3_code: 8470/0
+- :name: mucinous cystic tumor with moderate dysplasia
+  :icdo3_code: 8470/1
+- :name: mucinous cystadenocarcinoma, non-invasive
+  :icdo3_code: 8470/2
+- :name: mucinous cystadenocarcinoma, nos
+  :icdo3_code: 8470/3
+- :name: papillary mucinous cystadenoma, nos
+  :icdo3_code: 8471/0
+- :name: papillary mucinous cystadenocarcinoma
+  :icdo3_code: 8471/3
+- :name: mucinous cystic tumor of borderline malignancy
+  :icdo3_code: 8472/1
+- :name: papillary mucinous cystadenoma, borderline malignancy
+  :icdo3_code: 8473/1
+- :name: mucinous adenoma
+  :icdo3_code: 8480/0
+- :name: mucinous adenocarcinoma
+  :icdo3_code: 8480/3
+- :name: pseudomyxoma peritonei
+  :icdo3_code: 8480/6
+- :name: mucin-producing adenocarcinoma
+  :icdo3_code: 8481/3
+- :name: mucinous adenocarcinoma, endocervical type
+  :icdo3_code: 8482/3
+- :name: signet ring cell carcinoma
+  :icdo3_code: 8490/3
+- :name: metastatic signet ring cell carcinoma
+  :icdo3_code: 8490/6
+- :name: intraductal carcinoma, noninfiltrating, nos
+  :icdo3_code: 8500/2
+- :name: infiltrating duct carcinoma, nos
+  :icdo3_code: 8500/3
+- :name: comedocarcinoma, noninfiltrating
+  :icdo3_code: 8501/2
+- :name: comedocarcinoma, nos
+  :icdo3_code: 8501/3
+- :name: secretory carcinoma of breast
+  :icdo3_code: 8502/3
+- :name: intraductal papilloma
+  :icdo3_code: 8503/0
+- :name: noninfiltrating intraductal papillary adenocarcinoma
+  :icdo3_code: 8503/2
+- :name: intraductal papillary adenocarcinoma with invasion
+  :icdo3_code: 8503/3
+- :name: intracystic papillary adenoma
+  :icdo3_code: 8504/0
+- :name: noninfiltrating intracystic carcinoma
+  :icdo3_code: 8504/2
+- :name: intracystic carcinoma, nos
+  :icdo3_code: 8504/3
+- :name: intraductal papillomatosis, nos
+  :icdo3_code: 8505/0
+- :name: adenoma of nipple
+  :icdo3_code: 8506/0
+- :name: intraductal micropapillary carcinoma
+  :icdo3_code: 8507/2
+- :name: cystic hypersecretory carcinoma
+  :icdo3_code: 8508/3
+- :name: medullary carcinoma, nos
+  :icdo3_code: 8510/3
+- :name: medullary carcinoma with lymphoid stroma
+  :icdo3_code: 8512/3
+- :name: atypical medullary carcinoma
+  :icdo3_code: 8513/3
+- :name: duct carcinoma, desmoplastic type
+  :icdo3_code: 8514/3
+- :name: lobular carcinoma in situ, nos
+  :icdo3_code: 8520/2
+- :name: lobular carcinoma, nos
+  :icdo3_code: 8520/3
+- :name: fibrolipoma
+  :icdo3_code: 8851/0
+- :name: liposarcoma, well differentiated
+  :icdo3_code: 8851/3
+- :name: fibromyxolipoma
+  :icdo3_code: 8852/0
+- :name: myxoid liposarcoma
+  :icdo3_code: 8852/3
+- :name: round cell liposarcoma
+  :icdo3_code: 8853/3
+- :name: pleomorphic lipoma
+  :icdo3_code: 8854/0
+- :name: pleomorphic liposarcoma
+  :icdo3_code: 8854/3
+- :name: mixed liposarcoma
+  :icdo3_code: 8855/3
+- :name: intramuscular lipoma
+  :icdo3_code: 8856/0
+- :name: spindle cell lipoma
+  :icdo3_code: 8857/0
+- :name: fibroblastic liposarcoma
+  :icdo3_code: 8857/3
+- :name: dedifferentiated liposarcoma
+  :icdo3_code: 8858/3
+- :name: angiomyolipoma
+  :icdo3_code: 8860/0
+- :name: angiolipoma, nos
+  :icdo3_code: 8861/0
+- :name: chondroid lipoma
+  :icdo3_code: 8862/0
+- :name: myelolipoma
+  :icdo3_code: 8870/0
+- :name: hibernoma
+  :icdo3_code: 8880/0
+- :name: lipoblastomatosis
+  :icdo3_code: 8881/0
+- :name: leiomyoma, nos
+  :icdo3_code: 8890/0
+- :name: leiomyomatosis, nos
+  :icdo3_code: 8890/1
+- :name: leiomyosarcoma, nos
+  :icdo3_code: 8890/3
+- :name: epithelioid leiomyoma
+  :icdo3_code: 8891/0
+- :name: epithelioid leiomyosarcoma
+  :icdo3_code: 8891/3
+- :name: cellular leiomyoma
+  :icdo3_code: 8892/0
+- :name: bizarre leiomyoma
+  :icdo3_code: 8893/0
+- :name: angiomyoma
+  :icdo3_code: 8894/0
+- :name: angiomyosarcoma
+  :icdo3_code: 8894/3
+- :name: myoma
+  :icdo3_code: 8895/0
+- :name: myosarcoma
+  :icdo3_code: 8895/3
+- :name: myxoid leiomyosarcoma
+  :icdo3_code: 8896/3
+- :name: smooth muscle tumor of uncertain malignant potential
+  :icdo3_code: 8897/1
+- :name: metastasizing leiomyoma
+  :icdo3_code: 8898/1
+- :name: rhabdomyoma, nos
+  :icdo3_code: 8900/0
+- :name: rhabdomyosarcoma, nos
+  :icdo3_code: 8900/3
+- :name: pleomorphic rhabdomyosarcoma, adult type
+  :icdo3_code: 8901/3
+- :name: mixed type rhabdomyosarcoma
+  :icdo3_code: 8902/3
+- :name: fetal rhabdomyoma
+  :icdo3_code: 8903/0
+- :name: adult rhabdomyoma
+  :icdo3_code: 8904/0
+- :name: genital rhabdomyoma
+  :icdo3_code: 8905/0
+- :name: embryonal rhabdomyosarcoma, nos
+  :icdo3_code: 8910/3
+- :name: spindle cell rhabdomyosarcoma
+  :icdo3_code: 8912/3
+- :name: alveolar rhabdomyosarcoma
+  :icdo3_code: 8920/3
+- :name: rhabdomyosarcoma with ganglionic differentiation
+  :icdo3_code: 8921/3
+- :name: endometrial stromal nodule
+  :icdo3_code: 8930/0
+- :name: endometrial stromal sarcoma, nos
+  :icdo3_code: 8930/3
+- :name: endometrial stromal sarcoma, low grade
+  :icdo3_code: 8931/3
+- :name: adenomyoma
+  :icdo3_code: 8932/0
+- :name: adenosarcoma
+  :icdo3_code: 8933/3
+- :name: carcinofibroma
+  :icdo3_code: 8934/3
+- :name: stromal tumor, benign
+  :icdo3_code: 8935/0
+- :name: stromal tumor, nos
+  :icdo3_code: 8935/1
+- :name: stromal sarcoma, nos
+  :icdo3_code: 8935/3
+- :name: ameloblastic odontosarcoma
+  :icdo3_code: 9290/3
+- :name: adenomatoid odontogenic tumor
+  :icdo3_code: 9300/0
+- :name: calcifying odontogenic cyst
+  :icdo3_code: 9301/0
+- :name: odontogenic ghost cell tumor
+  :icdo3_code: 9302/0
+- :name: ameloblastoma, nos
+  :icdo3_code: 9310/0
+- :name: ameloblastoma, malignant
+  :icdo3_code: 9310/3
+- :name: odontoameloblastoma
+  :icdo3_code: 9311/0
+- :name: squamous odontogenic tumor
+  :icdo3_code: 9312/0
+- :name: odontogenic myxoma
+  :icdo3_code: 9320/0
+- :name: central odontogenic fibroma
+  :icdo3_code: 9321/0
+- :name: peripheral odontogenic fibroma
+  :icdo3_code: 9322/0
+- :name: ameloblastic fibroma
+  :icdo3_code: 9330/0
+- :name: ameloblastic fibrosarcoma
+  :icdo3_code: 9330/3
+- :name: calcifying epithelial odontogenic tumor
+  :icdo3_code: 9340/0
+- :name: clear cell odontogenic tumor
+  :icdo3_code: 9341/1
+- :name: odontogenic carcinosarcoma
+  :icdo3_code: 9342/3
+- :name: craniopharyngioma
+  :icdo3_code: 9350/1
+- :name: craniopharyngioma, adamantinomatous
+  :icdo3_code: 9351/1
+- :name: craniopharyngioma, papillary
+  :icdo3_code: 9352/1
+- :name: pinealoma
+  :icdo3_code: 9360/1
+- :name: pineocytoma
+  :icdo3_code: 9361/1
+- :name: pineoblastoma
+  :icdo3_code: 9362/3
+- :name: melanotic neuroectodermal tumor
+  :icdo3_code: 9363/0
+- :name: peripheral neuroectodermal tumor
+  :icdo3_code: 9364/3
+- :name: askin tumor
+  :icdo3_code: 9365/3
+- :name: chordoma, nos
+  :icdo3_code: 9370/3
+- :name: chondroid chordoma
+  :icdo3_code: 9371/3
+- :name: dedifferentiated chordoma
+  :icdo3_code: 9372/3
+- :name: parachordoma
+  :icdo3_code: 9373/0
+- :name: glioma, malignant
+  :icdo3_code: 9380/3
+- :name: gliomatosis cerebri
+  :icdo3_code: 9381/3
+- :name: mixed glioma
+  :icdo3_code: 9382/3
+- :name: subependymoma
+  :icdo3_code: 9383/1
+- :name: subependymal giant cell astrocytoma
+  :icdo3_code: 9384/1
+- :name: choroid plexus papilloma, nos
+  :icdo3_code: 9390/0
+- :name: atypical choroid plexus papilloma
+  :icdo3_code: 9390/1
+- :name: choroid plexus carcinoma
+  :icdo3_code: 9390/3
+- :name: ependymoma, nos
+  :icdo3_code: 9391/3
+- :name: infiltrating ductular carcinoma
+  :icdo3_code: 8521/3
+- :name: intraductal carcinoma and lobular carcinoma in situ
+  :icdo3_code: 8522/2
+- :name: infiltrating duct and lobular carcinoma
+  :icdo3_code: 8522/3
+- :name: infiltrating duct mixed with other types of carcinoma
+  :icdo3_code: 8523/3
+- :name: infiltrating lobular mixed with other types of carcinoma
+  :icdo3_code: 8524/3
+- :name: polymorphous low grade adenocarcinoma
+  :icdo3_code: 8525/3
+- :name: inflammatory carcinoma
+  :icdo3_code: 8530/3
+- :name: paget disease, mammary
+  :icdo3_code: 8540/3
+- :name: paget disease and infiltrating duct carcinoma of breast
+  :icdo3_code: 8541/3
+- :name: paget disease, extramammary
+  :icdo3_code: 8542/3
+- :name: paget disease and intraductal carcinoma of breast
+  :icdo3_code: 8543/3
+- :name: acinar cell adenoma
+  :icdo3_code: 8550/0
+- :name: acinar cell tumor
+  :icdo3_code: 8550/1
+- :name: acinar cell carcinoma
+  :icdo3_code: 8550/3
+- :name: acinar cell cystadenocarcinoma
+  :icdo3_code: 8551/3
+- :name: mixed squamous cell and glandular papilloma
+  :icdo3_code: 8560/0
+- :name: adenosquamous carcinoma
+  :icdo3_code: 8560/3
+- :name: adenolymphoma
+  :icdo3_code: 8561/0
+- :name: epithelial-myoepithelial carcinoma
+  :icdo3_code: 8562/3
+- :name: adenocarcinoma with squamous metaplasia
+  :icdo3_code: 8570/3
+- :name: adenocarcinoma with cartilaginous and osseous metaplasia
+  :icdo3_code: 8571/3
+- :name: adenocarcinoma with spindle cell metaplasia
+  :icdo3_code: 8572/3
+- :name: adenocarcinoma with apocrine metaplasia
+  :icdo3_code: 8573/3
+- :name: adenocarcinoma with neuroendocrine differentiation
+  :icdo3_code: 8574/3
+- :name: metaplastic carcinoma, nos
+  :icdo3_code: 8575/3
+- :name: hepatoid adenocarcinoma
+  :icdo3_code: 8576/3
+- :name: thymoma, benign
+  :icdo3_code: 8580/0
+- :name: thymoma, nos
+  :icdo3_code: 8580/1
+- :name: thymoma, malignant, nos
+  :icdo3_code: 8580/3
+- :name: thymoma, type a, nos
+  :icdo3_code: 8581/1
+- :name: thymoma, type a, malignant
+  :icdo3_code: 8581/3
+- :name: thymoma, type ab, nos
+  :icdo3_code: 8582/1
+- :name: thymoma, type ab, malignant
+  :icdo3_code: 8582/3
+- :name: thymoma, type b1, nos
+  :icdo3_code: 8583/1
+- :name: thymoma, type b1, malignant
+  :icdo3_code: 8583/3
+- :name: thymoma, type b2, nos
+  :icdo3_code: 8584/1
+- :name: thymoma, type b2, malignant
+  :icdo3_code: 8584/3
+- :name: thymoma, type b3, nos
+  :icdo3_code: 8585/1
+- :name: thymoma, type b3, malignant
+  :icdo3_code: 8585/3
+- :name: thymic carcinoma, nos
+  :icdo3_code: 8586/3
+- :name: ectopic hamartomatous thymoma
+  :icdo3_code: 8587/0
+- :name: spindle epithelial tumor with thymus-like element
+  :icdo3_code: 8588/3
+- :name: carcinoma showing thymus-like element
+  :icdo3_code: 8589/3
+- :name: sex cord-gonadal stromal tumor, nos
+  :icdo3_code: 8590/1
+- :name: sex cord-gonadal stromal tumor, incompletely differentiated
+  :icdo3_code: 8591/1
+- :name: sex cord-gonadal stromal tumor, mixed forms
+  :icdo3_code: 8592/1
+- :name: stromal tumor with minor sex cord elements
+  :icdo3_code: 8593/1
+- :name: thecoma, nos
+  :icdo3_code: 8600/0
+- :name: thecoma, malignant
+  :icdo3_code: 8600/3
+- :name: thecoma, luteinized
+  :icdo3_code: 8601/0
+- :name: sclerosing stromal tumor
+  :icdo3_code: 8602/0
+- :name: luteoma, nos
+  :icdo3_code: 8610/0
+- :name: granulosa cell tumor, adult type
+  :icdo3_code: 8620/1
+- :name: granulosa cell tumor, malignant
+  :icdo3_code: 8620/3
+- :name: granulosa cell-theca cell tumor
+  :icdo3_code: 8621/1
+- :name: granulosa cell tumor, juvenile
+  :icdo3_code: 8622/1
+- :name: sex cord tumor with annular tubules
+  :icdo3_code: 8623/1
+- :name: androblastoma, benign
+  :icdo3_code: 8630/0
+- :name: androblastoma, nos
+  :icdo3_code: 8630/1
+- :name: androblastoma, malignant
+  :icdo3_code: 8630/3
+- :name: sertoli-leydig cell tumor, well differentiated
+  :icdo3_code: 8631/0
+- :name: sertoli-leydig cell tumor of intermediate differentiation
+  :icdo3_code: 8631/1
+- :name: sertoli-leydig cell tumor, poorly differentiated
+  :icdo3_code: 8631/3
+- :name: gynandroblastoma
+  :icdo3_code: 8632/1
+- :name: sertoli-leydig cell tumor, retiform
+  :icdo3_code: 8633/1
+- :name: sertoli-leydig cell tumor, intermediate differentiation, with heterologous
+    elements
+  :icdo3_code: 8634/1
+- :name: sertoli-leydig cell tumor, poorly differentiated, with heterologous elements
+  :icdo3_code: 8634/3"
+- :name: sertoli cell tumor, nos
+  :icdo3_code: 8640/1
+- :name: sertoli cell carcinoma
+  :icdo3_code: 8640/3
+- :name: sertoli cell tumor with lipid storage
+  :icdo3_code: 8641/0
+- :name: large cell calcifying sertoli cell tumor
+  :icdo3_code: 8642/1
+- :name: leydig cell tumor, benign
+  :icdo3_code: 8650/0
+- :name: leydig cell tumor, nos
+  :icdo3_code: 8650/1
+- :name: leydig cell tumor, malignant
+  :icdo3_code: 8650/3
+- :name: hilus cell tumor
+  :icdo3_code: 8660/0
+- :name: lipid cell tumor of ovary
+  :icdo3_code: 8670/0
+- :name: steroid cell tumor, malignant
+  :icdo3_code: 8670/3
+- :name: adrenal rest tumor
+  :icdo3_code: 8671/0
+- :name: paraganglioma, benign
+  :icdo3_code: 8680/0
+- :name: paraganglioma, nos
+  :icdo3_code: 8680/1
+- :name: paraganglioma, malignant
+  :icdo3_code: 8680/3
+- :name: sympathetic paraganglioma
+  :icdo3_code: 8681/1
+- :name: parasympathetic paraganglioma
+  :icdo3_code: 8682/1
+- :name: gangliocytic paraganglioma
+  :icdo3_code: 8683/0
+- :name: glomus jugulare tumor, nos
+  :icdo3_code: 8690/1
+- :name: aortic body tumor
+  :icdo3_code: 8691/1
+- :name: carotid body tumor
+  :icdo3_code: 8692/1
+- :name: extra-adrenal paraganglioma, nos
+  :icdo3_code: 8693/1
+- :name: extra-adrenal paraganglioma, malignant
+  :icdo3_code: 8693/3
+- :name: pheochromocytoma, nos
+  :icdo3_code: 8700/0
+- :name: pheochromocytoma, malignant
+  :icdo3_code: 8700/3
+- :name: glomangiosarcoma
+  :icdo3_code: 8710/3
+- :name: glomus tumor, nos
+  :icdo3_code: 8711/0
+- :name: glomus tumor, malignant
+  :icdo3_code: 8711/3
+- :name: glomangioma
+  :icdo3_code: 8712/0
+- :name: glomangiomyoma
+  :icdo3_code: 8713/0
+- :name: pigmented nevus, nos
+  :icdo3_code: 8720/0
+- :name: melanoma in situ
+  :icdo3_code: 8720/2
+- :name: malignant melanoma, nos
+  :icdo3_code: 8720/3
+- :name: nodular melanoma
+  :icdo3_code: 8721/3
+- :name: balloon cell nevus
+  :icdo3_code: 8722/0
+- :name: balloon cell melanoma
+  :icdo3_code: 8722/3
+- :name: halo nevus
+  :icdo3_code: 8723/0
+- :name: malignant melanoma, regressing
+  :icdo3_code: 8723/3
+- :name: neuronevus
+  :icdo3_code: 8725/0
+- :name: magnocellular nevus
+  :icdo3_code: 8726/0
+- :name: dysplastic nevus
+  :icdo3_code: 8727/0
+- :name: diffuse melanocytosis
+  :icdo3_code: 8728/0
+- :name: meningeal melanocytoma
+  :icdo3_code: 8728/1
+- :name: meningeal melanomatosis
+  :icdo3_code: 8728/3
+- :name: nonpigmented nevus
+  :icdo3_code: 8730/0
+- :name: amelanotic melanoma
+  :icdo3_code: 8730/3
+- :name: junctional nevus, nos
+  :icdo3_code: 8740/0
+- :name: malignant melanoma in junctional nevus
+  :icdo3_code: 8740/3
+- :name: precancerous melanosis, nos
+  :icdo3_code: 8741/2
+- :name: malignant melanoma in precancerous melanosis
+  :icdo3_code: 8741/3
+- :name: lentigo maligna
+  :icdo3_code: 8742/2
+- :name: lentigo maligna melanoma
+  :icdo3_code: 8742/3
+- :name: superficial spreading melanoma
+  :icdo3_code: 8743/3
+- :name: acral lentiginous melanoma, malignant
+  :icdo3_code: 8744/3
+- :name: desmoplastic melanoma, malignant
+  :icdo3_code: 8745/3
+- :name: mucosal lentiginous melanoma
+  :icdo3_code: 8746/3
+- :name: intradermal nevus
+  :icdo3_code: 8750/0
+- :name: compound nevus
+  :icdo3_code: 8760/0
+- :name: small congenital nevus
+  :icdo3_code: 8761/0
+- :name: giant pigmented nevus, nos
+  :icdo3_code: 8761/1
+- :name: malignant melanoma in giant pigmented nevus
+  :icdo3_code: 8761/3
+- :name: proliferative dermal lesion in congenital nevus
+  :icdo3_code: 8762/1
+- :name: epithelioid and spindle cell nevus
+  :icdo3_code: 8770/0
+- :name: mixed epithelioid and spindle cell melanoma
+  :icdo3_code: 8770/3
+- :name: epithelioid cell nevus
+  :icdo3_code: 8771/0
+- :name: epithelioid cell melanoma
+  :icdo3_code: 8771/3
+- :name: spindle cell nevus, nos
+  :icdo3_code: 8772/0
+- :name: spindle cell melanoma, nos
+  :icdo3_code: 8772/3
+- :name: spindle cell melanoma, type a
+  :icdo3_code: 8773/3
+- :name: spindle cell melanoma, type b
+  :icdo3_code: 8774/3
+- :name: blue nevus, nos
+  :icdo3_code: 8780/0
+- :name: blue nevus, malignant
+  :icdo3_code: 8780/3
+- :name: cellular blue nevus
+  :icdo3_code: 8790/0
+- :name: soft tissue tumor, benign
+  :icdo3_code: 8800/0
+- :name: sarcoma, nos
+  :icdo3_code: 8800/3
+- :name: sarcomatosis, nos
+  :icdo3_code: 8800/9
+- :name: spindle cell sarcoma
+  :icdo3_code: 8801/3
+- :name: giant cell sarcoma
+  :icdo3_code: 8802/3
+- :name: small cell sarcoma
+  :icdo3_code: 8803/3
+- :name: epithelioid sarcoma
+  :icdo3_code: 8804/3
+- :name: undifferentiated sarcoma
+  :icdo3_code: 8805/3
+- :name: desmoplastic small round cell tumor
+  :icdo3_code: 8806/3
+- :name: fibroma, nos
+  :icdo3_code: 8810/0
+- :name: cellular fibroma
+  :icdo3_code: 8810/1
+- :name: fibrosarcoma, nos
+  :icdo3_code: 8810/3
+- :name: fibromyxoma
+  :icdo3_code: 8811/0
+- :name: fibromyxosarcoma
+  :icdo3_code: 8811/3
+- :name: periosteal fibroma
+  :icdo3_code: 8812/0
+- :name: periosteal fibrosarcoma
+  :icdo3_code: 8812/3
+- :name: fascial fibroma
+  :icdo3_code: 8813/0
+- :name: fascial fibrosarcoma
+  :icdo3_code: 8813/3
+- :name: infantile fibrosarcoma
+  :icdo3_code: 8814/3
+- :name: solitary fibrous tumor
+  :icdo3_code: 8815/0
+- :name: solitary fibrous tumor, malignant
+  :icdo3_code: 8815/3
+- :name: elastofibroma
+  :icdo3_code: 8820/0
+- :name: aggressive fibromatosis
+  :icdo3_code: 8821/1
+- :name: abdominal fibromatosis
+  :icdo3_code: 8822/1
+- :name: desmoplastic fibroma
+  :icdo3_code: 8823/0
+- :name: myofibroma
+  :icdo3_code: 8824/0
+- :name: myofibromatosis
+  :icdo3_code: 8824/1
+- :name: myofibroblastoma
+  :icdo3_code: 8825/0
+- :name: myofibroblastic tumor, nos
+  :icdo3_code: 8825/1
+- :name: angiomyofibroblastoma
+  :icdo3_code: 8826/0
+- :name: myofibroblastic tumor, peribronchial
+  :icdo3_code: 8827/1
+- :name: benign fibrous histiocytoma
+  :icdo3_code: 8830/0
+- :name: atypical fibrous histiocytoma
+  :icdo3_code: 8830/1
+- :name: malignant fibrous histiocytoma
+  :icdo3_code: 8830/3
+- :name: histiocytoma, nos
+  :icdo3_code: 8831/0
+- :name: dermatofibroma, nos
+  :icdo3_code: 8832/0
+- :name: dermatofibrosarcoma, nos
+  :icdo3_code: 8832/3
+- :name: pigmented dermatofibrosarcoma protuberans
+  :icdo3_code: 8833/3
+- :name: giant cell fibroblastoma
+  :icdo3_code: 8834/1
+- :name: plexiform fibrohistiocytic tumor
+  :icdo3_code: 8835/1
+- :name: angiomatoid fibrous histiocytoma
+  :icdo3_code: 8836/1
+- :name: myxoma, nos
+  :icdo3_code: 8840/0
+- :name: myxosarcoma
+  :icdo3_code: 8840/3
+- :name: angiomyxoma
+  :icdo3_code: 8841/1
+- :name: ossifying fibromyxoid tumor
+  :icdo3_code: 8842/0
+- :name: lipoma, nos
+  :icdo3_code: 8850/0
+- :name: atypical lipoma/j
+  :icdo3_code: 8850/1
+- :name: liposarcoma, nos
+  :icdo3_code: 8850/3
+- :name: gastrointestinal stromal tumor, benign
+  :icdo3_code: 8936/0
+- :name: gastrointestinal stromal tumor, nos
+  :icdo3_code: 8936/1
+- :name: gastrointestinal stromal sarcoma
+  :icdo3_code: 8936/3
+- :name: pleomorphic adenoma
+  :icdo3_code: 8940/0
+- :name: mixed tumor, malignant, nos
+  :icdo3_code: 8940/3
+- :name: carcinoma in pleomorphic adenoma
+  :icdo3_code: 8941/3
+- :name: mullerian mixed tumor
+  :icdo3_code: 8950/3
+- :name: mesodermal mixed tumor
+  :icdo3_code: 8951/3
+- :name: benign cystic nephroma
+  :icdo3_code: 8959/0
+- :name: cystic partially differentiated nephroblastoma
+  :icdo3_code: 8959/1
+- :name: malignant cystic nephroma
+  :icdo3_code: 8959/3
+- :name: mesoblastic nephroma
+  :icdo3_code: 8960/1
+- :name: nephroblastoma, nos
+  :icdo3_code: 8960/3
+- :name: malignant rhabdoid tumor
+  :icdo3_code: 8963/3
+- :name: clear cell sarcoma of kidney
+  :icdo3_code: 8964/3
+- :name: nephrogenic adenofibroma
+  :icdo3_code: 8965/0
+- :name: renomedullary interstitial cell tumor
+  :icdo3_code: 8966/0
+- :name: ossifying renal tumor
+  :icdo3_code: 8967/0
+- :name: hepatoblastoma
+  :icdo3_code: 8970/3
+- :name: pancreatoblastoma
+  :icdo3_code: 8971/3
+- :name: pulmonary blastoma
+  :icdo3_code: 8972/3
+- :name: pleuropulmonary blastoma
+  :icdo3_code: 8973/3
+- :name: sialoblastoma
+  :icdo3_code: 8974/1
+- :name: carcinosarcoma, nos
+  :icdo3_code: 8980/3
+- :name: carcinosarcoma, embryonal
+  :icdo3_code: 8981/3
+- :name: myoepithelioma
+  :icdo3_code: 8982/0
+- :name: malignant myoepithelioma
+  :icdo3_code: 8982/3
+- :name: adenomyoepithelioma
+  :icdo3_code: 8983/0
+- :name: mesenchymoma, benign
+  :icdo3_code: 8990/0
+- :name: mesenchymoma, nos
+  :icdo3_code: 8990/1
+- :name: mesenchymoma, malignant
+  :icdo3_code: 8990/3
+- :name: embryonal sarcoma
+  :icdo3_code: 8991/3
+- :name: brenner tumor, nos
+  :icdo3_code: 9000/0
+- :name: brenner tumor, borderline malignancy
+  :icdo3_code: 9000/1
+- :name: brenner tumor, malignant
+  :icdo3_code: 9000/3
+- :name: fibroadenoma, nos
+  :icdo3_code: 9010/0
+- :name: intracanalicular fibroadenoma
+  :icdo3_code: 9011/0
+- :name: pericanalicular fibroadenoma
+  :icdo3_code: 9012/0
+- :name: adenofibroma, nos
+  :icdo3_code: 9013/0
+- :name: serous adenofibroma, nos
+  :icdo3_code: 9014/0
+- :name: serous adenofibroma of borderline malignancy
+  :icdo3_code: 9014/1
+- :name: serous adenocarcinofibroma
+  :icdo3_code: 9014/3
+- :name: mucinous adenofibroma, nos
+  :icdo3_code: 9015/0
+- :name: mucinous adenofibroma of borderline malignancy
+  :icdo3_code: 9015/1
+- :name: mucinous adenocarcinofibroma
+  :icdo3_code: 9015/3
+- :name: giant fibroadenoma
+  :icdo3_code: 9016/0
+- :name: phyllodes tumor, benign
+  :icdo3_code: 9020/0
+- :name: phyllodes tumor, borderline
+  :icdo3_code: 9020/1
+- :name: phyllodes tumor, malignant
+  :icdo3_code: 9020/3
+- :name: juvenile fibroadenoma
+  :icdo3_code: 9030/0
+- :name: synovioma, benign
+  :icdo3_code: 9040/0
+- :name: synovial sarcoma, nos
+  :icdo3_code: 9040/3
+- :name: synovial sarcoma, spindle cell
+  :icdo3_code: 9041/3
+- :name: synovial sarcoma, epithelioid cell
+  :icdo3_code: 9042/3
+- :name: synovial sarcoma, biphasic
+  :icdo3_code: 9043/3
+- :name: clear cell sarcoma, nos
+  :icdo3_code: 9044/3
+- :name: mesothelioma, benign
+  :icdo3_code: 9050/0
+- :name: mesothelioma, malignant
+  :icdo3_code: 9050/3
+- :name: fibrous mesothelioma, benign
+  :icdo3_code: 9051/0
+- :name: fibrous mesothelioma, malignant
+  :icdo3_code: 9051/3
+- :name: epithelioid mesothelioma, benign
+  :icdo3_code: 9052/0
+- :name: epithelioid mesothelioma, malignant
+  :icdo3_code: 9052/3
+- :name: mesothelioma, biphasic, malignant
+  :icdo3_code: 9053/3
+- :name: adenomatoid tumor, nos
+  :icdo3_code: 9054/0
+- :name: multicystic mesothelioma, benign
+  :icdo3_code: 9055/0
+- :name: cystic mesothelioma, nos
+  :icdo3_code: 9055/1
+- :name: dysgerminoma
+  :icdo3_code: 9060/3
+- :name: seminoma, nos
+  :icdo3_code: 9061/3
+- :name: seminoma, anaplastic
+  :icdo3_code: 9062/3
+- :name: spermatocytic seminoma
+  :icdo3_code: 9063/3
+- :name: intratubular malignant germ cells
+  :icdo3_code: 9064/2
+- :name: germinoma
+  :icdo3_code: 9064/3
+- :name: germ cell tumor, nonseminomatous
+  :icdo3_code: 9065/3
+- :name: embryonal carcinoma, nos
+  :icdo3_code: 9070/3
+- :name: yolk sac tumor
+  :icdo3_code: 9071/3
+- :name: polyembryoma
+  :icdo3_code: 9072/3
+- :name: gonadoblastoma
+  :icdo3_code: 9073/1
+- :name: teratoma, benign
+  :icdo3_code: 9080/0
+- :name: teratoma, nos
+  :icdo3_code: 9080/1
+- :name: teratoma, malignant, nos
+  :icdo3_code: 9080/3
+- :name: teratocarcinoma
+  :icdo3_code: 9081/3
+- :name: malignant teratoma, undifferentiated
+  :icdo3_code: 9082/3
+- :name: malignant teratoma, intermediate
+  :icdo3_code: 9083/3
+- :name: dermoid cyst, nos
+  :icdo3_code: 9084/0
+- :name: teratoma with malignant transformation
+  :icdo3_code: 9084/3
+- :name: mixed germ cell tumor
+  :icdo3_code: 9085/3
+- :name: struma ovarii, nos
+  :icdo3_code: 9090/0
+- :name: struma ovarii, malignant
+  :icdo3_code: 9090/3
+- :name: strumal carcinoid
+  :icdo3_code: 9091/1
+- :name: hydatidiform mole, nos
+  :icdo3_code: 9100/0
+- :name: invasive hydatidiform mole
+  :icdo3_code: 9100/1
+- :name: choriocarcinoma, nos
+  :icdo3_code: 9100/3
+- :name: choriocarcinoma combined with other germ cell elements
+  :icdo3_code: 9101/3
+- :name: malignant teratoma, trophoblastic
+  :icdo3_code: 9102/3
+- :name: partial hydatidiform mole
+  :icdo3_code: 9103/0
+- :name: placental site trophoblastic tumor
+  :icdo3_code: 9104/1
+- :name: trophoblastic tumor, epithelioid
+  :icdo3_code: 9105/3
+- :name: mesonephroma, benign
+  :icdo3_code: 9110/0
+- :name: mesonephric tumor, nos
+  :icdo3_code: 9110/1
+- :name: mesonephroma, malignant
+  :icdo3_code: 9110/3
+- :name: hemangioma, nos
+  :icdo3_code: 9120/0
+- :name: hemangiosarcoma
+  :icdo3_code: 9120/3
+- :name: cavernous hemangioma
+  :icdo3_code: 9121/0
+- :name: venous hemangioma
+  :icdo3_code: 9122/0
+- :name: racemose hemangioma
+  :icdo3_code: 9123/0
+- :name: kupffer cell sarcoma
+  :icdo3_code: 9124/3
+- :name: epithelioid hemangioma
+  :icdo3_code: 9125/0
+- :name: hemangioendothelioma, benign
+  :icdo3_code: 9130/0
+- :name: hemangioendothelioma, nos
+  :icdo3_code: 9130/1
+- :name: hemangioendothelioma, malignant
+  :icdo3_code: 9130/3
+- :name: capillary hemangioma
+  :icdo3_code: 9131/0
+- :name: intramuscular hemangioma
+  :icdo3_code: 9132/0
+- :name: epithelioid hemangioendothelioma, nos
+  :icdo3_code: 9133/1
+- :name: epithelioid hemangioendothelioma, malignant
+  :icdo3_code: 9133/3
+- :name: endovascular papillary angioendothelioma
+  :icdo3_code: 9135/1
+- :name: spindle cell hemangioendothelioma
+  :icdo3_code: 9136/1
+- :name: kaposi sarcoma
+  :icdo3_code: 9140/3
+- :name: angiokeratoma
+  :icdo3_code: 9141/0
+- :name: verrucous keratotic hemangioma
+  :icdo3_code: 9142/0
+- :name: hemangiopericytoma, benign
+  :icdo3_code: 9150/0
+- :name: hemangiopericytoma, nos
+  :icdo3_code: 9150/1
+- :name: hemangiopericytoma, malignant
+  :icdo3_code: 9150/3
+- :name: angiofibroma, nos
+  :icdo3_code: 9160/0
+- :name: acquired tufted hemangioma
+  :icdo3_code: 9161/0
+- :name: hemangioblastoma
+  :icdo3_code: 9161/1
+- :name: lymphangioma, nos
+  :icdo3_code: 9170/0
+- :name: lymphangiosarcoma
+  :icdo3_code: 9170/3
+- :name: capillary lymphangioma
+  :icdo3_code: 9171/0
+- :name: cavernous lymphangioma
+  :icdo3_code: 9172/0
+- :name: cystic lymphangioma
+  :icdo3_code: 9173/0
+- :name: lymphangiomyoma
+  :icdo3_code: 9174/0
+- :name: lymphangiomyomatosis
+  :icdo3_code: 9174/1
+- :name: hemolymphangioma
+  :icdo3_code: 9175/0
+- :name: osteoma, nos
+  :icdo3_code: 9180/0
+- :name: osteosarcoma, nos
+  :icdo3_code: 9180/3
+- :name: chondroblastic osteosarcoma
+  :icdo3_code: 9181/3
+- :name: fibroblastic osteosarcoma
+  :icdo3_code: 9182/3
+- :name: telangiectatic osteosarcoma
+  :icdo3_code: 9183/3
+- :name: osteosarcoma in paget disease of bone
+  :icdo3_code: 9184/3
+- :name: small cell osteosarcoma
+  :icdo3_code: 9185/3
+- :name: central osteosarcoma
+  :icdo3_code: 9186/3
+- :name: intraosseous well differentiated osteosarcoma
+  :icdo3_code: 9187/3
+- :name: osteoid osteoma, nos
+  :icdo3_code: 9191/0
+- :name: parosteal osteosarcoma
+  :icdo3_code: 9192/3
+- :name: periosteal osteosarcoma
+  :icdo3_code: 9193/3
+- :name: high grade surface osteosarcoma
+  :icdo3_code: 9194/3
+- :name: intracortical osteosarcoma
+  :icdo3_code: 9195/3
+- :name: osteoblastoma, nos
+  :icdo3_code: 9200/0
+- :name: aggressive osteoblastoma
+  :icdo3_code: 9200/1
+- :name: osteochondroma
+  :icdo3_code: 9210/0
+- :name: osteochondromatosis, nos
+  :icdo3_code: 9210/1
+- :name: chondroma, nos
+  :icdo3_code: 9220/0
+- :name: chondromatosis, nos
+  :icdo3_code: 9220/1
+- :name: chondrosarcoma, nos
+  :icdo3_code: 9220/3
+- :name: juxtacortical chondroma
+  :icdo3_code: 9221/0
+- :name: juxtacortical chondrosarcoma
+  :icdo3_code: 9221/3
+- :name: chondroblastoma, nos
+  :icdo3_code: 9230/0
+- :name: chondroblastoma, malignant
+  :icdo3_code: 9230/3
+- :name: myxoid chondrosarcoma
+  :icdo3_code: 9231/3
+- :name: mesenchymal chondrosarcoma
+  :icdo3_code: 9240/3
+- :name: chondromyxoid fibroma
+  :icdo3_code: 9241/0
+- :name: clear cell chondrosarcoma
+  :icdo3_code: 9242/3
+- :name: dedifferentiated chondrosarcoma
+  :icdo3_code: 9243/3
+- :name: giant cell tumor of bone, nos
+  :icdo3_code: 9250/1
+- :name: giant cell tumor of bone, malignant
+  :icdo3_code: 9250/3
+- :name: giant cell tumor of soft parts, nos
+  :icdo3_code: 9251/1
+- :name: malignant giant cell tumor of soft parts
+  :icdo3_code: 9251/3
+- :name: tenosynovial giant cell tumor
+  :icdo3_code: 9252/0
+- :name: malignant tenosynovial giant cell tumor
+  :icdo3_code: 9252/3
+- :name: ewing sarcoma
+  :icdo3_code: 9260/3
+- :name: adamantinoma of long bones
+  :icdo3_code: 9261/3
+- :name: ossifying fibroma
+  :icdo3_code: 9262/0
+- :name: odontogenic tumor, benign
+  :icdo3_code: 9270/0
+- :name: odontogenic tumor, nos
+  :icdo3_code: 9270/1
+- :name: odontogenic tumor, malignant
+  :icdo3_code: 9270/3
+- :name: ameloblastic fibrodentinoma
+  :icdo3_code: 9271/0
+- :name: cementoma, nos
+  :icdo3_code: 9272/0
+- :name: cementoblastoma, benign
+  :icdo3_code: 9273/0
+- :name: cementifying fibroma
+  :icdo3_code: 9274/0
+- :name: gigantiform cementoma
+  :icdo3_code: 9275/0
+- :name: odontoma, nos
+  :icdo3_code: 9280/0
+- :name: compound odontoma
+  :icdo3_code: 9281/0
+- :name: complex odontoma
+  :icdo3_code: 9282/0
+- :name: ameloblastic fibro-odontoma
+  :icdo3_code: 9290/0
+- :name: ependymoma, anaplastic
+  :icdo3_code: 9392/3
+- :name: papillary ependymoma
+  :icdo3_code: 9393/3
+- :name: myxopapillary ependymoma
+  :icdo3_code: 9394/1
+- :name: astrocytoma, nos
+  :icdo3_code: 9400/3
+- :name: astrocytoma, anaplastic
+  :icdo3_code: 9401/3
+- :name: protoplasmic astrocytoma
+  :icdo3_code: 9410/3
+- :name: gemistocytic astrocytoma
+  :icdo3_code: 9411/3
+- :name: desmoplastic infantile astrocytoma
+  :icdo3_code: 9412/1
+- :name: dysembryoplastic neuroepithelial tumor
+  :icdo3_code: 9413/0
+- :name: fibrillary astrocytoma
+  :icdo3_code: 9420/3
+- :name: pilocytic astrocytoma
+  :icdo3_code: 9421/1
+- :name: polar spongioblastoma
+  :icdo3_code: 9423/3
+- :name: pleomorphic xanthoastrocytoma
+  :icdo3_code: 9424/3
+- :name: astroblastoma
+  :icdo3_code: 9430/3
+- :name: glioblastoma, nos
+  :icdo3_code: 9440/3
+- :name: giant cell glioblastoma
+  :icdo3_code: 9441/3
+- :name: gliofibroma
+  :icdo3_code: 9442/1
+- :name: gliosarcoma
+  :icdo3_code: 9442/3
+- :name: chordoid glioma
+  :icdo3_code: 9444/1
+- :name: oligodendroglioma, nos
+  :icdo3_code: 9450/3
+- :name: oligodendroglioma, anaplastic
+  :icdo3_code: 9451/3
+- :name: oligodendroblastoma
+  :icdo3_code: 9460/3
+- :name: medulloblastoma, nos
+  :icdo3_code: 9470/3
+- :name: desmoplastic nodular medulloblastoma
+  :icdo3_code: 9471/3
+- :name: medullomyoblastoma
+  :icdo3_code: 9472/3
+- :name: primitive neuroectodermal tumor, nos
+  :icdo3_code: 9473/3
+- :name: large cell medulloblastoma
+  :icdo3_code: 9474/3
+- :name: cerebellar sarcoma, nos
+  :icdo3_code: 9480/3
+- :name: ganglioneuroma
+  :icdo3_code: 9490/0
+- :name: ganglioneuroblastoma
+  :icdo3_code: 9490/3
+- :name: ganglioneuromatosis
+  :icdo3_code: 9491/0
+- :name: gangliocytoma
+  :icdo3_code: 9492/0
+- :name: dysplastic gangliocytoma of cerebellum (lhermitte-duclos)
+  :icdo3_code: 9493/0
+- :name: neuroblastoma, nos
+  :icdo3_code: 9500/3
+- :name: medulloepithelioma, benign
+  :icdo3_code: 9501/0
+- :name: medulloepithelioma, nos
+  :icdo3_code: 9501/3
+- :name: teratoid medulloepithelioma, benign
+  :icdo3_code: 9502/0
+- :name: teratoid medulloepithelioma
+  :icdo3_code: 9502/3
+- :name: neuroepithelioma, nos
+  :icdo3_code: 9503/3
+- :name: spongioneuroblastoma
+  :icdo3_code: 9504/3
+- :name: ganglioglioma, nos
+  :icdo3_code: 9505/1
+- :name: ganglioglioma, anaplastic
+  :icdo3_code: 9505/3
+- :name: central neurocytoma
+  :icdo3_code: 9506/1
+- :name: pacinian tumor
+  :icdo3_code: 9507/0
+- :name: atypical teratoid/rhabdoid tumor
+  :icdo3_code: 9508/3
+- :name: retinocytoma
+  :icdo3_code: 9510/0
+- :name: retinoblastoma, nos
+  :icdo3_code: 9510/3
+- :name: retinoblastoma, differentiated
+  :icdo3_code: 9511/3
+- :name: retinoblastoma, undifferentiated
+  :icdo3_code: 9512/3
+- :name: retinoblastoma, diffuse
+  :icdo3_code: 9513/3
+- :name: retinoblastoma, spontaneously regressed
+  :icdo3_code: 9514/1
+- :name: olfactory neurogenic tumor
+  :icdo3_code: 9520/3
+- :name: olfactory neurocytoma
+  :icdo3_code: 9521/3
+- :name: olfactory neuroblastoma
+  :icdo3_code: 9522/3
+- :name: olfactory neuroepithelioma
+  :icdo3_code: 9523/3
+- :name: meningioma, nos
+  :icdo3_code: 9530/0
+- :name: meningiomatosis, nos
+  :icdo3_code: 9530/1
+- :name: meningioma, malignant
+  :icdo3_code: 9530/3
+- :name: meningothelial meningioma
+  :icdo3_code: 9531/0
+- :name: fibrous meningioma
+  :icdo3_code: 9532/0
+- :name: psammomatous meningioma
+  :icdo3_code: 9533/0
+- :name: angiomatous meningioma
+  :icdo3_code: 9534/0
+- :name: hemangioblastic meningioma
+  :icdo3_code: 9535/0
+- :name: transitional meningioma
+  :icdo3_code: 9537/0
+- :name: clear cell meningioma
+  :icdo3_code: 9538/1
+- :name: papillary meningioma
+  :icdo3_code: 9538/3
+- :name: atypical meningioma
+  :icdo3_code: 9539/1
+- :name: meningeal sarcomatosis
+  :icdo3_code: 9539/3
+- :name: neurofibroma, nos
+  :icdo3_code: 9540/0
+- :name: neurofibromatosis, nos
+  :icdo3_code: 9540/1
+- :name: malignant peripheral nerve sheath tumor
+  :icdo3_code: 9540/3
+- :name: melanotic neurofibroma
+  :icdo3_code: 9541/0
+- :name: plexiform neurofibroma
+  :icdo3_code: 9550/0
+- :name: neurilemoma, nos
+  :icdo3_code: 9560/0
+- :name: neurinomatosis
+  :icdo3_code: 9560/1
+- :name: neurilemoma, malignant
+  :icdo3_code: 9560/3
+- :name: malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation
+  :icdo3_code: 9561/3
+- :name: neurothekeoma
+  :icdo3_code: 9562/0
+- :name: neuroma, nos
+  :icdo3_code: 9570/0
+- :name: perineurioma, nos
+  :icdo3_code: 9571/0
+- :name: perineurioma, malignant
+  :icdo3_code: 9571/3
+- :name: granular cell tumor, nos
+  :icdo3_code: 9580/0
+- :name: granular cell tumor, malignant
+  :icdo3_code: 9580/3
+- :name: alveolar soft part sarcoma
+  :icdo3_code: 9581/3
+- :name: granular cell tumor of the sellar region
+  :icdo3_code: 9582/0
+- :name: malignant lymphoma, nos
+  :icdo3_code: 9590/3
+- :name: malignant lymphoma, non-hodgkin, nos
+  :icdo3_code: 9591/3
+- :name: composite hodgkin and non-hodgkin lymphoma
+  :icdo3_code: 9596/3
+- :name: hodgkin lymphoma, nos
+  :icdo3_code: 9650/3
+- :name: hodgkin lymphoma, lymphocyte-rich
+  :icdo3_code: 9651/3
+- :name: hodgkin lymphoma, mixed cellularity, nos
+  :icdo3_code: 9652/3
+- :name: hodgkin lymphoma, lymphocyte depletion, nos
+  :icdo3_code: 9653/3
+- :name: hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis
+  :icdo3_code: 9654/3
+- :name: hodgkin lymphoma, lymphocyte depletion, reticular
+  :icdo3_code: 9655/3
+- :name: hodgkin lymphoma, nodular lymphocyte predominance
+  :icdo3_code: 9659/3
+- :name: hodgkin granuloma
+  :icdo3_code: 9661/3
+- :name: hodgkin sarcoma
+  :icdo3_code: 9662/3
+- :name: hodgkin lymphoma, nodular sclerosis, nos
+  :icdo3_code: 9663/3
+- :name: hodgkin lymphoma, nodular sclerosis, cellular phase
+  :icdo3_code: 9664/3
+- :name: hodgkin lymphoma, nodular sclerosis,  grade 1
+  :icdo3_code: 9665/3
+- :name: hodgkin lymphoma, nodular sclerosis,  grade 2
+  :icdo3_code: 9667/3
+- :name: malignant lymphoma, small b lymphocytic, nos
+  :icdo3_code: 9670/3
+- :name: malignant lymphoma, lymphoplasmacytic
+  :icdo3_code: 9671/3
+- :name: mantle cell lymphoma
+  :icdo3_code: 9673/3
+- :name: malignant lymphoma, mixed small and large cell, diffuse
+  :icdo3_code: 9675/3
+- :name: primary effusion lymphoma
+  :icdo3_code: 9678/3
+- :name: mediastinal large b-cell lymphoma
+  :icdo3_code: 9679/3
+- :name: malignant lymphoma, large b-cell, diffuse, nos
+  :icdo3_code: 9680/3
+- :name: malignant lymphoma, large b-cell, diffuse, immunoblastic, nos
+  :icdo3_code: 9684/3
+- :name: burkitt lymphoma, nos
+  :icdo3_code: 9687/3
+- :name: splenic marginal zone b-cell lymphoma
+  :icdo3_code: 9689/3
+- :name: follicular lymphoma, nos
+  :icdo3_code: 9690/3
+- :name: follicular lymphoma, grade 2
+  :icdo3_code: 9691/3
+- :name: follicular lymphoma, grade 1
+  :icdo3_code: 9695/3
+- :name: follicular lymphoma, grade 3
+  :icdo3_code: 9698/3
+- :name: marginal zone b-cell lymphoma, nos
+  :icdo3_code: 9699/3
+- :name: mycosis fungoides
+  :icdo3_code: 9700/3
+- :name: sezary syndrome
+  :icdo3_code: 9701/3
+- :name: mature t-cell lymphoma, nos
+  :icdo3_code: 9702/3
+- :name: angioimmunoblastic t-cell lymphoma
+  :icdo3_code: 9705/3
+- :name: subcutaneous panniculitis-like t-cell lymphoma
+  :icdo3_code: 9708/3
+- :name: cutaneous t-cell lymphoma, nos
+  :icdo3_code: 9709/3
+- :name: anaplastic large cell lymphoma, t cell and null cell type
+  :icdo3_code: 9714/3
+- :name: hepatosplenic  (gamma-delta) cell lymphoma
+  :icdo3_code: 9716/3
+- :name: intestinal t-cell lymphoma
+  :icdo3_code: 9717/3
+- :name: primary cutaneous cd30+ t-cell lymphoproliferative disorder
+  :icdo3_code: 9718/3
+- :name: nk/t-cell lymphoma, nasal and nasal-type
+  :icdo3_code: 9719/3
+- :name: precursor cell lymphoblastic lymphoma, nos
+  :icdo3_code: 9727/3
+- :name: precursor b-cell lymphoblastic lymphoma
+  :icdo3_code: 9728/3
+- :name: precursor t-cell lymphoblastic lymphoma
+  :icdo3_code: 9729/3
+- :name: plasmacytoma, nos
+  :icdo3_code: 9731/3
+- :name: multiple myeloma
+  :icdo3_code: 9732/3
+- :name: plasma cell leukemia
+  :icdo3_code: 9733/3
+- :name: plasmacytoma, extramedullary (not occurring in bone)
+  :icdo3_code: 9734/3
+- :name: mastocytoma, nos
+  :icdo3_code: 9740/1
+- :name: mast cell sarcoma
+  :icdo3_code: 9740/3
+- :name: malignant mastocytosis
+  :icdo3_code: 9741/3
+- :name: mast cell leukemia
+  :icdo3_code: 9742/3
+- :name: malignant histiocytosis
+  :icdo3_code: 9750/3
+- :name: langerhans cell histiocytosis, nos
+  :icdo3_code: 9751/1
+- :name: langerhans cell histiocytosis, unifocal
+  :icdo3_code: 9752/1
+- :name: langerhans cell histiocytosis, multifocal
+  :icdo3_code: 9753/1
+- :name: langerhans cell histiocytosis, disseminated
+  :icdo3_code: 9754/3
+- :name: histiocytic sarcoma
+  :icdo3_code: 9755/3
+- :name: langerhans cell sarcoma
+  :icdo3_code: 9756/3
+- :name: interdigitating dendritic cell sarcoma
+  :icdo3_code: 9757/3
+- :name: follicular dendritic cell sarcoma
+  :icdo3_code: 9758/3
+- :name: immunoproliferative disease, nos
+  :icdo3_code: 9760/3
+- :name: waldenstrom macroglobulinemia
+  :icdo3_code: 9761/3
+- :name: heavy chain disease, nos
+  :icdo3_code: 9762/3
+- :name: immunoproliferative small intestinal  disease
+  :icdo3_code: 9764/3
+- :name: monoclonal gammopathy of undetermined significance
+  :icdo3_code: 9765/1
+- :name: angiocentric immunoproliferative lesion
+  :icdo3_code: 9766/1
+- :name: angioimmunoblastic lymphadenopathy (aic)
+  :icdo3_code: 9767/1
+- :name: t-gamma lymphoproliferative disease
+  :icdo3_code: 9768/1
+- :name: immunoglobulin deposition disease
+  :icdo3_code: 9769/1
+- :name: leukemia, nos
+  :icdo3_code: 9800/3
+- :name: acute leukemia, nos
+  :icdo3_code: 9801/3
+- :name: acute biphenotypic leukemia
+  :icdo3_code: 9805/3
+- :name: lymphoid leukemia, nos
+  :icdo3_code: 9820/3
+- :name: b-cell chronic lymphocytic leukemia/small lymphocytic lymphoma
+  :icdo3_code: 9823/3
+- :name: burkitt cell leukemia
+  :icdo3_code: 9826/3
+- :name: adult t-cell leukemia/lymphoma (htlv-1 positive)
+  :icdo3_code: 9827/3
+- :name: t-cell large granular lymphocytic leukemia
+  :icdo3_code: 9831/1
+- :name: prolymphocytic leukemia, nos
+  :icdo3_code: 9832/3
+- :name: prolymphocytic leukemia, b-cell type
+  :icdo3_code: 9833/3
+- :name: prolymphocytic leukemia, t-cell type
+  :icdo3_code: 9834/3
+- :name: precursor cell lymphoblastic leukemia, nos
+  :icdo3_code: 9835/3
+- :name: precursor b-cell lymphoblastic leukemia
+  :icdo3_code: 9836/3
+- :name: precursor t-cell lymphoblastic leukemia
+  :icdo3_code: 9837/3
+- :name: acute myeloid leukemia, m6 type
+  :icdo3_code: 9840/3
+- :name: myeloid leukemia, nos
+  :icdo3_code: 9860/3
+- :name: acute myeloid leukemia, nos
+  :icdo3_code: 9861/3
+- :name: chronic myeloid leukemia, nos
+  :icdo3_code: 9863/3
+- :name: acute promyelocytic leukemia
+  :icdo3_code: 9866/3
+- :name: acute myelomonocytic leukemia
+  :icdo3_code: 9867/3
+- :name: acute basophilic leukemia
+  :icdo3_code: 9870/3
+- :name: acute myeloid leukemia with abnormal marrow eosinophils
+  :icdo3_code: 9871/3
+- :name: acute myeloid leukemia, minimal differentiation
+  :icdo3_code: 9872/3
+- :name: acute myeloid leukemia without maturation
+  :icdo3_code: 9873/3
+- :name: acute myeloid leukemia with maturation
+  :icdo3_code: 9874/3
+- :name: chronic myelogenous leukemia, bcr/abl  positive
+  :icdo3_code: 9875/3
+- :name: atypical chronic myeloid leukemia, bcr/abl negative
+  :icdo3_code: 9876/3
+- :name: acute monocytic leukemia
+  :icdo3_code: 9891/3
+- :name: acute myeloid leukemia with multilineage dysplasia
+  :icdo3_code: 9895/3
+- :name: acute myeloid leukemia, t(8
+  :icdo3_code: 9896/3
+- :name: acute myeloid leukemia, 11q23 abnormalities
+  :icdo3_code: 9897/3
+- :name: acute megakaryoblastic leukemia
+  :icdo3_code: 9910/3
+- :name: therapy-related acute myeloid leukemia, nos
+  :icdo3_code: 9920/3
+- :name: myeloid sarcoma
+  :icdo3_code: 9930/3
+- :name: acute panmyelosis with myelofibrosis
+  :icdo3_code: 9931/3
+- :name: hairy cell leukemia
+  :icdo3_code: 9940/3
+- :name: chronic myelomonocytic leukemia, nos
+  :icdo3_code: 9945/3
+- :name: juvenile myelomonocytic leukemia
+  :icdo3_code: 9946/3
+- :name: aggressive nk-cell leukemia
+  :icdo3_code: 9948/3
+- :name: polycythemia vera
+  :icdo3_code: 9950/3
+- :name: chronic myeloproliferative disease, nos
+  :icdo3_code: 9960/3
+- :name: myelosclerosis with myeloid metaplasia
+  :icdo3_code: 9961/3
+- :name: essential thrombocythemia
+  :icdo3_code: 9962/3
+- :name: chronic neutrophilic leukemia
+  :icdo3_code: 9963/3
+- :name: hypereosinophilic syndrome
+  :icdo3_code: 9964/3
+- :name: lymphoproliferative disorder, nos
+  :icdo3_code: 9970/1
+- :name: myeloproliferative disease, nos
+  :icdo3_code: 9975/1
+- :name: refractory anemia
+  :icdo3_code: 9980/3
+- :name: refractory anemia with sideroblasts
+  :icdo3_code: 9982/3
+- :name: refractory anemia with excess blasts
+  :icdo3_code: 9983/3
+- :name: refractory anemia with excess blasts in transformation
+  :icdo3_code: 9984/3
+- :name: refractory cytopenia with multilineage dysplasia
+  :icdo3_code: 9985/3
+- :name: myelodysplastic syndrome with 5q deletion (5q-) syndrome
+  :icdo3_code: 9986/3
+- :name: therapy-related myelodysplastic syndrome, nos
+  :icdo3_code: 9987/3
+- :name: myelodysplastic syndrome, nos
+  :icdo3_code: 9989/3

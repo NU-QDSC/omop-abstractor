@@ -1,0 +1,123 @@
+icdo3_code,name
+94003,"9400/3 Astrocytoma, NOS"
+94003,"9400/3 Diffuse astrocytoma, NOS"
+94003,"9400/3 Diffuse astrocytoma, IDH-mutant"
+94003,"9400/3 Diffuse astrocytoma, IDH-wildtype"
+94113,"9411/3 Gemistocytic astrocytoma, IDH-mutant"
+94013,"9401/3 Anaplastic astrocytoma, NOS"
+94013,"9401/3 Anaplastic astrocytoma, IDH-mutant"
+94013,"9401/3 Anaplastic astrocytoma, IDH-wildtype"
+94403,"9440/3 Glioblastoma, NOS"
+94453,"9445/3 Glioblastoma, IDH-mutant"
+94403,"9440/3 Glioblastoma, IDH-wildtype"
+94403,9440/3 Epithelioid glioblastoma
+94413,9441/3 Giant cell glioblastoma
+94423,9442/3 Gliosarcoma
+93853,"9385/3 Diffuse midline glioma, H3 K27M-mutant"
+94503,"9450/3 Oligodendroglioma, NOS"
+94503,"9450/3 Oligodendroglioma, IDH-mutant and 1p/19q-codeleted"
+94513,"9451/3 Anaplastic oligodendroglioma, NOS"
+94513,"9451/3 Anaplastic oligodendroglioma, IDH-mutant and 1p/19q-codeleted"
+93823,"9382/3 Oligoastrocytoma, NOS"
+93823,"9382/3 Anaplastic oligoastrocytoma, NOS"
+94211,9421/1 Pilocytic astrocytoma
+94253,9425/3 Pilomyxoid astrocytoma
+93841,9384/1 Subependymal giant cell astrocytoma
+94243,9424/3 Pleomorphic xanthoastrocytoma
+94243,9424/3 Anaplastic pleomorphic xanthoastrocytoma
+93913,"9391/3 Ependymoma, NOS"
+93831,9383/1 Subependymoma
+93941,9394/1 Myxopapillary ependymoma
+93913,9391/3 Ependymoma
+93913,9391/3 Clear cell ependymoma
+93933,9393/3 Papillary ependymoma
+93913,9391/3 Tanycytic ependymoma
+93963,"9396/3 Ependymoma, RELA fusion-positive"
+93923,9392/3 Anaplastic ependymoma
+94441,9444/1 Chordoid glioma of third ventricle
+94311,9431/1 Angiocentric glioma
+94303,9430/3 Astroblastoma
+93900,"9390/0 Choroid plexus papilloma, NOS"
+93900,9390/0 Choroid plexus papilloma
+93901,9390/1 Atypical choroid plexus papilloma
+93903,9390/3 Choroid plexus carcinoma
+94130,9413/0 Dysembryoplastic neuroepithelial tumor
+94920,9492/0 Gangliocytoma
+95051,9505/1 Ganglioglioma
+95053,9505/3 Anaplastic ganglioglioma
+94930,9493/0 Dysplastic gangliocytoma of cerebellum (Lhermitte-Duclos disease)
+94121,9412/1 Desmoplastic infantile astrocytoma and ganglioglioma
+95091,9509/1 Papillary glioneuronal tumor
+95091,9509/1 Rosette-forming glioneuronal tumor
+95091,9509/1 Diffuse leptomeningeal glioneuronal tumor
+95061,9506/1 Central neurocytoma
+95061,9506/1 Extraventricular neurocytoma
+95061,9506/1 Cerebellar liponeurocytoma
+86931,8693/1 Paraganglioma
+93611,9361/1 Pineocytoma
+93623,9362/3 Pineal parenchymal tumor of intermediate differentiation
+93623,9362/3 Pineoblastoma
+93953,9395/3 Papillary tumor of the pineal region
+94703,"9470/3 Medulloblastoma, NOS"
+94703,"9470/3 Medulloblastoma, classic"
+94713,9471/3 Desmoplastic/nodular medulloblastoma
+94713,9471/3 Medulloblastoma with extensive nodularity
+94743,"9474/3 Medulloblastoma, large cell / anaplastic"
+94753,"9475/3 Medulloblastoma, WNT-activated"
+94763,"9476/3 Medulloblasoma, SHH-acitvated and TP53-mutant"
+94713,"9471/3 Medulloblasoma, SHH-acitvated and TP53-wildtype"
+94773,"9477/3 Medulloblastoma, non-WNT/non-SHH"
+95083,9508/3 Atypical teratoid/rhabdoid tumor
+94783,"9478/3 Embryonal tumor with multilayered rosettes, NOS"
+94783,"9478/3 Embryonal tumor with multilayered rosettes, C19MC-altered"
+95013,9501/3 Medulloepithelioma
+95003,9500/3 CNS Neuroblastoma
+94903,9490/3 CNS ganglioneuroblastoma
+94733,"9473/3 CNS embryonal tumor, NOS"
+95083,9508/3 CNS embryonal tumor with rhabdoid features
+95300,"9530/0 Meningioma, NOS"
+95300,9530/0 Meningioma
+95340,9534/0 Angiomatous meningioma
+95320,9532/0 Fibrous meningioma
+95300,9530/0 Lymphoplasmacyte-rich meningioma
+95310,9531/0 Meningothelial meningioma
+95300,9530/0 Metaplastic meningioma
+95300,9530/0 Microcystic meningioma
+95330,9533/0 Psammomatous meningioma
+95300,9530/0 Secretory meningioma
+95370,9537/0 Transitional meningioma
+95381,9538/1 Chordoid meningioma
+95381,9538/1 Clear cell meningioma
+95391,9539/1 Atypical meningioma
+95383,9538/3 Papillary meningioma
+95383,9538/3 Rhabdoid meningioma
+95303,9530/3 Anaplastic (malignant) meningioma
+89903,"8990/3 Mesenchymoma, malignant"
+88150,8815/0 Solitary fibrous tumor / hemangiopericytoma
+88150,"8815/0 Solitary fibrous tumor / hemangiopericytoma, grade 1"
+88151,"8815/1 Solitary fibrous tumor / hemangiopericytoma, grade 2"
+88153,"8815/3 Solitary fibrous tumor / 8815/3 Solitary fibrous tumor / hemangiopericytoma, grade 3"
+91611,9161/1 Haemangioblastoma
+87280,8728/0 Meningeal melanocytosis
+87281,8728/1 Meningeal melanocytoma
+87203,8720/3 Meningeal melanoma
+87283,8728/3 Meningeal melanomatosis
+90643,9064/3 Germinoma
+90703,9070/3 Embryonal carcinoma
+90713,9071/3 Yolk sac tumor
+91003,9100/3 Choriocarcinoma
+90801,9080/1 Teratoma
+90800,9080/0 Mature teratoma
+90803,9080/3 Immature teratoma
+90843,9084/3 Teratoma with malignant transformation
+90853,9085/3 Mixed germ cell tumor
+93501,9350/1 Craniopharyngioma
+93511,9351/1 Adamantinomatous craniopharyngioma
+93521,9352/1 Papillary craniopharyngioma
+95820,9582/0 Granular cell tumor of the sellar region
+94321,9432/1 Pituicytoma
+82900,8290/0 Spindle cell oncocytoma
+82720,"8272/0 Pituitary Adenoma, NOS"
+82710,8271/0 Lactotroph adenoma
+82723,"8272/3 Pituitary carcinoma, NOS"
+88153,"8815/3 Solitary fibrous tumor / hemangiopericytoma, grade 3"
