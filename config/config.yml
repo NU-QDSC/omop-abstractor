@@ -1,6 +1,6 @@
 ---
 application: omop-abstractor
-repository: git@github.com:qdsc/omop-abstractor.git
+repository: git@github.com:nu-qdsc/omop-abstractor.git
 deployer: deploy
 development:
   server_name: 0.0.0.0:3000
