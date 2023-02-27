@@ -1,20 +1,6 @@
 Rails.application.default_url_options = { host: Rails.application.credentials.servers[Rails.env.to_sym][:server_name] }
-require 'stanford-core-nlp'
 Rails.application.configure do
-  StanfordCoreNLP.use :english
-  StanfordCoreNLP.model_files = {}
-  StanfordCoreNLP.jar_path = "#{Rails.root}/lib/stanford-corenlp-full-2015-04-20/"
-  StanfordCoreNLP.model_path = "#{Rails.root}/lib/stanford-corenlp-full-2015-04-20/"
-  StanfordCoreNLP.default_jars = [
-    "joda-time.jar",
-    "xom.jar",
-    "stanford-corenlp-3.5.2.jar",
-    "stanford-corenlp-3.5.2-models.jar",
-    "jollyday.jar",
-    "bridge.jar"
-  ]
   # Settings specified here will take precedence over those in config/application.rb.
-
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -106,10 +92,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  ENV['LD_LIBRARY_PATH'] = '/usr/lib/jvm/java-openjdk/bin'
-  ENV['JAVA_HOME'] = '/usr/lib/jvm/java-openjdk'
-
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: 'smtprelay.northwestern.edu', port: 25, domain: 'northwestern.edu' }
   config.action_mailer.default_url_options = { host: Rails.application.credentials.servers[Rails.env.to_sym][:server_name] }

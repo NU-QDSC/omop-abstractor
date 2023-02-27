@@ -129,7 +129,8 @@ namespace :bundler do
     task :config do
       on roles(:all), in: :groups, limit: 3, wait: 10 do
       # Required for pg gem to be installed
-      execute 'bundle config build.pg --with-pg-config=/usr/pgsql-10/bin/'
+      # execute 'bundle config build.pg --with-pg-config=/usr/pgsql-10/bin/'
+      execute '/usr/local/rvm/bin/rvm 2.6.3 do bundle config build.pg --local --with-pg-config=/usr/pgsql-10/bin/pg_config'
     end
   end
 end
