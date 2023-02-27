@@ -123,8 +123,20 @@ EOF
   end
 end
 
+namespace :bundler do
+  before 'bundler:install', :config
+    desc 'bundle config options'
+    task :config do
+      on roles(:all), in: :groups, limit: 3, wait: 10 do
+      # Required for pg gem to be installed
+      execute 'bundle config build.pg --with-pg-config=/usr/pgsql-10/bin/pg_config'
+    end
+  end
+end
+
 after "deploy:updated", "deploy:cleanup"
 after "deploy:finished", "deploy_prepare:create_vhost"
 after "deploy_prepare:create_vhost", "deploy:httpd_graceful"
 after "deploy:httpd_graceful", "deploy:restart"
 # after "deploy:restart", "deploy:monit"
+
