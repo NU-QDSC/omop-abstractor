@@ -33,7 +33,7 @@ set :linked_files, %w{config/master.key}
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-append :linked_dirs, "lib/stanford-corenlp-full-2015-04-20", "lib/lingscope", "lib/ClampCmd_1.6.3", "lib/setup/data_out/custom_nlp_provider_clamp", "lib/setup/data"
+append :linked_dirs, "lib/setup/data"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -140,4 +140,3 @@ after "deploy:finished", "deploy_prepare:create_vhost"
 after "deploy_prepare:create_vhost", "deploy:httpd_graceful"
 after "deploy:httpd_graceful", "deploy:restart"
 # after "deploy:restart", "deploy:monit"
-

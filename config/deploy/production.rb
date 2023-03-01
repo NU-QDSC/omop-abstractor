@@ -7,8 +7,6 @@ set :app_server, "#{APP_CONFIG['deployer']}@#{ fetch(:app_host) }"
 role :web, fetch(:app_server)
 role :db, fetch(:app_server)
 
-set :bundle_env_variables, {'JAVA_HOME' => "/usr/lib/jvm/java-openjdk"}
-
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
