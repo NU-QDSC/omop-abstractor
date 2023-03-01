@@ -92,7 +92,7 @@ module Abstractor
         source_id: source[:source_id],
         source_type: source[:source_type].to_s,
         source_method: source[:source_method],
-        note_abstractor_suggestions_uri: Rails.application.routes.url_helpers.abstractor_suggestions_note_stable_identifier_url(source[:source_id], format: :json, secure: secure)),
+        note_abstractor_suggestions_uri: Rails.application.routes.url_helpers.abstractor_suggestions_note_stable_identifier_url(source[:source_id], format: :json, secure: secure),
         abstractor_rules_uri: abstractor_rules_uri,
         text: abstractor_text,
         namespace_type: namespace_type,
