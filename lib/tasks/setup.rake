@@ -15,7 +15,9 @@
   # br
   # make start-service
   # bundle exec rake suggestor:do_multiple_will
+  # bundle exec rake suggestor:do_multiple_will_one["?"]
 
+# RAILS_ENV=staging ?
 # mbti final will
   # data
   # bundle exec rake mbti:truncate_stable_identifiers
