@@ -40,8 +40,7 @@ class User < ApplicationRecord
   end
 
   def valid_ldap_authentication?(password)
-    # valid_ldap_authentication = authorized?
-    valid_ldap_authentication = true
+    valid_ldap_authentication = authorized?
     if valid_ldap_authentication
       super
     end

@@ -77,8 +77,13 @@ module Abstractor
     end
 
     def self.format_body_for_multiple_suggestion_endpoint(abstractor_abstractions, abstractor_abstraction_sources, abstractor_text, source, namespace_type, namespace_id)
+      if  Rails.env.staging? || Rails.env.production?
+        secure = true
+      else
+        secure = false
+      end
       if Rails.application.config.relative_url_root
-        abstractor_rules_uri =  Rails.application.routes.url_helpers.abstractor_rules_url(script_name: Rails.application.config.relative_url_root, format: :json)
+        abstractor_rules_uri =  Rails.application.routes.url_helpers.abstractor_rules_url(script_name: Rails.application.config.relative_url_root, format: :json, secure: secure)
       else
         abstractor_rules_uri =  Rails.application.routes.url_helpers.abstractor_rules_url(format: :json)
       end
@@ -87,7 +92,7 @@ module Abstractor
         source_id: source[:source_id],
         source_type: source[:source_type].to_s,
         source_method: source[:source_method],
-        note_abstractor_suggestions_uri: Rails.application.routes.url_helpers.abstractor_suggestions_note_stable_identifier_url(source[:source_id], format: :json),
+        note_abstractor_suggestions_uri: Rails.application.routes.url_helpers.abstractor_suggestions_note_stable_identifier_url(source[:source_id], format: :json, secure: secure)),
         abstractor_rules_uri: abstractor_rules_uri,
         text: abstractor_text,
         namespace_type: namespace_type,
@@ -114,11 +119,11 @@ module Abstractor
         abstractor_abstraction_source = abstractor_abstraction_source.first
         abstractor_abstraction_schema = abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema
         if Rails.application.config.relative_url_root
-          abstractor_abstraction_schema_uri =  Rails.application.routes.url_helpers.abstractor_abstraction_schema_url(abstractor_abstraction_schema, script_name: Rails.application.config.relative_url_root, format: :json)
-          abstractor_abstraction_abstractor_suggestions_uri = Abstractor::Engine.routes.url_helpers.abstractor_abstraction_abstractor_suggestions_url(abstractor_abstraction, script_name: Rails.application.config.relative_url_root,format: :json)
+          abstractor_abstraction_schema_uri =  Rails.application.routes.url_helpers.abstractor_abstraction_schema_url(abstractor_abstraction_schema, script_name: Rails.application.config.relative_url_root, format: :json, secure: secure)
+          abstractor_abstraction_abstractor_suggestions_uri = Abstractor::Engine.routes.url_helpers.abstractor_abstraction_abstractor_suggestions_url(abstractor_abstraction, script_name: Rails.application.config.relative_url_root,format: :json, secure: secure)
         else
-          abstractor_abstraction_schema_uri =  Rails.application.routes.url_helpers.abstractor_abstraction_schema_url(abstractor_abstraction_schema,  format: :json)
-          abstractor_abstraction_abstractor_suggestions_uri =  Rails.application.routes.url_helpers.abstractor_abstraction_abstractor_suggestions_url(abstractor_abstraction, format: :json)
+          abstractor_abstraction_schema_uri =  Rails.application.routes.url_helpers.abstractor_abstraction_schema_url(abstractor_abstraction_schema,  format: :json, secure: secure)
+          abstractor_abstraction_abstractor_suggestions_uri =  Rails.application.routes.url_helpers.abstractor_abstraction_abstractor_suggestions_url(abstractor_abstraction, format: :json, secure: secure)
         end
 
         abstractor_abstraction_schema = {
