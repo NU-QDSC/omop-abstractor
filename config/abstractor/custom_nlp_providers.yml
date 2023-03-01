@@ -47,6 +47,12 @@ custom_nlp_provider_will:
       development:
           "username": testuser
           "password": password
+      staging:
+          "username": testuser
+          "password": password
+      production:
+          "username": testuser
+          "password": password
       test:
           "username": testuser
           "password": password
