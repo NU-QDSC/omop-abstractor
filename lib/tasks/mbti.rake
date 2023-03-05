@@ -568,7 +568,8 @@ namespace :mbti do
 
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'integrated diagnosis').first_or_create
 
-    primary_cns_histologies = Icdo3Histology.by_primary_cns_2021
+    primary_cns_histologies = [Icdo3Histology.by_primary_cns_2021, Icdo3Histology.by_primary_cns.where("icdo3_histologies.icdo3_name like '%mening%'")].flatten
+
     primary_cns_histologies.each do |histology|
       name = histology.icdo3_name.downcase
       if histology.icdo3_code != histology.icdo3_name
