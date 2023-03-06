@@ -722,9 +722,6 @@ def abstractor_suggestor_will_one(options = {})
         abstractor_namespace.save!
       # end
       # Process.wait(child_pid)
-        if i >= 15000
-          break
-        end
     end
   end
 
