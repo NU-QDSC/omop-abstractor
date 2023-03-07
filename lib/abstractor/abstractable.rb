@@ -236,11 +236,11 @@ module Abstractor
                 # suggestion_endpoint_auth[:password] = user.authentication_token
                 suggestion_endpoint_auth[:password] = 'password'
               end
-              puts 'suggestion_endpoint'
-              puts multiple_suggestion_endpoint
-              puts 'body'
-              puts body.to_json
-              puts 'here we go again'
+              # puts 'suggestion_endpoint'
+              # puts multiple_suggestion_endpoint
+              # puts 'body'
+              # puts body.to_json
+              # puts 'here we go again'
 
               # puts 'begin post timing'
               # start = Time.now
