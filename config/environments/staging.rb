@@ -105,4 +105,5 @@ Rails.application.configure do
       sender_address: Rails.application.credentials.support[:sender_address],
       exception_recipients: Rails.application.credentials.support[:recipients]
     }
+  config.log_level = :error
 end
