@@ -1,0 +1,2 @@
+class PathologyAccessionNumber < ApplicationRecord
+end

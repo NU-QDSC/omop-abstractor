@@ -1,0 +1,37 @@
+- content_for(:title) do
+  User
+.row
+  #user.col.s12
+    / = render 'shared/flash'
+    .user_header
+      %h2
+        User
+    .user
+      .row
+        .username
+          %div.col.s4.l2
+            %label
+              Username
+          %div.col.s8.l10
+            = @user.username
+      .row
+        .first_name
+          %div.col.s4.l2
+            %label
+              First Name
+          %div.col.s8.l10
+            = @user.first_name
+      .row
+        .last_name
+          %div.col.s4.l2
+            %label
+              Last Name
+          %div.col.s8.l10
+            = @user.last_name
+      .row
+        .email
+          %div.col.s4.l2
+            %label
+              Email
+          %div.col.s8.l10
+            = @user.email

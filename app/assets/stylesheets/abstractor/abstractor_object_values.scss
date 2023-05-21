@@ -1,0 +1,24 @@
+#abstractor_object_values {
+  a.current {
+    padding-right: 2em;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  a.asc {
+    background-image: asset_url("drop25.png");
+  }
+
+  a.desc {
+    background-image: asset_url("drop27.png");
+  }
+}
+
+
+#abstractor_object_value {
+  .abstractor_object_value_variants {
+    #add-abstractor-object-value-variant {
+      margin-top: 1rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+---
+application: omop-abstractor
+repository: git@github.com:nu-qdsc/omop-abstractor.git
+deployer: deploy
+development:
+  server_name: 0.0.0.0:3000
+  clamp_dir: lib/ClampCmd_1.6.3/
+  clamp_bin: clamp-nlp-1.6.3-jar-with-dependencies.jar
+  clamp_pipeline: mbti.pipeline.jar
+test:
+  server_name: 0.0.0.0:3000
+staging:
+  app_host: vtfsmmbtiapps01.fsm.northwestern.edu
+  server_name: omop-abstractor-staging.fsm.northwestern.edu
+  server_alias: omop-abstractor-staging.fsm.northwestern.edu
+  cert_file: /etc/pki/tls/certs/omop-abstractor-staging_fsm_northwestern_edu_cert.cer
+  chain_file: /etc/pki/tls/certs/omop-abstractor-staging_fsm_northwestern_edu_interm.cer
+  key_file: /etc/pki/tls/private/omop-abstractor-staging_fsm_northwestern_edu.key
+  clamp_dir: lib/ClampCmd_1.6.3/
+  clamp_bin: clamp-nlp-1.6.3-jar-with-dependencies.jar
+  clamp_pipeline: mbti.pipeline.jar
+production:
+  app_host: vfsmmbtiapps01.fsm.northwestern.edu
+  server_name: omop-abstractor.fsm.northwestern.edu
+  server_alias: omop-abstractor.fsm.northwestern.edu
+  cert_file: /etc/pki/tls/certs/omop-abstractor_fsm_northwestern_edu_cert.cer
+  chain_file: /etc/pki/tls/certs/omop-abstractor_fsm_northwestern_edu_interm.cer
+  key_file: /etc/pki/tls/private/omop-abstractor_fsm_northwestern_edu.key
+  clamp_dir: lib/ClampCmd_1.6.3/
+  clamp_bin: clamp-nlp-1.6.3-jar-with-dependencies.jar
+  clamp_pipeline: mbti.pipeline.jar
+support:
+  recipients:
+    - m-gurley@northwestern.edu
+  sender_address: omop-abstractor@northwestern.edu

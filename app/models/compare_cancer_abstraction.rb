@@ -1,0 +1,2 @@
+class CompareCancerAbstraction < ApplicationRecord
+end

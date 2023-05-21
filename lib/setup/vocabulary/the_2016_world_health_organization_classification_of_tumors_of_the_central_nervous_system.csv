@@ -1,0 +1,163 @@
+icdo3_description,icdo3_code,category
+"diffuse astrocytoma, idh-mutant",9400/3,diffuse astrocytic and oligodendroglial tumors
+"gemistocytic astrocytoma, idh-mutant",9411/3,diffuse astrocytic and oligodendroglial tumors
+"diffuse astrocytma, idh-wildtype",9400/3,diffuse astrocytic and oligodendroglial tumors
+"diffuse astrocytma, nos",9400/3,diffuse astrocytic and oligodendroglial tumors
+"anaplastic astrocytoma, idh-mutant",9401/3,diffuse astrocytic and oligodendroglial tumors
+"anaplastic astrocytoma, idh-wildtype",9401/3,diffuse astrocytic and oligodendroglial tumors
+"anaplastic astrocytoma, nos",9401/3,diffuse astrocytic and oligodendroglial tumors
+glioblastoma idh-wildtype,9440/3,diffuse astrocytic and oligodendroglial tumors
+giant cell glioblastoma,9411/3,diffuse astrocytic and oligodendroglial tumors
+gliosarcoma,9442/3,diffuse astrocytic and oligodendroglial tumors
+epithiloid glioblastoma,9440/3,diffuse astrocytic and oligodendroglial tumors
+"glioblastoma, idh-mutant",9445/3,diffuse astrocytic and oligodendroglial tumors
+"glioblastoma, nos",9440/3,diffuse astrocytic and oligodendroglial tumors
+"diffuse midline glioma, h3 k27m-mutant",9385/3,diffuse astrocytic and oligodendroglial tumors
+"oligodendroglioma, idh-mutant and 1p/19q codeleted",9450/3,diffuse astrocytic and oligodendroglial tumors
+"oligodendroglioma, nos",9450/3,diffuse astrocytic and oligodendroglial tumors
+"anaplastic oligodendroglioma, idh mutant and 1p/19q codeleted",9451/3,diffuse astrocytic and oligodendroglial tumors
+"anaplastic oligodendroglioma,  nos",9451/3,diffuse astrocytic and oligodendroglial tumors
+"oligastrocytoma, nos",9382/3,diffuse astrocytic and oligodendroglial tumors
+"anaplastic oligoastrocytoma, nos",9382/3,diffuse astrocytic and oligodendroglial tumors
+pilocytic astrocytoma,9421/1,other astrocytic tumors
+pilomyxoid astrocytoma,9425/3,other astrocytic tumors
+subependymal giant cell astrocytoma,9384/1,other astrocytic tumors
+pleomorphic xanthoastrocytoma,9424/3,other astrocytic tumors
+anaplastic pleomorphic xanthoastrocytoma,9424/3,other astrocytic tumors
+subependymoma,9383/1,ependymal tumors
+myxopapillary ependymoma,9394/1,ependymal tumors
+ependymoma,9391/3,ependymal tumors
+papillary ependymoma,9393/3,ependymal tumors
+clear cell ependymoma,9391/3,ependymal tumors
+tanycytic ependymoma,9391/3,ependymal tumors
+ependymoma rela fusion-positive,9396/3,ependymal tumors
+anaplastic ependymoma,9392/3,ependymal tumors
+choroid glioma of the third ventricle,9444/1,other gliomas
+angiocentric gloma,9431/1,other gliomas
+astroblastoma,9430/3,other gliomas
+choroid plexus papilloma,9390/0,choroid plexus tumors
+atypical choroid plexus papilloma,9390/1,choroid plexus tumors
+choroid plexus carcinoma,9390/3,choroid plexus tumors
+dysembryoplastic neuroepithelial tumor,9413/0,neuronal and mixed neuronal-glial tumors
+gangliocytoma,9492/0,neuronal and mixed neuronal-glial tumors
+ganglioglioma,9505/1,neuronal and mixed neuronal-glial tumors
+anaplastic ganglioglioma,9505/3,neuronal and mixed neuronal-glial tumors
+dysplastic cerebellar gangliocytoma (lhermitte-duclos disease),9493/0,neuronal and mixed neuronal-glial tumors
+desmoplastic infantile astrocytom and ganglioglima,9412/1,neuronal and mixed neuronal-glial tumors
+papillary glioneuronal tumor,9509/1,neuronal and mixed neuronal-glial tumors
+rosette-forming glioneuronal tumor,9509/1,neuronal and mixed neuronal-glial tumors
+diffuse leptomeningeal glioneuronal tumor,9506/1,neuronal and mixed neuronal-glial tumors
+central neurocytoma,9506/1,neuronal and mixed neuronal-glial tumors
+extraventricular neurocytoma,9506/1,neuronal and mixed neuronal-glial tumors
+cerebellar liponeurocytoma,9506/1,neuronal and mixed neuronal-glial tumors
+paraganglioma,8693/1,neuronal and mixed neuronal-glial tumors
+pineocytoma,9361/1,tumors of the pineal region
+pineal parenchymal tumor of intermediate differentiation,9362/3,tumors of the pineal region
+pineolblastoma,9362/3,tumors of the pineal region
+papillary tumor of the pineal region,9395/3,tumors of the pineal region
+medulloblastoma wnt-activated,9475/3,embryonal tumors
+medulloblastoma shh-activated and tp53-mutant,9476/3,embryonal tumors
+medulloblastoma shh-activated and tp53-wildtype,9471/3,embryonal tumors
+"medulloblastoma, non-wnt/non-SHH",9477/3,embryonal tumors
+"medulloblastoma, group 3",9477/3,embryonal tumors
+"medulloblastoma, group 4",9477/3,embryonal tumors
+"medulloblastoma, classic",9470/3,embryonal tumors
+"medulloblastoma, desmoplastic/nodular",9471/3,embryonal tumors
+medulloblastoma with extensive nodularity,9471/3,embryonal tumors
+medulloblastoma large cell /anaplastic,9474/3,embryonal tumors
+"medulloblastoma, nos",9470/3,embryonal tumors
+"embryonal tumor with multilayered rosettes, c19mc-altered",9478/3,embryonal tumors
+medulloepithelioma,9501/3,embryonal tumors
+cns neuroblastoma,9500/3,embryonal tumors
+cns ganglioneuroblastoma,9490/3,embryonal tumors
+"cns embryonal tumor, nos",9473/3,embryonal tumors
+atypical teratoid/rhabdoid tumor,9508/3,embryonal tumors
+cns embryonal tumor with rhabdoid features,9508/3,embryonal tumors
+schwannoma,9560/0,tumors of the cranial and paraspinal nerves
+cellular schwannoma,9560/0,tumors of the cranial and paraspinal nerves
+plexiform schwannoma,9560/0,tumors of the cranial and paraspinal nerves
+melanotic schwannoma,9560/1,tumors of the cranial and paraspinal nerves
+neurofibroma,9540/0,tumors of the cranial and paraspinal nerves
+atypical neurofibroma,9540/0,tumors of the cranial and paraspinal nerves
+plexiform neurofibroma,9550/0,tumors of the cranial and paraspinal nerves
+malignant peripheral nerve sheath tumor,9540/3,tumors of the cranial and paraspinal nerves
+epitheliod mpnst,9540/3,tumors of the cranial and paraspinal nerves
+mpnst with perineuronal differentiation,9540/3,tumors of the cranial and paraspinal nerves
+perineurioma,9571/0,tumors of the cranial and paraspinal nerves
+meningioma,9530/0,meningiomas
+meningothelial meningioma,9531/0,meningiomas
+fibrous meningioma,9532/0,meningiomas
+transitional meningioma,9537/0,meningiomas
+psammonatus meningioma,9533/0,meningiomas
+angiomatous meningioma,9534/0,meningiomas
+microcystic meningioma,9530/0,meningiomas
+secretory meningioma,9530/0,meningiomas
+lymphplastmacyte-rich meningioma,9530/0,meningiomas
+metaplastic meningioma,9538/1,meningiomas
+chordoid meningioma,9538/1,meningiomas
+clear cell meningioma,9538/1,meningiomas
+atypical meningioma,9539/1,meningiomas
+papillary meningioma,9538/3,meningiomas
+rhabdoid meningioma,9538/3,meningiomas
+anaplastic (maglignant) meningioma,9530/3,meningiomas
+solitary fibrous tumor / hemangiopericytoma grade 1,8815/0,mesenchymal and non-meningothelial tumors
+solitary fibrous tumor / hemangiopericytoma grade 2,8815/1,mesenchymal and non-meningothelial tumors
+solitary fibrous tumor / hemangiopericytoma grade 3,8815/3,mesenchymal and non-meningothelial tumors
+hemangioblastoma,9161/1,mesenchymal and non-meningothelial tumors
+hemangioma,9120/0,mesenchymal and non-meningothelial tumors
+epithelioid hemangioendothelioma (9133/0),9133/3,mesenchymal and non-meningothelial tumors
+angiosarcoma,9120/3,mesenchymal and non-meningothelial tumors
+kaposi sarcoma,9140/3,mesenchymal and non-meningothelial tumors
+ewing sarcoma / pnet,9364/3,mesenchymal and non-meningothelial tumors
+lipoma,8850/0,mesenchymal and non-meningothelial tumors
+angiolipoma,8861/0,mesenchymal and non-meningothelial tumors
+hibernoma,8880/0,mesenchymal and non-meningothelial tumors
+liposarcoma,8850/3,mesenchymal and non-meningothelial tumors
+desmoid-type fibromatosis,8821/1,mesenchymal and non-meningothelial tumors
+myofibroblastoma,8825/0,mesenchymal and non-meningothelial tumors
+inflammatory myofibroblastic tumor,8825/1,mesenchymal and non-meningothelial tumors
+benign fibrous hstiocytoma,8830/0,mesenchymal and non-meningothelial tumors
+fibrosarcoma,8810/3,mesenchymal and non-meningothelial tumors
+undifferentiated pleomorphic sarcoma / milignant fibrous hstiocytoma,8802/3,mesenchymal and non-meningothelial tumors
+leiomyoma,8890/0,mesenchymal and non-meningothelial tumors
+leiomyosarcoma,8890/3,mesenchymal and non-meningothelial tumors
+rhabdomyoma,8900/0,mesenchymal and non-meningothelial tumors
+rhabdomyosarcoma,8900/3,mesenchymal and non-meningothelial tumors
+chondroma,9220/0,mesenchymal and non-meningothelial tumors
+osteoma,9180/0,mesenchymal and non-meningothelial tumors
+osteochondroma,9210/0,mesenchymal and non-meningothelial tumors
+osteosarcoma,9180/3,mesenchymal and non-meningothelial tumors
+chondrosarcoma,9220/3,mesenchymal and non-meningothelial tumors
+meningeal melanocytosis,8728/0,melanocytic tumors
+meningeal melanocytoma,8728/1,melanocytic tumors
+meningeal melanoma,8720/3,melanocytic tumors
+meningeal melanomatosis,8728/3,melanocytic tumors
+diffuse large b-cell lymphoma of the cns,9680/3,lymphomas
+aids-related diffuse large b-cell lymphoma,,lymphomas
+ebv-postive diffuse large b-cell lymphoma,,lymphomas
+lymphomatoid granulomatosis,9766/1,lymphomas
+intravascular b-cell lymphomas of the cns,9712/3,lymphomas
+low-grade b-cell lymphomas of the cns,9712/3,lymphomas
+t-cell and nt/t-cell lymphomas of the cns,9712/3,lymphomas
+"anaplastic large cell lymphoma, alk-positive",9714/3,lymphomas
+"anaplastic large cell lymphoma, alk-ngative",9702/3,lymphomas
+malt lymphoma of the dura,9699/3,lymphomas
+langerhans cell histiocytosis,9751/3,histiocytic tumors
+erdheim-chester disease,9750/1,histiocytic tumors
+rosai-dorfman disease,9750/1,histiocytic tumors
+juvenile xanthogranuloma,9750/1,histiocytic tumors
+histiocytic sarcoma,9755/3,histiocytic tumors
+germinoma,9064/3,germ cell tumors
+embryonal carcinoma,9070/3,germ cell tumors
+yolk sac tumor,9071/3,germ cell tumors
+choriocarcinoma,9100/3,germ cell tumors
+teratoma,9080/1,germ cell tumors
+mature teratoma,9080/0,germ cell tumors
+immature teratoma,9080/3,germ cell tumors
+mixed germ cell tumor,9085/3,germ cell tumors
+craniopharyngioma,9350/1,tumors of the sellar region
+adamantinomatous craniopharyngioma,9351/1,tumors of the sellar region
+papillary craniopharyngioma,9352/1,tumors of the sellar region
+granular cell tumor of the sellar region,9582/0,tumors of the sellar region
+pituicytoma,9432/1,tumors of the sellar region
+spindle cell oncocytoma,8290/0,tumors of the sellar region

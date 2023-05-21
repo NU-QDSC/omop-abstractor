@@ -1,0 +1,34 @@
+%h1
+  Note
+.row
+  .note_date.col.s12.l2
+    %b
+      Note Date
+    %br
+    = note.note_date.to_s(:date)
+  .note_type.col.s12.l2
+    %b
+      Note Type
+    %br
+    = note.note_type.concept_name
+  .note_class.col.s12.l2
+    %b
+      Note Class
+    %br
+    = note.note_class.concept_name
+  .note_title.col.s12.l3
+    %b
+      Title
+    %br
+    = note.note_title
+  .provider.col.s12.l3
+    %b
+      Provider
+    %br
+    = note.provider.provider_name if note.provider.present?
+.row
+  .note_text.col.s12.l12
+    %b
+      Note Text
+    %br
+    = format_text(ERB::Util.html_escape(note.note_text))

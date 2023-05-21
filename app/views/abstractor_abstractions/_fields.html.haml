@@ -1,0 +1,69 @@
+- abstractor_abstraction ||= @abstractor_abstraction
+- read_only ||= @read_only
+- unless abstractor_abstraction.blank?
+  - abstractor_abstraction_schema   = abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema
+  - abstractor_suggestions          = abstractor_abstraction.abstractor_suggestions.not_deleted.order('suggested_value ASC, id DESC ')
+  - rejected_suggestions            = abstractor_suggestions.not_deleted.where(accepted: false)
+  - about = abstractor_abstraction.about
+  .abstractor_abstraction_display
+    .abstractor_abstraction_schema_name
+      %h5
+        = abstractor_abstraction_schema.display_name
+    .abstractor_suggestions
+      - if abstractor_suggestions.any?
+        - abstractor_suggestions.each_with_index do |abstractor_suggestion, index|
+          .abstractor_suggestion{ data: { controller: "abstractor-suggestion", target: 'abstractor-abstraction.suggestion abstractor-suggestion.suggestion' } }
+            = form_for [abstractor_abstraction, abstractor_suggestion], url: Abstractor::UserInterface.abstractor_relative_path(abstractor_abstraction_abstractor_suggestion_path(abstractor_abstraction, abstractor_suggestion)), method: :put, remote: true, html: { class: 'edit_abstractor_suggestion' }, data: { action: 'ajax:complete->abstractor-abstraction#render' } do |f|
+              = render 'shared/error_messages', object: f.object
+              .abstractor_suggestion_status
+                - id = "abstractor_suggestion_accepted_#{abstractor_suggestion.id}"
+                %label
+                  = f.check_box :accepted, id: id, class: "abstractor_suggestion_status_selection #{display}", disabled: read_only, data: { action: 'change->abstractor-suggestion#determine' }
+                  %span
+                    = abstractor_suggestion.display_value
+                .abstractor_suggestion_values
+                  - if abstractor_suggestion.abstractor_suggestion_sources.any? && abstractor_suggestion.display_value != Abstractor::Enum::ABSTRACTION_OTHER_VALUE_TYPE_NOT_APPLICABLE
+                    - abstractor_suggestion.normalize_abstractor_suggestion_sentences.each do |source|
+                      - abstractor_text = Abstractor::AbstractorAbstractionSource.abstractor_text(source)
+                      - if abstractor_text && source[:sentences].any?
+                        %span{ class: 'abstractor_abstraction_source_tooltip_img', rel:"#abstraction_text_#{abstractor_suggestion.id}_#{Abstractor::UserInterface.generate_source_id(source)}", title: "#{source[:source_type].to_s.underscore.humanize.titleize}: #{source[:source_method].to_s.humanize}", data: { target: 'abstractor-suggestion.tooltip', action: 'click->abstractor-suggestion#handleHighlight' }}
+                          %i{ id: "abstraction_text_link_#{Abstractor::UserInterface.generate_source_id(source)}", class: "abstraction_text_link_match right-align" }
+                        %div{ id: "abstraction_text_#{abstractor_suggestion.id}_#{Abstractor::UserInterface.generate_source_id(source)}", class: 'abstractor_abstraction_source_tooltip hide' }
+                          .abstractor_source_tab
+                            = Abstractor::UserInterface.generate_source_id(source)
+                          .section_name
+                            = source[:section_name]
+                          - source[:sentences].each do |sentence|
+                            .sentence
+                              .sentence_match_value
+                                = ERB::Util.html_escape(sentence[:sentence])
+                                .hashed_sentence
+                                  = hashed_sentence = sentence[:sentence].hash
+                              - sentence[:match_values].each do |match_value|
+                                .match_value
+                                  = ERB::Util.html_escape(match_value.strip)
+                - abstractor_suggestion.abstractor_suggestion_sources.custom.each do |abstractor_suggestion_source|
+                  .custom_explanation
+                    %label
+                      Explanation:
+                    .explanation_text
+                      = abstractor_suggestion_source.custom_explanation
+      - else
+        - abstractor_abstraction.abstractor_subject.abstractor_abstraction_sources.select { |s| s.abstractor_abstraction_source_type.name == 'nlp suggestion' }.each do |abstractor_abstraction_source|
+          - abstractor_abstraction_source.normalize_from_method_to_sources(abstractor_abstraction.about).each do |source|
+            - abstractor_text = Abstractor::AbstractorAbstractionSource.abstractor_text(source)
+            - dom_id = "#{abstractor_abstraction_source.id}_#{source[:source_type]}_#{source[:source_id]}_#{source[:source_method]}#{'_'+ source[:section_name].parameterize.underscore if source[:section_name]}"
+            %span{ class: 'abstractor_abstraction_source_tooltip_img', rel: "#abstraction_text_#{dom_id}", title: "#{source[:source_type].to_s} #{source[:source_method]} #{source[:section_name]}"}
+              %i{ id: "abstraction_text_link_#{dom_id}" }
+            %div{ id: "abstraction_text_#{dom_id}", class: 'tooltip'}
+              = format_text(abstractor_text)
+      .abstractor_abstraction_value
+        .links.right-align
+          - unless read_only
+            = link_to 'Edit', Abstractor::UserInterface.abstractor_relative_path(edit_abstractor_abstraction_path(abstractor_abstraction)), class: 'edit_link', data: { action: 'click->abstractor-abstraction#edit' }
+            |
+            = link_to 'Clear', Abstractor::UserInterface.abstractor_relative_path(clear_abstractor_abstraction_path(abstractor_abstraction)), class: 'clear_link waves-effect waves-light btn red', data: { action: 'click->abstractor-abstraction#clear' }
+        - if show_abstractor_history?
+          - versions = abstractor_abstraction.versions.sort{|a,b| b.created_at <=> a.created_at}.reject{|v| v.reify.blank? || v.reify.display_value =~ /not set/i}
+          .abstractor_history
+            = render partial: 'abstractor_abstractions/abstraction_history', locals: { versions: versions }

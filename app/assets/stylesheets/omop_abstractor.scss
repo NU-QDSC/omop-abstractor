@@ -1,0 +1,19 @@
+.nav-wrapper {
+  padding-left: 1rem;
+}
+
+.select2-results__options li {
+  font-size: 16px !important;
+  color: #4e2a84 !important;
+  display: block !important;
+  line-height: 22px !important;
+  padding: 14px 16px !important;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border-bottom: none !important;
+}
+
+.required:after {
+  content:" *";
+}

@@ -1,0 +1,2 @@
+class CompareCancerDiagnosisAbstraction < ApplicationRecord
+end

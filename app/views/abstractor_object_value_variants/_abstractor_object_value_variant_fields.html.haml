@@ -1,0 +1,13 @@
+%tr{ class: 'abstractor-object-value-variant', data: { controller: 'abstractor-object-value-variants', target: 'abstractor-object-value-variants.abstractorObjectValueVariant' } }
+  %td.value
+    = hidden_field_tag "abstractor_abstractor_object_value[abstractor_object_value_variants_attributes][#{index}][id]", nil,  id: "abstractor_abstractor_object_value_abstractor_object_value_variants_attributes_#{index}_id", data: { target: 'abstractor-object-value-variants.id' }
+    = hidden_field_tag "abstractor_abstractor_object_value[abstractor_object_value_variants_attributes][#{index}][_destroy]", nil,  id: "abstractor_abstractor_object_value_abstractor_object_value_variants_attributes_#{index}__destroy", data: { target: 'abstractor-object-value-variants.destroy' }
+    .input-field
+      = text_field_tag "abstractor_abstractor_object_value[abstractor_object_value_variants_attributes][#{index}][value]", nil, class: 'autocomplete', autocomplete: 'off'
+  %td.case_sensitive
+    %label
+      = check_box_tag "abstractor_abstractor_object_value[abstractor_object_value_variants_attributes][#{index}][case_sensitive]", data: { target: 'abstractor-object-value-variants.case_sensitive' }
+      %span
+        Case Sensitive?
+  %td.remove.right-align
+    = link_to 'Delete', '', class: 'btn wave-effect waves-light red remove-abstractor-object-value-variant', data: { action: 'click->abstractor-object-value-variants#delete' }

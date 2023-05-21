@@ -1,0 +1,3219 @@
+---
+- :site_name: external upper lip
+  :icdo3_code: C00.0
+  :synonym_name: upper lip, nos
+- :site_name: external upper lip
+  :icdo3_code: C00.0
+  :synonym_name: skin of upper lip
+- :site_name: external upper lip
+  :icdo3_code: C00.0
+  :synonym_name: vermilion border of upper lip
+- :site_name: external upper lip
+  :icdo3_code: C00.0
+  :synonym_name: upper lip
+- :site_name: external lower lip
+  :icdo3_code: C00.1
+  :synonym_name: vermilion border of lower lip
+- :site_name: external lower lip
+  :icdo3_code: C00.1
+  :synonym_name: lower lip, nos
+- :site_name: external lower lip
+  :icdo3_code: C00.1
+  :synonym_name: skin of lower lip
+- :site_name: external lower lip
+  :icdo3_code: C00.1
+  :synonym_name: lower lip
+- :site_name: external lip, nos
+  :icdo3_code: C00.2
+  :synonym_name: external lip
+- :site_name: mucosa of upper lip
+  :icdo3_code: C00.3
+  :synonym_name: frenulum of upper lip
+- :site_name: mucosa of lower lip
+  :icdo3_code: C00.4
+  :synonym_name: inner aspect of lower lip
+- :site_name: mucosa of lower lip
+  :icdo3_code: C00.4
+  :synonym_name: frenulum of lower lip
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: frenulum labii, nos
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: frenulum of lip, nos
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: inner aspect of lip, nos
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: internal lip, nos
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: mucosa of lip
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: frenulum labii
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: frenulum of lip
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: inner aspect of lip
+- :site_name: mucosa of lip, nos
+  :icdo3_code: C00.5
+  :synonym_name: internal lip
+- :site_name: commissure of lip
+  :icdo3_code: C00.6
+  :synonym_name: labial commissure
+- :site_name: base of tongue, nos
+  :icdo3_code: C01.9
+  :synonym_name: posterior third of tongue
+- :site_name: base of tongue, nos
+  :icdo3_code: C01.9
+  :synonym_name: posterior tongue, nos
+- :site_name: base of tongue, nos
+  :icdo3_code: C01.9
+  :synonym_name: dorsal surface of base of tongue
+- :site_name: base of tongue, nos
+  :icdo3_code: C01.9
+  :synonym_name: root of tongue
+- :site_name: base of tongue, nos
+  :icdo3_code: C01.9
+  :synonym_name: posterior tongue
+- :site_name: dorsal surface of tongue, nos
+  :icdo3_code: C02.0
+  :synonym_name: anterior 2/3 of tongue, dorsal surface
+- :site_name: dorsal surface of tongue, nos
+  :icdo3_code: C02.0
+  :synonym_name: midline of tongue
+- :site_name: dorsal surface of tongue, nos
+  :icdo3_code: C02.0
+  :synonym_name: dorsal surface of anterior tongue
+- :site_name: dorsal surface of tongue, nos
+  :icdo3_code: C02.0
+  :synonym_name: dorsal surface of tongue
+- :site_name: dorsal surface of tongue, nos
+  :icdo3_code: C02.0
+  :synonym_name: dorsal surface anterior 2/3 of tongue
+- :site_name: dorsal surface of tongue, nos
+  :icdo3_code: C02.0
+  :synonym_name: anterior 2/3 of tongue dorsal surface
+- :site_name: border of tongue
+  :icdo3_code: C02.1
+  :synonym_name: tip of tongue
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: ventral surface of anterior tongue, nos
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: anterior 2/3 of tongue, ventral surface
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: frenulum linguae
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: ventral surface of tongue
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: ventral surface of anterior tongue
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: ventral surface anterior 2/3 of tongue
+- :site_name: ventral surface of tongue, nos
+  :icdo3_code: C02.2
+  :synonym_name: anterior 2/3 of tongue ventral surface
+- :site_name: anterior 2/3 of tongue, nos
+  :icdo3_code: C02.3
+  :synonym_name: anterior tongue, nos
+- :site_name: anterior 2/3 of tongue, nos
+  :icdo3_code: C02.3
+  :synonym_name: anterior 2/3 of tongue
+- :site_name: anterior 2/3 of tongue, nos
+  :icdo3_code: C02.3
+  :synonym_name: anterior tongue
+- :site_name: overlapping lesion of tongue
+  :icdo3_code: C02.8
+  :synonym_name: junctional zone of tongue
+- :site_name: tongue, nos
+  :icdo3_code: C02.9
+  :synonym_name: lingual, nos
+- :site_name: tongue, nos
+  :icdo3_code: C02.9
+  :synonym_name: tongue
+- :site_name: tongue, nos
+  :icdo3_code: C02.9
+  :synonym_name: lingual
+- :site_name: upper gum
+  :icdo3_code: C03.0
+  :synonym_name: upper gingiva
+- :site_name: upper gum
+  :icdo3_code: C03.0
+  :synonym_name: upper alveolus
+- :site_name: upper gum
+  :icdo3_code: C03.0
+  :synonym_name: upper alveolar mucosa
+- :site_name: upper gum
+  :icdo3_code: C03.0
+  :synonym_name: upper alveolar ridge mucosa
+- :site_name: lower gum
+  :icdo3_code: C03.1
+  :synonym_name: lower alveolar mucosa
+- :site_name: lower gum
+  :icdo3_code: C03.1
+  :synonym_name: lower alveolar ridge mucosa
+- :site_name: lower gum
+  :icdo3_code: C03.1
+  :synonym_name: lower alveolus
+- :site_name: lower gum
+  :icdo3_code: C03.1
+  :synonym_name: lower gingiva
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: alveolus, nos
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: periodontal tissue
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: tooth socket
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: alveolar mucosa, nos
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: alveolar ridge mucosa, nos
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: alveolus
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: alveolar mucosa
+- :site_name: gum, nos
+  :icdo3_code: C03.9
+  :synonym_name: alveolar ridge mucosa
+- :site_name: soft palate, nos
+  :icdo3_code: C05.1
+  :synonym_name: soft palate
+- :site_name: overlapping lesion of palate
+  :icdo3_code: C05.8
+  :synonym_name: junction of hard and soft palate
+- :site_name: palate, nos
+  :icdo3_code: C05.9
+  :synonym_name: roof of mouth
+- :site_name: cheek mucosa
+  :icdo3_code: C06.0
+  :synonym_name: internal cheek
+- :site_name: cheek mucosa
+  :icdo3_code: C06.0
+  :synonym_name: buccal mucosa
+- :site_name: vestibule of mouth
+  :icdo3_code: C06.1
+  :synonym_name: buccal sulcus
+- :site_name: vestibule of mouth
+  :icdo3_code: C06.1
+  :synonym_name: labial sulcus
+- :site_name: retromolar area
+  :icdo3_code: C06.2
+  :synonym_name: retromolar triangle
+- :site_name: retromolar area
+  :icdo3_code: C06.2
+  :synonym_name: retromolar trigone
+- :site_name: mouth, nos
+  :icdo3_code: C06.9
+  :synonym_name: minor salivary gland, nos
+- :site_name: mouth, nos
+  :icdo3_code: C06.9
+  :synonym_name: oral mucosa
+- :site_name: mouth, nos
+  :icdo3_code: C06.9
+  :synonym_name: oral cavity
+- :site_name: mouth, nos
+  :icdo3_code: C06.9
+  :synonym_name: buccal cavity
+- :site_name: mouth, nos
+  :icdo3_code: C06.9
+  :synonym_name: mouth
+- :site_name: mouth, nos
+  :icdo3_code: C06.9
+  :synonym_name: minor salivary gland
+- :site_name: parotid gland
+  :icdo3_code: C07.9
+  :synonym_name: parotid gland duct
+- :site_name: parotid gland
+  :icdo3_code: C07.9
+  :synonym_name: parotid, nos
+- :site_name: parotid gland
+  :icdo3_code: C07.9
+  :synonym_name: stensen duct
+- :site_name: parotid gland
+  :icdo3_code: C07.9
+  :synonym_name: parotid
+- :site_name: submandibular gland
+  :icdo3_code: C08.0
+  :synonym_name: submaxillary gland
+- :site_name: submandibular gland
+  :icdo3_code: C08.0
+  :synonym_name: wharton duct
+- :site_name: submandibular gland
+  :icdo3_code: C08.0
+  :synonym_name: submaxillary gland duct
+- :site_name: sublingual gland
+  :icdo3_code: C08.1
+  :synonym_name: sublingual gland duct
+- :site_name: major salivary gland, nos
+  :icdo3_code: C08.9
+  :synonym_name: salivary gland, nos
+- :site_name: major salivary gland, nos
+  :icdo3_code: C08.9
+  :synonym_name: minor salivary gland, nos
+- :site_name: major salivary gland, nos
+  :icdo3_code: C08.9
+  :synonym_name: major salivary gland
+- :site_name: major salivary gland, nos
+  :icdo3_code: C08.9
+  :synonym_name: salivary gland
+- :site_name: tonsillar pillar
+  :icdo3_code: C09.1
+  :synonym_name: faucial pillar
+- :site_name: tonsillar pillar
+  :icdo3_code: C09.1
+  :synonym_name: glossopalatine fold
+- :site_name: tonsil, nos
+  :icdo3_code: C09.9
+  :synonym_name: faucial tonsil
+- :site_name: tonsil, nos
+  :icdo3_code: C09.9
+  :synonym_name: palatine tonsil
+- :site_name: lateral wall of oropharynx
+  :icdo3_code: C10.2
+  :synonym_name: lateral wall of mesopharynx
+- :site_name: posterior wall of oropharynx
+  :icdo3_code: C10.3
+  :synonym_name: posterior wall of mesopharynx
+- :site_name: overlapping lesion of oropharynx
+  :icdo3_code: C10.8
+  :synonym_name: junctional region of oropharynx
+- :site_name: oropharynx, nos
+  :icdo3_code: C10.9
+  :synonym_name: mesopharynx, nos
+- :site_name: oropharynx, nos
+  :icdo3_code: C10.9
+  :synonym_name: fauces, nos
+- :site_name: oropharynx, nos
+  :icdo3_code: C10.9
+  :synonym_name: mesopharynx
+- :site_name: oropharynx, nos
+  :icdo3_code: C10.9
+  :synonym_name: fauces
+- :site_name: superior wall of nasopharynx
+  :icdo3_code: C11.0
+  :synonym_name: roof of nasopharynx
+- :site_name: posterior wall of nasopharynx
+  :icdo3_code: C11.1
+  :synonym_name: pharyngeal tonsil
+- :site_name: posterior wall of nasopharynx
+  :icdo3_code: C11.1
+  :synonym_name: adenoid
+- :site_name: lateral wall of nasopharynx
+  :icdo3_code: C11.2
+  :synonym_name: fossa of rosenmuller
+- :site_name: anterior wall of nasopharynx
+  :icdo3_code: C11.3
+  :synonym_name: posterior margin of nasal septum
+- :site_name: anterior wall of nasopharynx
+  :icdo3_code: C11.3
+  :synonym_name: choana
+- :site_name: anterior wall of nasopharynx
+  :icdo3_code: C11.3
+  :synonym_name: pharyngeal fornix
+- :site_name: anterior wall of nasopharynx
+  :icdo3_code: C11.3
+  :synonym_name: nasopharyngeal surface of soft palate
+- :site_name: nasopharynx, nos
+  :icdo3_code: C11.9
+  :synonym_name: nasopharyngeal wall
+- :site_name: pyriform sinus
+  :icdo3_code: C12.9
+  :synonym_name: piriform fossa
+- :site_name: pyriform sinus
+  :icdo3_code: C12.9
+  :synonym_name: pyriform fossa
+- :site_name: pyriform sinus
+  :icdo3_code: C12.9
+  :synonym_name: piriform sinus
+- :site_name: postcricoid region
+  :icdo3_code: C13.0
+  :synonym_name: cricopharynx
+- :site_name: postcricoid region
+  :icdo3_code: C13.0
+  :synonym_name: cricoid, nos
+- :site_name: postcricoid region
+  :icdo3_code: C13.0
+  :synonym_name: cricoid
+- :site_name: hypopharyngeal aspect of aryepiglottic fold
+  :icdo3_code: C13.1
+  :synonym_name: arytenoid fold
+- :site_name: hypopharyngeal aspect of aryepiglottic fold
+  :icdo3_code: C13.1
+  :synonym_name: laryngeal aspect of aryepiglottic fold
+- :site_name: hypopharyngeal aspect of aryepiglottic fold
+  :icdo3_code: C13.1
+  :synonym_name: aryepiglottic fold, nos
+- :site_name: hypopharyngeal aspect of aryepiglottic fold
+  :icdo3_code: C13.1
+  :synonym_name: aryepiglottic fold
+- :site_name: hypopharynx, nos
+  :icdo3_code: C13.9
+  :synonym_name: hypopharyngeal wall
+- :site_name: hypopharynx, nos
+  :icdo3_code: C13.9
+  :synonym_name: laryngopharynx
+- :site_name: other and ill-defined sites in lip, oral cavity and pharynx
+  :icdo3_code: C14
+  :synonym_name: oral cavity and pharynx other and ill-defined sites in lip
+- :site_name: other and ill-defined sites in lip, oral cavity and pharynx
+  :icdo3_code: C14
+  :synonym_name: other and ill-defined sites in lip oral cavity and pharynx
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: pharyngeal wall, nos
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: wall of pharynx, nos
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: lateral wall of pharynx, nos
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: posterior wall of pharynx, nos
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: retropharynx
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: throat
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: pharynx
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: pharyngeal wall
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: wall of pharynx
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: lateral wall of pharynx
+- :site_name: pharynx, nos
+  :icdo3_code: C14.0
+  :synonym_name: posterior wall of pharynx
+- :site_name: overlapping lesion of lip, oral cavity and pharynx
+  :icdo3_code: C14.8
+  :synonym_name: oral cavity and pharynx overlapping lesion of lip
+- :site_name: overlapping lesion of lip, oral cavity and pharynx
+  :icdo3_code: C14.8
+  :synonym_name: overlapping lesion of lip oral cavity and pharynx
+- :site_name: upper third of esophagus
+  :icdo3_code: C15.3
+  :synonym_name: proximal third of esophagus
+- :site_name: lower third of esophagus
+  :icdo3_code: C15.5
+  :synonym_name: distal third of esophagus
+- :site_name: cardia, nos
+  :icdo3_code: C16.0
+  :synonym_name: gastroesophageal junction
+- :site_name: cardia, nos
+  :icdo3_code: C16.0
+  :synonym_name: esophagogastric junction
+- :site_name: cardia, nos
+  :icdo3_code: C16.0
+  :synonym_name: cardioesophageal junction
+- :site_name: cardia, nos
+  :icdo3_code: C16.0
+  :synonym_name: gastric cardia
+- :site_name: cardia, nos
+  :icdo3_code: C16.0
+  :synonym_name: cardia
+- :site_name: fundus of stomach
+  :icdo3_code: C16.1
+  :synonym_name: gastric fundus
+- :site_name: body of stomach
+  :icdo3_code: C16.2
+  :synonym_name: corpus of stomach
+- :site_name: body of stomach
+  :icdo3_code: C16.2
+  :synonym_name: gastric corpus
+- :site_name: gastric antrum
+  :icdo3_code: C16.3
+  :synonym_name: antrum of stomach
+- :site_name: gastric antrum
+  :icdo3_code: C16.3
+  :synonym_name: pyloric antrum
+- :site_name: pylorus
+  :icdo3_code: C16.4
+  :synonym_name: pyloric canal
+- :site_name: pylorus
+  :icdo3_code: C16.4
+  :synonym_name: prepylorus
+- :site_name: lesser curvature of stomach, nos
+  :icdo3_code: C16.5
+  :synonym_name: lesser curvature of stomach
+- :site_name: greater curvature of stomach, nos
+  :icdo3_code: C16.6
+  :synonym_name: greater curvature of stomach
+- :site_name: overlapping lesion of stomach
+  :icdo3_code: C16.8
+  :synonym_name: posterior wall of stomach, nos
+- :site_name: overlapping lesion of stomach
+  :icdo3_code: C16.8
+  :synonym_name: anterior wall of stomach, nos
+- :site_name: overlapping lesion of stomach
+  :icdo3_code: C16.8
+  :synonym_name: posterior wall of stomach
+- :site_name: overlapping lesion of stomach
+  :icdo3_code: C16.8
+  :synonym_name: anterior wall of stomach
+- :site_name: stomach, nos
+  :icdo3_code: C16.9
+  :synonym_name: gastric, nos
+- :site_name: stomach, nos
+  :icdo3_code: C16.9
+  :synonym_name: gastric
+- :site_name: small intestine, nos
+  :icdo3_code: C17.9
+  :synonym_name: small bowel, nos
+- :site_name: small intestine, nos
+  :icdo3_code: C17.9
+  :synonym_name: small bowel
+- :site_name: cecum
+  :icdo3_code: C18.0
+  :synonym_name: ileocecal valve
+- :site_name: cecum
+  :icdo3_code: C18.0
+  :synonym_name: ileocecal junction
+- :site_name: ascending colon
+  :icdo3_code: C18.2
+  :synonym_name: right colon
+- :site_name: descending colon
+  :icdo3_code: C18.6
+  :synonym_name: left colon
+- :site_name: sigmoid colon
+  :icdo3_code: C18.7
+  :synonym_name: sigmoid, nos
+- :site_name: sigmoid colon
+  :icdo3_code: C18.7
+  :synonym_name: sigmoid flexure of colon
+- :site_name: sigmoid colon
+  :icdo3_code: C18.7
+  :synonym_name: pelvic colon
+- :site_name: sigmoid colon
+  :icdo3_code: C18.7
+  :synonym_name: sigmoid
+- :site_name: colon, nos
+  :icdo3_code: C18.9
+  :synonym_name: large intestine
+- :site_name: colon, nos
+  :icdo3_code: C18.9
+  :synonym_name: rectum, nos
+- :site_name: colon, nos
+  :icdo3_code: C18.9
+  :synonym_name: and rectosigmoid junction
+- :site_name: colon, nos
+  :icdo3_code: C18.9
+  :synonym_name: large bowel, nos
+- :site_name: colon, nos
+  :icdo3_code: C18.9
+  :synonym_name: large bowel
+- :site_name: rectosigmoid junction
+  :icdo3_code: C19.9
+  :synonym_name: pelvirectal junction
+- :site_name: rectosigmoid junction
+  :icdo3_code: C19.9
+  :synonym_name: rectosigmoid colon
+- :site_name: rectosigmoid junction
+  :icdo3_code: C19.9
+  :synonym_name: rectosigmoid, nos
+- :site_name: rectosigmoid junction
+  :icdo3_code: C19.9
+  :synonym_name: colon and rectum
+- :site_name: rectosigmoid junction
+  :icdo3_code: C19.9
+  :synonym_name: rectosigmoid
+- :site_name: rectum, nos
+  :icdo3_code: C20.9
+  :synonym_name: rectal ampulla
+- :site_name: anus, nos
+  :icdo3_code: C21.0
+  :synonym_name: anus
+- :site_name: anal canal
+  :icdo3_code: C21.1
+  :synonym_name: anal sphincter
+- :site_name: overlapping lesion of rectum, anus and anal canal
+  :icdo3_code: C21.8
+  :synonym_name: anorectal junction
+- :site_name: overlapping lesion of rectum, anus and anal canal
+  :icdo3_code: C21.8
+  :synonym_name: anorectum
+- :site_name: overlapping lesion of rectum, anus and anal canal
+  :icdo3_code: C21.8
+  :synonym_name: anus and anal canal overlapping lesion of rectum
+- :site_name: overlapping lesion of rectum, anus and anal canal
+  :icdo3_code: C21.8
+  :synonym_name: overlapping lesion of rectum anus and anal canal
+- :site_name: liver
+  :icdo3_code: C22.0
+  :synonym_name: hepatic, nos
+- :site_name: liver
+  :icdo3_code: C22.0
+  :synonym_name: hepatic
+- :site_name: intrahepatic bile duct
+  :icdo3_code: C22.1
+  :synonym_name: biliary canaliculus
+- :site_name: intrahepatic bile duct
+  :icdo3_code: C22.1
+  :synonym_name: cholangiole
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: sphincter of oddi
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: cystic bile duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: hepatic duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: cystic duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: common duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: common bile duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: choledochal duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: bile duct, nos
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: biliary duct, nos
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: hepatic bile duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: bile duct
+- :site_name: extrahepatic bile duct
+  :icdo3_code: C24.0
+  :synonym_name: biliary duct
+- :site_name: ampulla of vater
+  :icdo3_code: C24.1
+  :synonym_name: periampullary
+- :site_name: biliary tract, nos
+  :icdo3_code: C24.9
+  :synonym_name: biliary tract
+- :site_name: pancreatic duct
+  :icdo3_code: C25.3
+  :synonym_name: duct of wirsung
+- :site_name: pancreatic duct
+  :icdo3_code: C25.3
+  :synonym_name: duct of santorini
+- :site_name: islets of langerhans
+  :icdo3_code: C25.4
+  :synonym_name: islands of langerhans
+- :site_name: islets of langerhans
+  :icdo3_code: C25.4
+  :synonym_name: endocrine pancreas
+- :site_name: other specified parts of pancreas
+  :icdo3_code: C25.7
+  :synonym_name: neck of pancreas
+- :site_name: intestinal tract, nos
+  :icdo3_code: C26.0
+  :synonym_name: bowel, nos
+- :site_name: intestinal tract, nos
+  :icdo3_code: C26.0
+  :synonym_name: intestine, nos
+- :site_name: intestinal tract, nos
+  :icdo3_code: C26.0
+  :synonym_name: intestinal tract
+- :site_name: intestinal tract, nos
+  :icdo3_code: C26.0
+  :synonym_name: bowel
+- :site_name: intestinal tract, nos
+  :icdo3_code: C26.0
+  :synonym_name: intestine
+- :site_name: gastrointestinal tract, nos
+  :icdo3_code: C26.9
+  :synonym_name: digestive organs, nos
+- :site_name: gastrointestinal tract, nos
+  :icdo3_code: C26.9
+  :synonym_name: gastrointestinal tract
+- :site_name: gastrointestinal tract, nos
+  :icdo3_code: C26.9
+  :synonym_name: digestive organs
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: nostril
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: posterior margin of nasal septum
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: nasal septum, nos
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: nasal mucosa
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: nasal cartilage
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: naris
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: nasal turbinate
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: internal nose
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: vestibule of nose
+- :site_name: nasal cavity
+  :icdo3_code: C30.0
+  :synonym_name: nasal septum
+- :site_name: middle ear
+  :icdo3_code: C30.1
+  :synonym_name: eustachian tube
+- :site_name: middle ear
+  :icdo3_code: C30.1
+  :synonym_name: inner ear
+- :site_name: middle ear
+  :icdo3_code: C30.1
+  :synonym_name: auditory tube
+- :site_name: middle ear
+  :icdo3_code: C30.1
+  :synonym_name: mastoid antrum
+- :site_name: middle ear
+  :icdo3_code: C30.1
+  :synonym_name: tympanic cavity
+- :site_name: maxillary sinus
+  :icdo3_code: C31.0
+  :synonym_name: maxillary antrum
+- :site_name: maxillary sinus
+  :icdo3_code: C31.0
+  :synonym_name: antrum, nos
+- :site_name: maxillary sinus
+  :icdo3_code: C31.0
+  :synonym_name: antrum
+- :site_name: accessory sinus, nos
+  :icdo3_code: C31.9
+  :synonym_name: paranasal sinus
+- :site_name: accessory sinus, nos
+  :icdo3_code: C31.9
+  :synonym_name: accessory nasal sinus
+- :site_name: accessory sinus, nos
+  :icdo3_code: C31.9
+  :synonym_name: accessory sinus
+- :site_name: glottis
+  :icdo3_code: C32.0
+  :synonym_name: intrinsic larynx
+- :site_name: glottis
+  :icdo3_code: C32.0
+  :synonym_name: laryngeal commissure
+- :site_name: glottis
+  :icdo3_code: C32.0
+  :synonym_name: vocal cord, nos
+- :site_name: glottis
+  :icdo3_code: C32.0
+  :synonym_name: true vocal cord
+- :site_name: glottis
+  :icdo3_code: C32.0
+  :synonym_name: true cord
+- :site_name: glottis
+  :icdo3_code: C32.0
+  :synonym_name: vocal cord
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: anterior surface of epiglottis
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: false cord
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: false vocal cord
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: ventricular band of larynx
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: posterior surface of epiglottis
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: extrinsic larynx
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: epiglottis, nos
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: laryngeal aspect of aryepiglottic fold
+- :site_name: supraglottis
+  :icdo3_code: C32.1
+  :synonym_name: epiglottis
+- :site_name: laryngeal cartilage
+  :icdo3_code: C32.3
+  :synonym_name: cuneiform cartilage
+- :site_name: laryngeal cartilage
+  :icdo3_code: C32.3
+  :synonym_name: thyroid cartilage
+- :site_name: laryngeal cartilage
+  :icdo3_code: C32.3
+  :synonym_name: cricoid cartilage
+- :site_name: laryngeal cartilage
+  :icdo3_code: C32.3
+  :synonym_name: arytenoid cartilage
+- :site_name: main bronchus
+  :icdo3_code: C34.0
+  :synonym_name: hilus of lung
+- :site_name: main bronchus
+  :icdo3_code: C34.0
+  :synonym_name: carina
+- :site_name: upper lobe, lung
+  :icdo3_code: C34.1
+  :synonym_name: upper lobe, bronchus
+- :site_name: upper lobe, lung
+  :icdo3_code: C34.1
+  :synonym_name: lingula of lung
+- :site_name: upper lobe, lung
+  :icdo3_code: C34.1
+  :synonym_name: lung upper lobe
+- :site_name: upper lobe, lung
+  :icdo3_code: C34.1
+  :synonym_name: upper lobe lung
+- :site_name: upper lobe, lung
+  :icdo3_code: C34.1
+  :synonym_name: bronchus upper lobe
+- :site_name: upper lobe, lung
+  :icdo3_code: C34.1
+  :synonym_name: upper lobe bronchus
+- :site_name: middle lobe, lung
+  :icdo3_code: C34.2
+  :synonym_name: middle lobe, bronchus
+- :site_name: middle lobe, lung
+  :icdo3_code: C34.2
+  :synonym_name: lung middle lobe
+- :site_name: middle lobe, lung
+  :icdo3_code: C34.2
+  :synonym_name: middle lobe lung
+- :site_name: middle lobe, lung
+  :icdo3_code: C34.2
+  :synonym_name: bronchus middle lobe
+- :site_name: middle lobe, lung
+  :icdo3_code: C34.2
+  :synonym_name: middle lobe bronchus
+- :site_name: lower lobe, lung
+  :icdo3_code: C34.3
+  :synonym_name: lower lobe, bronchus
+- :site_name: lower lobe, lung
+  :icdo3_code: C34.3
+  :synonym_name: lung lower lobe
+- :site_name: lower lobe, lung
+  :icdo3_code: C34.3
+  :synonym_name: lower lobe lung
+- :site_name: lower lobe, lung
+  :icdo3_code: C34.3
+  :synonym_name: bronchus lower lobe
+- :site_name: lower lobe, lung
+  :icdo3_code: C34.3
+  :synonym_name: lower lobe bronchus
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: pulmonary, nos
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: bronchus, nos
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: bronchiole
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: bronchogenic
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: lung
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: pulmonary
+- :site_name: lung, nos
+  :icdo3_code: C34.9
+  :synonym_name: bronchus
+- :site_name: heart, mediastinum, and pleura
+  :icdo3_code: C38
+  :synonym_name: and pleura mediastinum heart
+- :site_name: heart, mediastinum, and pleura
+  :icdo3_code: C38
+  :synonym_name: heart mediastinum and pleura
+- :site_name: heart
+  :icdo3_code: C38.0
+  :synonym_name: cardiac atrium
+- :site_name: heart
+  :icdo3_code: C38.0
+  :synonym_name: epicardium
+- :site_name: heart
+  :icdo3_code: C38.0
+  :synonym_name: myocardium
+- :site_name: heart
+  :icdo3_code: C38.0
+  :synonym_name: cardiac ventricle
+- :site_name: heart
+  :icdo3_code: C38.0
+  :synonym_name: endocardium
+- :site_name: heart
+  :icdo3_code: C38.0
+  :synonym_name: pericardium
+- :site_name: mediastinum, nos
+  :icdo3_code: C38.3
+  :synonym_name: mediastinum
+- :site_name: pleura, nos
+  :icdo3_code: C38.4
+  :synonym_name: parietal pleura
+- :site_name: pleura, nos
+  :icdo3_code: C38.4
+  :synonym_name: visceral pleura
+- :site_name: pleura, nos
+  :icdo3_code: C38.4
+  :synonym_name: pleura
+- :site_name: overlapping lesion of heart, mediastinum and pleura
+  :icdo3_code: C38.8
+  :synonym_name: mediastinum and pleura overlapping lesion of heart
+- :site_name: overlapping lesion of heart, mediastinum and pleura
+  :icdo3_code: C38.8
+  :synonym_name: overlapping lesion of heart mediastinum and pleura
+- :site_name: upper respiratory tract, nos
+  :icdo3_code: C39.0
+  :synonym_name: upper respiratory tract
+- :site_name: ill-defined sites within respiratory system
+  :icdo3_code: C39.9
+  :synonym_name: respiratory tract, nos
+- :site_name: ill-defined sites within respiratory system
+  :icdo3_code: C39.9
+  :synonym_name: respiratory tract
+- :site_name: bones, joints and articular cartilage of limbs
+  :icdo3_code: C40
+  :synonym_name: joints and articular cartilage of limbs bones
+- :site_name: bones, joints and articular cartilage of limbs
+  :icdo3_code: C40
+  :synonym_name: bones joints and articular cartilage of limbs
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: bone of shoulder
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: ulna
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: shoulder joint
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: shoulder girdle
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: scapula
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: radius
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: elbow joint
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: bone of forearm
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: bone of arm
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: acromioclavicular joint
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: humerus
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: scapula and associated joints long bones of upper limb
+- :site_name: long bones of upper limb, scapula and associated joints
+  :icdo3_code: C40.0
+  :synonym_name: long bones of upper limb scapula and associated joints
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: hand joint
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: bone of hand
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: wrist joint
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: phalanx of hand
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: metacarpal bone
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: bone of thumb
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: bone of finger
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: bone of wrist
+- :site_name: short bones of upper limb and associated joints
+  :icdo3_code: C40.1
+  :synonym_name: carpal bone
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: knee joint, nos
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: tibia
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: medial meniscus of knee joint
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: semilunar cartilage
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: fibula
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: femur
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: bone of leg
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: lateral meniscus of knee joint
+- :site_name: long bones of lower limb and associated joints
+  :icdo3_code: C40.2
+  :synonym_name: knee joint
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: ankle joint
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: phalanx of foot
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: foot joint
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: patella
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: tarsal bone
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: metatarsal bone
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: bone of heel
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: bone of ankle
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: bone of toe
+- :site_name: short bones of lower limb and associated joints
+  :icdo3_code: C40.3
+  :synonym_name: bone of foot
+- :site_name: overlapping lesion of bones, joints and articular cartilage of limbs
+  :icdo3_code: C40.8
+  :synonym_name: joints and articular cartilage of limbs overlapping lesion of bones
+- :site_name: overlapping lesion of bones, joints and articular cartilage of limbs
+  :icdo3_code: C40.8
+  :synonym_name: overlapping lesion of bones joints and articular cartilage of limbs
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: articular cartilage of limb, nos
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: cartilage of limb, nos
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: joint of limb, nos
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: bone of limb
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: articular cartilage of limb
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: cartilage of limb
+- :site_name: bone of limb, nos
+  :icdo3_code: C40.9
+  :synonym_name: joint of limb
+- :site_name: bones, joints and articular cartilage of other and unspecified sites
+  :icdo3_code: C41
+  :synonym_name: joints and articular cartilage of other and unspecified sites bones
+- :site_name: bones, joints and articular cartilage of other and unspecified sites
+  :icdo3_code: C41
+  :synonym_name: bones joints and articular cartilage of other and unspecified sites
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: hyoid bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: sphenoid bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: skull, nos
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: parietal bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: orbital bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: occipital bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: zygomatic bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: nasal bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: temporal bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: frontal bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: facial bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: ethmoid bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: cranial bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: calvarium
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: maxilla
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: upper jaw bone
+- :site_name: bones of skull and face and associated joints
+  :icdo3_code: C41.0
+  :synonym_name: skull
+- :site_name: mandible
+  :icdo3_code: C41.1
+  :synonym_name: temporomandibular joint
+- :site_name: mandible
+  :icdo3_code: C41.1
+  :synonym_name: lower jaw bone
+- :site_name: mandible
+  :icdo3_code: C41.1
+  :synonym_name: jaw bone, nos
+- :site_name: mandible
+  :icdo3_code: C41.1
+  :synonym_name: jaw bone
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: spine
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: spinal column
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: nucleus pulposus
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: intervertebral disc
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: axis
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: atlas
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: bone of back
+- :site_name: vertebral column
+  :icdo3_code: C41.2
+  :synonym_name: vertebra
+- :site_name: rib, sternum, clavicle and associated joints
+  :icdo3_code: C41.3
+  :synonym_name: costal cartilage
+- :site_name: rib, sternum, clavicle and associated joints
+  :icdo3_code: C41.3
+  :synonym_name: costovertebral joint
+- :site_name: rib, sternum, clavicle and associated joints
+  :icdo3_code: C41.3
+  :synonym_name: sternocostal joint
+- :site_name: rib, sternum, clavicle and associated joints
+  :icdo3_code: C41.3
+  :synonym_name: clavicle and associated joints sternum rib
+- :site_name: rib, sternum, clavicle and associated joints
+  :icdo3_code: C41.3
+  :synonym_name: rib sternum clavicle and associated joints
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: coccyx
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: symphysis pubis
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: sacrum
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: pubic bone
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: pelvic bone
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: ischium
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: innominate bone
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: hip joint
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: bone of hip
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: acetabulum
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: ilium
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: coccyx and associated joints sacrum pelvic bones
+- :site_name: pelvic bones, sacrum, coccyx and associated joints
+  :icdo3_code: C41.4
+  :synonym_name: pelvic bones sacrum coccyx and associated joints
+- :site_name: overlapping lesion of bones, joints and articular cartilage
+  :icdo3_code: C41.8
+  :synonym_name: joints and articular cartilage overlapping lesion of bones
+- :site_name: overlapping lesion of bones, joints and articular cartilage
+  :icdo3_code: C41.8
+  :synonym_name: overlapping lesion of bones joints and articular cartilage
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: articular cartilage, nos
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: cartilage, nos
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: joint, nos
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: skeletal bone
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: bone
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: articular cartilage
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: cartilage
+- :site_name: bone, nos
+  :icdo3_code: C41.9
+  :synonym_name: joint
+- :site_name: reticuloendothelial system,nos
+  :icdo3_code: C42.3
+  :synonym_name: reticuloendothelial system
+- :site_name: hematopoietic system, nos
+  :icdo3_code: C42.4
+  :synonym_name: hematopoietic system
+- :site_name: skin of lip, nos
+  :icdo3_code: C44.0
+  :synonym_name: skin of lower lip
+- :site_name: skin of lip, nos
+  :icdo3_code: C44.0
+  :synonym_name: skin of upper lip
+- :site_name: skin of lip, nos
+  :icdo3_code: C44.0
+  :synonym_name: skin of lip
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: canthus, nos
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: upper lid
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: outer canthus
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: meibomian gland
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: inner canthus
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: palpebra
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: lid, nos
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: lower lid
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: canthus
+- :site_name: eyelid
+  :icdo3_code: C44.1
+  :synonym_name: lid
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: auricular canal, nos
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: tragus
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: skin of ear, nos
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: skin of auricle
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: helix
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: external auditory meatus
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: ear canal
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: concha
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: external auricular canal
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: auricle, nos
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: auditory canal, nos
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: ear lobule
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: pinna
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: ceruminal gland
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: ear, nos
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: earlobe
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: external auditory canal
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: auricular canal
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: skin of ear
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: auricle
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: auditory canal
+- :site_name: external ear
+  :icdo3_code: C44.2
+  :synonym_name: ear
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: temple, nos
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: brow
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: ala nasi
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: external cheek
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: eyebrow
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: columnella
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: chin, nos
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: forehead, nos
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: external nose
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: temple
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: chin
+- :site_name: skin of other and unspecified parts of face
+  :icdo3_code: C44.3
+  :synonym_name: forehead
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: scalp, nos
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: skin of cervical region
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: skin of scalp
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: skin of head, nos
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: skin of neck
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: skin of supraclavicular region
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: scalp
+- :site_name: skin of scalp and neck
+  :icdo3_code: C44.4
+  :synonym_name: skin of head
+- :site_name: skin of trunk
+  :icdo3_code: C44.5
+  :synonym_name: umbilicus, nos
+- :site_name: skin of trunk
+  :icdo3_code: C44.5
+  :synonym_name: perianal skin
+- :site_name: skin of trunk
+  :icdo3_code: C44.5
+  :synonym_name: umbilicus
+- :site_name: skin of upper limb and shoulder
+  :icdo3_code: C44.6
+  :synonym_name: finger nail
+- :site_name: skin of upper limb and shoulder
+  :icdo3_code: C44.6
+  :synonym_name: palmar skin
+- :site_name: skin of lower limb and hip
+  :icdo3_code: C44.7
+  :synonym_name: plantar skin
+- :site_name: skin of lower limb and hip
+  :icdo3_code: C44.7
+  :synonym_name: toe nail
+- :site_name: skin of lower limb and hip
+  :icdo3_code: C44.7
+  :synonym_name: sole of foot
+- :site_name: skin, nos
+  :icdo3_code: C44.9
+  :synonym_name: c51.0, skin of vulva c51.9, skin of penis c60.9 and skin of scrotum
+    c63.2)
+- :site_name: skin, nos
+  :icdo3_code: C44.9
+  :synonym_name: skin of penis c60.9 and skin of scrotum c63.2) skin of vulva c51.9
+    c51.0
+- :site_name: skin, nos
+  :icdo3_code: C44.9
+  :synonym_name: c51.0 skin of vulva c51.9 skin of penis c60.9 and skin of scrotum
+    c63.2)
+- :site_name: peripheral nerves and autonomic nervous system of head, face, and neck
+  :icdo3_code: C47.0
+  :synonym_name: cervical plexus
+- :site_name: peripheral nerves and autonomic nervous system of head, face, and neck
+  :icdo3_code: C47.0
+  :synonym_name: and neck face peripheral nerves and autonomic nervous system of head
+- :site_name: peripheral nerves and autonomic nervous system of head, face, and neck
+  :icdo3_code: C47.0
+  :synonym_name: peripheral nerves and autonomic nervous system of head face and neck
+- :site_name: peripheral nerves and autonomic nervous system of upper limb and shoulder
+  :icdo3_code: C47.1
+  :synonym_name: radial nerve
+- :site_name: peripheral nerves and autonomic nervous system of upper limb and shoulder
+  :icdo3_code: C47.1
+  :synonym_name: ulnar nerve
+- :site_name: peripheral nerves and autonomic nervous system of upper limb and shoulder
+  :icdo3_code: C47.1
+  :synonym_name: median nerve
+- :site_name: peripheral nerves and autonomic nervous system of upper limb and shoulder
+  :icdo3_code: C47.1
+  :synonym_name: brachial plexus
+- :site_name: peripheral nerves and autonomic nervous system of upper limb and shoulder
+  :icdo3_code: C47.1
+  :synonym_name: brachial nerve
+- :site_name: peripheral nerves and autonomic nervous system of lower limband hip
+  :icdo3_code: C47.2
+  :synonym_name: femoral nerve
+- :site_name: peripheral nerves and autonomic nervous system of lower limband hip
+  :icdo3_code: C47.2
+  :synonym_name: sciatic nerve
+- :site_name: peripheral nerves and autonomic nervous system of lower limband hip
+  :icdo3_code: C47.2
+  :synonym_name: obturator nerve
+- :site_name: peripheral nerves and autonomic nervous system of thorax
+  :icdo3_code: C47.3
+  :synonym_name: intercostal nerve
+- :site_name: peripheral nerves and autonomic nervous system of pelvis
+  :icdo3_code: C47.5
+  :synonym_name: sacral plexus
+- :site_name: peripheral nerves and autonomic nervous system of pelvis
+  :icdo3_code: C47.5
+  :synonym_name: sacral nerve
+- :site_name: peripheral nerves and autonomic nervous system of pelvis
+  :icdo3_code: C47.5
+  :synonym_name: lumbosacral plexus
+- :site_name: peripheral nerves and autonomic nervous system of trunk, nos
+  :icdo3_code: C47.6
+  :synonym_name: lumbar nerve
+- :site_name: peripheral nerves and autonomic nervous system of trunk, nos
+  :icdo3_code: C47.6
+  :synonym_name: peripheral nerves and autonomic nervous system of trunk
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: sympathetic nervous system, nos
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: ganglia, nos
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: nerve, nos
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: parasympathetic nervous system, nos
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: peripheral nerve, nos
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: spinal nerve, nos
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: autonomic nervous system
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: sympathetic nervous system
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: ganglia
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: nerve
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: parasympathetic nervous system
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: peripheral nerve
+- :site_name: autonomic nervous system, nos
+  :icdo3_code: C47.9
+  :synonym_name: spinal nerve
+- :site_name: retroperitoneum
+  :icdo3_code: C48.0
+  :synonym_name: periadrenal tissue
+- :site_name: retroperitoneum
+  :icdo3_code: C48.0
+  :synonym_name: perinephric tissue
+- :site_name: retroperitoneum
+  :icdo3_code: C48.0
+  :synonym_name: peripancreatic tissue
+- :site_name: retroperitoneum
+  :icdo3_code: C48.0
+  :synonym_name: perirenal tissue
+- :site_name: retroperitoneum
+  :icdo3_code: C48.0
+  :synonym_name: retrocecal tissue
+- :site_name: retroperitoneum
+  :icdo3_code: C48.0
+  :synonym_name: retroperitoneal tissue
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: pelvic peritoneum
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: pouch of douglas
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: cul de sac
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: rectouterine pouch
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: mesocolon
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: mesoappendix
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: mesentery
+- :site_name: specified parts of peritoneum
+  :icdo3_code: C48.1
+  :synonym_name: omentum
+- :site_name: peritoneum, nos
+  :icdo3_code: C48.2
+  :synonym_name: peritoneal cavity
+- :site_name: peritoneum, nos
+  :icdo3_code: C48.2
+  :synonym_name: peritoneum
+- :site_name: connective, subcutaneous and other soft tissues
+  :icdo3_code: C49
+  :synonym_name: subcutaneous and other soft tissues connective
+- :site_name: connective, subcutaneous and other soft tissues
+  :icdo3_code: C49
+  :synonym_name: connective subcutaneous and other soft tissues
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: auricular cartilage
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: cartilage of ear
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: masseter muscle
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: sternocleidomastoid muscle
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: carotid artery
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: c69.6 and nasal cartilage c30.0)
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: and neck face subcutaneous and other soft tissues of head connective
+- :site_name: connective, subcutaneous and other soft tissues of head, face, and neck
+  :icdo3_code: C49.0
+  :synonym_name: connective subcutaneous and other soft tissues of head face and neck
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: biceps brachii muscle
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: brachialis muscle
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: coracobrachialis muscle
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: palmar aponeurosis
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: radial artery
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: triceps brachii muscle
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: ulnar artery
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: deltoideus muscle
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: palmar fascia
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: subcutaneous and other soft tissues of upper limb and shoulder connective
+- :site_name: connective, subcutaneous and other soft tissues of upper limb and shoulder
+  :icdo3_code: C49.1
+  :synonym_name: connective subcutaneous and other soft tissues of upper limb and
+    shoulder
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: quadriceps femoris muscle
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: plantar fascia
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: plantar aponeurosis
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: gastrocnemius muscle
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: femoral artery
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: biceps femoris muscle
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: subcutaneous and other soft tissues of lower limb and hip connective
+- :site_name: connective, subcutaneous and other soft tissues of lower limb and hip
+  :icdo3_code: C49.2
+  :synonym_name: connective subcutaneous and other soft tissues of lower limb and
+    hip
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: aorta, nos
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: pectoralis major muscle
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: subclavian artery
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: trapezius muscle
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: latissimus dorsi muscle
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: internal mammary artery
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: intercostal muscle
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: diaphragm
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: axillary artery
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: thoracic duct
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: c38._)
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: superior vena cava
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: subcutaneous and other soft tissues of thorax connective
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: connective subcutaneous and other soft tissues of thorax
+- :site_name: connective, subcutaneous and other soft tissues of thorax
+  :icdo3_code: C49.3
+  :synonym_name: aorta
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: celiac artery
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: renal artery
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: rectus abdominis muscle
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: psoas muscle
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: mesenteric artery
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: inferior vena cava
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: iliopsoas muscle
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: abdominal wall muscle
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: abdominal aorta
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: vena cava, nos
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: abdominal vena cava
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: subcutaneous and other soft tissues of abdomen connective
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: connective subcutaneous and other soft tissues of abdomen
+- :site_name: connective, subcutaneous and other soft tissues of abdomen
+  :icdo3_code: C49.4
+  :synonym_name: vena cava
+- :site_name: connective, subcutaneous and other soft tissues of pelvis
+  :icdo3_code: C49.5
+  :synonym_name: iliac artery
+- :site_name: connective, subcutaneous and other soft tissues of pelvis
+  :icdo3_code: C49.5
+  :synonym_name: iliac vein
+- :site_name: connective, subcutaneous and other soft tissues of pelvis
+  :icdo3_code: C49.5
+  :synonym_name: gluteus maximus muscle
+- :site_name: connective, subcutaneous and other soft tissues of pelvis
+  :icdo3_code: C49.5
+  :synonym_name: subcutaneous and other soft tissues of pelvis connective
+- :site_name: connective, subcutaneous and other soft tissues of pelvis
+  :icdo3_code: C49.5
+  :synonym_name: connective subcutaneous and other soft tissues of pelvis
+- :site_name: connective, subcutaneous and other soft tissues of trunk nos
+  :icdo3_code: C49.6
+  :synonym_name: subcutaneous and other soft tissues of trunk nos connective
+- :site_name: connective, subcutaneous and other soft tissues of trunk nos
+  :icdo3_code: C49.6
+  :synonym_name: connective subcutaneous and other soft tissues of trunk nos
+- :site_name: overlapping lesion of connective, subcutaneous and other soft tissues
+  :icdo3_code: C49.8
+  :synonym_name: subcutaneous and other soft tissues overlapping lesion of connective
+- :site_name: overlapping lesion of connective, subcutaneous and other soft tissues
+  :icdo3_code: C49.8
+  :synonym_name: overlapping lesion of connective subcutaneous and other soft tissues
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: lymphatic, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: vein, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: tendon sheath, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: tendon, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: aponeurosis, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: synovia, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: subcutaneous tissue, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: skeletal muscle, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: muscle, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: vessel, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: fibrous tissue, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: fatty tissue, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: fascia, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: connective tissue, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: bursa, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: artery, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: blood vessel, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: adipose tissue, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: ligament, nos
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: lymphatic
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: vein
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: tendon sheath
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: tendon
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: aponeurosis
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: synovia
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: subcutaneous tissue
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: skeletal muscle
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: muscle
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: vessel
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: fibrous tissue
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: fatty tissue
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: fascia
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: connective tissue
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: bursa
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: artery
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: blood vessel
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: adipose tissue
+- :site_name: connective, subcutaneous and other soft tissues, nos
+  :icdo3_code: C49.9
+  :synonym_name: ligament
+- :site_name: nipple
+  :icdo3_code: C50.0
+  :synonym_name: areola
+- :site_name: axillary tail of breast
+  :icdo3_code: C50.6
+  :synonym_name: tail of breast, nos
+- :site_name: axillary tail of breast
+  :icdo3_code: C50.6
+  :synonym_name: tail of breast
+- :site_name: overlapping lesion of breast
+  :icdo3_code: C50.8
+  :synonym_name: upper breast
+- :site_name: overlapping lesion of breast
+  :icdo3_code: C50.8
+  :synonym_name: outer breast
+- :site_name: overlapping lesion of breast
+  :icdo3_code: C50.8
+  :synonym_name: inner breast
+- :site_name: overlapping lesion of breast
+  :icdo3_code: C50.8
+  :synonym_name: lower breast
+- :site_name: overlapping lesion of breast
+  :icdo3_code: C50.8
+  :synonym_name: midline of breast
+- :site_name: breast, nos
+  :icdo3_code: C50.9
+  :synonym_name: mammary gland
+- :site_name: labium majus
+  :icdo3_code: C51.0
+  :synonym_name: bartholin gland
+- :site_name: labium majus
+  :icdo3_code: C51.0
+  :synonym_name: skin of labia majora
+- :site_name: labium majus
+  :icdo3_code: C51.0
+  :synonym_name: labia majora, nos
+- :site_name: labium majus
+  :icdo3_code: C51.0
+  :synonym_name: labia majora
+- :site_name: labium minus
+  :icdo3_code: C51.1
+  :synonym_name: labia minora
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: fourchette
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: skin of vulva
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: pudendum
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: mons veneris
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: mons pubis
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: labia, nos
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: external female genitalia
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: labium, nos
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: labia
+- :site_name: vulva, nos
+  :icdo3_code: C51.9
+  :synonym_name: labium
+- :site_name: vagina, nos
+  :icdo3_code: C52.9
+  :synonym_name: hymen
+- :site_name: vagina, nos
+  :icdo3_code: C52.9
+  :synonym_name: vaginal vault
+- :site_name: vagina, nos
+  :icdo3_code: C52.9
+  :synonym_name: fornix of vagina
+- :site_name: vagina, nos
+  :icdo3_code: C52.9
+  :synonym_name: gartner duct
+- :site_name: endocervix
+  :icdo3_code: C53.0
+  :synonym_name: internal os
+- :site_name: endocervix
+  :icdo3_code: C53.0
+  :synonym_name: cervical canal
+- :site_name: endocervix
+  :icdo3_code: C53.0
+  :synonym_name: endocervical canal
+- :site_name: endocervix
+  :icdo3_code: C53.0
+  :synonym_name: endocervical gland
+- :site_name: endocervix
+  :icdo3_code: C53.0
+  :synonym_name: nabothian gland
+- :site_name: exocervix
+  :icdo3_code: C53.1
+  :synonym_name: external os
+- :site_name: overlapping lesion of cervix uteri
+  :icdo3_code: C53.8
+  :synonym_name: squamocolumnar junction of cervix
+- :site_name: overlapping lesion of cervix uteri
+  :icdo3_code: C53.8
+  :synonym_name: cervical stump
+- :site_name: cervix uteri
+  :icdo3_code: C53.9
+  :synonym_name: cervix, nos
+- :site_name: cervix uteri
+  :icdo3_code: C53.9
+  :synonym_name: uterine cervix
+- :site_name: cervix uteri
+  :icdo3_code: C53.9
+  :synonym_name: cervix
+- :site_name: isthmus uteri
+  :icdo3_code: C54.0
+  :synonym_name: lower uterine segment
+- :site_name: endometrium
+  :icdo3_code: C54.1
+  :synonym_name: endometrial gland
+- :site_name: endometrium
+  :icdo3_code: C54.1
+  :synonym_name: endometrial stroma
+- :site_name: corpus uteri
+  :icdo3_code: C54.9
+  :synonym_name: body of uterus
+- :site_name: uterus, nos
+  :icdo3_code: C55
+  :synonym_name: uterus
+- :site_name: uterus, nos
+  :icdo3_code: C55.9
+  :synonym_name: uterine, nos
+- :site_name: uterus, nos
+  :icdo3_code: C55.9
+  :synonym_name: uterine
+- :site_name: fallopian tube
+  :icdo3_code: C57.0
+  :synonym_name: uterine tube
+- :site_name: broad ligament
+  :icdo3_code: C57.1
+  :synonym_name: mesovarium
+- :site_name: broad ligament
+  :icdo3_code: C57.1
+  :synonym_name: parovarian region
+- :site_name: parametrium
+  :icdo3_code: C57.3
+  :synonym_name: uterosacral ligament
+- :site_name: parametrium
+  :icdo3_code: C57.3
+  :synonym_name: uterine ligament
+- :site_name: uterine adnexa
+  :icdo3_code: C57.4
+  :synonym_name: adnexa, nos
+- :site_name: uterine adnexa
+  :icdo3_code: C57.4
+  :synonym_name: adnexa
+- :site_name: other specified parts of female genital organs
+  :icdo3_code: C57.7
+  :synonym_name: wolffian body
+- :site_name: other specified parts of female genital organs
+  :icdo3_code: C57.7
+  :synonym_name: wolffian duct
+- :site_name: overlapping lesion of female genital organs
+  :icdo3_code: C57.8
+  :synonym_name: utero-ovarian
+- :site_name: overlapping lesion of female genital organs
+  :icdo3_code: C57.8
+  :synonym_name: tubo-ovarian
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: female genital organs, nos
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: female genitourinary tract, nos
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: urethrovaginal septum
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: vesicocervical tissue
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: vesicovaginal septum
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: female genital tract
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: female genital organs
+- :site_name: female genital tract, nos
+  :icdo3_code: C57.9
+  :synonym_name: female genitourinary tract
+- :site_name: placenta
+  :icdo3_code: C58.9
+  :synonym_name: fetal membranes
+- :site_name: prepuce
+  :icdo3_code: C60.0
+  :synonym_name: foreskin
+- :site_name: body of penis
+  :icdo3_code: C60.2
+  :synonym_name: corpus cavernosum
+- :site_name: body of penis
+  :icdo3_code: C60.2
+  :synonym_name: corpus of penis
+- :site_name: prostate gland
+  :icdo3_code: C61.9
+  :synonym_name: prostate, nos
+- :site_name: prostate gland
+  :icdo3_code: C61.9
+  :synonym_name: prostate
+- :site_name: undescended testis
+  :icdo3_code: C62.0
+  :synonym_name: retained testis (site of neoplasm)
+- :site_name: undescended testis
+  :icdo3_code: C62.0
+  :synonym_name: ectopic testis (site of neoplasm)
+- :site_name: descended testis
+  :icdo3_code: C62.1
+  :synonym_name: scrotal testis
+- :site_name: testis, nos
+  :icdo3_code: C62.9
+  :synonym_name: testicle, nos
+- :site_name: testis, nos
+  :icdo3_code: C62.9
+  :synonym_name: testicle
+- :site_name: spermatic cord
+  :icdo3_code: C63.1
+  :synonym_name: vas deferens
+- :site_name: scrotum, nos
+  :icdo3_code: C63.2
+  :synonym_name: skin of scrotum
+- :site_name: scrotum, nos
+  :icdo3_code: C63.2
+  :synonym_name: scrotum
+- :site_name: other specified parts of male genital organs
+  :icdo3_code: C63.7
+  :synonym_name: seminal vesicle
+- :site_name: other specified parts of male genital organs
+  :icdo3_code: C63.7
+  :synonym_name: tunica vaginalis
+- :site_name: male genital organs, nos
+  :icdo3_code: C63.9
+  :synonym_name: male genitourinary tract, nos
+- :site_name: male genital organs, nos
+  :icdo3_code: C63.9
+  :synonym_name: male genital tract, nos
+- :site_name: male genital organs, nos
+  :icdo3_code: C63.9
+  :synonym_name: male genital organs
+- :site_name: male genital organs, nos
+  :icdo3_code: C63.9
+  :synonym_name: male genitourinary tract
+- :site_name: male genital organs, nos
+  :icdo3_code: C63.9
+  :synonym_name: male genital tract
+- :site_name: kidney, nos
+  :icdo3_code: C64.9
+  :synonym_name: renal, nos
+- :site_name: kidney, nos
+  :icdo3_code: C64.9
+  :synonym_name: kidney parenchyma
+- :site_name: kidney, nos
+  :icdo3_code: C64.9
+  :synonym_name: renal
+- :site_name: renal pelvis
+  :icdo3_code: C65.9
+  :synonym_name: renal calyces
+- :site_name: renal pelvis
+  :icdo3_code: C65.9
+  :synonym_name: renal calyx
+- :site_name: renal pelvis
+  :icdo3_code: C65.9
+  :synonym_name: pelvis of kidney
+- :site_name: renal pelvis
+  :icdo3_code: C65.9
+  :synonym_name: pelviureteric junction
+- :site_name: bladder neck
+  :icdo3_code: C67.5
+  :synonym_name: internal urethral orifice
+- :site_name: bladder, nos
+  :icdo3_code: C67.9
+  :synonym_name: bladder wall, nos
+- :site_name: bladder, nos
+  :icdo3_code: C67.9
+  :synonym_name: urinary bladder, nos
+- :site_name: bladder, nos
+  :icdo3_code: C67.9
+  :synonym_name: bladder wall
+- :site_name: bladder, nos
+  :icdo3_code: C67.9
+  :synonym_name: urinary bladder
+- :site_name: urethra
+  :icdo3_code: C68.0
+  :synonym_name: urethral gland
+- :site_name: urethra
+  :icdo3_code: C68.0
+  :synonym_name: cowper gland
+- :site_name: urethra
+  :icdo3_code: C68.0
+  :synonym_name: prostatic utricle
+- :site_name: urinary system, nos
+  :icdo3_code: C68.9
+  :synonym_name: urinary system
+- :site_name: cornea, nos
+  :icdo3_code: C69.1
+  :synonym_name: limbus of cornea
+- :site_name: cornea, nos
+  :icdo3_code: C69.1
+  :synonym_name: cornea
+- :site_name: ciliary body
+  :icdo3_code: C69.4
+  :synonym_name: crystalline lens
+- :site_name: ciliary body
+  :icdo3_code: C69.4
+  :synonym_name: iris
+- :site_name: ciliary body
+  :icdo3_code: C69.4
+  :synonym_name: sclera
+- :site_name: ciliary body
+  :icdo3_code: C69.4
+  :synonym_name: uveal tract
+- :site_name: ciliary body
+  :icdo3_code: C69.4
+  :synonym_name: intraocular
+- :site_name: ciliary body
+  :icdo3_code: C69.4
+  :synonym_name: eyeball
+- :site_name: lacrimal gland
+  :icdo3_code: C69.5
+  :synonym_name: lacrimal duct, nos
+- :site_name: lacrimal gland
+  :icdo3_code: C69.5
+  :synonym_name: lacrimal sac
+- :site_name: lacrimal gland
+  :icdo3_code: C69.5
+  :synonym_name: nasal lacrimal duct
+- :site_name: lacrimal gland
+  :icdo3_code: C69.5
+  :synonym_name: nasolacrimal duct
+- :site_name: lacrimal gland
+  :icdo3_code: C69.5
+  :synonym_name: lacrimal duct
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: autonomic nervous system of orbit
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: connective tissue of orbit
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: extraocular muscle
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: peripheral nerves of orbit
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: retrobulbar tissue
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: soft tissue of orbit
+- :site_name: orbit, nos
+  :icdo3_code: C69.6
+  :synonym_name: orbit
+- :site_name: eye, nos
+  :icdo3_code: C69.9
+  :synonym_name: eye
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: falx, nos
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: tentorium, nos
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: tentorium cerebelli
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: intracranial arachnoid
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: falx cerebri
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: falx cerebelli
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: cranial pia mater
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: cranial meninges
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: cranial dura mater
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: intracranial meninges
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: falx
+- :site_name: cerebral meninges
+  :icdo3_code: C70.0
+  :synonym_name: tentorium
+- :site_name: spinal meninges
+  :icdo3_code: C70.1
+  :synonym_name: spinal arachnoid
+- :site_name: spinal meninges
+  :icdo3_code: C70.1
+  :synonym_name: spinal dura mater
+- :site_name: spinal meninges
+  :icdo3_code: C70.1
+  :synonym_name: spinal pia mater
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: dura mater, nos
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: pia mater, nos
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: arachnoid, nos
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: dura, nos
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: dura mater
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: pia mater
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: arachnoid
+- :site_name: meninges, nos
+  :icdo3_code: C70.9
+  :synonym_name: dura
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: corpus striatum
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: thalamus
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: supratentorial brain, nos
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: rhinencephalon
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: putamen
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: pallium
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: operculum
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: island of reil
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: internal capsule
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: insula
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: globus pallidus
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: cerebral white matter
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: cerebral hemisphere
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: cerebral cortex
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: central white matter
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: basal ganglia
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: hypothalamus
+- :site_name: cerebrum
+  :icdo3_code: C71.0
+  :synonym_name: supratentorial brain
+- :site_name: frontal lobe
+  :icdo3_code: C71.1
+  :synonym_name: frontal pole
+- :site_name: temporal lobe
+  :icdo3_code: C71.2
+  :synonym_name: hippocampus
+- :site_name: temporal lobe
+  :icdo3_code: C71.2
+  :synonym_name: uncus
+- :site_name: occipital lobe
+  :icdo3_code: C71.4
+  :synonym_name: occipital pole
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: choroid plexus of third ventricle
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: third ventricle, nos
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: ependyma
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: choroid plexus of lateral ventricle
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: choroid plexus, nos
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: cerebral ventricle
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: lateral ventricle, nos
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: ventricle
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: third ventricle
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: choroid plexus
+- :site_name: ventricle, nos
+  :icdo3_code: C71.5
+  :synonym_name: lateral ventricle
+- :site_name: cerebellum, nos
+  :icdo3_code: C71.6
+  :synonym_name: cerebellopontine angle
+- :site_name: cerebellum, nos
+  :icdo3_code: C71.6
+  :synonym_name: vermis of cerebellum
+- :site_name: cerebellum, nos
+  :icdo3_code: C71.6
+  :synonym_name: cerebellum
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: choroid plexus of fourth ventricle
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: pyramid
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: pons
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: olive
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: midbrain
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: medulla oblongata
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: basis pedunculi
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: cerebral peduncle
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: fourth ventricle, nos
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: infratentorial brain, nos
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: fourth ventricle
+- :site_name: brain stem
+  :icdo3_code: C71.7
+  :synonym_name: infratentorial brain
+- :site_name: overlapping lesion of brain
+  :icdo3_code: C71.8
+  :synonym_name: corpus callosum
+- :site_name: overlapping lesion of brain
+  :icdo3_code: C71.8
+  :synonym_name: tapetum
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: intracranial site
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: suprasellar
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: posterior cranial fossa
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: middle cranial fossa
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: cranial fossa, nos
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: anterior cranial fossa
+- :site_name: brain, nos
+  :icdo3_code: C71.9
+  :synonym_name: cranial fossa
+- :site_name: spinal cord, cranial nerves, and other parts of central nervous system
+  :icdo3_code: C72
+  :synonym_name: and other parts of central nervous system cranial nerves spinal cord
+- :site_name: spinal cord, cranial nerves, and other parts of central nervous system
+  :icdo3_code: C72
+  :synonym_name: spinal cord cranial nerves and other parts of central nervous system
+- :site_name: spinal cord
+  :icdo3_code: C72.0
+  :synonym_name: cervical cord
+- :site_name: spinal cord
+  :icdo3_code: C72.0
+  :synonym_name: sacral cord
+- :site_name: spinal cord
+  :icdo3_code: C72.0
+  :synonym_name: thoracic cord
+- :site_name: spinal cord
+  :icdo3_code: C72.0
+  :synonym_name: lumbar cord
+- :site_name: spinal cord
+  :icdo3_code: C72.0
+  :synonym_name: filum terminale
+- :site_name: spinal cord
+  :icdo3_code: C72.0
+  :synonym_name: conus medullaris
+- :site_name: optic nerve
+  :icdo3_code: C72.3
+  :synonym_name: optic chiasm
+- :site_name: optic nerve
+  :icdo3_code: C72.3
+  :synonym_name: optic tract
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: trochlear nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: trigeminal nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: oculomotor nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: hypoglossal nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: glossopharyngeal nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: facial nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: spinal accessory nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: abducens nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: vagus nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: accessory nerve, nos
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: cranial nerve
+- :site_name: cranial nerve, nos
+  :icdo3_code: C72.5
+  :synonym_name: accessory nerve
+- :site_name: nervous system, nos
+  :icdo3_code: C72.9
+  :synonym_name: central nervous system
+- :site_name: nervous system, nos
+  :icdo3_code: C72.9
+  :synonym_name: epidural
+- :site_name: nervous system, nos
+  :icdo3_code: C72.9
+  :synonym_name: extradural
+- :site_name: nervous system, nos
+  :icdo3_code: C72.9
+  :synonym_name: parasellar
+- :site_name: nervous system, nos
+  :icdo3_code: C72.9
+  :synonym_name: nervous system
+- :site_name: thyroid gland
+  :icdo3_code: C73.9
+  :synonym_name: thyroglossal duct
+- :site_name: thyroid gland
+  :icdo3_code: C73.9
+  :synonym_name: thyroid, nos
+- :site_name: thyroid gland
+  :icdo3_code: C73.9
+  :synonym_name: thyroid
+- :site_name: adrenal gland, nos
+  :icdo3_code: C74.9
+  :synonym_name: suprarenal gland
+- :site_name: adrenal gland, nos
+  :icdo3_code: C74.9
+  :synonym_name: adrenal, nos
+- :site_name: adrenal gland, nos
+  :icdo3_code: C74.9
+  :synonym_name: adrenal
+- :site_name: pituitary gland
+  :icdo3_code: C75.1
+  :synonym_name: pituitary, nos
+- :site_name: pituitary gland
+  :icdo3_code: C75.1
+  :synonym_name: sella turcica
+- :site_name: pituitary gland
+  :icdo3_code: C75.1
+  :synonym_name: pituitary fossa
+- :site_name: pituitary gland
+  :icdo3_code: C75.1
+  :synonym_name: hypophysis
+- :site_name: pituitary gland
+  :icdo3_code: C75.1
+  :synonym_name: rathke pouch
+- :site_name: pituitary gland
+  :icdo3_code: C75.1
+  :synonym_name: pituitary
+- :site_name: aortic body and other paraganglia
+  :icdo3_code: C75.5
+  :synonym_name: glomus jugulare
+- :site_name: aortic body and other paraganglia
+  :icdo3_code: C75.5
+  :synonym_name: paraganglion
+- :site_name: aortic body and other paraganglia
+  :icdo3_code: C75.5
+  :synonym_name: para-aortic body
+- :site_name: aortic body and other paraganglia
+  :icdo3_code: C75.5
+  :synonym_name: coccygeal glomus
+- :site_name: aortic body and other paraganglia
+  :icdo3_code: C75.5
+  :synonym_name: coccygeal body
+- :site_name: aortic body and other paraganglia
+  :icdo3_code: C75.5
+  :synonym_name: organ of zuckerkandl
+- :site_name: overlapping lesion of endocrine glands and related structures
+  :icdo3_code: C75.8
+  :synonym_name: multiple endocrine glands
+- :site_name: overlapping lesion of endocrine glands and related structures
+  :icdo3_code: C75.8
+  :synonym_name: pluriglandular
+- :site_name: endocrine gland, nos
+  :icdo3_code: C75.9
+  :synonym_name: endocrine gland
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: cheek, nos
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: cervical region, nos
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: supraclavicular region, nos
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: jaw, nos
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: nose, nos
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: face or neck head
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: head face or neck
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: cheek
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: cervical region
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: supraclavicular region
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: jaw
+- :site_name: head, face or neck, nos
+  :icdo3_code: C76.0
+  :synonym_name: nose
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: infraclavicular region, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: scapular region, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: thoracic wall, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: intrathoracic site, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: chest wall, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: chest, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: axilla, nos
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: thorax
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: infraclavicular region
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: scapular region
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: thoracic wall
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: intrathoracic site
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: chest wall
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: chest
+- :site_name: thorax, nos
+  :icdo3_code: C76.1
+  :synonym_name: axilla
+- :site_name: abdomen, nos
+  :icdo3_code: C76.2
+  :synonym_name: abdominal wall, nos
+- :site_name: abdomen, nos
+  :icdo3_code: C76.2
+  :synonym_name: intra-abdominal site, nos
+- :site_name: abdomen, nos
+  :icdo3_code: C76.2
+  :synonym_name: abdomen
+- :site_name: abdomen, nos
+  :icdo3_code: C76.2
+  :synonym_name: abdominal wall
+- :site_name: abdomen, nos
+  :icdo3_code: C76.2
+  :synonym_name: intra-abdominal site
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: rectovesical septum
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: sacrococcygeal region, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: presacral region, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: perirectal region, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: inguinal region, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: rectovaginal septum
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: perineum, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: pelvic wall, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: ischiorectal fossa
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: groin, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: buttock, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: gluteal region, nos
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: pelvis
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: sacrococcygeal region
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: presacral region
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: perirectal region
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: inguinal region
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: perineum
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: pelvic wall
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: groin
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: buttock
+- :site_name: pelvis, nos
+  :icdo3_code: C76.3
+  :synonym_name: gluteal region
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: elbow, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: wrist, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: thumb, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: shoulder, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: hand, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: finger, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: arm, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: antecubital space, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: forearm, nos
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: upper limb
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: elbow
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: wrist
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: thumb
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: shoulder
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: hand
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: finger
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: arm
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: antecubital space
+- :site_name: upper limb, nos
+  :icdo3_code: C76.4
+  :synonym_name: forearm
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: foot, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: toe, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: thigh, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: popliteal space, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: leg, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: knee, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: hip, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: calf, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: ankle, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: heel, nos
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: lower limb
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: foot
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: toe
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: thigh
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: popliteal space
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: leg
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: knee
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: hip
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: calf
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: ankle
+- :site_name: lower limb, nos
+  :icdo3_code: C76.5
+  :synonym_name: heel
+- :site_name: other ill-defined sites
+  :icdo3_code: C76.7
+  :synonym_name: back, nos
+- :site_name: other ill-defined sites
+  :icdo3_code: C76.7
+  :synonym_name: flank, nos
+- :site_name: other ill-defined sites
+  :icdo3_code: C76.7
+  :synonym_name: trunk, nos
+- :site_name: other ill-defined sites
+  :icdo3_code: C76.7
+  :synonym_name: back
+- :site_name: other ill-defined sites
+  :icdo3_code: C76.7
+  :synonym_name: flank
+- :site_name: other ill-defined sites
+  :icdo3_code: C76.7
+  :synonym_name: trunk
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: parotid lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: submaxillary lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: submandibular lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: sublingual lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: scalene lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: retropharyngeal lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: pretracheal lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: supraclavicular lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: submental lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: preauricular lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: auricular lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: cervical lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: facial lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: jugular lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: mandibular lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: occipital lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: prelaryngeal lymph node
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: face and neck lymph nodes of head
+- :site_name: lymph nodes of head, face and neck
+  :icdo3_code: C77.0
+  :synonym_name: lymph nodes of head face and neck
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: mediastinal lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: intercostal lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: tracheobronchial lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: tracheal lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: thoracic lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: pulmonary lymph node, nos
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: parasternal lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: hilar lymph node, nos
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: esophageal lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: diaphragmatic lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: bronchopulmonary lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: bronchial lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: innominate lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: pulmonary hilar lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: pulmonary lymph node
+- :site_name: intrathoracic lymph nodes
+  :icdo3_code: C77.1
+  :synonym_name: hilar lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: splenic lymph node, nos
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: midcolic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: pancreatic lymph node, nos
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: para-aortic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: superior mesenteric lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: peripancreatic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: portal lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: retroperitoneal lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: splenic hilar lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: mesenteric lymph node, nos
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: periaortic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: pyloric lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: celiac lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: lumbar lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: porta hepatis lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: aortic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: colic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: common duct lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: gastric lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: hepatic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: ileocolic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: inferior mesenteric lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: intestinal lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: abdominal lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: splenic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: pancreatic lymph node
+- :site_name: intra-abdominal lymph nodes
+  :icdo3_code: C77.2
+  :synonym_name: mesenteric lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: infraclavicular lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: subclavicular lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: pectoral lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: lymph node of upper limb
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: epitrochlear lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: cubital lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: axillary lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: subscapular lymph node
+- :site_name: lymph nodes of axilla or arm
+  :icdo3_code: C77.3
+  :synonym_name: brachial lymph node
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: lymph node of lower limb
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: subinguinal lymph node
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: tibial lymph node
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: popliteal lymph node
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: lymph node of rosenmuller
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: lymph node of cloquet
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: inguinal lymph node
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: lymph node of groin
+- :site_name: lymph nodes of inguinal region or leg
+  :icdo3_code: C77.4
+  :synonym_name: femoral lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: inferior epigastric lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: sacral lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: presymphysial lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: parametrial lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: paracervical lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: intrapelvic lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: iliac lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: hypogastric lymph node
+- :site_name: pelvic lymph nodes
+  :icdo3_code: C77.5
+  :synonym_name: obturator lymph node
+- :site_name: lymph node, nos
+  :icdo3_code: C77.9
+  :synonym_name: lymph node

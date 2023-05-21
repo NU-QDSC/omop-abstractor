@@ -1,0 +1,5 @@
+class LoginAudit < ActiveRecord::Base
+  LOGIN_TYPE_INTERACTIVE = 'Interactive'
+  LOGIN_TYPE_API = 'API'
+  LOGIN_TYPES =[LOGIN_TYPE_INTERACTIVE, LOGIN_TYPE_API]
+end

@@ -1,0 +1,2 @@
+class BatchPathologyCaseSurgery < ApplicationRecord
+end

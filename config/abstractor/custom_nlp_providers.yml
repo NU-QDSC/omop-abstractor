@@ -1,0 +1,58 @@
+# Add the actual name of your custom nlp provider.
+# Specify the sugestion endpoint per environemnt.
+custom_nlp_provider_clamp:
+  multiple_suggestion_file_location:
+      development: /Users/mjg994/Documents/source/omop-abstractor/lib/setup/data_out/custom_nlp_provider_clamp
+      test: /Users/mjg994/Documents/source/omop-abstractor/lib/setup/data_out/custom_nlp_provider_clamp_test
+      staging: /var/www/apps/omop-abstractor/current/lib/setup/data_out/custom_nlp_provider_clamp
+      production: /var/www/apps/omop-abstractor/current/lib/setup/data_out/custom_nlp_provider_clamp
+custom_nlp_provider_spacy:
+  multiple_suggestion_endpoint:
+      development: http://custom-nlp-provider.dev/multiple_suggest
+      test: http://custom-nlp-provider.test/multiple_suggest
+      staging: http://custom-nlp-provider-staging.org/multiple_suggest
+      production: http://custom-nlp-provider.org/multiple_suggest
+  suggestion_endpoint_credentials:
+      development:
+          "username": testuser
+          "password": password
+      test:
+          "username": testuser
+          "password": password
+custom_nlp_provider_name:
+  suggestion_endpoint:
+      development: http://custom-nlp-provider.dev/suggest
+      test: http://custom-nlp-provider.test/suggest
+      staging: http://custom-nlp-provider-staging.org/suggest
+      production: http://custom-nlp-provider.org/suggest
+  multiple_suggestion_endpoint:
+      development: http://custom-nlp-provider.dev/multiple_suggest
+      test: http://custom-nlp-provider.test/multiple_suggest
+      staging: http://custom-nlp-provider-staging.org/multiple_suggest
+      production: http://custom-nlp-provider.org/multiple_suggest
+  suggestion_endpoint_credentials:
+      development:
+          "username": testuser
+          "password": password
+      test:
+          "username": testuser
+          "password": password
+custom_nlp_provider_will:
+  multiple_suggestion_endpoint:
+      development: http://127.0.0.1:8000/multiple_suggest
+      test: http://127.0.0.1:8000/multiple_suggest
+      staging: http://127.0.0.1:8000/multiple_suggest
+      production: http://127.0.0.1:8000/multiple_suggest
+  suggestion_endpoint_credentials:
+      development:
+          "username": testuser
+          "password": password
+      staging:
+          "username": testuser
+          "password": password
+      production:
+          "username": testuser
+          "password": password
+      test:
+          "username": testuser
+          "password": password

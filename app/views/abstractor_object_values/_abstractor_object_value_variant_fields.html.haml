@@ -1,0 +1,15 @@
+%tr{ class: 'abstractor-object-value-variant', data: { new_record: "#{form.object.new_record?}" } }
+  %td.value
+    = form.hidden_field :id
+    = form.hidden_field :_destroy
+    .input-field
+      = form.text_field :value, class: 'autocomplete', autocomplete: 'off', disabled: form.object.used?
+    - if validation_errors?(form.object, :value)
+      %p.error= format_validation_errors(form.object, :value)
+  %td.case_sensitive
+    %label
+      = form.check_box :case_sensitive, disabled: form.object.used?
+      %span
+        Case Sensitive?
+  %td.remove.right-align
+    = link_to 'Remove', '#', class: 'btn wave-effect waves-light red', data: { action: 'click->abstractor-object-value-variants#remove_association' }

@@ -1,0 +1,24 @@
+- content_for(:title) do
+  Notes
+.row
+  .devise.col.s12
+    .session
+      %h4 Login with your username
+      .help-text
+        Use your username and password to login.
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field.input-field.col.s12
+          = f.text_field :username, autofocus: true
+          = label_tag :username, 'Username', for: 'user_username'
+        .field.input-field.col.s12
+          = f.password_field :password, autocomplete: "off"
+          = f.label :password
+        - if devise_mapping.rememberable?
+          .field.input-field.col.s12
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .actions
+          .row
+            = f.submit "Submit", class: 'waves-effect waves-light btn'
+            = link_to 'Cancel', new_user_session_url, class: 'cancel-link button warning'
+            = render "devise/shared/links"
