@@ -101,22 +101,14 @@ namespace :biorepository_prostate do
       end
     end
 
-    # abstractor_object_value = abstractor_abstraction_schema.abstractor_object_values.where(vocabulary_code: '8000/0').first
-    # abstractor_object_value.favor_more_specific = true
-    # abstractor_object_value.save!
-    #
-    # abstractor_object_value = abstractor_abstraction_schema.abstractor_object_values.where(vocabulary_code: '8000/3').first
-    # abstractor_object_value.favor_more_specific = true
-    # abstractor_object_value.save!
-    #
-    # abstractor_object_value = abstractor_abstraction_schema.abstractor_object_values.where(vocabulary_code: '9380/3').first
-    # abstractor_object_value.favor_more_specific = true
-    # abstractor_object_value.save!
-
     abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_surgical_pathology.id, anchor: true).first_or_create
     abstractor_abstraction_source = Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will', section_required: true).first_or_create
     Abstractor::AbstractorAbstractionSourceSection.where( abstractor_abstraction_source: abstractor_abstraction_source, abstractor_section: abstractor_section_specimen).first_or_create
     Abstractor::AbstractorSubjectGroupMember.where(:abstractor_subject => abstractor_subject, :abstractor_subject_group => primary_cancer_group, :display_order => 1).first_or_create
+
+    abstractor_object_value = abstractor_abstraction_schema.abstractor_object_values.where(vocabulary_code: '8010/3').first
+    abstractor_object_value.favor_more_specific = true
+    abstractor_object_value.save!
 
     abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
       predicate: 'has_cancer_site',
@@ -412,6 +404,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+3=6').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 3 = 6').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 3=6').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+3= 6').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '3+4', vocabulary_code: '3+4').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -419,6 +412,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+4=7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 4 = 7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 4=7').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+4= 7').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '4+3', vocabulary_code: '4+3').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -426,6 +420,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+3=7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 3 = 7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 3=7').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+3= 7').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '4+4', vocabulary_code: '4+4').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -433,6 +428,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+4=8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 4 = 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 4=8').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+4= 8').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '3+5', vocabulary_code: '3+5').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -440,6 +436,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+5=8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 5 = 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 5=8').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+5= 8').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '5+3', vocabulary_code: '5+3').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -447,6 +444,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+3=8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 3 = 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 3=8').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+3= 8').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '4+5', vocabulary_code: '4+5').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -454,6 +452,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+5=9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 5 = 9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 5=9').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+5= 9').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '5+4', vocabulary_code: '5+4').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -461,6 +460,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+4=9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 4 = 9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 4=9').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+4= 9').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '5+5', vocabulary_code: '5+5').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -468,6 +468,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+5=10').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 5 = 10').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 5=10').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+5= 10').first_or_create
 
     abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_surgical_pathology.id, anchor: false).first_or_create
     abstractor_abstraction_source = Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => name_value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will', section_required: true).first_or_create
@@ -1337,6 +1338,11 @@ namespace :biorepository_prostate do
     abstractor_abstraction_source = Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will', section_required: true).first_or_create
     Abstractor::AbstractorAbstractionSourceSection.where( abstractor_abstraction_source: abstractor_abstraction_source, abstractor_section: abstractor_section_specimen).first_or_create
     Abstractor::AbstractorSubjectGroupMember.where(:abstractor_subject => abstractor_subject, :abstractor_subject_group => primary_cancer_group, :display_order => 1).first_or_create
+
+    abstractor_object_value = abstractor_abstraction_schema.abstractor_object_values.where(vocabulary_code: '8010/3').first
+    abstractor_object_value.favor_more_specific = true
+    abstractor_object_value.save!
+
     #End Histology
 
     #Begin Prostate Biopsy
@@ -1400,6 +1406,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+3= 6').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 3 = 6').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 3=6').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+3= 6').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '3+4', vocabulary_code: '3+4').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1408,6 +1415,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+4= 7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 4 = 7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 4=7').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+4= 7').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '4+3', vocabulary_code: '4+3').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1415,6 +1423,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+3=7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 3 = 7').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 3=7').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+3= 7').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '4+4', vocabulary_code: '4+4').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1423,6 +1432,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+4= 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 4 = 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 4=8').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+4= 8').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '3+5', vocabulary_code: '3+5').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1431,6 +1441,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+5= 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 5 = 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3 + 5=8').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '3+5= 8').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '5+3', vocabulary_code: '5+3').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1439,6 +1450,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+3= 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 3 = 8').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 3=8').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+3= 8').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '4+5', vocabulary_code: '4+5').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1447,6 +1459,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+5= 9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 5 = 9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4 + 5=9').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '4+5= 9').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '5+4', vocabulary_code: '5+4').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1455,6 +1468,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+4= 9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 4 = 9').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 4=9').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+4= 9').first_or_create
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: '5+5', vocabulary_code: '5+5').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
@@ -1463,6 +1477,7 @@ namespace :biorepository_prostate do
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+5= 10').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 5 = 10').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5 + 5=10').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: '5+5= 10').first_or_create
 
     abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_surgical_pathology_biopsy.id, anchor: false).first_or_create
     abstractor_abstraction_source = Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => name_value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will', section_required: true).first_or_create

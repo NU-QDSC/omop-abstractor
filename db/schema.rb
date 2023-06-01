@@ -354,7 +354,6 @@ ActiveRecord::Schema.define(version: 2023_04_04_180356) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["abstractor_object_value_id"], name: "test"
   end
 
   create_table "abstractor_suggestion_sources", force: :cascade do |t|
@@ -652,6 +651,21 @@ ActiveRecord::Schema.define(version: 2023_04_04_180356) do
     t.string "abstractor_subject_group_name"
     t.string "system_type"
     t.string "status"
+  end
+
+  create_table "compare_cancer_diagnosis_abstractions_old", id: :bigint, default: -> { "nextval('compare_cancer_diagnosis_abstractions_id_seq'::regclass)" }, force: :cascade do |t|
+    t.string "nlp_system"
+    t.string "note_id"
+    t.string "stable_identifier_path"
+    t.string "stable_identifier_value"
+    t.string "has_cancer_histology"
+    t.string "has_cancer_site"
+    t.string "has_cancer_site_laterality"
+    t.string "has_cancer_who_grade"
+    t.string "has_cancer_recurrence_status"
+    t.string "abstractor_namespace_name"
+    t.string "status"
+    t.integer "other_compare_cancer_diagnosis_abstraction_id"
   end
 
   create_table "compare_pspore_surgeries", force: :cascade do |t|

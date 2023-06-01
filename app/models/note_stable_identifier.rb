@@ -552,14 +552,17 @@ class NoteStableIdentifier < ApplicationRecord
 
            anchor_named_entities = omop_abstractor_nlp_document.named_entities.select { |named_entity|  named_entity.semantic_tag_attribute == anchor_predicate && named_entity.sentence.section && named_entity.sentence.section.section_range == first_anchor_named_entity_section }
 
+           abstractor_namespace = Abstractor::AbstractorNamespace.find(omop_abstractor_nlp_document.namespace_id)
+           biopsy = false
+           if ['Surgical Pathology Biopsy', 'Outside Surgical Pathology Biopsy'].include?(abstractor_namespace.name)
+             biopsy = true
+           end
+
            prior_anchor_named_entities = []
            prior_anchor_named_entities << anchor_named_entities.map(&:semantic_tag_value).sort
            for anchor_named_entity_section in anchor_named_entity_sections
              anchor_named_entities = omop_abstractor_nlp_document.named_entities.select { |named_entity|  named_entity.semantic_tag_attribute == anchor_predicate && named_entity.sentence.section && named_entity.sentence.section.section_range == anchor_named_entity_section }
-
-             #Does not work for 'Prostate Biopsy' namespaces
-             #Come Back
-             if prior_anchor_named_entities.none?(anchor_named_entities.map(&:semantic_tag_value).sort)
+             if prior_anchor_named_entities.none?(anchor_named_entities.map(&:semantic_tag_value).sort) || biopsy
                abstractor_abstraction_group = Abstractor::AbstractorAbstractionGroup.create_abstractor_abstraction_group(abstractor_abstraction_group.abstractor_subject_group_id, self.class.to_s, self.id, omop_abstractor_nlp_document.namespace_type, omop_abstractor_nlp_document.namespace_id)
 
                if section_abstractor_abstraction_group_map[anchor_named_entity_section]
@@ -1465,7 +1468,7 @@ class NoteStableIdentifier < ApplicationRecord
        end
       end
 
-      primary_cns = true
+      primary_cns = false
       if primary_cns
         # Post-processing across all schemas within an abstraction group.
         # Create a non-generic post processing step unique to cancer groups to set laterallity based on site.

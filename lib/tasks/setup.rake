@@ -1,3 +1,37 @@
+# biorepository prostate
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:prostate_spore_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+#biorepository_prostate_development_biopsy_one
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:dummy_data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction
+  # br
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
 # export RAILS_ENV=staging
 
 # bundle exec rake mbti:mbti_data
@@ -1708,7 +1742,7 @@ namespace :setup do
 
   desc "Prostate SPORE data"
   task(prostate_spore_data: :environment) do |t, args|
-    files = ['lib/setup/data/mbti/Pathology Cases with Surgeries.xlsx']
+    files = ['lib/setup/data/prostate_spore/Pathology Cases with Surgeries 1.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 2.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 3.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 4.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 5.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 6.xlsx']
     load_data(files)
   end
 
