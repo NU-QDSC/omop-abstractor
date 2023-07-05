@@ -600,6 +600,34 @@ def abstractor_suggestor_will(options = {})
       # Process.wait(child_pid)
     end
   end
+
+  Abstractor::AbstractorNamespace.where(name: 'Clinic Visits').all.each do |abstractor_namespace|
+    puts 'here is the namespace'
+    puts abstractor_namespace.name
+    #All
+    abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
+
+    puts 'Begin backlog count'
+    puts abstractable_events.size
+    puts 'End backlog count'
+    abstractable_events.each_with_index do |abstractable_event, i|
+      puts 'what we got?'
+      puts abstractable_event.id
+      # child_pid = fork do
+        if options[:multiple]
+          abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+          if i == 1
+            sleep(60)
+          end
+        else
+          abstractable_event.abstract(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+        end
+        abstractor_namespace.abstractor_namespace_events.build(eventable: abstractable_event)
+        abstractor_namespace.save!
+      # end
+      # Process.wait(child_pid)
+    end
+  end
 end
 
 def abstractor_suggestor_will_one(options = {})
@@ -914,7 +942,7 @@ def abstractor_suggestor_will_one(options = {})
   end
 end
 
-# abstractor_namespace = Abstractor::AbstractorNamespace.where(name: 'Surgical Pathology').first
+# abstractor_namespace = Abstractor::AbstractorNamespace.where(name: 'Clinic Visits').first
 # # abstractor_namespace = Abstractor::AbstractorNamespace.where(name: 'Outside Surgical Pathology').first
 # abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).count
 # abstractor_namespace.subject_type.constantize.joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).count

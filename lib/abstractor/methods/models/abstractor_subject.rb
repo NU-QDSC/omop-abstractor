@@ -376,49 +376,52 @@ module Abstractor
               end
             end
             abstractor_suggestion = abstractor_abstraction.detect_abstractor_suggestion(suggested_value, unknown, not_applicable)
-            if !abstractor_suggestion
-              accepted = nil
-              system_accepted = false
-              system_accepted_reason = nil
-              system_rejected = false
-              system_rejected_reason = nil
 
-              if section_name
-                if abstractor_abstraction_source
-                  if abstractor_abstraction_source.detect_abstractor_abstraction_source_section(section_name)
-                    if !abstractor_abstraction.suggested?
-                      if abstractor_object_value && !abstractor_object_value.favor_more_specific
-                        accepted = true
-                        system_accepted = true
-                        system_accepted_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_ACCEPTED_REASON_SECTION_MATCH
-                      end
-                    end
-                  else
-                    if abstractor_abstraction_source.section_required
-                      accepted = false
-                      system_accepted = false
-                      system_rejected = true
-                      system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NO_SECTION_MATCH
+            accepted = nil
+            system_accepted = false
+            system_accepted_reason = nil
+            system_rejected = false
+            system_rejected_reason = nil
+
+            if section_name
+              if abstractor_abstraction_source
+                if abstractor_abstraction_source.detect_abstractor_abstraction_source_section(section_name)
+                  if !abstractor_abstraction.suggested?
+                    if abstractor_object_value && !abstractor_object_value.favor_more_specific
+                      puts 'tove jannson'
+                      accepted = true
+                      system_accepted = true
+                      system_accepted_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_ACCEPTED_REASON_SECTION_MATCH
                     end
                   end
-                end
-              else
-                if abstractor_abstraction_source && abstractor_abstraction_source.section_required
-                  accepted = false
-                  system_accepted = false
-                  system_rejected = true
-                  system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NO_SECTION_MATCH
+                else
+                  if abstractor_abstraction_source.section_required
+                    puts 'ricahrd rorty'
+                    accepted = false
+                    system_accepted = false
+                    system_rejected = true
+                    system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NO_SECTION_MATCH
+                  end
                 end
               end
-
-              if negated
+            else
+              if abstractor_abstraction_source && abstractor_abstraction_source.section_required
+                puts 'daniel dennet'
                 accepted = false
                 system_accepted = false
-                system_accepted_reason = nil
                 system_rejected = true
-                system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NEGATED
+                system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NO_SECTION_MATCH
               end
+            end
 
+            if negated
+              accepted = false
+              system_accepted = false
+              system_accepted_reason = nil
+              system_rejected = true
+              system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NEGATED
+            end
+            if !abstractor_suggestion
               abstractor_suggestion = Abstractor::AbstractorSuggestion.create!(
                                                                   abstractor_abstraction: abstractor_abstraction,
                                                                   accepted: accepted,
@@ -432,15 +435,14 @@ module Abstractor
                                                                   abstractor_object_value: abstractor_object_value
                                                                   )
             else
-              # come back
-              # if negated
-              #   abstractor_suggestion.accepted = false
-              #   abstractor_suggestion.system_accepted = false
-              #   abstractor_suggestion.system_accepted_reason = nil
-              #   abstractor_suggestion.system_rejected = true
-              #   abstractor_suggestion.system_rejected_reason = Abstractor::Enum::ABSTRACTOR_SUGGESTION_SYSTEM_REJECTED_REASON_NEGATED
-              #   abstractor_suggestion.save!
-              # end
+              if !abstractor_suggestion.accepted && accepted
+                abstractor_suggestion.accepted = accepted
+                abstractor_suggestion.system_accepted = system_accepted
+                abstractor_suggestion.system_accepted_reason = system_accepted_reason
+                abstractor_suggestion.system_rejected = system_rejected
+                abstractor_suggestion.system_rejected_reason = system_rejected_reason
+                abstractor_suggestion.save!
+              end
             end
 
             if abstractor_abstraction_source

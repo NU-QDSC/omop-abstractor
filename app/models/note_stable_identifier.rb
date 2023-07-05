@@ -605,7 +605,8 @@ class NoteStableIdentifier < ApplicationRecord
       # puts 'Need to be better'
       puts section_abstractor_abstraction_group_map
       # puts 'Going to be better'
-      self.abstractor_abstractions.order('created_at ASC').each do |abstractor_abstraction|
+
+      self.abstractor_abstractions_by_namespace(namespace_type: omop_abstractor_nlp_document.namespace_type, namespace_id: omop_abstractor_nlp_document.namespace_id).order('created_at ASC').each do |abstractor_abstraction|
        # puts abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate
        abstractor_abstraction_source = abstractor_abstraction.abstractor_subject.abstractor_abstraction_sources.first
        abstractor_abstraction_schema = abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema

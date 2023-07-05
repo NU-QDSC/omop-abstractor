@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_04_180356) do
+ActiveRecord::Schema.define(version: 2023_06_09_151518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -651,21 +651,6 @@ ActiveRecord::Schema.define(version: 2023_04_04_180356) do
     t.string "abstractor_subject_group_name"
     t.string "system_type"
     t.string "status"
-  end
-
-  create_table "compare_cancer_diagnosis_abstractions_old", id: :bigint, default: -> { "nextval('compare_cancer_diagnosis_abstractions_id_seq'::regclass)" }, force: :cascade do |t|
-    t.string "nlp_system"
-    t.string "note_id"
-    t.string "stable_identifier_path"
-    t.string "stable_identifier_value"
-    t.string "has_cancer_histology"
-    t.string "has_cancer_site"
-    t.string "has_cancer_site_laterality"
-    t.string "has_cancer_who_grade"
-    t.string "has_cancer_recurrence_status"
-    t.string "abstractor_namespace_name"
-    t.string "status"
-    t.integer "other_compare_cancer_diagnosis_abstraction_id"
   end
 
   create_table "compare_pspore_surgeries", force: :cascade do |t|
@@ -1322,10 +1307,6 @@ ActiveRecord::Schema.define(version: 2023_04_04_180356) do
     t.text "has_cancer_integrated_histology_suggestions"
     t.string "has_cancer_site"
     t.text "has_cancer_site_suggestions"
-    t.string "has_cancer_site_laterality"
-    t.string "has_cancer_who_grade"
-    t.string "has_metastatic_cancer_primary_site"
-    t.string "has_cancer_recurrence_status"
     t.string "has_idh1_status"
     t.string "has_idh2_status"
     t.string "has_1p_status"
@@ -1368,6 +1349,44 @@ ActiveRecord::Schema.define(version: 2023_04_04_180356) do
     t.string "stable_identifier_value_6"
     t.index ["procedure_occurrence_id"], name: "idx_procedure_occurrence_stable_identifier_1"
     t.index ["stable_identifier_path", "stable_identifier_value_1"], name: "idx_procedure_occurrence_stable_identifier_2"
+  end
+
+  create_table "prostate_surgery_pathology_cases", force: :cascade do |t|
+    t.string "abstractor_namespace_name"
+    t.string "west_mrn"
+    t.string "note_stable_identifier_path"
+    t.string "note_stable_identifier_value_1"
+    t.string "note_stable_identifier_value_2"
+    t.bigint "note_id"
+    t.string "pathology_stable_identifier_path"
+    t.string "pathology_stable_identifier_value_1"
+    t.date "pathology_procedure_date"
+    t.string "pathology_provider_name"
+    t.string "pathology_procedure_source_value"
+    t.string "pathology_concept_name"
+    t.string "surgery_stable_identifier_path"
+    t.string "surgery_stable_identifier_value_1"
+    t.date "surgery_procedure_date"
+    t.string "surgery_provider_name"
+    t.string "surgery_procedure_source_value"
+    t.string "surgery_concept_name"
+    t.string "diagnosis_type"
+    t.string "has_cancer_histology"
+    t.text "has_cancer_histology_suggestions"
+    t.string "has_cancer_site"
+    t.text "has_cancer_site_suggestions"
+    t.string "has_gleason_score_grade"
+    t.string "has_perineural_invasion"
+    t.string "has_prostate_weight"
+    t.string "pathological_tumor_staging_category"
+    t.string "pathological_nodes_staging_category"
+    t.string "pathological_metastasis_staging_category"
+    t.string "has_extraprostatic_extension"
+    t.string "has_seminal_vesicle_invasion"
+    t.string "has_margin_status"
+    t.string "has_number_lymph_nodes_examined"
+    t.string "has_number_lymph_nodes_positive_tumor"
+    t.string "has_surgery_date"
   end
 
   create_table "provider", primary_key: "provider_id", id: :bigint, default: nil, force: :cascade do |t|

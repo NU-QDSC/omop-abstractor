@@ -1,3 +1,18 @@
+# biorepository prostate ps
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:prostate_spore_clinic_visit_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_clinic_vists
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
 # biorepository prostate
   # data
   # bundle exec rake biorepository_prostate:truncate_stable_identifiers
@@ -1746,6 +1761,11 @@ namespace :setup do
     load_data(files)
   end
 
+  desc "Prostate SPORE clinic vist data"
+  task(prostate_spore_clinic_visit_data: :environment) do |t, args|
+    files = ['lib/setup/data/prostate_spore/Northwestern Prostate SPORE ECOG Performance Status Notes.xlsx']
+    load_clinic_vist_data(files)
+  end
 end
 
 def load_data(files)
@@ -1981,6 +2001,78 @@ def load_data(files)
         relationship_has_proc_context = Relationship.where(relationship_id: 'Has proc context').first
         FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: surgery_procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_has_proc_context.relationship_concept_id).first_or_create
         FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: surgery_procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_proc_context_of.relationship_concept_id).first_or_create
+      end
+    end
+  end
+end
+
+def load_clinic_vist_data(files)
+  files.each do |file|
+    clinic_visit_notes = Roo::Spreadsheet.open(file)
+    clinic_visit_note_map = {
+       'west mrn' => 0,
+       'encounter type' => 1,
+       'contact date' => 2,
+       'department name' => 3,
+       'speciality' => 4,
+       'provider full name' => 5,
+       'provider npi' => 6,
+       'note text'  => 7
+    }
+
+    location = Location.where(location_id: 1, address_1: '123 Main Street', address_2: 'Apt, 3F', city: 'New York', state: 'NY' , zip: '10001', county: 'Manhattan').first_or_create
+    gender_concept_id = Concept.genders.first.concept_id
+    race_concept_id = Concept.races.first.concept_id
+    ethnicity_concept_id =   Concept.ethnicities.first.concept_id
+
+    for i in 2..clinic_visit_notes.sheet(0).last_row do
+      puts 'row'
+      puts i
+      puts 'west mrn'
+      west_mrn = clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['west mrn']]
+      puts west_mrn
+
+      #Person 1
+      person = Person.where(gender_concept_id: gender_concept_id, year_of_birth: 1971, month_of_birth: 12, day_of_birth: 10, birth_datetime: DateTime.parse('12/10/1971'), race_concept_id: race_concept_id, ethnicity_concept_id: ethnicity_concept_id, person_source_value: west_mrn, location: location).first
+      if person.blank?
+        person_id = Person.maximum(:person_id)
+        if person_id.nil?
+          person_id = 1
+        else
+          person_id+=1
+        end
+        person = Person.new(person_id: person_id, gender_concept_id: gender_concept_id, year_of_birth: 1971, month_of_birth: 12, day_of_birth: 10, birth_datetime: DateTime.parse('12/10/1971'), race_concept_id: race_concept_id, ethnicity_concept_id: ethnicity_concept_id, person_source_value: west_mrn, location: location)
+        person.save!
+        person.mrns.where(health_system: 'NMHC',  mrn: west_mrn).first_or_create
+      end
+
+      provider = Provider.where(provider_source_value: clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['provider full name']]).first
+      if provider.blank?
+        provider_id = Provider.maximum(:provider_id)
+        if provider_id.nil?
+          provider_id = 1
+        else
+          provider_id+=1
+        end
+        provider = Provider.new(provider_id: provider_id, provider_name: clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['provider full name']], npi: clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['provider npi']], dea: nil, specialty_concept_id: nil, care_site_id: nil, year_of_birth: Date.parse('1/1/1968').year, gender_concept_id: gender_concept_id, provider_source_value: clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['provider full name']], specialty_source_value: nil, specialty_source_concept_id: nil, gender_source_value: nil, gender_source_concept_id: nil)
+        provider.save!
+      end
+
+      #progress report begin
+      visit_concept = Concept.visit_concepts.where(concept_id: 581477).first        #Office Visit
+      visit_type_concept = Concept.visit_types.where(concept_id: 44818518).first    #Visit derived from EHR record
+      visit_source_value = "#{clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['speciality']]}:#{clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['department name']]}".truncate(50)
+      visit_occurrence = VisitOccurrence.where(visit_occurrence_id: i, person_id: person.person_id, visit_concept_id: visit_concept.concept_id, visit_start_date: Date.parse(clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['contact date']].to_s), visit_end_date: Date.parse(clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['contact date']].to_s), visit_type_concept_id: visit_type_concept.concept_id, visit_source_value: visit_source_value).first_or_create
+
+      note_type_concept = Concept.note_types.where(concept_id: 44814640).first #Outpatient note
+      note_class_concept = Concept.valid.where(concept_id: 36205960).first #Progress note | Outpatient
+
+      note_text = clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['note text']]
+      note_date = clinic_visit_notes.sheet(0).row(i)[clinic_visit_note_map['contact date']]
+      note = Note.where(note_id: i, person_id: person.person_id, note_date: note_date, note_type_concept_id: note_type_concept.concept_id, note_class_concept_id: note_class_concept.concept_id, note_title: 'Progress Report', note_text: note_text, encoding_concept_id: 0, language_concept_id: 0, provider_id: provider.provider_id, visit_occurrence_id: visit_occurrence.visit_occurrence_id, note_source_value: nil).first_or_create
+      if note.note_stable_identifier.blank?
+        NoteStableIdentifierFull.where(note_id: note.note_id, stable_identifier_path: 'stable_identifier_path', stable_identifier_value: "#{note.note_id}").first_or_create
+        NoteStableIdentifier.where(note_id: note.note_id, stable_identifier_path: 'stable_identifier_path', stable_identifier_value: "#{note.note_id}").first_or_create
       end
     end
   end
