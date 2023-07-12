@@ -277,6 +277,12 @@
 require './lib/omop_abstractor/setup/setup'
 require './lib/clamp_mapper/parser'
 namespace :setup do
+  desc "Truncate stable identifiers"
+  task(truncate_stable_identifiers: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE note_stable_identifier CASCADE;')
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE note_stable_identifier_full CASCADE;')
+  end
+
   desc "Compare ICDO3"
   task(compare_icdo3: :environment) do |t, args|
     Icdo3Histology.delete_all
@@ -1699,6 +1705,12 @@ namespace :setup do
     end
   end
 
+  desc "Truncate stable identifiers"
+  task(truncate_stable_identifiers: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE note_stable_identifier CASCADE;')
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE note_stable_identifier_full CASCADE;')
+  end
+
   desc 'Truncate schemas'
   task(truncate_schemas: :environment) do  |t, args|
     Abstractor::AbstractorAbstraction.delete_all
@@ -1761,10 +1773,206 @@ namespace :setup do
     load_data(files)
   end
 
+  # desc "OHDSI NLP Proposal data"
+  # task(ohdsi_nlp_proposal_data: :environment) do |t, args|
+  #   files = ['lib/setup/data/ohdsi_nlp_proposal/Pathology Cases with Surgeries V2 All 1.xlsx', 'lib/setup/data/ohdsi_nlp_proposal/Pathology Cases with Surgeries V2 All 2.xlsx', 'lib/setup/data/ohdsi_nlp_proposal/Pathology Cases with Surgeries V2 All 3.xlsx']
+  #   load_data(files)
+  # end
+
+  desc "OHDSI NLP Proposal data"
+  task(ohdsi_nlp_proposal_data: :environment) do |t, args|
+    files = ['lib/setup/data/ohdsi_nlp_proposal/Pathology Cases with Surgeries V2 All 2017.xml']
+    load_data_new(files)
+  end
+
   desc "Prostate SPORE clinic vist data"
   task(prostate_spore_clinic_visit_data: :environment) do |t, args|
     files = ['lib/setup/data/prostate_spore/Northwestern Prostate SPORE ECOG Performance Status Notes.xlsx']
     load_clinic_vist_data(files)
+  end
+end
+
+def load_data_new(files)
+  @note_type_concept = Concept.note_types.where(concept_name: 'Pathology report').first
+  @note_class_concept = Concept.standard.valid.where(concept_name: 'Pathology procedure note').first
+  files.each do |file|
+    pathology_case_handler = Omop::PathologyCaseHandler.new
+    File.open(file) do |file|
+      parser = Nokogiri::XML::SAX::Parser.new(pathology_case_handler)
+      parser.parse(file)
+    end
+
+    location = Location.where(location_id: 1, address_1: '123 Main Street', address_2: 'Apt, 3F', city: 'New York', state: 'NY' , zip: '10001', county: 'Manhattan').first_or_create
+    gender_concept_id = Concept.genders.first.concept_id
+    race_concept_id = Concept.races.first.concept_id
+    ethnicity_concept_id =   Concept.ethnicities.first.concept_id
+
+    pathology_case_handler.pathology_cases.each_with_index do |pathology_case, i|
+      puts 'row'
+      puts i
+      puts 'west mrn'
+      west_mrn = pathology_case.west_mrn
+      puts west_mrn
+
+      #Person 1
+      person = Person.where(gender_concept_id: gender_concept_id, year_of_birth: 1971, month_of_birth: 12, day_of_birth: 10, birth_datetime: DateTime.parse('12/10/1971'), race_concept_id: race_concept_id, ethnicity_concept_id: ethnicity_concept_id, person_source_value: west_mrn, location: location).first
+      if person.blank?
+        person_id = Person.maximum(:person_id)
+        if person_id.nil?
+          person_id = 1
+        else
+          person_id+=1
+        end
+        person = Person.new(person_id: person_id, gender_concept_id: gender_concept_id, year_of_birth: 1971, month_of_birth: 12, day_of_birth: 10, birth_datetime: DateTime.parse('12/10/1971'), race_concept_id: race_concept_id, ethnicity_concept_id: ethnicity_concept_id, person_source_value: west_mrn, location: location)
+        person.save!
+        person.mrns.where(health_system: 'NMHC',  mrn: west_mrn).first_or_create
+      end
+
+      provider = Provider.where(provider_source_value: pathology_case.responsible_pathologist_full_name).first
+      if provider.blank?
+        provider_id = Provider.maximum(:provider_id)
+        if provider_id.nil?
+          provider_id = 1
+        else
+          provider_id+=1
+        end
+        provider = Provider.new(provider_id: provider_id, provider_name: pathology_case.responsible_pathologist_full_name, npi: pathology_case.responsible_pathologist_npi, dea: nil, specialty_concept_id: nil, care_site_id: nil, year_of_birth: Date.parse('1/1/1968').year, gender_concept_id: gender_concept_id, provider_source_value: pathology_case.responsible_pathologist_full_name, specialty_source_value: nil, specialty_source_concept_id: nil, gender_source_value: nil, gender_source_concept_id: nil)
+        provider.save!
+      end
+
+      accession_nbr_formatted = pathology_case.accession_nbr_formatted
+      puts 'accession_nbr_formatted'
+      puts accession_nbr_formatted
+      accessioned_datetime = pathology_case.accessioned_datetime
+      accessioned_datetime = accessioned_datetime.to_date.to_s
+      procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.where(stable_identifier_path: 'accession nbr formatted', stable_identifier_value_1: accession_nbr_formatted).first
+      if procedure_occurrence_stable_identifier.blank?
+        puts 'not here yet'
+        snomed_code = pathology_case.snomed_code
+        puts 'snomed_code'
+        puts snomed_code
+        procedure_concept = Concept.where(concept_code: snomed_code, vocabulary_id: Concept::VOCABULARY_ID_SNOMED).first
+        if procedure_concept
+          procedure_concept_id = procedure_concept.concept_id
+        else
+          procedure_concept_id = 0
+        end
+
+        procedure_type_concept = Concept.procedure_types.where(concept_name: 'Secondary Procedure').first
+        procedure_occurrence_id = ProcedureOccurrence.maximum(:procedure_occurrence_id)
+        if procedure_occurrence_id.nil?
+          procedure_occurrence_id = 1
+        else
+          procedure_occurrence_id+=1
+        end
+
+        procedure_occurrence = ProcedureOccurrence.new(procedure_occurrence_id: procedure_occurrence_id, person_id: person.person_id, procedure_concept_id: procedure_concept_id, procedure_date: Date.parse(accessioned_datetime), procedure_datetime: Date.parse(accessioned_datetime), procedure_type_concept_id: procedure_type_concept.concept_id, modifier_concept_id: nil, quantity: 1, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, procedure_source_value: nil, procedure_source_concept_id: nil, modifier_source_value: nil)
+        procedure_occurrence.save!
+        procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.new(procedure_occurrence_id: procedure_occurrence_id, stable_identifier_path: 'accession nbr formatted', stable_identifier_value_1: accession_nbr_formatted)
+        procedure_occurrence_stable_identifier.save!
+      else
+        procedure_occurrence = ProcedureOccurrence.where(procedure_occurrence_id: procedure_occurrence_stable_identifier.procedure_occurrence_id).first
+      end
+
+      stable_identifier_path = pathology_case.stable_identifier_path
+      stable_identifier_value = pathology_case.stable_identifier_value
+      stable_identifier_value_1 = pathology_case.stable_identifier_value_1
+      stable_identifier_value_2 = pathology_case.stable_identifier_value_2
+
+      note_stable_identifier = NoteStableIdentifier.where(stable_identifier_path: stable_identifier_path, stable_identifier_value: stable_identifier_value)
+
+      if note_stable_identifier.blank?
+        note_title = pathology_case.section_description
+        puts 'hello booch'
+        puts pathology_case.section_description
+        puts note_title
+        note_text = pathology_case.note_text
+        note_id = Note.maximum(:note_id)
+        if note_id.nil?
+          note_id = 1
+        else
+          note_id+=1
+        end
+
+        note = Note.new(note_id: note_id, person_id: person.person_id, note_date: Date.parse(accessioned_datetime), note_datetime: Date.parse(accessioned_datetime), note_type_concept_id: @note_type_concept.concept_id, note_class_concept_id: @note_class_concept.concept_id, note_title: note_title, note_text: note_text, encoding_concept_id: 0, language_concept_id: 0, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, note_source_value: nil)
+        note.save!
+        note_stable_identifier_full = NoteStableIdentifierFull.new(note_id: note.note_id, stable_identifier_path: stable_identifier_path, stable_identifier_value: stable_identifier_value)
+        note_stable_identifier_full.save!
+
+        note_stable_identifier = NoteStableIdentifier.new(note_id: note.note_id, stable_identifier_path: stable_identifier_path, stable_identifier_value: stable_identifier_value, stable_identifier_value_1: stable_identifier_value_1, stable_identifier_value_2: stable_identifier_value_2)
+        note_stable_identifier.save!
+
+        domain_concept_procedure = Concept.domain_concepts.where(concept_name: 'Procedure').first
+        domain_concept_note = Concept.domain_concepts.where(concept_name: 'Note').first
+        relationship_proc_context_of = Relationship.where(relationship_id: 'Proc context of').first
+        relationship_has_proc_context = Relationship.where(relationship_id: 'Has proc context').first
+        FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_note.concept_id, fact_id_2: note.note_id, relationship_concept_id: relationship_proc_context_of.relationship_concept_id).first_or_create
+        FactRelationship.where(domain_concept_id_1: domain_concept_note.concept_id, fact_id_1: note.note_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_has_proc_context.relationship_concept_id).first_or_create
+      end
+
+      surgical_case_number = pathology_case.surgical_case_number
+
+      surgery = false
+      if surgical_case_number.present?
+        puts 'here 1'
+        stable_identifier_path = 'surgical case number'
+        stable_identifier_value_1 = surgical_case_number
+        procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.where(stable_identifier_path: stable_identifier_path, stable_identifier_value_1: surgical_case_number).first
+        surgery = true
+      end
+
+      if surgery && procedure_occurrence_stable_identifier.blank?
+        cpt = pathology_case.cpt_code
+        surgery_name = pathology_case.surgery_name
+
+        if surgery_name
+          surgery_name = surgery_name.truncate(50)
+        end
+
+        if cpt
+          procedure_concept = Concept.standard.valid.where(vocabulary_id: Concept::CONCEPT_CLASS_CPT4, concept_code: cpt).first
+          if procedure_concept.present?
+            procedure_concept_id = procedure_concept.concept_id
+          else
+            procedure_concept_id = 0
+          end
+        else
+          procedure_concept_id = 0
+        end
+
+        procedure_type_concept = Concept.procedure_types.where(concept_name: 'Primary Procedure').first
+        procedure_occurrence_id = ProcedureOccurrence.maximum(:procedure_occurrence_id)
+        if procedure_occurrence_id.nil?
+          procedure_occurrence_id = 1
+        else
+          procedure_occurrence_id+=1
+        end
+
+        provider = Provider.where(provider_source_value: pathology_case.primary_surgeon_full_name).first
+        if provider.blank?
+          provider_id = Provider.maximum(:provider_id)
+          if provider_id.nil?
+            provider_id = 1
+          else
+            provider_id+=1
+          end
+          provider = Provider.new(provider_id: provider_id, provider_name: pathology_case.primary_surgeon_full_name, npi: pathology_case.primary_surgeon_npi, dea: nil, specialty_concept_id: nil, care_site_id: nil, year_of_birth: Date.parse('1/1/1968').year, gender_concept_id: gender_concept_id, provider_source_value: pathology_case.primary_surgeon_full_name, specialty_source_value: nil, specialty_source_concept_id: nil, gender_source_value: nil, gender_source_concept_id: nil)
+          provider.save!
+        end
+
+        surgery_procedure_occurrence = ProcedureOccurrence.new(procedure_occurrence_id: procedure_occurrence_id, person_id: person.person_id, procedure_concept_id: procedure_concept_id, procedure_date: Date.parse(accessioned_datetime), procedure_datetime: Date.parse(accessioned_datetime), procedure_type_concept_id: procedure_type_concept.concept_id, modifier_concept_id: nil, quantity: 1, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, procedure_source_value: surgery_name, procedure_source_concept_id: nil, modifier_source_value: nil)
+        surgery_procedure_occurrence.save!
+        procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.new(procedure_occurrence_id: procedure_occurrence_id, stable_identifier_path: stable_identifier_path, stable_identifier_value_1: stable_identifier_value_1)
+        procedure_occurrence_stable_identifier.save!
+
+        domain_concept_procedure = Concept.domain_concepts.where(concept_name: 'Procedure').first
+        domain_concept_note = Concept.domain_concepts.where(concept_name: 'Note').first
+        relationship_proc_context_of = Relationship.where(relationship_id: 'Proc context of').first
+        relationship_has_proc_context = Relationship.where(relationship_id: 'Has proc context').first
+        FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: surgery_procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_has_proc_context.relationship_concept_id).first_or_create
+        FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: surgery_procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_proc_context_of.relationship_concept_id).first_or_create
+      end
+    end
   end
 end
 

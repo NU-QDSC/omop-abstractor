@@ -41,6 +41,10 @@ class Icdo3Histology < ApplicationRecord
     joins(icdo3_categorizations: :icdo3_category).where('icdo3_categories.category = ?', '2021 primary cns histology')
   end
 
+  scope :by_primary_cns_2016_glioma, -> do
+    where('icdo3_histologies.version = ? AND icdo3_histologies.minor_version = ? AND icdo3_histologies.category IN(?)', 'new', 'the_2016_world_health_organization_classification_of_tumors_of_the_central_nervous_system.csv', [ 'diffuse astrocytic and oligodendroglial tumors', 'other astrocytic tumors','ependymal tumors', 'other gliomas'])
+  end
+
   scope :by_cns_metastasis, -> do
     current.joins(icdo3_categorizations: :icdo3_category).where('icdo3_categories.category = ?', 'metastatic histology')
   end
