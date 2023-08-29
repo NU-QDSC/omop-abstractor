@@ -1781,7 +1781,9 @@ namespace :setup do
 
   desc "OHDSI NLP Proposal data"
   task(ohdsi_nlp_proposal_data: :environment) do |t, args|
-    files = ['lib/setup/data/ohdsi_nlp_proposal/Pathology Cases with Surgeries V2 All 2017.xml']
+    directory_path = 'lib/setup/data/ohdsi_nlp_proposal/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
     load_data_new(files)
   end
 

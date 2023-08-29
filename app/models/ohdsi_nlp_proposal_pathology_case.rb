@@ -1,0 +1,2 @@
+class OhdsiNlpProposalPathologyCase < ApplicationRecord
+end
