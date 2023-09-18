@@ -13,6 +13,22 @@
   #abstraction will
   # bundle exec rake suggestor:do_multiple_will
 
+
+# biorepository prostate ps
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:prostate_spore_clinic_visit_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_clinic_vists
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
 # biorepository prostate
   # data
   # bundle exec rake biorepository_prostate:truncate_stable_identifiers
@@ -1800,6 +1816,250 @@ def load_data(files)
        'cpt name' => 23,
        'primary surgeon full name' => 24,
        'primary surgeon npi' => 25
+    }
+
+    pathology_procedures_by_mrn = {}
+
+    location = Location.where(location_id: 1, address_1: '123 Main Street', address_2: 'Apt, 3F', city: 'New York', state: 'NY' , zip: '10001', county: 'Manhattan').first_or_create
+    gender_concept_id = Concept.genders.first.concept_id
+    race_concept_id = Concept.races.first.concept_id
+    ethnicity_concept_id =   Concept.ethnicities.first.concept_id
+
+    for i in 2..pathology_procedures.sheet(0).last_row do
+      batch_pathology_case_surgery = BatchPathologyCaseSurgery.new
+      batch_pathology_case_surgery.west_mrn = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['west mrn']]
+      batch_pathology_case_surgery.source_system = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['source system']]
+      batch_pathology_case_surgery.stable_identifier_path = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier path']]
+      batch_pathology_case_surgery.stable_identiifer_value = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier value']]
+      batch_pathology_case_surgery.case_collect_datetime = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['case collect datetime']]
+      batch_pathology_case_surgery.accessioned_datetime = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['accessioned datetime']]
+      batch_pathology_case_surgery.accession_nbr_formatted = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['accession nbr formatted']]
+      batch_pathology_case_surgery.group_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['group name']]
+      batch_pathology_case_surgery.group_desc = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['group desc']]
+      batch_pathology_case_surgery.group_id = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['group id']]
+      batch_pathology_case_surgery.snomed_code = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['snomed code']]
+      batch_pathology_case_surgery.snomed_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['snomed name']]
+      batch_pathology_case_surgery.responsible_pathologist_full_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist full name']]
+      batch_pathology_case_surgery.responsible_pathologist_npi = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist npi']]
+      batch_pathology_case_surgery.section_description = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['section description']]
+      # batch_pathology_report_section.note_text
+      batch_pathology_case_surgery.surgical_case_number = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgical case number']]
+      batch_pathology_case_surgery.surgery_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgery name']]
+      batch_pathology_case_surgery.surgery_start_date = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgery start date']]
+      batch_pathology_case_surgery.code_type = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['code type']]
+      batch_pathology_case_surgery.cpt_code = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['cpt code']]
+      batch_pathology_case_surgery.cpt_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['cpt name']]
+      batch_pathology_case_surgery.primary_surgeon_full_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon full name']]
+      batch_pathology_case_surgery.primary_surgeon_npi = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon npi']]
+
+      batch_pathology_case_surgery.save!
+
+      puts 'row'
+      puts i
+      puts 'west mrn'
+      west_mrn = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['west mrn']]
+      puts west_mrn
+
+      #Person 1
+      person = Person.where(gender_concept_id: gender_concept_id, year_of_birth: 1971, month_of_birth: 12, day_of_birth: 10, birth_datetime: DateTime.parse('12/10/1971'), race_concept_id: race_concept_id, ethnicity_concept_id: ethnicity_concept_id, person_source_value: west_mrn, location: location).first
+      if person.blank?
+        person_id = Person.maximum(:person_id)
+        if person_id.nil?
+          person_id = 1
+        else
+          person_id+=1
+        end
+        person = Person.new(person_id: person_id, gender_concept_id: gender_concept_id, year_of_birth: 1971, month_of_birth: 12, day_of_birth: 10, birth_datetime: DateTime.parse('12/10/1971'), race_concept_id: race_concept_id, ethnicity_concept_id: ethnicity_concept_id, person_source_value: west_mrn, location: location)
+        person.save!
+        person.mrns.where(health_system: 'NMHC',  mrn: west_mrn).first_or_create
+      end
+
+      provider = Provider.where(provider_source_value: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist full name']]).first
+      if provider.blank?
+        provider_id = Provider.maximum(:provider_id)
+        if provider_id.nil?
+          provider_id = 1
+        else
+          provider_id+=1
+        end
+        provider = Provider.new(provider_id: provider_id, provider_name: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist full name']], npi: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist npi']], dea: nil, specialty_concept_id: nil, care_site_id: nil, year_of_birth: Date.parse('1/1/1968').year, gender_concept_id: gender_concept_id, provider_source_value: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist full name']], specialty_source_value: nil, specialty_source_concept_id: nil, gender_source_value: nil, gender_source_concept_id: nil)
+        provider.save!
+      end
+
+      accession_nbr_formatted = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['accession nbr formatted']]
+      puts 'accession_nbr_formatted'
+      puts accession_nbr_formatted
+      accessioned_datetime = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['accessioned datetime']]
+      accessioned_datetime = accessioned_datetime.to_date.to_s
+      procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.where(stable_identifier_path: 'accession nbr formatted', stable_identifier_value_1: accession_nbr_formatted).first
+      if procedure_occurrence_stable_identifier.blank?
+        puts 'not here yet'
+        snomed_code = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['snomed code']]
+        puts 'snomed_code'
+        puts snomed_code
+        procedure_concept = Concept.where(concept_code: snomed_code, vocabulary_id: Concept::VOCABULARY_ID_SNOMED).first
+        if procedure_concept
+          procedure_concept_id = procedure_concept.concept_id
+        else
+          procedure_concept_id = 0
+        end
+
+        procedure_type_concept = Concept.procedure_types.where(concept_name: 'Secondary Procedure').first
+        procedure_occurrence_id = ProcedureOccurrence.maximum(:procedure_occurrence_id)
+        if procedure_occurrence_id.nil?
+          procedure_occurrence_id = 1
+        else
+          procedure_occurrence_id+=1
+        end
+
+        procedure_occurrence = ProcedureOccurrence.new(procedure_occurrence_id: procedure_occurrence_id, person_id: person.person_id, procedure_concept_id: procedure_concept_id, procedure_date: Date.parse(accessioned_datetime), procedure_datetime: Date.parse(accessioned_datetime), procedure_type_concept_id: procedure_type_concept.concept_id, modifier_concept_id: nil, quantity: 1, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, procedure_source_value: nil, procedure_source_concept_id: nil, modifier_source_value: nil)
+        procedure_occurrence.save!
+        procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.new(procedure_occurrence_id: procedure_occurrence_id, stable_identifier_path: 'accession nbr formatted', stable_identifier_value_1: accession_nbr_formatted)
+        procedure_occurrence_stable_identifier.save!
+      else
+        procedure_occurrence = ProcedureOccurrence.where(procedure_occurrence_id: procedure_occurrence_stable_identifier.procedure_occurrence_id).first
+      end
+
+      stable_identifier_path = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier path']]
+      stable_identifier_value = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier value']]
+      stable_identifier_value_1 = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier value 1']]
+      stable_identifier_value_2 = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier value 2']]
+
+      note_stable_identifier = NoteStableIdentifier.where(stable_identifier_path: stable_identifier_path, stable_identifier_value: stable_identifier_value)
+
+      if note_stable_identifier.blank?
+        note_title = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['section description']]
+        puts 'hello booch'
+        puts pathology_procedure_map['section description']
+        puts note_title
+        note_text = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['note text']]
+        note_id = Note.maximum(:note_id)
+        if note_id.nil?
+          note_id = 1
+        else
+          note_id+=1
+        end
+
+        note = Note.new(note_id: note_id, person_id: person.person_id, note_date: Date.parse(accessioned_datetime), note_datetime: Date.parse(accessioned_datetime), note_type_concept_id: @note_type_concept.concept_id, note_class_concept_id: @note_class_concept.concept_id, note_title: note_title, note_text: note_text, encoding_concept_id: 0, language_concept_id: 0, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, note_source_value: nil)
+        note.save!
+        note_stable_identifier_full = NoteStableIdentifierFull.new(note_id: note.note_id, stable_identifier_path: stable_identifier_path, stable_identifier_value: stable_identifier_value)
+        note_stable_identifier_full.save!
+
+        note_stable_identifier = NoteStableIdentifier.new(note_id: note.note_id, stable_identifier_path: stable_identifier_path, stable_identifier_value: stable_identifier_value, stable_identifier_value_1: stable_identifier_value_1, stable_identifier_value_2: stable_identifier_value_2)
+        note_stable_identifier.save!
+
+        domain_concept_procedure = Concept.domain_concepts.where(concept_name: 'Procedure').first
+        domain_concept_note = Concept.domain_concepts.where(concept_name: 'Note').first
+        relationship_proc_context_of = Relationship.where(relationship_id: 'Proc context of').first
+        relationship_has_proc_context = Relationship.where(relationship_id: 'Has proc context').first
+        FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_note.concept_id, fact_id_2: note.note_id, relationship_concept_id: relationship_proc_context_of.relationship_concept_id).first_or_create
+        FactRelationship.where(domain_concept_id_1: domain_concept_note.concept_id, fact_id_1: note.note_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_has_proc_context.relationship_concept_id).first_or_create
+      end
+
+      surgical_case_number = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgical case number']]
+
+      surgery = false
+      if surgical_case_number.present?
+        puts 'here 1'
+        stable_identifier_path = 'surgical case number'
+        stable_identifier_value_1 = surgical_case_number
+        procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.where(stable_identifier_path: stable_identifier_path, stable_identifier_value_1: surgical_case_number).first
+        surgery = true
+      end
+
+      if surgery && procedure_occurrence_stable_identifier.blank?
+        cpt = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['cpt code']]
+        surgery_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgery name']]
+
+        if surgery_name
+          surgery_name = surgery_name.truncate(50)
+        end
+
+        if cpt
+          procedure_concept = Concept.standard.valid.where(vocabulary_id: Concept::CONCEPT_CLASS_CPT4, concept_code: cpt).first
+          if procedure_concept.present?
+            procedure_concept_id = procedure_concept.concept_id
+          else
+            procedure_concept_id = 0
+          end
+        else
+          procedure_concept_id = 0
+        end
+
+        procedure_type_concept = Concept.procedure_types.where(concept_name: 'Primary Procedure').first
+        procedure_occurrence_id = ProcedureOccurrence.maximum(:procedure_occurrence_id)
+        if procedure_occurrence_id.nil?
+          procedure_occurrence_id = 1
+        else
+          procedure_occurrence_id+=1
+        end
+
+        provider = Provider.where(provider_source_value: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon full name']]).first
+        if provider.blank?
+          provider_id = Provider.maximum(:provider_id)
+          if provider_id.nil?
+            provider_id = 1
+          else
+            provider_id+=1
+          end
+          provider = Provider.new(provider_id: provider_id, provider_name: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon full name']], npi: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon npi']], dea: nil, specialty_concept_id: nil, care_site_id: nil, year_of_birth: Date.parse('1/1/1968').year, gender_concept_id: gender_concept_id, provider_source_value: pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon full name']], specialty_source_value: nil, specialty_source_concept_id: nil, gender_source_value: nil, gender_source_concept_id: nil)
+          provider.save!
+        end
+
+        surgery_procedure_occurrence = ProcedureOccurrence.new(procedure_occurrence_id: procedure_occurrence_id, person_id: person.person_id, procedure_concept_id: procedure_concept_id, procedure_date: Date.parse(accessioned_datetime), procedure_datetime: Date.parse(accessioned_datetime), procedure_type_concept_id: procedure_type_concept.concept_id, modifier_concept_id: nil, quantity: 1, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, procedure_source_value: surgery_name, procedure_source_concept_id: nil, modifier_source_value: nil)
+        surgery_procedure_occurrence.save!
+        procedure_occurrence_stable_identifier = ProcedureOccurrenceStableIdentifier.new(procedure_occurrence_id: procedure_occurrence_id, stable_identifier_path: stable_identifier_path, stable_identifier_value_1: stable_identifier_value_1)
+        procedure_occurrence_stable_identifier.save!
+
+        domain_concept_procedure = Concept.domain_concepts.where(concept_name: 'Procedure').first
+        domain_concept_note = Concept.domain_concepts.where(concept_name: 'Note').first
+        relationship_proc_context_of = Relationship.where(relationship_id: 'Proc context of').first
+        relationship_has_proc_context = Relationship.where(relationship_id: 'Has proc context').first
+        FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: surgery_procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_has_proc_context.relationship_concept_id).first_or_create
+        FactRelationship.where(domain_concept_id_1: domain_concept_procedure.concept_id, fact_id_1: procedure_occurrence.procedure_occurrence_id, domain_concept_id_2: domain_concept_procedure.concept_id, fact_id_2: surgery_procedure_occurrence.procedure_occurrence_id, relationship_concept_id: relationship_proc_context_of.relationship_concept_id).first_or_create
+      end
+    end
+  end
+end
+
+def load_data_new(files)
+  @note_type_concept = Concept.note_types.where(concept_name: 'Pathology report').first
+  @note_class_concept = Concept.standard.valid.where(concept_name: 'Pathology procedure note').first
+  files.each do |file|
+    pathology_procedures = Roo::Spreadsheet.open(file)
+    pathology_procedure_map = {
+       'west mrn' => 0,
+       'source system' => 1,
+       'source system_id' => 2,
+       'stable identifier path' => 3,
+       'stable identifier value' => 4,
+       'stable identifier value 1' => 5,
+       'stable identifier value 2' => 6,
+       'pathology stable identifier path' => 7,
+       'pathology stable identifier value_1' => 8,
+       'accession nbr formatted' => 9,
+       'accessioned datetime'   => 10,
+       'case collect datetime'   => 11,
+       'surgery stable identifier path' => 12,
+       'surgery stable identifier value 1' => 13,
+       'surgical case number' => 14,
+       'surgery start date' => 15,
+       'primary surgeon full name' => 16,
+       'primary surgeon specialty 1 description' => 17,
+       'primary surgeon npi' => 18,
+       'surgery name' => 19,
+       'code type' => 20,
+       'cpt code' => 21,
+       'cpt name' => 22,
+       'group name' => 23,
+       'group desc' => 24,
+       'snomed code' => 25,
+       'snomed name' => 26,
+       'group id' => 27,
+       'responsible pathologist full name' => 28,
+       'responsible pathologist npi' => 29,
+       'section description' => 30,
+       'note text' => 31
     }
 
     pathology_procedures_by_mrn = {}
