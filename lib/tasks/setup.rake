@@ -1773,6 +1773,12 @@ namespace :setup do
 
   desc "Prostate SPORE data"
   task(prostate_spore_data: :environment) do |t, args|
+    files = []
+    load_data(files)
+  end
+
+  desc "AML SPORE data"
+  task(aml_data: :environment) do |t, args|
     files = ['lib/setup/data/prostate_spore/Pathology Cases with Surgeries 1.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 2.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 3.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 4.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 5.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 6.xlsx']
     load_data(files)
   end
@@ -2025,6 +2031,7 @@ end
 def load_data_new(files)
   @note_type_concept = Concept.note_types.where(concept_name: 'Pathology report').first
   @note_class_concept = Concept.standard.valid.where(concept_name: 'Pathology procedure note').first
+
   files.each do |file|
     pathology_procedures = Roo::Spreadsheet.open(file)
     pathology_procedure_map = {
@@ -2062,6 +2069,7 @@ def load_data_new(files)
        'note text' => 31
     }
 
+
     pathology_procedures_by_mrn = {}
 
     location = Location.where(location_id: 1, address_1: '123 Main Street', address_2: 'Apt, 3F', city: 'New York', state: 'NY' , zip: '10001', county: 'Manhattan').first_or_create
@@ -2070,34 +2078,6 @@ def load_data_new(files)
     ethnicity_concept_id =   Concept.ethnicities.first.concept_id
 
     for i in 2..pathology_procedures.sheet(0).last_row do
-      batch_pathology_case_surgery = BatchPathologyCaseSurgery.new
-      batch_pathology_case_surgery.west_mrn = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['west mrn']]
-      batch_pathology_case_surgery.source_system = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['source system']]
-      batch_pathology_case_surgery.stable_identifier_path = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier path']]
-      batch_pathology_case_surgery.stable_identiifer_value = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['stable identifier value']]
-      batch_pathology_case_surgery.case_collect_datetime = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['case collect datetime']]
-      batch_pathology_case_surgery.accessioned_datetime = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['accessioned datetime']]
-      batch_pathology_case_surgery.accession_nbr_formatted = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['accession nbr formatted']]
-      batch_pathology_case_surgery.group_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['group name']]
-      batch_pathology_case_surgery.group_desc = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['group desc']]
-      batch_pathology_case_surgery.group_id = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['group id']]
-      batch_pathology_case_surgery.snomed_code = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['snomed code']]
-      batch_pathology_case_surgery.snomed_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['snomed name']]
-      batch_pathology_case_surgery.responsible_pathologist_full_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist full name']]
-      batch_pathology_case_surgery.responsible_pathologist_npi = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['responsible pathologist npi']]
-      batch_pathology_case_surgery.section_description = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['section description']]
-      # batch_pathology_report_section.note_text
-      batch_pathology_case_surgery.surgical_case_number = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgical case number']]
-      batch_pathology_case_surgery.surgery_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgery name']]
-      batch_pathology_case_surgery.surgery_start_date = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['surgery start date']]
-      batch_pathology_case_surgery.code_type = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['code type']]
-      batch_pathology_case_surgery.cpt_code = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['cpt code']]
-      batch_pathology_case_surgery.cpt_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['cpt name']]
-      batch_pathology_case_surgery.primary_surgeon_full_name = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon full name']]
-      batch_pathology_case_surgery.primary_surgeon_npi = pathology_procedures.sheet(0).row(i)[pathology_procedure_map['primary surgeon npi']]
-
-      batch_pathology_case_surgery.save!
-
       puts 'row'
       puts i
       puts 'west mrn'
