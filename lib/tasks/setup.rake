@@ -1777,10 +1777,13 @@ namespace :setup do
     load_data(files)
   end
 
-  desc "AML SPORE data"
+  desc "AML data"
   task(aml_data: :environment) do |t, args|
-    files = ['lib/setup/data/prostate_spore/Pathology Cases with Surgeries 1.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 2.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 3.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 4.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 5.xlsx', 'lib/setup/data/prostate_spore/Pathology Cases with Surgeries 6.xlsx']
-    load_data(files)
+    directory_path = 'lib/setup/data/aml/'
+    files = Dir.glob(File.join(directory_path, '*.xlsx'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_new(files)
   end
 
   desc "Prostate SPORE clinic vist data"
