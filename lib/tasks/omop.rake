@@ -4,6 +4,7 @@
 # bundle exec rake omop:truncate_omop_vocabulary_tables
 # bundle exec rake omop:load_omop_vocabulary_tables
 # bundle exec rake omop:drop_omop_indexes
+# bundle exec rake omop:compile_omop_vocabulary_indexes
 # bundle exec rake omop:compile_omop_indexes
 require 'omop/setup'
 namespace :omop do
@@ -30,6 +31,11 @@ namespace :omop do
   desc "Truncate OMOP vocabulary tables"
   task(truncate_omop_vocabulary_tables: :environment) do |t, args|
     Omop::Setup.truncate_omop_vocabulary_tables
+  end
+
+  desc "Compile OMOP Vocabulary indexes"
+  task(compile_omop_vocabulary_indexes: :environment) do |t, args|
+    Omop::Setup.compile_omop_vocabulary_indexes
   end
 
   desc "Compile OMOP indexes"

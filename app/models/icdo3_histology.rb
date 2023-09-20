@@ -25,6 +25,9 @@ class Icdo3Histology < ApplicationRecord
   HISTOLOGIES_VULVA =['8010/3', '8013/3', '8020/3', '8041/3', '8045/3', '8051/3', '8052/3', '8070/3', '8071/3', '8072/3', '8083/3', '8085/3', '8086/3', '8090/3', '8098/3', '8120/3', '8140/3', '8144/3', '8200/3', '8240/3', '8249/3', '8400/3', '8401/3', '8409/3', '8413/3', '8500/3', '8542/3', '8560/3', '8562/3', '8982/3', '9020/1', '9020/3']
   #done
 
+  HISTOLOGIES_AML =[  '9861/3', '9865/3', '9866/3', '9869/3', '9871/3', '9877/3', '9878/3', '9879/3', '9895/3', '9896/3', '9897/3', '9920/3']
+  #done
+
   scope :current, -> do
     where('icdo3_histologies.version = ? AND icdo3_histologies.minor_version = ?', 'new', 'ICD-O-3.2.csv')
   end
@@ -75,6 +78,10 @@ class Icdo3Histology < ApplicationRecord
 
   scope :by_metastasis, -> do
     current.where('icdo3_histologies.icdo3_code IN(?)', Icdo3Histology::HISTOLOGIES_METASTASIS)
+  end
+
+  scope :by_primary_aml, -> do
+    current.where('icdo3_histologies.icdo3_code IN(?)', Icdo3Histology::HISTOLOGIES_AML)
   end
 
   scope :by_icdo3_code_with_synonyms, ->(icdo3_code) do

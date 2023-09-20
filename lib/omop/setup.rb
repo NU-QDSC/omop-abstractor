@@ -30,6 +30,11 @@ module Omop
       `psql -h #{Rails.configuration.database_configuration[Rails.env]['host']} --u #{Rails.configuration.database_configuration[Rails.env]['username']} -d #{Rails.configuration.database_configuration[Rails.env]['database']} -f "#{Rails.root}/db/migrate/CommonDataModel/inst/ddl/5.4/postgresql/OMOPCDM_postgresql_5.4_indices.sql"`
     end
 
+    def self.compile_omop_vocabulary_indexes
+      ENV['PGPASSWORD'] = Rails.configuration.database_configuration[Rails.env]['password']
+      `psql -h #{Rails.configuration.database_configuration[Rails.env]['host']} --u #{Rails.configuration.database_configuration[Rails.env]['username']} -d #{Rails.configuration.database_configuration[Rails.env]['database']} -f "#{Rails.root}/db/migrate/CommonDataModel/inst/ddl/5.4/postgresql/OMOPCDM_postgresql_5.4_vocabulary_indices.sql"`
+    end
+
     def self.compile_omop_constraints
       ENV['PGPASSWORD'] = Rails.configuration.database_configuration[Rails.env]['password']
       `psql -h #{Rails.configuration.database_configuration[Rails.env]['host']} --u #{Rails.configuration.database_configuration[Rails.env]['username']} -d #{Rails.configuration.database_configuration[Rails.env]['database']} -f "#{Rails.root}/db/migrate/CommonDataModel/inst/ddl/5.4/postgresql/OMOPCDM_postgresql_5.4_constraints.sql"`

@@ -5,7 +5,7 @@
   # bundle exec rake setup:ohdsi_nlp_proposal_data
   # bundle exec rake ohdsi_nlp_proposal:load_clinical_data
 
-  #schemas
+  #schemas:
   # bundle exec rake abstractor:setup:system
   # bundle exec rake setup:compare_icdo3
   # bundle exec rake setup:truncate_schemas
