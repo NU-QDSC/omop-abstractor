@@ -452,73 +452,77 @@ class NoteStableIdentifier < ApplicationRecord
     puts 'End NOTE.note_id'
     omop_abstractor_nlp_document = OmopAbstractorNlpMapper::Document.new(document, self.note_text)
 
-    puts 'how many sections at the beginning?'
-    puts omop_abstractor_nlp_document.sections.length
+    #Begin Section Preprocessing
+    if omop_abstractor_nlp_document.sections.any?
+      puts 'how many sections at the beginning?'
+      puts omop_abstractor_nlp_document.sections.length
 
-    sections_grouped = omop_abstractor_nlp_document.sections.group_by do |section|
-     section.name
-    end
+      sections_grouped = omop_abstractor_nlp_document.sections.group_by do |section|
+       section.name
+      end
 
-    bad_guy_sections = []
-    sections_grouped.each do |section_name, sections|
-     if section_name == 'SPECIMEN'
-       previous_section_trigger = sections.first.trigger
-       sections.each_with_index do |section, i|
-         puts 'section token'
-         puts section.to_s
-         puts 'trigger'
-         puts section.trigger
+      bad_guy_sections = []
+      sections_grouped.each do |section_name, sections|
+       if section_name == 'SPECIMEN'
+         previous_section_trigger = sections.first.trigger
+         sections.each_with_index do |section, i|
+           puts 'section token'
+           puts section.to_s
+           puts 'trigger'
+           puts section.trigger
 
-         if section.trigger.blank?
-           bad_guy_sections << section
-         elsif i > 0 && section.trigger.downcase <= previous_section_trigger.downcase
-           # puts 'bingo'
-           bad_guy_sections << section
-         else
-           # puts 'bango'
-           previous_section_trigger = section.trigger
+           if section.trigger.blank?
+             bad_guy_sections << section
+           elsif i > 0 && section.trigger.downcase <= previous_section_trigger.downcase
+             # puts 'bingo'
+             bad_guy_sections << section
+           else
+             # puts 'bango'
+             previous_section_trigger = section.trigger
+           end
          end
        end
-     end
-    end
+      end
 
-    #Remove all 'specimen' sections after the first 'comment' section.
-    bad_guy_sections.each do |bad_guy_section|
-     omop_abstractor_nlp_document.sections.reject! { |section| section == bad_guy_section }
-    end
+      #Remove all 'specimen' sections after the first 'comment' section.
+      bad_guy_sections.each do |bad_guy_section|
+       omop_abstractor_nlp_document.sections.reject! { |section| section == bad_guy_section }
+      end
 
-    sections_grouped = omop_abstractor_nlp_document.sections.group_by do |section|
-      section.name
-    end
+      sections_grouped = omop_abstractor_nlp_document.sections.group_by do |section|
+        section.name
+      end
 
-    if !sections_grouped['SPECIMEN'].nil? && !sections_grouped['COMMENT'].nil?
-     bad_guy_sections = []
-     sections_grouped['SPECIMEN'].each do |specimen_section|
-       if sections_grouped['COMMENT'][0].section_begin < specimen_section.section_begin
-         bad_guy_sections << specimen_section
+      if !sections_grouped['SPECIMEN'].nil? && !sections_grouped['COMMENT'].nil?
+       bad_guy_sections = []
+       sections_grouped['SPECIMEN'].each do |specimen_section|
+         if sections_grouped['COMMENT'][0].section_begin < specimen_section.section_begin
+           bad_guy_sections << specimen_section
+         end
        end
-     end
-    end
+      end
 
-    bad_guy_sections.each do |bad_guy_section|
-     omop_abstractor_nlp_document.sections.reject! { |section| section == bad_guy_section  }
-    end
+      bad_guy_sections.each do |bad_guy_section|
+       omop_abstractor_nlp_document.sections.reject! { |section| section == bad_guy_section  }
+      end
 
-    sections_grouped = omop_abstractor_nlp_document.sections.group_by do |section|
-     section.name
-    end
+      sections_grouped = omop_abstractor_nlp_document.sections.group_by do |section|
+       section.name
+      end
 
-    #Derive a synthetic 'specimen' section for those pathology reports that have no specimen callout but do have a section 'before' a comment section.
-    if sections_grouped['SPECIMEN'].nil? && !sections_grouped['COMMENT'].nil?
-      # puts "we are adding!"
-      omop_abstractor_nlp_document.add_named_entity(0, sections_grouped['COMMENT'][0].section_begin-2, 'SPECIMEN', nil, nil, 'present', true, 0, 0)
-    end
+      #Derive a synthetic 'specimen' section for those pathology reports that have no specimen callout but do have a section 'before' a comment section.
+      if sections_grouped['SPECIMEN'].nil? && !sections_grouped['COMMENT'].nil?
+        # puts "we are adding!"
+        omop_abstractor_nlp_document.add_named_entity(0, sections_grouped['COMMENT'][0].section_begin-2, 'SPECIMEN', nil, nil, 'present', true, 0, 0)
+      end
 
-    #Derive a synthetic 'specimen' section for those pathology reports that have no specimen callout and no comment section.
-    if sections_grouped['SPECIMEN'].nil? && sections_grouped['COMMENT'].nil?
-      # puts "we are adding!"
-      omop_abstractor_nlp_document.add_named_entity(0, omop_abstractor_nlp_document.text.length, 'SPECIMEN', nil, nil, 'present', true, 0, 0)
+      #Derive a synthetic 'specimen' section for those pathology reports that have no specimen callout and no comment section.
+      if sections_grouped['SPECIMEN'].nil? && sections_grouped['COMMENT'].nil?
+        # puts "we are adding!"
+        omop_abstractor_nlp_document.add_named_entity(0, omop_abstractor_nlp_document.text.length, 'SPECIMEN', nil, nil, 'present', true, 0, 0)
+      end
     end
+    #End Section Preprocessing
 
     ActiveRecord::Base.transaction do
       # Partition suggestions by section within an abstractor subject group based on the anchor schema.
@@ -1380,7 +1384,7 @@ class NoteStableIdentifier < ApplicationRecord
       # Set the anchor to the only suggestion.
       # If the member is not suggested and 'only less specific suggested', set the member to the only suggestion.
       # If the member is not suggested and not 'only less specific suggested' but has a 'detault suggested value', set the member to the 'detault suggested value'
-      # If the member is not suggested and not 'only less specific suggested' and has no 'detault suggested value', set  the member to 'Not applicable'.
+      # If the member is not suggested and not 'only less specific suggested' and has no 'detault suggested value', set the member to 'Not applicable'.
       # puts 'hello before'
       # puts abstractor_note['source_id']
       # note_stable_identifier = NoteStableIdentifier.find(abstractor_note['source_id'])
@@ -1421,7 +1425,7 @@ class NoteStableIdentifier < ApplicationRecord
       end
 
       # Post-processing across all schemas within an abstraction group.
-      # Suggest 'unknown' to non-anchor schemas if the anchor schema has an accepted/suggested value and the non-anchor schmea is marked as not-applicable.
+      # Suggest 'unknown' to non-anchor schemas if the anchor schema has an accepted/suggested value and the non-anchor schema is marked as not-applicable.
       abstractor_abstraction_groups = self.abstractor_abstraction_groups_by_namespace(namespace_type: omop_abstractor_nlp_document.namespace_type, namespace_id: omop_abstractor_nlp_document.namespace_id)
       self.abstractor_abstraction_groups_by_namespace(namespace_type: omop_abstractor_nlp_document.namespace_type, namespace_id: omop_abstractor_nlp_document.namespace_id).each do |abstractor_abstraction_group|
        # puts 'hello'
