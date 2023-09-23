@@ -341,8 +341,8 @@ def abstractor_suggestor_aml(options = {})
             abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
             if i == 1
               sleep(60)
-            # else
-            #   sleep(1)
+            else
+              sleep(1)
             end
             Rails.logger.info('End abstraction')
             finish = Time.now
@@ -408,8 +408,8 @@ def abstractor_suggestor_aml(options = {})
 
             if i == 1
               sleep(60)
-            # else
-            #   sleep(1)
+            else
+              sleep(1)
             end
 
             Rails.logger.info('End abstraction')
