@@ -1790,6 +1790,15 @@ namespace :setup do
     load_data_new(files)
   end
 
+  desc "AML Test data"
+  task(aml_test_data: :environment) do |t, args|
+    directory_path = 'lib/setup/data/aml/test/'
+    files = Dir.glob(File.join(directory_path, '*.xlsx'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_new(files)
+  end
+
   desc "Prostate SPORE clinic vist data"
   task(prostate_spore_clinic_visit_data: :environment) do |t, args|
     files = ['lib/setup/data/prostate_spore/Northwestern Prostate SPORE ECOG Performance Status Notes.xlsx']

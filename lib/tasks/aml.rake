@@ -3,6 +3,7 @@
   # bundle exec rake setup:truncate_stable_identifiers
   # bundle exec rake omop:truncate_omop_clinical_data_tables
   # bundle exec rake setup:aml_data
+  # bundle exec rake setup:aml_test_data
 
   #schemas
   # bundle exec rake abstractor:setup:system
@@ -102,6 +103,7 @@ namespace :aml do
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value_recurrent).first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value_recurrent, value: 'residual').first_or_create
     Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value_recurrent, value: 'recurrence').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value_recurrent, value: 'persistent').first_or_create
 
     abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_surgical_pathology.id, anchor: false, default_abstractor_object_value_id: abstractor_object_value_initial.id).first_or_create
     abstractor_abstraction_source = Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will', section_required: false).first_or_create
@@ -237,11 +239,11 @@ namespace :aml do
     end
   end
 
-  #bundle exec rake ohdsi_nlp_proposal:create_ohdsi_nlp_proposal_pathology_cases_datamart
-  desc "Create OHDSI NLP proposal Pathology Cases Datamart"
-  task(create_ohdsi_nlp_proposal_pathology_cases_datamart: :environment) do |t, args|
-    ActiveRecord::Base.connection.execute('TRUNCATE TABLE ohdsi_nlp_proposal_pathology_cases CASCADE;')
-    sql_file = "#{Rails.root}/lib/tasks/ohdsi_nlp_proposal_pathology_cases.sql"
+  #bundle exec rake aml:create_aml_pathology_cases_datamart
+  desc "Create AML Pathology Cases Datamart"
+  task(create_aml_pathology_cases_datamart: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE aml_pathology_cases CASCADE;')
+    sql_file = "#{Rails.root}/lib/tasks/aml_pathology_cases.sql"
     sql = File.read(sql_file)
     ActiveRecord::Base.connection.execute(sql)
   end
