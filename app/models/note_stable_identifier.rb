@@ -657,6 +657,7 @@ class NoteStableIdentifier < ApplicationRecord
          puts 'how much you got?'
          puts named_entities.size
          suggested = false
+         suggestions = []
          if named_entities.any?
            named_entities.each do |named_entity|
              abstractor_abstraction.reload
@@ -811,12 +812,20 @@ class NoteStableIdentifier < ApplicationRecord
              end
              if !named_entity.negated?
                suggested = true
+               suggestions << abstractor_suggestion
              end
            end
          end
          if !suggested
            # abstractor_abstraction.set_unknown!
            abstractor_abstraction.set_not_applicable!
+         else
+           suggestions.uniq!
+           if suggestions.size == 1
+             abstractor_suggestion = suggestions.first
+             abstractor_suggestion.accepted = true
+             abstractor_suggestion.save!
+           end
          end
        when Abstractor::Enum::ABSTRACTOR_RULE_TYPE_NAME_VALUE
          named_entities = omop_abstractor_nlp_document.named_entities.select { |named_entity|  named_entity.semantic_tag_attribute == abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate }
