@@ -1773,6 +1773,13 @@ namespace :setup do
     load_data(files)
   end
 
+  desc "Prostate SPORE clinic vist data"
+  task(prostate_spore_clinic_visit_data: :environment) do |t, args|
+    files = ['lib/setup/data/prostate_spore/Northwestern Prostate SPORE ECOG Performance Status Notes.xlsx']
+    load_clinic_vist_data(files)
+  end
+
+
   desc "OHDSI NLP Proposal data"
   task(ohdsi_nlp_proposal_data: :environment) do |t, args|
     directory_path = 'lib/setup/data/ohdsi_nlp_proposal/'
@@ -1799,11 +1806,15 @@ namespace :setup do
     load_data_new(files)
   end
 
-  desc "Prostate SPORE clinic vist data"
-  task(prostate_spore_clinic_visit_data: :environment) do |t, args|
-    files = ['lib/setup/data/prostate_spore/Northwestern Prostate SPORE ECOG Performance Status Notes.xlsx']
-    load_clinic_vist_data(files)
+  desc "Prostate data"
+  task(prostate_data: :environment) do |t, args|
+    directory_path = 'lib/setup/data/prostate/'
+    files = Dir.glob(File.join(directory_path, '*.xlsx'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_new(files)
   end
+
 end
 
 def load_data_xml(files)

@@ -1,10 +1,17 @@
-# bundle exec rake omop:compile_omop_tables
+# bundle exec rake omop:load_omop_vocabulary_tables
+# bundle exec rake omop:compile_omop_vocabulary_indexes
+# data
 # bundle exec rake omop:compile_omop_primary_keys
 # bundle exec rake omop:compile_omop_constraints
-# bundle exec rake omop:truncate_omop_vocabulary_tables
-# bundle exec rake omop:load_omop_vocabulary_tables
+# bundle exec rake omop:compile_omop_indexes
+
+# bundle exec rake omop:compile_omop_tables
 # bundle exec rake omop:drop_omop_indexes
-# bundle exec rake omop:compile_omop_vocabulary_indexes
+# bundle exec rake omop:truncate_omop_vocabulary_tables
+
+
+
+
 # bundle exec rake omop:compile_omop_indexes
 require 'omop/setup'
 namespace :omop do
