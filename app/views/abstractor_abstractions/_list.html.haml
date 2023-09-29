@@ -22,8 +22,8 @@
   .abstractor_abstractions
     - if show_abstractor_all_links?
       .abstractor_all_links
-        = link_to 'Not applicable all', Abstractor::UserInterface.abstractor_relative_path(update_all_abstractor_abstractions_path(about_type: about.class, about_id: about.id, abstractor_abstraction_value: 'not applicable')), data: { confirm: 'Are you sure?'}, method: :put, class: 'abstractor_not_applicable_all_link waves-effect waves-light btn'
-        = link_to 'Unknown all', Abstractor::UserInterface.abstractor_relative_path(update_all_abstractor_abstractions_path(about_type: about.class, about_id: about.id, abstractor_abstraction_value: 'unknown')), data: { confirm: 'Are you sure?'}, method: :put,  class: 'abstractor_unknown_all_link waves-effect waves-light btn'
+        = link_to 'Not applicable all', Abstractor::UserInterface.abstractor_relative_path(update_all_abstractor_abstractions_path(about_type: about.class, about_id: about.id, abstractor_abstraction_value: 'not applicable', namespace_type: namespace_type, namespace_id: namespace_id)), data: { confirm: 'Are you sure?'}, method: :put, class: 'abstractor_not_applicable_all_link waves-effect waves-light btn'
+        = link_to 'Unknown all', Abstractor::UserInterface.abstractor_relative_path(update_all_abstractor_abstractions_path(about_type: about.class, about_id: about.id, abstractor_abstraction_value: 'unknown', namespace_type: namespace_type, namespace_id: namespace_id)), data: { confirm: 'Are you sure?'}, method: :put,  class: 'abstractor_unknown_all_link waves-effect waves-light btn'
     - if flash[:abstractor_errors]
       %div{ :id => "abstractor_error", :class => "message"}
         - flash[:abstractor_errors].each do |error|

@@ -78,7 +78,7 @@ module Abstractor
           end
 
           @about = params[:about_type].constantize.find(params[:about_id])
-          abstractor_abstractions = @about.abstractor_abstractions
+          abstractor_abstractions = @about.abstractor_abstractions_by_namespace(namespace_type: params[:namespace_type], namespace_id: params[:namespace_id])
           Abstractor::AbstractorAbstraction.transaction do
             abstractor_abstractions.each do |abstractor_abstraction|
               abstractor_abstraction.abstractor_suggestions.each do |abstractor_suggestion|
@@ -138,7 +138,7 @@ module Abstractor
           end
 
           def abstractor_abstraction_params
-            params.require(:abstractor_abstractor_abstraction).permit(:id, :abstractor_subject_id, :value, :about_type, :about_id, :unknown, :not_applicable, :deleted_at, :_destroy,
+            params.require(:abstractor_abstractor_abstraction).permit(:id, :abstractor_subject_id, :value, :about_type, :about_id, :unknown, :not_applicable, :deleted_at, :namespace, :namespace_id,  :_destroy,
             abstractor_indirect_sources_attributes: [:id, :abstractor_abstraction_id, :abstractor_abstraction_source_id, :source_type, :source_id, :source_method, :deleted_at, :_destroy]
             )
           end
