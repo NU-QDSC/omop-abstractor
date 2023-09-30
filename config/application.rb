@@ -21,5 +21,6 @@ module OmopAbstractor
     config.x.clamp.clamp_dir = APP_CONFIG['clamp_dir']
     config.x.clamp.clamp_bin = APP_CONFIG['clamp_bin']
     config.x.clamp.clamp_pipeline = APP_CONFIG['clamp_pipeline']
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
