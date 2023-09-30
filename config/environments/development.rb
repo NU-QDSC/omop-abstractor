@@ -63,5 +63,5 @@ Rails.application.configure do
   ENV['OBJC_DISABLE_INITIALIZE_FORK_SAFETY'] = 'YES'
   Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 
-  config.log_level = :error
+  # config.log_level = :error
 end
