@@ -1,279 +1,3 @@
-# biorepository prostate ps
-  # data
-  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:prostate_spore_clinic_visit_data
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_clinic_vists
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-
-# biorepository prostate
-  # data
-  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:prostate_spore_data
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-
-#biorepository_prostate_development_biopsy_one
-  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:dummy_data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
-
-  #abstraction
-  # br
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-
-# export RAILS_ENV=staging
-
-# bundle exec rake mbti:mbti_data
-# bundle exec rake suggestor:do_multiple_will
-
-# export RAILS_ENV=staging
-# mbti final will
-  # data
-  # bundle exec rake mbti:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake mbti:mbti_data
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake mbti:schemas_mbti
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-  # bundle exec rake suggestor:do_multiple_will_one["?"]
-  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake suggestor:do_multiple_will
-
-# mbti will one
-  #data
-  # bundle exec rake mbti:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake mbti:schemas_mbti
-
-  #abstraction
-  # br
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-  # bundle exec rake suggestor:do_multiple_will_one["?"]
-
-# biorepository prostate
-  # data
-  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake biorepository_prostate:biorepository_prostate_data_3
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
-
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-
-# bundle exec rake biorepository_breast_new:biorepository_breast_abstractions
-# biorepository breast new will
-  # data
-  # bundle exec rake biorepository_breast_new:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake biorepository_breast_new:biorepository_breast_data
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_breast_new:schemas_breast
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake suggestor:do_multiple_will
-
-# biorepository breast new will one
-  #data
-  # bundle exec rake biorepository_breast:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_breast_new:schemas_breast
-
-  #abstraction
-  # br
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-
-# mbti will
-  # data
-  # bundle exec rake db:migrate
-  # bundle exec rake abstractor:setup:system
-
-  #schemas
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake clamp:schemas_clamp
-
-  #abstraction
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-
-# biorepository breast new one will
-  #data
-  # bundle exec rake biorepository_breast:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_breast_new:schemas_breast
-
-  #abstraction
-  # br
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-
-
-# mbti will
-  # data
-  # bundle exec rake db:migrate
-  # bundle exec rake abstractor:setup:system
-
-  #schemas
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake clamp:schemas_clamp
-
-  #abstraction
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-
-# mbti will one
-  #data
-  # bundle exec rake biorepository_breast:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake clamp:schemas_clamp
-
-  #abstraction
-  # br
-  # make start-service
-  # bundle exec rake suggestor:do_multiple_will
-
-# biorepository prostate one
-  #data
-  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
-
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-
-# biorepository prostate
-  # data
-  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake biorepository_prostate:biorepository_prostate_data_2
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
-
-  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-
-# nu chers
-  # data
-  # bundle exec rake nu_chers:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake nu_chers:nu_chers_data
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake nu_chers:schemas_omop_abstractor_nlp_nu_chers_final_diagnosis
-  # bundle exec rake nu_chers:schemas_omop_abstractor_nlp_nu_chers_synoptic
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-
-# nu chers one
-  #data
-  # bundle exec rake biorepository_breast:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:data
-  # bundle exec rake data:create_note_stable_identifier_entires
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake clamp:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake nu_chers:schemas_omop_abstractor_nlp_nu_chers_final_diagnosis
-
-  #abstraction
-  # br
-  # bundle exec rake suggestor:do_multiple_will
 require './lib/omop_abstractor/setup/setup'
 require './lib/clamp_mapper/parser'
 namespace :setup do
@@ -1779,7 +1503,6 @@ namespace :setup do
     load_clinic_vist_data(files)
   end
 
-
   desc "OHDSI NLP Proposal data"
   task(ohdsi_nlp_proposal_data: :environment) do |t, args|
     directory_path = 'lib/setup/data/ohdsi_nlp_proposal/'
@@ -1815,6 +1538,13 @@ namespace :setup do
     load_data_new(files)
   end
 
+  desc "Breast data"
+  task(breast_data: :environment) do |t, args|
+    directory_path = 'lib/setup/data/breast/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+    load_data_xml(files)
+  end
 end
 
 def load_data_xml(files)
@@ -2527,3 +2257,281 @@ def load_clinic_vist_data(files)
     end
   end
 end
+
+
+# biorepository prostate ps
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:prostate_spore_clinic_visit_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_clinic_vists
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+# biorepository prostate
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:prostate_spore_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+#biorepository_prostate_development_biopsy_one
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:dummy_data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction
+  # br
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
+# export RAILS_ENV=staging
+
+# bundle exec rake mbti:mbti_data
+# bundle exec rake suggestor:do_multiple_will
+
+# export RAILS_ENV=staging
+# mbti final will
+  # data
+  # bundle exec rake mbti:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake mbti:mbti_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake mbti:schemas_mbti
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+  # bundle exec rake suggestor:do_multiple_will_one["?"]
+  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake suggestor:do_multiple_will
+
+# mbti will one
+  #data
+  # bundle exec rake mbti:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake mbti:schemas_mbti
+
+  #abstraction
+  # br
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+  # bundle exec rake suggestor:do_multiple_will_one["?"]
+
+# biorepository prostate
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake biorepository_prostate:biorepository_prostate_data_3
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+# bundle exec rake biorepository_breast_new:biorepository_breast_abstractions
+# biorepository breast new will
+  # data
+  # bundle exec rake biorepository_breast_new:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake biorepository_breast_new:biorepository_breast_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_breast_new:schemas_breast
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake suggestor:do_multiple_will
+
+# biorepository breast new will one
+  #data
+  # bundle exec rake biorepository_breast:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_breast_new:schemas_breast
+
+  #abstraction
+  # br
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
+# mbti will
+  # data
+  # bundle exec rake db:migrate
+  # bundle exec rake abstractor:setup:system
+
+  #schemas
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake clamp:schemas_clamp
+
+  #abstraction
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
+# biorepository breast new one will
+  #data
+  # bundle exec rake biorepository_breast:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_breast_new:schemas_breast
+
+  #abstraction
+  # br
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
+
+# mbti will
+  # data
+  # bundle exec rake db:migrate
+  # bundle exec rake abstractor:setup:system
+
+  #schemas
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake clamp:schemas_clamp
+
+  #abstraction
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
+# mbti will one
+  #data
+  # bundle exec rake biorepository_breast:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake clamp:schemas_clamp
+
+  #abstraction
+  # br
+  # make start-service
+  # bundle exec rake suggestor:do_multiple_will
+
+# biorepository prostate one
+  #data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+# biorepository prostate
+  # data
+  # bundle exec rake biorepository_prostate:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake biorepository_prostate:biorepository_prostate_data_2
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate_biopsy
+
+  # bundle exec rake biorepository_prostate:schemas_omop_abstractor_nlp_biorepository_prostate
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+# nu chers
+  # data
+  # bundle exec rake nu_chers:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake nu_chers:nu_chers_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake nu_chers:schemas_omop_abstractor_nlp_nu_chers_final_diagnosis
+  # bundle exec rake nu_chers:schemas_omop_abstractor_nlp_nu_chers_synoptic
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+
+# nu chers one
+  #data
+  # bundle exec rake biorepository_breast:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake setup:data
+  # bundle exec rake data:create_note_stable_identifier_entires
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake clamp:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake nu_chers:schemas_omop_abstractor_nlp_nu_chers_final_diagnosis
+
+  #abstraction
+  # br
+  # bundle exec rake suggestor:do_multiple_will

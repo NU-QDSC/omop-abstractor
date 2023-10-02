@@ -12,8 +12,8 @@ class Icdo3Site < ApplicationRecord
   #done
   #'C54.2' custom
   #'C54.3' custom
-  #'C54.9' custom 
-  #'C55.9' custom  
+  #'C54.9' custom
+  #'C55.9' custom
 
   SITES_UTERINE_CERVIX = ['C53.0', 'C53.1', 'C53.9']
   #done
@@ -29,10 +29,12 @@ class Icdo3Site < ApplicationRecord
 
   SITES_VAGINA = ['C52.9']
   #done
-  
+
   SITES_VULVA = ['C51.0', 'C51.1', 'C51.2', 'C51.9', 'C76.3']
-   #done  
-  
+   #done
+
+  SITES_LYMPH_NODE = ['C77.9']
+
   scope :current, -> do
     where('icdo3_sites.version = ? AND icdo3_sites.minor_version = ?', 'new', 'Topoenglish.csv')
   end
@@ -46,11 +48,11 @@ class Icdo3Site < ApplicationRecord
   end
 
   scope :by_primary_breast, -> do
-    current.where('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_BREAST)
+    current.where('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_BREAST + Icdo3Site::SITES_LYMPH_NODE)
   end
 
   scope :by_primary_metastatic_breast, -> do
-    current.where.not('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_BREAST)
+    current.where.not('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_LYMPH_NODE)
   end
 
   scope :by_primary_colon, -> do

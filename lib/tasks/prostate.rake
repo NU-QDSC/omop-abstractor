@@ -1710,7 +1710,7 @@ namespace :prostate do
     #End surgery date
   end
 
-  #bundle exec rake aml:create_aml_pathology_cases_datamart
+  #bundle exec rake prostate:create_prostate_pathology_cases_datamart
   desc "Create Prostate Pathology Cases Datamart"
   task(create_prostate_pathology_cases_datamart: :environment) do |t, args|
     ActiveRecord::Base.connection.execute('TRUNCATE TABLE prostate_pathology_cases CASCADE;')
