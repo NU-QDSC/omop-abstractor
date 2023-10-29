@@ -22,8 +22,15 @@ class CreateAmlPathologyCases < ActiveRecord::Migration[5.2]
       t.string  :diagnosis_type, null: true
       t.string  :has_cancer_histology, null: true
       t.text    :has_cancer_histology_suggestions, null: true
+      t.text    :has_cancer_histology_suggestion_sentences, null: true
       t.boolean :has_cancer_histology_negated, null: true
       t.string  :has_cancer_recurrence_status, null: true
+      t.string  :has_cellular, null: true
+      t.text    :has_cellular_suggestions, null: true
+      t.text    :has_cellular_suggestion_sentences, null: true
+      t.string  :has_blasts, null: true
+      t.text    :has_blasts_suggestions, null: true
+      t.text    :has_blasts_suggestion_sentences, null: true
       t.string  :has_surgery_date, null: true
     end
   end

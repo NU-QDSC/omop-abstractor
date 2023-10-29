@@ -1513,11 +1513,11 @@ namespace :setup do
 
   desc "AML data"
   task(aml_data: :environment) do |t, args|
-    directory_path = 'lib/setup/data/aml/'
-    files = Dir.glob(File.join(directory_path, '*.xlsx'))
+    directory_path = 'lib/setup/data/aml/diagnositic_pathology'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
     files = files.sort_by { |file| File.stat(file).mtime }
 
-    load_data_new(files)
+    load_data_xml(files)
   end
 
   desc "AML Test data"
@@ -1532,10 +1532,9 @@ namespace :setup do
   desc "Prostate data"
   task(prostate_data: :environment) do |t, args|
     directory_path = 'lib/setup/data/prostate/'
-    files = Dir.glob(File.join(directory_path, '*.xlsx'))
+    files = Dir.glob(File.join(directory_path, '*.xml'))
     files = files.sort_by { |file| File.stat(file).mtime }
-
-    load_data_new(files)
+    load_data_xml(files)
   end
 
   desc "Breast data"
@@ -1772,8 +1771,6 @@ def load_data_new(files)
        'note text' => 31
     }
 
-    pathology_procedures_by_mrn = {}
-
     location = Location.where(location_id: 1, address_1: '123 Main Street', address_2: 'Apt, 3F', city: 'New York', state: 'NY' , zip: '10001', county: 'Manhattan').first_or_create
     gender_concept_id = Concept.genders.first.concept_id
     race_concept_id = Concept.races.first.concept_id
@@ -1981,8 +1978,6 @@ def load_data(files)
        'primary surgeon full name' => 24,
        'primary surgeon npi' => 25
     }
-
-    pathology_procedures_by_mrn = {}
 
     location = Location.where(location_id: 1, address_1: '123 Main Street', address_2: 'Apt, 3F', city: 'New York', state: 'NY' , zip: '10001', county: 'Manhattan').first_or_create
     gender_concept_id = Concept.genders.first.concept_id

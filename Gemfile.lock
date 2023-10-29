@@ -395,7 +395,7 @@ DEPENDENCIES
   yajl-ruby
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.18
+   2.4.3

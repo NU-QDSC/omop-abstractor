@@ -8,11 +8,7 @@ CREATE TEMPORARY TABLE cancer_abstractions
  stable_identifier_value                      varchar(255)  NULL,
  subject_id                                   BIGINT        NOT NULL,
  has_cellular                                 varchar(255)  NULL,
- has_cellular_suggestions                     text NULL,
- has_cellular_suggestion_sentences            text NULL,
  has_blasts                                   varchar(255)  NULL,
- has_blasts_suggestions                       text NULL,
- has_blasts_suggestion_sentences              text NULL,
  has_surgery_date                             varchar(255)  NULL,
  about_id                                     BIGINT        NOT NULL
 );
@@ -24,11 +20,7 @@ INSERT INTO cancer_abstractions (
  , stable_identifier_value
  , subject_id
  , has_cellular
- , has_cellular_suggestions
- , has_cellular_suggestion_sentences
  , has_blasts
- , has_blasts_suggestions
- , has_blasts_suggestion_sentences
  , has_surgery_date
  , about_id
 )
@@ -38,45 +30,7 @@ SELECT note_stable_identifier.id
      , note_stable_identifier.stable_identifier_value
      , pivoted_abstractions.subject_id
      , pivoted_abstractions.has_cellular
-     , array_to_string(array(
-         SELECT DISTINCT asg2.suggested_value
-         FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
-                                          JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
-                                          JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
-         WHERE aa2.about_id = pivoted_abstractions.about_id
-         AND aas2.predicate = 'has_cellular'
-         AND asg2.suggested_value IS NOT NULL
-       ), ', ') AS has_cellular_suggestions
-     , array_to_string(array(
-         SELECT DISTINCT ass.sentence_match_value
-         FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
-                                          JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
-                                          JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
-                                          JOIN abstractor_suggestion_sources ass on asg2.id = ass.abstractor_suggestion_id
-         WHERE aa2.about_id = pivoted_abstractions.about_id
-         AND aas2.predicate = 'has_cellular'
-         AND asg2.suggested_value IS NOT NULL
-       ), '|') AS has_cellular_suggestion_sentences
      , pivoted_abstractions.has_blasts
-     , array_to_string(array(
-         SELECT DISTINCT asg2.suggested_value
-         FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
-                                          JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
-                                          JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
-         WHERE aa2.about_id = pivoted_abstractions.about_id
-         AND aas2.predicate = 'has_blasts'
-         AND asg2.suggested_value IS NOT NULL
-       ), ', ') AS has_blasts_suggestions
-     , array_to_string(array(
-         SELECT DISTINCT ass.sentence_match_value
-         FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
-                                          JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
-                                          JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
-                                          JOIN abstractor_suggestion_sources ass on asg2.id = ass.abstractor_suggestion_id
-         WHERE aa2.about_id = pivoted_abstractions.about_id
-         AND aas2.predicate = 'has_blasts'
-         AND asg2.suggested_value IS NOT NULL
-       ), '|') AS has_blasts_suggestion_sentences
      , pivoted_abstractions.has_surgery_date
      , pivoted_abstractions.about_id
 FROM note_stable_identifier JOIN note_stable_identifier_full ON note_stable_identifier.stable_identifier_path = note_stable_identifier_full.stable_identifier_path AND note_stable_identifier.stable_identifier_value = note_stable_identifier_full.stable_identifier_value
@@ -156,19 +110,18 @@ DROP TABLE IF EXISTS cancer_diagnosis_abstractions;
 
 CREATE TEMPORARY TABLE cancer_diagnosis_abstractions
 (
-  id                                        BIGINT        NOT NULL,
-  note_id                                   BIGINT        NOT NULL,
-  stable_identifier_path                    varchar(255)  NULL,
-  stable_identifier_value                   varchar(255)  NULL,
-  subject_id                                BIGINT        NOT NULL,
-  diagnosis_type                            varchar(255)  NULL,
-  has_cancer_histology                      varchar(255)  NULL,
-  has_cancer_histology_suggestions          text NULL,
-  has_cancer_histology_suggestion_sentences text NULL,
-  has_cancer_histology_negated              boolean NULL,
-  has_cancer_recurrence_status              varchar(255)  NULL,
-  abstractor_namespace_name                 varchar(255)  NULL,
-  about_id                                  BIGINT        NOT NULL
+  id                                       BIGINT        NOT NULL,
+  note_id                                  BIGINT        NOT NULL,
+  stable_identifier_path                   varchar(255)  NULL,
+  stable_identifier_value                  varchar(255)  NULL,
+  subject_id                               BIGINT        NOT NULL,
+  diagnosis_type                           varchar(255)  NULL,
+  has_cancer_histology                     varchar(255)  NULL,
+  has_cancer_histology_suggestions         text NULL,
+  has_cancer_histology_negated             boolean NULL,
+  has_cancer_recurrence_status             varchar(255)  NULL,
+  abstractor_namespace_name                varchar(255)  NULL,
+  about_id                                 BIGINT        NOT NULL
 );
 
 INSERT INTO cancer_diagnosis_abstractions (
@@ -180,7 +133,6 @@ INSERT INTO cancer_diagnosis_abstractions (
  , diagnosis_type
  , has_cancer_histology
  , has_cancer_histology_suggestions
- , has_cancer_histology_suggestion_sentences
  , has_cancer_histology_negated
  , has_cancer_recurrence_status
  , abstractor_namespace_name
@@ -206,20 +158,6 @@ SELECT note_stable_identifier.id
          AND asg2.suggested_value IS NOT NULL
          AND asg.name = 'Primary Cancer'
        ), ', ') AS has_cancer_histology_suggestions
-     , array_to_string(array(
-         SELECT DISTINCT ass.sentence_match_value
-         FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
-                                          JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
-                                          JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
-                                          JOIN abstractor_abstraction_group_members aagm ON aa2.id = aagm.abstractor_abstraction_id
-                                          JOIN abstractor_abstraction_groups aag ON aagm.abstractor_abstraction_group_id = aag.id
-                                          JOIN abstractor_subject_groups asg ON aag.abstractor_subject_group_id = asg.id
-                                          JOIN abstractor_suggestion_sources ass on asg2.id = ass.abstractor_suggestion_id
-         WHERE aa2.about_id = pivoted_abstractions.about_id
-         AND aas2.predicate = 'has_cancer_histology'
-         AND asg2.suggested_value IS NOT NULL
-         AND asg.name = 'Primary Cancer'
-       ), '|') AS has_cancer_histology_suggestion_sentences
      , false
      , pivoted_abstractions.has_cancer_recurrence_status
      , pivoted_abstractions.abstractor_namespace_name
@@ -300,7 +238,6 @@ INSERT INTO cancer_diagnosis_abstractions (
  , diagnosis_type
  , has_cancer_histology
  , has_cancer_histology_suggestions
- , has_cancer_histology_suggestion_sentences
  , has_cancer_histology_negated
  , has_cancer_recurrence_status
  , abstractor_namespace_name
@@ -326,20 +263,6 @@ SELECT note_stable_identifier.id
          AND asg2.suggested_value IS NOT NULL
          AND asg.name = 'Primary Cancer'
        ), ', ') AS has_cancer_histology_suggestions
-     , array_to_string(array(
-         SELECT DISTINCT ass.sentence_match_value
-         FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
-                                          JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
-                                          JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
-                                          JOIN abstractor_abstraction_group_members aagm ON aa2.id = aagm.abstractor_abstraction_id
-                                          JOIN abstractor_abstraction_groups aag ON aagm.abstractor_abstraction_group_id = aag.id
-                                          JOIN abstractor_subject_groups asg ON aag.abstractor_subject_group_id = asg.id
-                                          JOIN abstractor_suggestion_sources ass on asg2.id = ass.abstractor_suggestion_id
-         WHERE aa2.about_id = pivoted_abstractions.about_id
-         AND aas2.predicate = 'has_cancer_histology'
-         AND asg2.suggested_value IS NOT NULL
-         AND asg.name = 'Primary Cancer'
-       ), '|') AS has_cancer_histology_suggestion_sentences
      , true
      , pivoted_abstractions.has_cancer_recurrence_status
      , pivoted_abstractions.abstractor_namespace_name
@@ -447,15 +370,10 @@ INSERT INTO aml_pathology_cases
 , diagnosis_type
 , has_cancer_histology
 , has_cancer_histology_suggestions
-, has_cancer_histology_suggestion_sentences
 , has_cancer_histology_negated
 , has_cancer_recurrence_status
 , has_cellular
-, has_cellular_suggestions
-, has_cellular_suggestion_sentences
 , has_blasts
-, has_blasts_suggestions
-, has_blasts_suggestion_sentences
 , has_surgery_date
 )
 SELECT
@@ -480,15 +398,10 @@ SELECT
       , cancer_diagnosis_abstractions.diagnosis_type
       , cancer_diagnosis_abstractions.has_cancer_histology
       , cancer_diagnosis_abstractions.has_cancer_histology_suggestions
-      , cancer_diagnosis_abstractions.has_cancer_histology_suggestion_sentences
       , cancer_diagnosis_abstractions.has_cancer_histology_negated
       , cancer_diagnosis_abstractions.has_cancer_recurrence_status
       , cancer_abstractions.has_cellular
-      , cancer_abstractions.has_cellular_suggestions
-      , cancer_abstractions.has_cellular_suggestion_sentences
       , cancer_abstractions.has_blasts
-      , cancer_abstractions.has_blasts_suggestions
-      , cancer_abstractions.has_blasts_suggestion_sentences
       , cancer_abstractions.has_surgery_date
 from(
 select    p.person_source_value
@@ -560,14 +473,10 @@ INSERT INTO aml_pathology_cases
 , diagnosis_type
 , has_cancer_histology
 , has_cancer_histology_suggestions
-, has_cancer_histology_suggestion_sentences
 , has_cancer_histology_negated
 , has_cancer_recurrence_status
 , has_cellular
-, has_cellular_suggestions
-, has_cellular_suggestion_sentences
 , has_blasts
-, has_blasts_suggestions
 , has_surgery_date
 )
 SELECT  cancer_diagnosis_abstractions.abstractor_namespace_name
@@ -591,14 +500,10 @@ SELECT  cancer_diagnosis_abstractions.abstractor_namespace_name
       , cancer_diagnosis_abstractions.diagnosis_type
       , cancer_diagnosis_abstractions.has_cancer_histology
       , cancer_diagnosis_abstractions.has_cancer_histology_suggestions
-      , cancer_diagnosis_abstractions.has_cancer_histology_suggestion_sentences
       , cancer_diagnosis_abstractions.has_cancer_histology_negated
       , cancer_diagnosis_abstractions.has_cancer_recurrence_status
       , cancer_abstractions.has_cellular
-      , cancer_abstractions.has_cellular_suggestions
-      , cancer_abstractions.has_cellular_suggestion_sentences
       , cancer_abstractions.has_blasts
-      , cancer_abstractions.has_blasts_suggestions
       , cancer_abstractions.has_surgery_date
 
 from(

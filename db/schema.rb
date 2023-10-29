@@ -378,8 +378,15 @@ ActiveRecord::Schema.define(version: 2023_10_01_183804) do
     t.string "diagnosis_type"
     t.string "has_cancer_histology"
     t.text "has_cancer_histology_suggestions"
+    t.text "has_cancer_histology_suggestion_sentences"
     t.boolean "has_cancer_histology_negated"
     t.string "has_cancer_recurrence_status"
+    t.string "has_cellular"
+    t.text "has_cellular_suggestions"
+    t.text "has_cellular_suggestion_sentences"
+    t.string "has_blasts"
+    t.text "has_blasts_suggestions"
+    t.text "has_blasts_suggestion_sentences"
     t.string "has_surgery_date"
   end
 
@@ -1261,6 +1268,15 @@ ActiveRecord::Schema.define(version: 2023_10_01_183804) do
     t.boolean "case_number_found"
     t.boolean "case_number_collection_date_found"
     t.string "accession_number_assigned"
+  end
+
+  create_table "patients", id: false, force: :cascade do |t|
+    t.string "west_mrn", limit: 255
+    t.string "diagnosis_date", limit: 255
+    t.string "icdo3_site_code", limit: 255
+    t.string "icdo3_histology_code", limit: 255
+    t.string "icd10_code", limit: 255
+    t.string "source_system", limit: 255
   end
 
   create_table "payer_plan_period", primary_key: "payer_plan_period_id", id: :integer, default: nil, force: :cascade do |t|

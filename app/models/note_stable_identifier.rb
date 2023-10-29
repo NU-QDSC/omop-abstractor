@@ -1085,6 +1085,10 @@ class NoteStableIdentifier < ApplicationRecord
                end
 
                if values.size == 2 #&& values.last.semantic_tag_value.scan('%').present?
+                 values.each do |value|
+                    value.semantic_tag_value.gsub!('~', '')
+                 end
+
                  value_last = values.last.semantic_tag_value.gsub('%', '')
                  sentence = omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
                  regexp = Regexp.new("#{values.first.semantic_tag_value}\s?\-\s?#{value_last}\%")
@@ -1123,8 +1127,30 @@ class NoteStableIdentifier < ApplicationRecord
                end
 
                if move && values.any? && values.size <= 4
+                 if values.size > 1
+                   working_values = values.dup
+                   closest = working_values[0]
+                   working_values.shift
+                   working_values.each_with_index do |value, i|
+                     if closest
+                       closest = closest_value(named_entity_name, closest, working_values[i])
+                     end
+                   end
+                   puts closest
+                   if closest
+                     values = [closest]
+                   end
+
+                 # elsif values.size == 1
+                 #   enough = close_enough?(named_entity_name, values.first)
+                 #   if !enough
+                 #     values.shift
+                 #   end
+                 end
+
                  values.each do |value|
                    abstractor_abstraction.reload
+                   value.semantic_tag_value.gsub!('~', '')
                    if value.semantic_tag_value.scan('%').present?
                      value.semantic_tag_value = (Percentage.new(value.semantic_tag_value).to_f / 100).to_s
                    end
@@ -1142,7 +1168,7 @@ class NoteStableIdentifier < ApplicationRecord
                      self.id,
                      self.class.to_s,
                      'note_text',
-                     section_name,          #suggestion_source[:section_name]
+                     section_name,                                     #suggestion_source[:section_name]
                      value.semantic_tag_value,                         #suggestion[:value]
                      false,                                            #suggestion[:unknown].to_s.to_boolean
                      false,                                            #suggestion[:not_applicable].to_s.to_boolean
@@ -1687,5 +1713,39 @@ class NoteStableIdentifier < ApplicationRecord
     end
 
     canonical_format
+  end
+
+  def closest_value(named_entity_name, named_entity_value1, named_entity_value2)
+     range1_start_diff = (named_entity_name.named_entity_begin - named_entity_value1.named_entity_begin).abs
+     range1_end_diff = (named_entity_name.named_entity_end - named_entity_value1.named_entity_end).abs
+
+     range2_start_diff = (named_entity_name.named_entity_begin - named_entity_value2.named_entity_begin).abs
+     range2_end_diff = (named_entity_name.named_entity_end - named_entity_value2.named_entity_end).abs
+
+     total_diff1 = range1_start_diff + range1_end_diff
+     total_diff2 = range2_start_diff + range2_end_diff
+
+     if total_diff1 < total_diff2
+       return named_entity_value1
+     elsif total_diff2 < total_diff1
+       return named_entity_value2
+     else
+       return nil # Both ranges are equally close
+     end
+  end
+
+  def close_enough?(named_entity_name, named_entity_value)
+    enough = nil
+
+    range1_start_diff = (named_entity_name.named_entity_begin - named_entity_value.named_entity_end).abs
+    if range1_start_diff <= 10
+      enough = true
+    end
+
+    range2_start_diff = (named_entity_value.named_entity_begin - named_entity_name.named_entity_end).abs
+    if range2_start_diff <= 10
+      enough = true
+    end
+    enough
   end
 end
