@@ -1511,22 +1511,16 @@ namespace :setup do
     load_data_xml(files)
   end
 
+  # RAILS_ENV=staging bundle exec rake setup:aml_data["?"]
   desc "AML data"
-  task(aml_data: :environment) do |t, args|
+  task :aml_data, [:west_mrn] => :environment do |t, args|
+    puts 'youn need to care'
+    puts args[:west_mrn]
     directory_path = 'lib/setup/data/aml/diagnositic_pathology'
     files = Dir.glob(File.join(directory_path, '*.xml'))
     files = files.sort_by { |file| File.stat(file).mtime }
 
-    load_data_xml(files)
-  end
-
-  desc "AML Test data"
-  task(aml_test_data: :environment) do |t, args|
-    directory_path = 'lib/setup/data/aml/test/'
-    files = Dir.glob(File.join(directory_path, '*.xlsx'))
-    files = files.sort_by { |file| File.stat(file).mtime }
-
-    load_data_new(files)
+    load_data_xml(files, west_mrn: args[:west_mrn])
   end
 
   desc "Prostate data"
@@ -1546,7 +1540,8 @@ namespace :setup do
   end
 end
 
-def load_data_xml(files)
+def load_data_xml(files, options= {})
+  options = { west_mrn: nil }.merge(options)
   @note_type_concept = Concept.note_types.where(concept_name: 'Pathology report').first
   @note_class_concept = Concept.standard.valid.where(concept_name: 'Pathology procedure note').first
   files.each do |file|
@@ -1561,7 +1556,16 @@ def load_data_xml(files)
     race_concept_id = Concept.races.first.concept_id
     ethnicity_concept_id =   Concept.ethnicities.first.concept_id
 
-    pathology_case_handler.pathology_cases.each_with_index do |pathology_case, i|
+    pathology_cases = []
+    if !options[:west_mrn].present?
+      puts 'wrong way'
+      pathology_cases =  pathology_case_handler.pathology_cases
+    else
+      puts 'in clover'
+      pathology_cases = pathology_case_handler.pathology_cases.select { |pathology_case| pathology_case.west_mrn ==  options[:west_mrn] }
+    end
+
+    pathology_cases.each_with_index do |pathology_case, i|
       puts 'row'
       puts i
       puts 'west mrn'
@@ -2252,7 +2256,6 @@ def load_clinic_vist_data(files)
     end
   end
 end
-
 
 # biorepository prostate ps
   # data

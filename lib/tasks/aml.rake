@@ -1,21 +1,21 @@
 # AML
-  # data
-  # bundle exec rake setup:truncate_stable_identifiers
-  # bundle exec rake omop:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:aml_data
-  # bundle exec rake setup:aml_test_data
+# data
+# bundle exec rake setup:truncate_stable_identifiers
+# bundle exec rake omop:truncate_omop_clinical_data_tables
+# bundle exec rake setup:aml_data
+# bundle exec rake setup:aml_data[""]
 
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake aml:schemas
+#schemas
+# bundle exec rake abstractor:setup:system
+# bundle exec rake setup:compare_icdo3
+# bundle exec rake setup:truncate_schemas
+# bundle exec rake aml:schemas
 
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_aml
-  # bundle exec rake ohdsi_nlp_proposal:create_ohdsi_nlp_proposal_pathology_cases_datamart
-  #data mart
-  #bundle exec rake aml:create_aml_pathology_cases_datamart
+#abstraction will
+# bundle exec rake suggestor:do_multiple_aml
+
+#data mart
+# bundle exec rake aml:create_aml_pathology_cases_datamart
 namespace :aml do
   desc 'Load schemas'
   task(schemas: :environment) do |t, args|
@@ -218,3 +218,5 @@ namespace :aml do
     ActiveRecord::Base.connection.execute(sql)
   end
 end
+
+

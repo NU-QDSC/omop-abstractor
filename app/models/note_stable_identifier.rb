@@ -1073,6 +1073,18 @@ class NoteStableIdentifier < ApplicationRecord
            # puts named_entities.size
            suggested = false
            suggestions = []
+
+           if abstractor_abstraction_schema.predicate == 'has_blasts'
+             named_entities_names.each do |named_entity_name|
+               sentence = omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
+               regexp = Regexp.new(/no increase in blasts/)
+               match =  sentence.match(regexp)
+               if match
+                 named_entities_values = []
+               end
+             end
+           end
+
            if named_entities_names.any?
              named_entities_names.each do |named_entity_name|
                values = named_entities_values.select { |named_entities_value| named_entity_name.sentence == named_entities_value.sentence }
@@ -1091,7 +1103,8 @@ class NoteStableIdentifier < ApplicationRecord
 
                  value_last = values.last.semantic_tag_value.gsub('%', '')
                  sentence = omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
-                 regexp = Regexp.new("#{values.first.semantic_tag_value}\s?\-\s?#{value_last}\%")
+                 regexp = Regexp.new('\b('+ values.first.semantic_tag_value + '(?:\.' + values.first.semantic_tag_value + ')?%?)\s*(?:-|to)\s*(' + value_last + '(?:\.' + value_last + '})?%?)\b')
+
                  match = sentence.match(regexp)
                  if match
                    values.first.semantic_tag_value = (Percentage.new((((values.first.semantic_tag_value.to_f + values.last.semantic_tag_value.to_f)/2)) / 100)).value.to_s
@@ -1126,7 +1139,22 @@ class NoteStableIdentifier < ApplicationRecord
                  end
                end
 
+               #come back to drive range logic based on configuration
+               if move
+                 working_values = values.dup
+                 working_values.each_with_index do |value, i|
+                   value.semantic_tag_value.gsub!('~', '')
+                   if value.semantic_tag_value.scan('%').present?
+                     value.semantic_tag_value = (Percentage.new(value.semantic_tag_value).to_f / 100).to_s
+                   else
+                     value.semantic_tag_value.to_f > 1
+                     values.delete_at(i)
+                   end
+                 end
+               end
+
                if move && values.any? && values.size <= 4
+
                  if values.size > 1
                    working_values = values.dup
                    closest = working_values[0]
