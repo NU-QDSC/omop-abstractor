@@ -1087,14 +1087,35 @@ class NoteStableIdentifier < ApplicationRecord
 
            if named_entities_names.any?
              named_entities_names.each do |named_entity_name|
-               values = named_entities_values.select { |named_entities_value| named_entity_name.sentence == named_entities_value.sentence }
+               values = named_entities_values.select { |named_entity_value| named_entity_name.sentence == named_entity_value.sentence }.uniq
                values.reject! { |value| named_entity_name.overlap?(value) }
+
+               working_values = values.dup
+               working_values.each do |working_value|
+                 duplicate_values = values.select { |value| value.semantic_tag_value == working_value.semantic_tag_value && value.sentence == working_value.sentence }
+                 if duplicate_values.size == 2
+                   values.delete(duplicate_values.last)
+                 end
+               end
+
                move = true
                if named_entity_name.sentence.section
                  section_name = named_entity_name.sentence.section.name
                else
                  section_name = nil
                end
+
+               # puts 'here is the sentence'
+          #      puts omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
+          #      puts 'how many values?'
+          #      puts values.size
+          #
+          #      values.each do |value|
+          #        puts 'here is the value'
+          #        puts value.class
+          #        puts value.semantic_tag_value
+          #        puts value.sentence
+          #      end
 
                if values.size == 2 #&& values.last.semantic_tag_value.scan('%').present?
                  values.each do |value|
@@ -1103,7 +1124,10 @@ class NoteStableIdentifier < ApplicationRecord
 
                  value_last = values.last.semantic_tag_value.gsub('%', '')
                  sentence = omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
-                 regexp = Regexp.new('\b('+ values.first.semantic_tag_value + '(?:\.' + values.first.semantic_tag_value + ')?%?)\s*(?:-|to)\s*(' + value_last + '(?:\.' + value_last + '})?%?)\b')
+                 regexp = '\b('+ values.first.semantic_tag_value + '(?:\.' + values.first.semantic_tag_value + ')?%?)\s*(?:-|to)\s*(' + value_last + '(?:\.' + value_last + '})?%?)\b'
+                 # puts 'here is the regexp'
+              #    puts regexp
+                 regexp = Regexp.new(regexp)
 
                  match = sentence.match(regexp)
                  if match
