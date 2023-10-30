@@ -1090,14 +1090,6 @@ class NoteStableIdentifier < ApplicationRecord
                values = named_entities_values.select { |named_entity_value| named_entity_name.sentence == named_entity_value.sentence }.uniq
                values.reject! { |value| named_entity_name.overlap?(value) }
 
-               working_values = values.dup
-               working_values.each do |working_value|
-                 duplicate_values = values.select { |value| value.semantic_tag_value == working_value.semantic_tag_value && value.sentence == working_value.sentence }
-                 if duplicate_values.size == 2
-                   values.delete(duplicate_values.last)
-                 end
-               end
-
                move = true
                if named_entity_name.sentence.section
                  section_name = named_entity_name.sentence.section.name
@@ -1105,74 +1097,105 @@ class NoteStableIdentifier < ApplicationRecord
                  section_name = nil
                end
 
-               # puts 'here is the sentence'
-          #      puts omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
-          #      puts 'how many values?'
-          #      puts values.size
-          #
-          #      values.each do |value|
-          #        puts 'here is the value'
-          #        puts value.class
-          #        puts value.semantic_tag_value
-          #        puts value.sentence
-          #      end
-
-               if values.size == 2 #&& values.last.semantic_tag_value.scan('%').present?
-                 values.each do |value|
-                    value.semantic_tag_value.gsub!('~', '')
-                 end
-
-                 value_last = values.last.semantic_tag_value.gsub('%', '')
-                 sentence = omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
-                 regexp = '\b('+ values.first.semantic_tag_value + '(?:\.' + values.first.semantic_tag_value + ')?%?)\s*(?:-|to)\s*(' + value_last + '(?:\.' + value_last + '})?%?)\b'
-                 # puts 'here is the regexp'
-              #    puts regexp
-                 regexp = Regexp.new(regexp)
-
-                 match = sentence.match(regexp)
-                 if match
-                   values.first.semantic_tag_value = (Percentage.new((((values.first.semantic_tag_value.to_f + values.last.semantic_tag_value.to_f)/2)) / 100)).value.to_s
-                   abstractor_suggestion = abstractor_abstraction.abstractor_subject.suggest(
-                   abstractor_abstraction,
-                   abstractor_abstraction_source,
-                   omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
-                   omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
-                   self.id,
-                   self.class.to_s,
-                   'note_text',
-                   section_name,          #suggestion_source[:section_name]
-                   values.first.semantic_tag_value,                         #suggestion[:value]
-                   false,                                            #suggestion[:unknown].to_s.to_boolean
-                   false,                                            #suggestion[:not_applicable].to_s.to_boolean
-                   nil,
-                   nil,
-                   (named_entity_name.negated? || values.first.negated?)    #suggestion[:negated].to_s.to_boolean
-                   )
-                   #save so this suggestion gets saved first
-                   # abstractor_abstraction.save!
-                   abstractor_suggestion.save!
-                   if !named_entity_name.negated? && !values.first.negated?
-                     suggestions << abstractor_suggestion
-                     suggested = true
-                     # if canonical_format?(omop_abstractor_nlp_document.text[named_entity_name.named_entity_begin..named_entity_name.named_entity_end], omop_abstractor_nlp_document.text[value.named_entity_begin..value.named_entity_end], omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end])
-                     #   abstractor_suggestion.accepted = true
-                     #   abstractor_suggestion.save!
-                     # end
-                   end
-                   move = false
+               values_to_delete = []
+               working_values = values.dup
+               working_values.each do |working_value|
+                 duplicate_values = values.select { |value| value.semantic_tag_value == working_value.semantic_tag_value && value.sentence == working_value.sentence }
+                 if duplicate_values.size == 2
+                   values_to_delete << duplicate_values.last
                  end
                end
+
+               values_to_delete.each do |value_to_delete|
+                 values.delete(value_to_delete)
+               end
+
+               # puts 'here is the predicate for the values'
+               # puts abstractor_abstraction_schema.predicate
+               # puts 'here is the sentence'
+               # puts omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
+               # puts 'how many values?'
+               # puts values.size
+               #
+               # values.each do |value|
+               #   puts 'here is the value'
+               #   puts value.class
+               #   puts value.semantic_tag_value
+               #   puts 'named_entity_begin'
+               #   puts value.named_entity_begin
+               #   puts 'named_entity_end'
+               #   puts value.named_entity_end
+               #   puts 'sentence'
+               #   puts value.sentence
+               #   puts 'value.sentence.sentence_begin'
+               #   puts value.sentence.sentence_begin
+               #   puts 'value.sentence.sentence_end'
+               #   puts value.sentence.sentence_end
+               # end
+
+               # values.each do |value|
+               #   enough = close_enough?(named_entity_name, value)
+               #   if !enough
+               #     values.shift
+               #   end
+               # end
+
+               # if values.size == 2 #&& values.last.semantic_tag_value.scan('%').present?
+               #   values.each do |value|
+               #      value.semantic_tag_value.gsub!('~', '')
+               #   end
+               #
+               #   value_last = values.last.semantic_tag_value.gsub('%', '')
+               #   sentence = omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end]
+               #   regexp = '\b('+ values.first.semantic_tag_value + '(?:\.' + values.first.semantic_tag_value + ')?%?)\s*(?:-|to)\s*(' + value_last + '(?:\.' + value_last + '})?%?)\b'
+               #   # puts 'here is the regexp'
+               #   # puts regexp
+               #   regexp = Regexp.new(regexp)
+               #
+               #   match = sentence.match(regexp)
+               #   if match
+               #     values.first.semantic_tag_value = (Percentage.new((((values.first.semantic_tag_value.to_f + values.last.semantic_tag_value.to_f)/2)) / 100)).value.to_s
+               #     abstractor_suggestion = abstractor_abstraction.abstractor_subject.suggest(
+               #     abstractor_abstraction,
+               #     abstractor_abstraction_source,
+               #     omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
+               #     omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+               #     self.id,
+               #     self.class.to_s,
+               #     'note_text',
+               #     section_name,          #suggestion_source[:section_name]
+               #     values.first.semantic_tag_value,                         #suggestion[:value]
+               #     false,                                            #suggestion[:unknown].to_s.to_boolean
+               #     false,                                            #suggestion[:not_applicable].to_s.to_boolean
+               #     nil,
+               #     nil,
+               #     (named_entity_name.negated? || values.first.negated?)    #suggestion[:negated].to_s.to_boolean
+               #     )
+               #     #save so this suggestion gets saved first
+               #     # abstractor_abstraction.save!
+               #     abstractor_suggestion.save!
+               #     if !named_entity_name.negated? && !values.first.negated?
+               #       suggestions << abstractor_suggestion
+               #       suggested = true
+               #       # if canonical_format?(omop_abstractor_nlp_document.text[named_entity_name.named_entity_begin..named_entity_name.named_entity_end], omop_abstractor_nlp_document.text[value.named_entity_begin..value.named_entity_end], omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end])
+               #       #   abstractor_suggestion.accepted = true
+               #       #   abstractor_suggestion.save!
+               #       # end
+               #     end
+               #     move = false
+               #   end
+               # end
 
                #come back to drive range logic based on configuration
                if move
                  working_values = values.dup
                  working_values.each_with_index do |value, i|
                    value.semantic_tag_value.gsub!('~', '')
-                   if value.semantic_tag_value.scan('%').present?
-                     value.semantic_tag_value = (Percentage.new(value.semantic_tag_value).to_f / 100).to_s
-                   else
-                     value.semantic_tag_value.to_f > 1
-                     values.delete_at(i)
+                   numeric_value = value.semantic_tag_value.to_f
+                   if numeric_value
+                     if !value.semantic_tag_value.scan('%').present? && numeric_value > 1 && numeric_value != 0
+                        values.delete_at(i)
+                     end
                    end
                  end
                end
@@ -1201,14 +1224,16 @@ class NoteStableIdentifier < ApplicationRecord
                  end
 
                  values.each do |value|
+                   suggested_value = nil
                    abstractor_abstraction.reload
-                   value.semantic_tag_value.gsub!('~', '')
-                   if value.semantic_tag_value.scan('%').present?
-                     value.semantic_tag_value = (Percentage.new(value.semantic_tag_value).to_f / 100).to_s
+                   suggested_value = value.semantic_tag_value
+                   suggested_value = value.semantic_tag_value.gsub('~', '')
+                   if suggested_value.scan('%').present?
+                     suggested_value = (Percentage.new(suggested_value).to_f / 100).to_s
                    end
 
-                   if value.semantic_tag_value.downcase == 'zero'
-                     value.semantic_tag_value = '0'
+                   if suggested_value.downcase == 'zero'
+                     suggested_value = '0'
                    end
 
                    if !named_entity_name.overlap?(value)
@@ -1221,7 +1246,7 @@ class NoteStableIdentifier < ApplicationRecord
                      self.class.to_s,
                      'note_text',
                      section_name,                                     #suggestion_source[:section_name]
-                     value.semantic_tag_value,                         #suggestion[:value]
+                     suggested_value,                                   #suggestion[:value]
                      false,                                            #suggestion[:unknown].to_s.to_boolean
                      false,                                            #suggestion[:not_applicable].to_s.to_boolean
                      nil,
