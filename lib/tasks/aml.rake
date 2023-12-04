@@ -10,9 +10,11 @@
 # bundle exec rake setup:compare_icdo3
 # bundle exec rake setup:truncate_schemas
 # bundle exec rake aml:schemas
+# bundle exec rake aml:schemas_sufficiency
 
 #abstraction will
 # bundle exec rake suggestor:do_multiple_aml
+# bundle exec rake suggestor:do_multiple_aml_sufficiency
 
 #data mart
 # bundle exec rake aml:create_aml_pathology_cases_datamart
@@ -209,6 +211,153 @@ namespace :aml do
     #End blasts
   end
 
+  desc 'Load schemas sufficiency'
+  task(schemas_sufficiency: :environment) do |t, args|
+    date_object_type = Abstractor::AbstractorObjectType.where(value: 'date').first
+    list_object_type = Abstractor::AbstractorObjectType.where(value: 'list').first
+    boolean_object_type = Abstractor::AbstractorObjectType.where(value: 'boolean').first
+    string_object_type = Abstractor::AbstractorObjectType.where(value: 'string').first
+    number_object_type = Abstractor::AbstractorObjectType.where(value: 'number').first
+    radio_button_list_object_type = Abstractor::AbstractorObjectType.where(value: 'radio button list').first
+    dynamic_list_object_type = Abstractor::AbstractorObjectType.where(value: 'dynamic list').first
+    text_object_type = Abstractor::AbstractorObjectType.where(value: 'text').first
+    name_value_rule = Abstractor::AbstractorRuleType.where(name: 'name/value').first
+    value_rule = Abstractor::AbstractorRuleType.where(name: 'value').first
+    unknown_rule = Abstractor::AbstractorRuleType.where(name: 'unknown').first
+    source_type_nlp_suggestion = Abstractor::AbstractorAbstractionSourceType.where(name: 'nlp suggestion').first
+    source_type_custom_nlp_suggestion = Abstractor::AbstractorAbstractionSourceType.where(name: 'custom nlp suggestion').first
+    indirect_source_type = Abstractor::AbstractorAbstractionSourceType.where(name: 'indirect').first
+    abstractor_section_type_offsets = Abstractor::AbstractorSectionType.where(name: Abstractor::Enum::ABSTRACTOR_SECTION_TYPE_OFFSETS).first
+    abstractor_section_mention_type_alphabetic = Abstractor::AbstractorSectionMentionType.where(name: Abstractor::Enum::ABSTRACTOR_SECTION_MENTION_TYPE_ALPHABETIC).first
+    abstractor_section_mention_type_token = Abstractor::AbstractorSectionMentionType.where(name: Abstractor::Enum::ABSTRACTOR_SECTION_MENTION_TYPE_TOKEN).first
+
+    abstractor_namespace_diagnostic_pathology = Abstractor::AbstractorNamespace.where(name: 'Diagnostic Pathology Sufficiency', subject_type: NoteStableIdentifier.to_s, joins_clause:
+    "JOIN note_stable_identifier_full ON note_stable_identifier.stable_identifier_path = note_stable_identifier_full.stable_identifier_path AND note_stable_identifier.stable_identifier_value = note_stable_identifier_full.stable_identifier_value
+     JOIN note ON note_stable_identifier_full.note_id = note.note_id
+     JOIN fact_relationship ON fact_relationship.domain_concept_id_1 = 5085 AND fact_relationship.fact_id_1 = note.note_id AND fact_relationship.relationship_concept_id = 44818790
+     JOIN procedure_occurrence ON fact_relationship.domain_concept_id_2 = 10 AND fact_relationship.fact_id_2 = procedure_occurrence.procedure_occurrence_id AND procedure_occurrence.procedure_concept_id IN(4213297, 4192879, 4094377)",
+    where_clause: "note.note_title in('Microscopic Description')").first_or_create
+
+    #Begin Bone Marrow Aspirate Adequacy
+    abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
+      predicate: 'has_bone_marrow_aspirate_adequacy',
+      display_name: 'Bone Marrow Aspirate Adequacy',
+      abstractor_object_type: radio_button_list_object_type,
+      preferred_name: 'bone marrow aspirate').first_or_create
+
+    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'aspirate').first_or_create
+
+    abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'adequate', vocabulary_code: 'adequate').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hypercellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'cellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'multiple cellular bone marrow particles for interpretation').first_or_create
+    Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+
+    abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'inadequate', vocabulary_code: 'inadequate').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'not adequate').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'not cellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'no cellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'scantly cellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'acellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hemodilute').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hemodiluted').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'aspiculate').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'lacks spicules').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'paucicellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hypocellular').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'suboptimal').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'no bone marrow particles for interpretation').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'no bone marrow particles present for evaluation').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'do not have cellular bone marrow particles present').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'bone marrow aspirate contains no spicules').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'lack of cellular particles').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'does not contain cellular bone marrow particles').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'lacks cellular particles').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'limiting for accurate morphologic evaluation').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'limiting for morphologic').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'do not have cellular particles').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'precluding a meaningful differential count').first_or_create
+    Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'precluding adequate differential count and meaningful interpretation').first_or_create
+
+    Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+
+    abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_diagnostic_pathology.id).first_or_create
+    Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => name_value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will').first_or_create
+    #End Bone Marrow Aspirate Adequacy
+
+    # #Begin Bone Marrow Aspirate Cellular
+    # abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
+    #   predicate: 'has_bone_marrow_aspirate_cellular',
+    #   display_name: 'Bone Marrow Aspirate cellular',
+    #   abstractor_object_type: radio_button_list_object_type,
+    #   preferred_name: 'bone marrow aspirate').first_or_create
+    #
+    # Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'aspirate').first_or_create
+    #
+    # abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'cellular', vocabulary_code: 'cellular').first_or_create
+    # Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+    #
+    # abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'not cellular', vocabulary_code: 'not cellular').first_or_create
+    # Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'no cellular').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hemodilute').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'acellular').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'aspiculate').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'lacks spicules').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'paucicellular').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hypocellular').first_or_create
+    #
+    # abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_diagnostic_pathology.id).first_or_create
+    # Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => name_value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will').first_or_create
+    #
+    # #End Bone Marrow Aspirate Cellular
+
+    abstractor_namespace_outside_diagnostic_pathology = Abstractor::AbstractorNamespace.where(name: 'Outside Diagnostic Pathology Sufficiency', subject_type: NoteStableIdentifier.to_s, joins_clause:
+    "JOIN note_stable_identifier_full ON note_stable_identifier.stable_identifier_path = note_stable_identifier_full.stable_identifier_path AND note_stable_identifier.stable_identifier_value = note_stable_identifier_full.stable_identifier_value
+     JOIN note ON note_stable_identifier_full.note_id = note.note_id
+     JOIN fact_relationship ON fact_relationship.domain_concept_id_1 = 5085 AND fact_relationship.fact_id_1 = note.note_id AND fact_relationship.relationship_concept_id = 44818790
+     JOIN procedure_occurrence ON fact_relationship.domain_concept_id_2 = 10 AND fact_relationship.fact_id_2 = procedure_occurrence.procedure_occurrence_id AND procedure_occurrence.procedure_concept_id = 4244107",
+    where_clause: "note.note_title in('Microscopic Description')").first_or_create
+
+    #Begin Bone Marrow Aspirate Adequacy
+    abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
+      predicate: 'has_bone_marrow_aspirate_adequacy',
+      display_name: 'Bone Marrow Aspirate Adequacy',
+      abstractor_object_type: radio_button_list_object_type,
+      preferred_name: 'bone marrow aspirate').first_or_create
+
+    abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_outside_diagnostic_pathology.id).first_or_create
+    Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => name_value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will').first_or_create
+
+    #End Bone Marrow Aspirate Adequacy
+
+    # #Begin Bone Marrow Aspirate Cellular
+    # abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
+    #   predicate: 'has_bone_marrow_aspirate_cellular',
+    #   display_name: 'Bone Marrow Aspirate cellular',
+    #   abstractor_object_type: radio_button_list_object_type,
+    #   preferred_name: 'bone marrow aspirate').first_or_create
+    #
+    # Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'aspirate').first_or_create
+    #
+    # abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'cellular', vocabulary_code: 'cellular').first_or_create
+    # Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+    #
+    # abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'not cellular', vocabulary_code: 'not cellular').first_or_create
+    # Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hemodilute').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'acellular').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'aspiculate').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'lacks spicules').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'paucicellular').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(abstractor_object_value: abstractor_object_value, value: 'hypocellular').first_or_create
+    #
+    # abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_outside_diagnostic_pathology.id).first_or_create
+    # Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => name_value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will').first_or_create
+    #
+    # #End Bone Marrow Aspirate Cellular
+  end
+
   #bundle exec rake aml:create_aml_pathology_cases_datamart
   desc "Create AML Pathology Cases Datamart"
   task(create_aml_pathology_cases_datamart: :environment) do |t, args|
@@ -217,6 +366,14 @@ namespace :aml do
     sql = File.read(sql_file)
     ActiveRecord::Base.connection.execute(sql)
   end
+
+  #bundle exec rake aml:create_aml_sufficiencey_pathology_cases_datamart
+  desc "Create AML Pathology Cases Datamart"
+  task(create_aml_sufficiencey_pathology_cases_datamart: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE aml_sufficiency_pathology_cases CASCADE;')
+    sql_file = "#{Rails.root}/lib/tasks/aml_sufficiency_pathology_cases.sql"
+    sql = File.read(sql_file)
+    ActiveRecord::Base.connection.execute(sql)
+  end
+
 end
-
-

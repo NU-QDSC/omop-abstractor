@@ -453,7 +453,7 @@ class NoteStableIdentifier < ApplicationRecord
     omop_abstractor_nlp_document = OmopAbstractorNlpMapper::Document.new(document, self.note_text)
 
     #Begin Section Preprocessing
-    if omop_abstractor_nlp_document.sections.any?
+    if true #omop_abstractor_nlp_document.sections.any?
       puts 'how many sections at the beginning?'
       puts omop_abstractor_nlp_document.sections.length
 
@@ -858,86 +858,152 @@ class NoteStableIdentifier < ApplicationRecord
              section_name = nil
              named_entities_names.each do |named_entity_name|
                abstractor_abstraction.reload
-               if named_entity_name.sentence.section.present?
-                 if abstractor_abstraction.group_member?
-                   if section_abstractor_abstraction_group_map[named_entity_name.sentence.section.section_range].present?
-                     # puts 'step 2'
-                     section_abstractor_abstraction_group_map[named_entity_name.sentence.section.section_range].each do |abstractor_abstraction_group|
-                       abstractor_abstraction_group.abstractor_abstraction_group_members.each do |abstractor_abstraction_group_member|
-                         if abstractor_abstraction_group_member.abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate == named_entity_name.semantic_tag_attribute
-                           values = named_entities_values.select { |named_entity_value| named_entity_name.sentence == named_entity_value.sentence && section_abstractor_abstraction_group_map[named_entity_value.sentence.section.section_range].present? }
-                           aa = abstractor_abstraction_group_member.abstractor_abstraction
-                           if values.any?
-                             values.each do |value|
-                               section_name = named_entity_name.sentence.section.name
-                               suggested_value = named_entity_name.semantic_tag_value.gsub(' , ', ',')
-                               suggested_value = suggested_value.gsub(' - ', '-')
+               if !omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end].match(/\bsimilar\b/) &&
+                   !omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end].match(/\bprussian blue\b/i)
+                 if named_entity_name.sentence.section.present?
+                   if abstractor_abstraction.group_member?
+                     if section_abstractor_abstraction_group_map[named_entity_name.sentence.section.section_range].present?
+                       # puts 'step 2'
+                       section_abstractor_abstraction_group_map[named_entity_name.sentence.section.section_range].each do |abstractor_abstraction_group|
+                         abstractor_abstraction_group.abstractor_abstraction_group_members.each do |abstractor_abstraction_group_member|
+                           if abstractor_abstraction_group_member.abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate == named_entity_name.semantic_tag_attribute
+                             values = named_entities_values.select { |named_entity_value| named_entity_name.sentence == named_entity_value.sentence && section_abstractor_abstraction_group_map[named_entity_value.sentence.section.section_range].present? }
+                             aa = abstractor_abstraction_group_member.abstractor_abstraction
+                             if values.any?
+                               values.each do |value|
+                                 section_name = named_entity_name.sentence.section.name
+                                 suggested_value = named_entity_name.semantic_tag_value.gsub(' , ', ',')
+                                 suggested_value = suggested_value.gsub(' - ', '-')
 
-                               abstractor_suggestion = aa.abstractor_subject.suggest(
-                                 aa,
-                                 abstractor_abstraction_source,
-                                 omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
-                                     omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
-                                 self.id,
-                                 self.class.to_s,
-                                 'note_text',
-                                 section_name, #suggestion_source[:section_name]
-                                 value.semantic_tag_value,                 #suggestion[:value]
-                                 false,                                     #suggestion[:unknown].to_s.to_boolean
-                                 false,                                     #suggestion[:not_applicable].to_s.to_boolean
-                                 nil,
-                                 nil,
-                                 false   #suggestion[:negated].to_s.to_boolean
-                               )
-                               #save so this suggestion gets saved first
-                               #abstractor_abstraction.save!
-                               abstractor_suggestion.save!
-                               suggestions << abstractor_suggestion
-                               suggested = true
-                               if canonical_format?(omop_abstractor_nlp_document.text[named_entity_name.named_entity_begin..named_entity_name.named_entity_end], omop_abstractor_nlp_document.text[value.named_entity_begin..value.named_entity_end], omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end])
-                                 abstractor_suggestion.accepted = true
+                                 abstractor_suggestion = aa.abstractor_subject.suggest(
+                                   aa,
+                                   abstractor_abstraction_source,
+                                   omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
+                                       omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+                                   self.id,
+                                   self.class.to_s,
+                                   'note_text',
+                                   section_name, #suggestion_source[:section_name]
+                                   value.semantic_tag_value,                 #suggestion[:value]
+                                   false,                                     #suggestion[:unknown].to_s.to_boolean
+                                   false,                                     #suggestion[:not_applicable].to_s.to_boolean
+                                   nil,
+                                   nil,
+                                   false   #suggestion[:negated].to_s.to_boolean
+                                 )
+                                 #save so this suggestion gets saved first
+                                 #abstractor_abstraction.save!
+                                 abstractor_suggestion.save!
+                                 suggestions << abstractor_suggestion
+                                 suggested = true
+                                 if canonical_format?(omop_abstractor_nlp_document.text[named_entity_name.named_entity_begin..named_entity_name.named_entity_end], omop_abstractor_nlp_document.text[value.named_entity_begin..value.named_entity_end], omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end])
+                                   abstractor_suggestion.accepted = true
+                                   abstractor_suggestion.save!
+                                 end
+                               end
+                             else
+                               if !named_entity_name.negated?
+                                 suggested = true
+                                 abstractor_suggestion = aa.abstractor_subject.suggest(
+                                   aa,
+                                   abstractor_abstraction_source,
+                                   omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
+                                   omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+                                   self.id,
+                                   self.class.to_s,
+                                   'note_text',
+                                   nil, #suggestion_source[:section_name]
+                                   nil,                 #suggestion[:value]
+                                   true,                                     #suggestion[:unknown].to_s.to_boolean
+                                   false,                                     #suggestion[:not_applicable].to_s.to_boolean
+                                   nil,
+                                   nil,
+                                   false   #suggestion[:negated].to_s.to_boolean
+                                 )
+                                 #save so this suggestion gets saved first
+                                 #abstractor_abstraction.save!
                                  abstractor_suggestion.save!
                                end
-                             end
-                           else
-                             if !named_entity_name.negated?
-                               suggested = true
-                               abstractor_suggestion = aa.abstractor_subject.suggest(
-                                 aa,
-                                 abstractor_abstraction_source,
-                                 omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
-                                 omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
-                                 self.id,
-                                 self.class.to_s,
-                                 'note_text',
-                                 nil, #suggestion_source[:section_name]
-                                 nil,                 #suggestion[:value]
-                                 true,                                     #suggestion[:unknown].to_s.to_boolean
-                                 false,                                     #suggestion[:not_applicable].to_s.to_boolean
-                                 nil,
-                                 nil,
-                                 false   #suggestion[:negated].to_s.to_boolean
-                               )
-                               #save so this suggestion gets saved first
-                               #abstractor_abstraction.save!
-                               abstractor_suggestion.save!
                              end
                            end
                          end
                        end
                      end
+                   else
+                     aa = abstractor_abstraction
+                     values = named_entities_values.select { |named_entity_value| named_entity_name.sentence == named_entity_value.sentence }
+                     if values.any?
+                       values.each do |value|
+                         section_name = named_entity_name.sentence.section.name
+                         suggested_value = named_entity_name.semantic_tag_value.gsub(' , ', ',')
+                         suggested_value = suggested_value.gsub(' - ', '-')
+
+                         abstractor_suggestion = aa.abstractor_subject.suggest(
+                           aa,
+                           abstractor_abstraction_source,
+                           omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
+                               omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+                           self.id,
+                           self.class.to_s,
+                           'note_text',
+                           section_name, #suggestion_source[:section_name]
+                           value.semantic_tag_value,                 #suggestion[:value]
+                           false,                                     #suggestion[:unknown].to_s.to_boolean
+                           false,                                     #suggestion[:not_applicable].to_s.to_boolean
+                           nil,
+                           nil,
+                           false   #suggestion[:negated].to_s.to_boolean
+                         )
+                         #save so this suggestion gets saved first
+                         #abstractor_abstraction.save!
+                         abstractor_suggestion.save!
+                         suggestions << abstractor_suggestion
+                         suggested = true
+                         if canonical_format?(omop_abstractor_nlp_document.text[named_entity_name.named_entity_begin..named_entity_name.named_entity_end], omop_abstractor_nlp_document.text[value.named_entity_begin..value.named_entity_end], omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end])
+                           abstractor_suggestion.accepted = true
+                           abstractor_suggestion.save!
+                         end
+                       end
+                     else
+                       if !named_entity_name.negated?
+                         suggested = true
+                         abstractor_suggestion = aa.abstractor_subject.suggest(
+                           aa,
+                           abstractor_abstraction_source,
+                           omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
+                           omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+                           self.id,
+                           self.class.to_s,
+                           'note_text',
+                           nil, #suggestion_source[:section_name]
+                           nil,                 #suggestion[:value]
+                           true,                                     #suggestion[:unknown].to_s.to_boolean
+                           false,                                     #suggestion[:not_applicable].to_s.to_boolean
+                           nil,
+                           nil,
+                           false   #suggestion[:negated].to_s.to_boolean
+                         )
+                         #save so this suggestion gets saved first
+                         #abstractor_abstraction.save!
+                         abstractor_suggestion.save!
+                       end
+                     end
                    end
                  else
-                   aa = abstractor_abstraction
-                   values = named_entities_values.select { |named_entity_value| named_entity_name.sentence == named_entity_value.sentence }
+                   values = named_entities_values.select { |named_entities_value| named_entity_name.sentence == named_entities_value.sentence }
+                   puts 'How many values you got?'
+                   puts values.size
+                   puts 'What do you say?'
                    if values.any?
                      values.each do |value|
-                       section_name = named_entity_name.sentence.section.name
-                       suggested_value = named_entity_name.semantic_tag_value.gsub(' , ', ',')
-                       suggested_value = suggested_value.gsub(' - ', '-')
+                       if named_entity_name.sentence.section
+                         section_name = named_entity_name.sentence.section.name
+                       else
+                         section_name = nil
+                       end
 
-                       abstractor_suggestion = aa.abstractor_subject.suggest(
-                         aa,
+                       abstractor_suggestion = abstractor_abstraction.abstractor_subject.suggest(
+                         abstractor_abstraction,
                          abstractor_abstraction_source,
                          omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
                              omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
@@ -965,8 +1031,8 @@ class NoteStableIdentifier < ApplicationRecord
                    else
                      if !named_entity_name.negated?
                        suggested = true
-                       abstractor_suggestion = aa.abstractor_subject.suggest(
-                         aa,
+                       abstractor_suggestion = abstractor_abstraction.abstractor_subject.suggest(
+                         abstractor_abstraction,
                          abstractor_abstraction_source,
                          omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
                          omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
@@ -985,69 +1051,6 @@ class NoteStableIdentifier < ApplicationRecord
                        #abstractor_abstraction.save!
                        abstractor_suggestion.save!
                      end
-                   end
-                 end
-               else
-                 values = named_entities_values.select { |named_entities_value| named_entity_name.sentence == named_entities_value.sentence }
-                 puts 'How many values you got?'
-                 puts values.size
-                 puts 'What do you say?'
-                 if values.any?
-                   values.each do |value|
-                     if named_entity_name.sentence.section
-                       section_name = named_entity_name.sentence.section.name
-                     else
-                       section_name = nil
-                     end
-
-                     abstractor_suggestion = abstractor_abstraction.abstractor_subject.suggest(
-                       abstractor_abstraction,
-                       abstractor_abstraction_source,
-                       omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
-                           omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
-                       self.id,
-                       self.class.to_s,
-                       'note_text',
-                       section_name, #suggestion_source[:section_name]
-                       value.semantic_tag_value,                 #suggestion[:value]
-                       false,                                     #suggestion[:unknown].to_s.to_boolean
-                       false,                                     #suggestion[:not_applicable].to_s.to_boolean
-                       nil,
-                       nil,
-                       false   #suggestion[:negated].to_s.to_boolean
-                     )
-                     #save so this suggestion gets saved first
-                     #abstractor_abstraction.save!
-                     abstractor_suggestion.save!
-                     suggestions << abstractor_suggestion
-                     suggested = true
-                     if canonical_format?(omop_abstractor_nlp_document.text[named_entity_name.named_entity_begin..named_entity_name.named_entity_end], omop_abstractor_nlp_document.text[value.named_entity_begin..value.named_entity_end], omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end])
-                       abstractor_suggestion.accepted = true
-                       abstractor_suggestion.save!
-                     end
-                   end
-                 else
-                   if !named_entity_name.negated?
-                     suggested = true
-                     abstractor_suggestion = abstractor_abstraction.abstractor_subject.suggest(
-                       abstractor_abstraction,
-                       abstractor_abstraction_source,
-                       omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:match_value],
-                       omop_abstractor_nlp_document.text[named_entity_name.sentence.sentence_begin..named_entity_name.sentence.sentence_end], #suggestion_source[:sentence_match_value]
-                       self.id,
-                       self.class.to_s,
-                       'note_text',
-                       nil, #suggestion_source[:section_name]
-                       nil,                 #suggestion[:value]
-                       true,                                     #suggestion[:unknown].to_s.to_boolean
-                       false,                                     #suggestion[:not_applicable].to_s.to_boolean
-                       nil,
-                       nil,
-                       false   #suggestion[:negated].to_s.to_boolean
-                     )
-                     #save so this suggestion gets saved first
-                     #abstractor_abstraction.save!
-                     abstractor_suggestion.save!
                    end
                  end
                end
@@ -1301,6 +1304,26 @@ class NoteStableIdentifier < ApplicationRecord
              suggestions.uniq!
              # puts 'here is the size'
              # puts suggestions.size
+
+             if suggestions.size > 1
+               numeric_suggestions = suggestions.map { |suggestion| string_to_float_or_nil(suggestion.suggested_value) }.compact
+               if numeric_suggestions.size > 1
+                   puts 'here are the numeric suggestions'
+                   numeric_suggestions.each do |numeric_suggestion|
+                     puts numeric_suggestion
+                   end
+                   puts 'here are the raw suggestions'
+                   suggestions.each do |suggestion|
+                     puts suggestion.suggested_value
+                   end
+                 if (numeric_suggestions.max - numeric_suggestions.min) <= 0.05
+                   abstractor_suggestion = suggestions.detect { |suggestion| suggestion.suggested_value.to_f == numeric_suggestions.max }
+                   abstractor_suggestion.accepted = true
+                   abstractor_suggestion.save!
+                 end
+               end
+             end
+
              if suggestions.size == 1
                # puts 'auto accepting!'
                abstractor_suggestion = suggestions.first
@@ -1824,5 +1847,16 @@ class NoteStableIdentifier < ApplicationRecord
       enough = true
     end
     enough
+  end
+
+  def string_to_float_or_nil(str)
+    begin
+      # Attempt to convert the string to a float using Float()
+      float_value = Float(str)
+      return float_value
+    rescue ArgumentError, TypeError
+      # If the conversion fails, return nil
+      return nil
+    end
   end
 end

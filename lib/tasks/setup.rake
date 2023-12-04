@@ -384,6 +384,24 @@ namespace :setup do
       Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
     end
 
+    # CIN 1
+    ['cin i', 'cin1', 'cin-1', 'cin-i', 'cervical intraepithelial neoplasia 1', 'cervical intra-epithelial neoplasia 1', 'cervical intraepithelial neoplasia i', 'cervical intra-epithelial neoplasia i', 'lsil', 'low grade squamous intraepithelial lesion', 'low grade squamous intra-epithelial lesion', 'low-grade squamous intraepithelial lesion', 'low-grade squamous intra-epithelial lesion', 'adenocarcinoma in situ 1', 'ais 1', 'ais1', 'ais-1'].each do |histology_synonym|
+      icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: 'CIN 1', icdo3_name: 'CIN 1', icdo3_description: 'CIN 1').first_or_create
+      Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
+    end
+
+    # CIN 2
+    ['cin ii', 'cin2', 'cin-2', 'cin-ii', 'cervical intraepithelial neoplasia 2', 'cervical intra-epithelial neoplasia 2', 'cervical intraepithelial neoplasia ii', 'cervical intra-epithelial neoplasia ii', 'hsil 2', 'hsil ii', 'hsil2', 'hgsil 2', 'hgsil ii', 'hgsil2', 'adenocarcinoma in situ 2', 'ais 2', 'ais2', 'ais-2'].each do |histology_synonym|
+      icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: 'CIN 2', icdo3_name: 'CIN 2', icdo3_description: 'CIN 2').first_or_create
+      Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
+    end
+
+    # CIN 3
+    ['cin iii', 'cin3', 'cin-3', 'CIN 2-3', 'CIN 2/3', 'cin-iii', 'cervical intraepithelial neoplasia 3', 'cervical intra-epithelial neoplasia 3', 'cervical intraepithelial neoplasia iii', 'cervical intra-epithelial neoplasia iii', 'hsil 3', 'hsil iii', 'hsil3', 'hgsil 3', 'hgsil iii', 'hgsil3', 'adenocarcinoma in situ 3', 'ais 3', 'ais3', 'ais-3'].each do |histology_synonym|
+      icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: 'CIN 3', icdo3_name: 'CIN 3', icdo3_description: 'CIN 3').first_or_create
+      Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
+    end
+
     legacy_icdo3_metastatic_histology_synonyms = CSV.new(File.open('lib/setup/vocabulary/legacy_icdo3_metastatic_histology_synonyms.csv'), headers: true, col_sep: ",", return_headers: false,  quote_char: "\"")
     legacy_icdo3_metastatic_histology_synonyms.each do |histology|
       icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: histology['icdo3_code']).first
@@ -1514,7 +1532,7 @@ namespace :setup do
   # RAILS_ENV=staging bundle exec rake setup:aml_data["?"]
   desc "AML data"
   task :aml_data, [:west_mrn] => :environment do |t, args|
-    puts 'youn need to care'
+    puts 'you need to care'
     puts args[:west_mrn]
     directory_path = 'lib/setup/data/aml/diagnositic_pathology'
     files = Dir.glob(File.join(directory_path, '*.xml'))
@@ -1537,6 +1555,18 @@ namespace :setup do
     files = Dir.glob(File.join(directory_path, '*.xml'))
     files = files.sort_by { |file| File.stat(file).mtime }
     load_data_xml(files)
+  end
+
+  # RAILS_ENV=staging bundle exec rake setup:aml_data["?"]
+  desc "Cervical data"
+  task :cervical_data, [:west_mrn] => :environment do |t, args|
+    puts 'you need to care'
+    puts args[:west_mrn]
+    directory_path = 'lib/setup/data/cervical/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_xml(files, west_mrn: args[:west_mrn])
   end
 end
 
@@ -1650,6 +1680,34 @@ def load_data_xml(files, options= {})
           note_id = 1
         else
           note_id+=1
+        end
+
+        puts 'taking a look'
+        puts pathology_case.source_system
+        puts note_title
+        if pathology_case.source_system == 'clarity_west' && note_title == 'Microscopic Description'
+          puts 'in the clover'
+          file_path = "spacy_parser/input.txt"
+          File.open(file_path, "w") do |file|
+            file.write(note_text)
+          end
+
+          result = system("python spacy_parser/sentences.py spacy_parser/input.txt spacy_parser/output.txt")
+          if result
+            puts "Python script executed successfully."
+
+            # Specify the file path
+            file_path = "spacy_parser/output.txt"
+
+            # Read the contents of the file into a string
+            file_contents = File.read('spacy_parser/output.txt')
+
+            # Now, 'file_contents' contains the content of the file as a string
+            puts "File contents:"
+            note_text = file_contents
+          else
+            puts "Python script execution failed."
+          end
         end
 
         note = Note.new(note_id: note_id, person_id: person.person_id, note_date: Date.parse(accessioned_datetime), note_datetime: Date.parse(accessioned_datetime), note_type_concept_id: @note_type_concept.concept_id, note_class_concept_id: @note_class_concept.concept_id, note_title: note_title, note_text: note_text, encoding_concept_id: 0, language_concept_id: 0, provider_id: (provider.present? ? provider.provider_id : nil), visit_occurrence_id: nil, note_source_value: nil)

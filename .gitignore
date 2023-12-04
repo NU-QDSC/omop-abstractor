@@ -52,3 +52,6 @@ lib/setup/data
 doc/omop_abstractor.txt
 doc/utility/compare.sql
 db/migrate/CommonDataModel/
+
+spacy_parser/
+spacy_parser/*.*

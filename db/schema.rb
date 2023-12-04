@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_01_183804) do
+ActiveRecord::Schema.define(version: 2023_12_03_134321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -390,6 +390,30 @@ ActiveRecord::Schema.define(version: 2023_10_01_183804) do
     t.string "has_surgery_date"
   end
 
+  create_table "aml_sufficiency_pathology_cases", force: :cascade do |t|
+    t.string "abstractor_namespace_name"
+    t.string "west_mrn"
+    t.string "note_stable_identifier_path"
+    t.string "note_stable_identifier_value_1"
+    t.string "note_stable_identifier_value_2"
+    t.bigint "note_id"
+    t.string "pathology_stable_identifier_path"
+    t.string "pathology_stable_identifier_value_1"
+    t.date "pathology_procedure_date"
+    t.string "pathology_provider_name"
+    t.string "pathology_procedure_source_value"
+    t.string "pathology_concept_name"
+    t.string "surgery_stable_identifier_path"
+    t.string "surgery_stable_identifier_value_1"
+    t.date "surgery_procedure_date"
+    t.string "surgery_provider_name"
+    t.string "surgery_procedure_source_value"
+    t.string "surgery_concept_name"
+    t.string "has_bone_marrow_aspirate_adequacy"
+    t.text "has_bone_marrow_aspirate_adequacy_suggestions"
+    t.text "has_bone_marrow_aspirate_adequacy_suggestion_sentences"
+  end
+
   create_table "api_logs", force: :cascade do |t|
     t.string "system", null: false
     t.text "url"
@@ -561,6 +585,33 @@ ActiveRecord::Schema.define(version: 2023_10_01_183804) do
     t.string "cdm_version", limit: 10
     t.integer "cdm_version_concept_id", null: false
     t.string "vocabulary_version", limit: 20, null: false
+  end
+
+  create_table "cervical_pathology_cases", force: :cascade do |t|
+    t.string "abstractor_namespace_name"
+    t.string "west_mrn"
+    t.string "note_stable_identifier_path"
+    t.string "note_stable_identifier_value_1"
+    t.string "note_stable_identifier_value_2"
+    t.bigint "note_id"
+    t.string "pathology_stable_identifier_path"
+    t.string "pathology_stable_identifier_value_1"
+    t.date "pathology_procedure_date"
+    t.string "pathology_provider_name"
+    t.string "pathology_procedure_source_value"
+    t.string "pathology_concept_name"
+    t.string "surgery_stable_identifier_path"
+    t.string "surgery_stable_identifier_value_1"
+    t.date "surgery_procedure_date"
+    t.string "surgery_provider_name"
+    t.string "surgery_procedure_source_value"
+    t.string "surgery_concept_name"
+    t.string "diagnosis_type"
+    t.string "has_cancer_histology"
+    t.text "has_cancer_histology_suggestions"
+    t.string "has_cancer_site"
+    t.text "has_cancer_site_suggestions"
+    t.string "has_surgery_date"
   end
 
   create_table "cohort", id: false, force: :cascade do |t|

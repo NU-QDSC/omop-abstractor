@@ -91,6 +91,10 @@ class Icdo3Site < ApplicationRecord
     current.where('icdo3_sites.icdo3_code IN(?)', [Icdo3Site::SITES_ENDOMETRIAL, Icdo3Site::SITES_UTERINE_CERVIX, Icdo3Site::SITES_OVARIAN, Icdo3Site::SITES_VAGINA, Icdo3Site::SITES_VULVA].flatten.uniq!)
   end
 
+  scope :by_primary_cervical, -> do
+    current.where('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_UTERINE_CERVIX)
+  end
+
   scope :by_icdo3_code_with_synonyms, ->(icdo3_code) do
     current.joins(:icdo3_site_synonyms).where('icdo3_sites.icdo3_code = ?',icdo3_code).select('icdo3_site_synonyms.icdo3_synonym_description')
   end

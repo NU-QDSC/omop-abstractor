@@ -21,6 +21,10 @@ namespace :suggestor do
     abstractor_suggestor_aml(multiple: true)
   end
 
+  task(do_multiple_aml_sufficiency: :environment) do |t, args|
+    abstractor_suggestor_aml_sufficiency(multiple: true)
+  end
+
   # RAILS_ENV=staging bundle exec rake suggestor:do_multiple_will_one["?"]
   task :do_multiple_will_one, [:person_source_value] => [:environment] do |t, args|
     person = Person.where(person_source_value: args[:person_source_value]).first
@@ -340,7 +344,7 @@ def abstractor_suggestor_aml(options = {})
             Rails.logger.info('Begin an abstraction')
             abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
             if i == 1
-              sleep(60)
+              sleep(30)
             else
               sleep(1)
             end
@@ -407,7 +411,7 @@ def abstractor_suggestor_aml(options = {})
             abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
 
             if i == 1
-              sleep(60)
+              sleep(30)
             else
               sleep(1)
             end
@@ -430,10 +434,10 @@ def abstractor_suggestor_aml(options = {})
   end
 end
 
-def abstractor_suggestor_will(options = {})
+def abstractor_suggestor_aml_sufficiency(options = {})
   options.reverse_merge!({ multiple: false })
 
-  Abstractor::AbstractorNamespace.where(name: ['Outside Surgical Pathology', 'Outside Surgical Pathology Biopsy']).all.each do |abstractor_namespace|
+  Abstractor::AbstractorNamespace.where(name: ['Outside Diagnostic Pathology Sufficiency']).all.each do |abstractor_namespace|
     puts 'here is the namespace'
     puts abstractor_namespace.name
     #All
@@ -449,43 +453,21 @@ def abstractor_suggestor_will(options = {})
         if options[:multiple]
           # puts 'here is the stable_identifier_value'
           # puts abstractable_event.stable_identifier_value
-
-          # note_titles = ['Microscopic Description', 'Addendum', 'AP ADDENDUM 1', 'AP ADDENDUM 2', 'AP ADDENDUM 3']
-          note_titles = ['Microscopic Description', 'Addendum', 'Comment']
-          procedure_occurrence_options = {}
-          procedure_occurrence_options[:username] = 'mjg994'
-          procedure_occurrence_options[:include_parent_procedures] = false
-          note = abstractable_event.note
-          note_options = {}
-          note_options[:username] = 'mjg994'
-          note_options[:except_notes] = [note]
-          note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
-            procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
-                note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
-                note.save!
-                note.reload
-              else
-                puts 'not so much'
-              end
-            end
-
-            abstractable_event.reload
-
-            # puts 'begin a new abstraction'
-            # start = Time.now
-            # Rails.logger.info('Begin an abstraction')
-            abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
-            if i == 1
-              sleep(60)
-            end
-            # Rails.logger.info('End abstraction')
-            # finish = Time.now
-            # diff = finish - start
-            # puts 'how long did you take?'
-            # puts diff
-            # puts 'end abstraction'
+          puts 'begin a new abstraction'
+          start = Time.now
+          Rails.logger.info('Begin an abstraction')
+          abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+          if i == 1
+            sleep(30)
+          else
+            sleep(1)
           end
+          Rails.logger.info('End abstraction')
+          finish = Time.now
+          diff = finish - start
+          puts 'how long did you take?'
+          puts diff
+          puts 'end abstraction'
         else
           abstractable_event.abstract(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
         end
@@ -495,6 +477,116 @@ def abstractor_suggestor_will(options = {})
       # Process.wait(child_pid)
     end
   end
+
+  Abstractor::AbstractorNamespace.where(name: 'Diagnostic Pathology Sufficiency').all.each do |abstractor_namespace|
+    puts 'here is the namespace'
+    puts abstractor_namespace.name
+    #All
+    abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
+
+    puts 'Begin backlog count'
+    puts abstractable_events.size
+    puts 'End backlog count'
+    abstractable_events.each_with_index do |abstractable_event, i|
+      puts 'what we got?'
+      puts abstractable_event.id
+      # child_pid = fork do
+        if options[:multiple]
+          # puts 'here is the stable_identifier_value'
+          # puts abstractable_event.stable_identifier_value
+          puts 'begin a new abstraction'
+          start = Time.now
+          Rails.logger.info('Begin an abstraction')
+          abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+
+          if i == 1
+            sleep(30)
+          else
+            sleep(1)
+          end
+
+          Rails.logger.info('End abstraction')
+          finish = Time.now
+          diff = finish - start
+          puts 'how long did you take?'
+          puts diff
+          puts 'end abstraction'
+        else
+          abstractable_event.abstract(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+        end
+        abstractor_namespace.abstractor_namespace_events.build(eventable: abstractable_event)
+        abstractor_namespace.save!
+      # end
+      # Process.wait(child_pid)
+    end
+  end
+end
+
+def abstractor_suggestor_will(options = {})
+  options.reverse_merge!({ multiple: false })
+
+  # Abstractor::AbstractorNamespace.where(name: ['Outside Surgical Pathology', 'Outside Surgical Pathology Biopsy']).all.each do |abstractor_namespace|
+  #   puts 'here is the namespace'
+  #   puts abstractor_namespace.name
+  #   #All
+  #   abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
+  #
+  #   puts 'Begin backlog count'
+  #   puts abstractable_events.size
+  #   puts 'End backlog count'
+  #   abstractable_events.each_with_index do |abstractable_event, i|
+  #     puts 'what we got?'
+  #     puts abstractable_event.id
+  #     # child_pid = fork do
+  #       if options[:multiple]
+  #         # puts 'here is the stable_identifier_value'
+  #         # puts abstractable_event.stable_identifier_value
+  #
+  #         # note_titles = ['Microscopic Description', 'Addendum', 'AP ADDENDUM 1', 'AP ADDENDUM 2', 'AP ADDENDUM 3']
+  #         note_titles = ['Microscopic Description', 'Addendum', 'Comment']
+  #         procedure_occurrence_options = {}
+  #         procedure_occurrence_options[:username] = 'mjg994'
+  #         procedure_occurrence_options[:include_parent_procedures] = false
+  #         note = abstractable_event.note
+  #         note_options = {}
+  #         note_options[:username] = 'mjg994'
+  #         note_options[:except_notes] = [note]
+  #         note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
+  #           procedure_occurence.notes(note_options).each do |other_note|
+  #             if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+  #               note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
+  #               note.save!
+  #               note.reload
+  #             else
+  #               puts 'not so much'
+  #             end
+  #           end
+  #
+  #           abstractable_event.reload
+  #
+  #           # puts 'begin a new abstraction'
+  #           # start = Time.now
+  #           # Rails.logger.info('Begin an abstraction')
+  #           abstractable_event.abstract_multiple(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+  #           if i == 1
+  #             sleep(60)
+  #           end
+  #           # Rails.logger.info('End abstraction')
+  #           # finish = Time.now
+  #           # diff = finish - start
+  #           # puts 'how long did you take?'
+  #           # puts diff
+  #           # puts 'end abstraction'
+  #         end
+  #       else
+  #         abstractable_event.abstract(namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace.id)
+  #       end
+  #       abstractor_namespace.abstractor_namespace_events.build(eventable: abstractable_event)
+  #       abstractor_namespace.save!
+  #     # end
+  #     # Process.wait(child_pid)
+  #   end
+  # end
 
   Abstractor::AbstractorNamespace.where(name: 'Synoptic Pathology').all.each do |abstractor_namespace|
     puts 'here is the namespace'

@@ -12,7 +12,7 @@
 
   #abstraction will
   # bundle exec rake suggestor:do_multiple_will
-  # bundle exec rake breast:create_datamart
+  # bundle exec rake breast:create_pathology_cases_datamart
 
 namespace :breast do
   desc 'Load schemas'
