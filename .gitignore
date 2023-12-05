@@ -51,3 +51,5 @@ lib/ClampCmd_1.6.3/
 lib/setup/data
 doc/omop_abstractor.txt
 doc/utility/compare.sql
+spacy_parser/
+db/migrate/CommonDataModel

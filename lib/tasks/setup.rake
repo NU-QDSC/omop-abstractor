@@ -1,3 +1,22 @@
+# export RAILS_ENV=production bundle exec rake suggestor:do_multiple_will
+# mbti final will
+  # data
+  # bundle exec rake mbti:truncate_stable_identifiers
+  # bundle exec rake data:truncate_omop_clinical_data_tables
+  # bundle exec rake mbti:mbti_data
+
+  #schemas
+  # bundle exec rake abstractor:setup:system
+  # bundle exec rake setup:compare_icdo3
+  # bundle exec rake setup:truncate_schemas
+  # bundle exec rake mbti:schemas_mbti
+
+  #abstraction will
+  # bundle exec rake suggestor:do_multiple_will
+  # bundle exec rake suggestor:do_multiple_will_one["?"]
+  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake suggestor:do_multiple_will
+
+
 # mbti new
   # data
   # bundle exec rake setup:mbti_data_new
@@ -76,23 +95,6 @@
 # bundle exec rake mbti:mbti_data
 # bundle exec rake suggestor:do_multiple_will
 
-# export RAILS_ENV=staging
-# mbti final will
-  # data
-  # bundle exec rake mbti:truncate_stable_identifiers
-  # bundle exec rake data:truncate_omop_clinical_data_tables
-  # bundle exec rake mbti:mbti_data
-
-  #schemas
-  # bundle exec rake abstractor:setup:system
-  # bundle exec rake setup:compare_icdo3
-  # bundle exec rake setup:truncate_schemas
-  # bundle exec rake mbti:schemas_mbti
-
-  #abstraction will
-  # bundle exec rake suggestor:do_multiple_will
-  # bundle exec rake suggestor:do_multiple_will_one["?"]
-  # OBJC_DISABLE_INITIALIZE_FORK_SAFETY='YES' bundle exec rake suggestor:do_multiple_will
 
 # mbti will one
   #data
