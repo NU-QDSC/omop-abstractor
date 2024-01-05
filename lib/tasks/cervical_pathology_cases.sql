@@ -48,6 +48,7 @@ SELECT note_stable_identifier.id
          WHERE aa2.about_id = pivoted_abstractions.about_id
          AND aas2.predicate = 'has_cancer_histology'
          AND asg2.suggested_value IS NOT NULL
+         AND asg2.system_rejected = false
          AND asg.name = 'Primary Cancer'
        ), ', ') AS has_cancer_histology_suggestions
      , pivoted_abstractions.has_cancer_site
@@ -62,6 +63,7 @@ SELECT note_stable_identifier.id
          WHERE aa2.about_id = pivoted_abstractions.about_id
          AND aas2.predicate = 'has_cancer_site'
          AND asg2.suggested_value IS NOT NULL
+         AND asg2.system_rejected = false
          AND asg.name = 'Primary Cancer'
        ), ', ') AS has_cancer_site_suggestions
      , pivoted_abstractions.abstractor_namespace_name
