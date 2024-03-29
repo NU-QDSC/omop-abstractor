@@ -18,6 +18,7 @@
 
 #data mart
 # bundle exec rake aml:create_aml_pathology_cases_datamart
+# bundle exec rake aml:create_aml_sufficiencey_pathology_cases_datamart
 namespace :aml do
   desc 'Load schemas'
   task(schemas: :environment) do |t, args|
@@ -375,5 +376,4 @@ namespace :aml do
     sql = File.read(sql_file)
     ActiveRecord::Base.connection.execute(sql)
   end
-
 end

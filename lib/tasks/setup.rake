@@ -1529,7 +1529,7 @@ namespace :setup do
     load_data_xml(files)
   end
 
-  # RAILS_ENV=staging bundle exec rake setup:aml_data["?"]
+  # bundle exec rake setup:aml_data["?"]
   desc "AML data"
   task :aml_data, [:west_mrn] => :environment do |t, args|
     puts 'you need to care'
@@ -1549,6 +1549,7 @@ namespace :setup do
     load_data_xml(files)
   end
 
+# RAILS_ENV=staging bundle exec rake setup:breast_data
   desc "Breast data"
   task(breast_data: :environment) do |t, args|
     directory_path = 'lib/setup/data/breast/'
