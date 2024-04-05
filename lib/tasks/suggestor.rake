@@ -291,7 +291,6 @@ end
 def abstractor_suggestor_will(options = {})
   options.reverse_merge!({ multiple: false })
 
-  abstractor_namespace = Abstractor::AbstractorNamespace.where(name: ['Outside Surgical Pathology']).first
   Abstractor::AbstractorNamespace.where(name: ['Outside Surgical Pathology', 'Outside Surgical Pathology Biopsy']).all.each do |abstractor_namespace|
     puts 'here is the namespace'
     puts abstractor_namespace.name
