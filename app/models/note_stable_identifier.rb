@@ -1469,7 +1469,7 @@ class NoteStableIdentifier < ApplicationRecord
        end
       end
 
-      primary_cns = false
+      primary_cns = true
       if primary_cns
         # Post-processing across all schemas within an abstraction group.
         # Create a non-generic post processing step unique to cancer groups to set laterallity based on site.

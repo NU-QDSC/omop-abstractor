@@ -19,7 +19,7 @@
 
 # mbti new
   # data
-  # bundle exec rake setup:mbti_data_new
+  # bundle exec rake setup:mbti_data_new2
 
   #abstraction will
   # bundle exec rake suggestor:do_multiple_will
@@ -1808,6 +1808,15 @@ namespace :setup do
     files = Dir.glob(File.join(directory_path, '*.xml'))
     files = files.sort_by { |file| File.stat(file).mtime }
     load_data_xml(files)
+  end
+
+  desc "MBTI data new 2"
+  task(mbti_data_new2: :environment) do |t, args|
+    directory_path = 'lib/setup/data/mbti_new/'
+    files = Dir.glob(File.join(directory_path, '*.xlsx'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_new(files)
   end
 end
 
