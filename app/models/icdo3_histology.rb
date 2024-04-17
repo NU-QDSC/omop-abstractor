@@ -25,6 +25,8 @@ class Icdo3Histology < ApplicationRecord
   #done
 
   HISTOLOGIES_AML =[  '9861/3', '9865/3', '9866/3', '9869/3', '9871/3', '9877/3', '9878/3', '9879/3', '9895/3', '9896/3', '9897/3', '9920/3']
+
+  HISTOLOGIES_ESOPHOGEAL =['8140/3' ,'8200/3' ,'8430/3' ,'8244/3' ,'8070/3' ,'8083/3' ,'8560/3' ,'8074/3' ,'8051/3' ,'8013/3' ,'8041/3' ,'8240/3' ,'8249/3' ,'8010/3','8574/3' ,'8020/3','8082/3','9052/3' ,'9051/3','9053/3']
   #done
 
   scope :current, -> do
@@ -77,6 +79,10 @@ class Icdo3Histology < ApplicationRecord
 
   scope :by_primary_cervical, -> do
     current.where('icdo3_histologies.icdo3_code IN(?)', Icdo3Histology::HISTOLOGIES_UTERINE_CERVIX)
+  end
+
+  scope :by_primary_esophogeal, -> do
+    current.where('icdo3_histologies.icdo3_code IN(?)', Icdo3Histology::HISTOLOGIES_ESOPHOGEAL)
   end
 
   scope :by_metastasis, -> do

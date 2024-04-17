@@ -10,6 +10,7 @@ CREATE TEMPORARY TABLE cancer_diagnosis_abstractions
   diagnosis_type                           varchar(255)  NULL,
   has_cancer_histology                     varchar(255)  NULL,
   has_cancer_histology_suggestions         text NULL,
+  has_cancer_histology_suggestion_sentences text NULL,
   has_cancer_histology_negated              boolean NULL,
   has_cancer_site                          varchar(255)  NULL,
   has_cancer_site_suggestions              text NULL,
@@ -26,6 +27,7 @@ INSERT INTO cancer_diagnosis_abstractions (
  , diagnosis_type
  , has_cancer_histology
  , has_cancer_histology_suggestions
+ , has_cancer_histology_suggestion_sentences
  , has_cancer_histology_negated
  , has_cancer_site
  , has_cancer_site_suggestions
@@ -53,6 +55,20 @@ SELECT note_stable_identifier.id
          AND asg2.system_rejected = false
          AND asg.name = 'Primary Cancer'
        ), ', ') AS has_cancer_histology_suggestions
+       , array_to_string(array(
+           SELECT DISTINCT ass.sentence_match_value
+           FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
+                                            JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
+                                            JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
+                                            JOIN abstractor_abstraction_group_members aagm ON aa2.id = aagm.abstractor_abstraction_id
+                                            JOIN abstractor_abstraction_groups aag ON aagm.abstractor_abstraction_group_id = aag.id
+                                            JOIN abstractor_subject_groups asg ON aag.abstractor_subject_group_id = asg.id
+                                            JOIN abstractor_suggestion_sources ass on asg2.id = ass.abstractor_suggestion_id
+           WHERE aa2.about_id = pivoted_abstractions.about_id
+           AND aas2.predicate = 'has_cancer_histology'
+           AND asg2.suggested_value IS NOT NULL
+           AND asg.name = 'Primary Cancer'
+         ), '|') AS has_cancer_histology_suggestion_sentences
      , false
      , pivoted_abstractions.has_cancer_site
      , array_to_string(array(
@@ -145,6 +161,7 @@ INSERT INTO cancer_diagnosis_abstractions (
  , diagnosis_type
  , has_cancer_histology
  , has_cancer_histology_suggestions
+ , has_cancer_histology_suggestion_sentences
  , has_cancer_histology_negated
  , has_cancer_site
  , has_cancer_site_suggestions
@@ -172,6 +189,20 @@ SELECT note_stable_identifier.id
          AND asg2.system_rejected = false
          AND asg.name = 'Primary Cancer'
        ), ', ') AS has_cancer_histology_suggestions
+       , array_to_string(array(
+           SELECT DISTINCT ass.sentence_match_value
+           FROM abstractor_abstractions aa2 JOIN abstractor_suggestions asg2 on aa2.id = asg2.abstractor_abstraction_id
+                                            JOIN abstractor_subjects asb2 ON aa2.abstractor_subject_id = asb2.id
+                                            JOIN abstractor_abstraction_schemas aas2 ON asb2.abstractor_abstraction_schema_id = aas2.id
+                                            JOIN abstractor_abstraction_group_members aagm ON aa2.id = aagm.abstractor_abstraction_id
+                                            JOIN abstractor_abstraction_groups aag ON aagm.abstractor_abstraction_group_id = aag.id
+                                            JOIN abstractor_subject_groups asg ON aag.abstractor_subject_group_id = asg.id
+                                            JOIN abstractor_suggestion_sources ass on asg2.id = ass.abstractor_suggestion_id
+           WHERE aa2.about_id = pivoted_abstractions.about_id
+           AND aas2.predicate = 'has_cancer_histology'
+           AND asg2.suggested_value IS NOT NULL
+           AND asg.name = 'Primary Cancer'
+         ), '|') AS has_cancer_histology_suggestion_sentences
      , true
      , pivoted_abstractions.has_cancer_site
      , array_to_string(array(
@@ -256,11 +287,11 @@ AND pivoted_abstractions.abstractor_namespace_name IN(
 )
 AND EXISTS(
 	SELECT 1
-	FROM abstractor_abstractions aa  join abstractor_suggestions asg on aa.id = asg.abstractor_abstraction_id
+	FROM abstractor_abstractions aa    join abstractor_suggestions asg on aa.id = asg.abstractor_abstraction_id
                                      join abstractor_suggestion_sources ass on asg.id = ass.abstractor_suggestion_id
                                      join abstractor_subjects asb on aa.abstractor_subject_id = asb.id
                                      join abstractor_abstraction_schemas aas on asb.abstractor_abstraction_schema_id = aas.id
-									 join abstractor_namespace_events on note_stable_identifier.id = abstractor_namespace_events.eventable_id and abstractor_namespace_events.eventable_type = 'NoteStableIdentifier'
+                                     join abstractor_namespace_events on note_stable_identifier.id = abstractor_namespace_events.eventable_id and abstractor_namespace_events.eventable_type = 'NoteStableIdentifier'
 	WHERE note_stable_identifier.id = aa.about_id
 	AND aas.predicate = 'has_cancer_histology'
 	AND aa.not_applicable = true
@@ -269,7 +300,7 @@ AND EXISTS(
 
 
 --inside
-INSERT INTO cervical_pathology_cases
+INSERT INTO esophageal_pathology_cases
 (
   abstractor_namespace_name
 , west_mrn
@@ -292,6 +323,7 @@ INSERT INTO cervical_pathology_cases
 , diagnosis_type
 , has_cancer_histology
 , has_cancer_histology_suggestions
+, has_cancer_histology_suggestion_sentences
 , has_cancer_histology_negated
 , has_cancer_site
 , has_cancer_site_suggestions
@@ -319,6 +351,7 @@ SELECT
       , cancer_diagnosis_abstractions.diagnosis_type
       , cancer_diagnosis_abstractions.has_cancer_histology
       , cancer_diagnosis_abstractions.has_cancer_histology_suggestions
+      , cancer_diagnosis_abstractions.has_cancer_histology_suggestion_sentences
       , cancer_diagnosis_abstractions.has_cancer_histology_negated
       , cancer_diagnosis_abstractions.has_cancer_site
       , cancer_diagnosis_abstractions.has_cancer_site_suggestions

@@ -35,6 +35,8 @@ class Icdo3Site < ApplicationRecord
 
   SITES_LYMPH_NODE = ['C77.9']
 
+  SITES_ESOPHOGEAL = [ 'C15.0', 'C15.1', 'C15.2', 'C15.3', 'C15.4', 'C15.5', 'C15.8','C15.9']
+
   scope :current, -> do
     where('icdo3_sites.version = ? AND icdo3_sites.minor_version = ?', 'new', 'Topoenglish.csv')
   end
@@ -93,6 +95,10 @@ class Icdo3Site < ApplicationRecord
 
   scope :by_primary_cervical, -> do
     current.where('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_UTERINE_CERVIX)
+  end
+
+  scope :by_primary_esophogeal, -> do
+    current.where('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_ESOPHOGEAL)
   end
 
   scope :by_icdo3_code_with_synonyms, ->(icdo3_code) do

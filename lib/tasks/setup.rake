@@ -1569,6 +1569,17 @@ namespace :setup do
 
     load_data_xml(files, west_mrn: args[:west_mrn])
   end
+
+  desc "Esophageal data"
+  task :esophageal_data, [:west_mrn] => :environment do |t, args|
+    puts 'you need to care'
+    puts args[:west_mrn]
+    directory_path = 'lib/setup/data/esophageal/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_xml(files, west_mrn: args[:west_mrn])
+  end
 end
 
 def load_data_xml(files, options= {})

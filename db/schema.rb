@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_03_134321) do
+ActiveRecord::Schema.define(version: 2024_04_15_190204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "tablefunc"
 
   create_table "abstractor_abstraction_group_members", force: :cascade do |t|
     t.integer "abstractor_abstraction_group_id"
@@ -609,6 +610,7 @@ ActiveRecord::Schema.define(version: 2023_12_03_134321) do
     t.string "diagnosis_type"
     t.string "has_cancer_histology"
     t.text "has_cancer_histology_suggestions"
+    t.boolean "has_cancer_histology_negated"
     t.string "has_cancer_site"
     t.text "has_cancer_site_suggestions"
     t.string "has_surgery_date"
@@ -1003,6 +1005,35 @@ ActiveRecord::Schema.define(version: 2023_12_03_134321) do
     t.integer "episode_event_field_concept_id", null: false
   end
 
+  create_table "esophageal_pathology_cases", force: :cascade do |t|
+    t.string "abstractor_namespace_name"
+    t.string "west_mrn"
+    t.string "note_stable_identifier_path"
+    t.string "note_stable_identifier_value_1"
+    t.string "note_stable_identifier_value_2"
+    t.bigint "note_id"
+    t.string "pathology_stable_identifier_path"
+    t.string "pathology_stable_identifier_value_1"
+    t.date "pathology_procedure_date"
+    t.string "pathology_provider_name"
+    t.string "pathology_procedure_source_value"
+    t.string "pathology_concept_name"
+    t.string "surgery_stable_identifier_path"
+    t.string "surgery_stable_identifier_value_1"
+    t.date "surgery_procedure_date"
+    t.string "surgery_provider_name"
+    t.string "surgery_procedure_source_value"
+    t.string "surgery_concept_name"
+    t.string "diagnosis_type"
+    t.string "has_cancer_histology"
+    t.text "has_cancer_histology_suggestions"
+    t.text "has_cancer_histology_suggestion_sentences"
+    t.boolean "has_cancer_histology_negated"
+    t.string "has_cancer_site"
+    t.text "has_cancer_site_suggestions"
+    t.string "has_surgery_date"
+  end
+
   create_table "fact_relationship", id: false, force: :cascade do |t|
     t.integer "domain_concept_id_1", null: false
     t.integer "fact_id_1", null: false
@@ -1319,15 +1350,6 @@ ActiveRecord::Schema.define(version: 2023_12_03_134321) do
     t.boolean "case_number_found"
     t.boolean "case_number_collection_date_found"
     t.string "accession_number_assigned"
-  end
-
-  create_table "patients", id: false, force: :cascade do |t|
-    t.string "west_mrn", limit: 255
-    t.string "diagnosis_date", limit: 255
-    t.string "icdo3_site_code", limit: 255
-    t.string "icdo3_histology_code", limit: 255
-    t.string "icd10_code", limit: 255
-    t.string "source_system", limit: 255
   end
 
   create_table "payer_plan_period", primary_key: "payer_plan_period_id", id: :integer, default: nil, force: :cascade do |t|

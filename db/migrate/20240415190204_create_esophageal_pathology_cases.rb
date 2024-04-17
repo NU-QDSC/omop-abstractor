@@ -1,6 +1,6 @@
-class CreateCervicalPathologyCases < ActiveRecord::Migration[5.2]
+class CreateEsophagealPathologyCases < ActiveRecord::Migration[5.2]
   def change
-    create_table :cervical_pathology_cases do |t|
+    create_table :esophageal_pathology_cases do |t|
       t.string  :abstractor_namespace_name, null: true
       t.string  :west_mrn, null: true
       t.string  :note_stable_identifier_path, null: true
@@ -22,6 +22,7 @@ class CreateCervicalPathologyCases < ActiveRecord::Migration[5.2]
       t.string  :diagnosis_type, null: true
       t.string  :has_cancer_histology, null: true
       t.text    :has_cancer_histology_suggestions, null: true
+      t.text    :has_cancer_histology_suggestion_sentences, null: true
       t.boolean :has_cancer_histology_negated, null: true
       t.string  :has_cancer_site, null: true
       t.text    :has_cancer_site_suggestions, null: true
