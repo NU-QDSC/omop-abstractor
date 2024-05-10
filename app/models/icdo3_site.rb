@@ -49,6 +49,10 @@ class Icdo3Site < ApplicationRecord
     current.joins(icdo3_categorizations: :icdo3_category).where.not('icdo3_categories.category = ?', 'primary cns site')
   end
 
+  scope :by_primary, -> do
+    current.joins(icdo3_categorizations: :icdo3_category)
+  end
+
   scope :by_primary_breast, -> do
     current.where('icdo3_sites.icdo3_code IN(?)', Icdo3Site::SITES_BREAST + Icdo3Site::SITES_LYMPH_NODE)
   end

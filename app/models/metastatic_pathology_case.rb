@@ -1,0 +1,2 @@
+class MetastaticPathologyCase < ApplicationRecord
+end

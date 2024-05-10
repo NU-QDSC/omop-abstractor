@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_15_190204) do
+ActiveRecord::Schema.define(version: 2024_05_09_175757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -616,6 +616,26 @@ ActiveRecord::Schema.define(version: 2024_04_15_190204) do
     t.string "has_surgery_date"
   end
 
+  create_table "cervical_patients", force: :cascade do |t|
+    t.bigint "patient_ir_id"
+    t.string "west_mrn"
+    t.string "race_nih"
+    t.string "ethnic_group_nih"
+    t.string "gender"
+    t.date "birth_date"
+  end
+
+  create_table "cervical_treatments", force: :cascade do |t|
+    t.bigint "patient_ir_id"
+    t.string "cpt_name"
+    t.string "treatment_type"
+    t.date "treatment_date"
+    t.bigint "treatment_year"
+    t.string "treatment_provenance"
+    t.bigint "interval_days_from_first_pathology"
+    t.bigint "age_at_treatment"
+  end
+
   create_table "cohort", id: false, force: :cascade do |t|
     t.integer "cohort_definition_id", null: false
     t.integer "subject_id", null: false
@@ -1169,6 +1189,40 @@ ActiveRecord::Schema.define(version: 2024_04_15_190204) do
     t.datetime "metadata_datetime"
   end
 
+  create_table "metastatic_pathology_cases", force: :cascade do |t|
+    t.string "abstractor_namespace_name"
+    t.string "west_mrn"
+    t.string "note_stable_identifier_path"
+    t.string "note_stable_identifier_value_1"
+    t.string "note_stable_identifier_value_2"
+    t.bigint "note_id"
+    t.string "pathology_stable_identifier_path"
+    t.string "pathology_stable_identifier_value_1"
+    t.date "pathology_procedure_date"
+    t.string "pathology_provider_name"
+    t.string "pathology_procedure_source_value"
+    t.string "pathology_concept_name"
+    t.string "surgery_stable_identifier_path"
+    t.string "surgery_stable_identifier_value_1"
+    t.date "surgery_procedure_date"
+    t.string "surgery_provider_name"
+    t.string "surgery_procedure_source_value"
+    t.string "surgery_concept_name"
+    t.string "diagnosis_type"
+    t.string "has_cancer_histology"
+    t.text "has_cancer_histology_suggestions"
+    t.text "has_cancer_histology_suggestion_match_values"
+    t.text "has_cancer_histology_suggestion_sentences"
+    t.boolean "has_cancer_histology_negated"
+    t.string "has_cancer_site"
+    t.text "has_cancer_site_suggestions"
+    t.text "has_cancer_site_suggestion_sentences"
+    t.string "has_metastatic_cancer_primary_site"
+    t.text "has_metastatic_cancer_primary_site_suggestions"
+    t.text "has_metastatic_cancer_primary_site_suggestion_sentences"
+    t.string "has_surgery_date"
+  end
+
   create_table "nlp_comparison_suggestions", force: :cascade do |t|
     t.integer "nlp_comparison_id", null: false
     t.string "source", null: false
@@ -1329,6 +1383,16 @@ ActiveRecord::Schema.define(version: 2024_04_15_190204) do
     t.string "has_metastatic_cancer_primary_site"
     t.string "has_cancer_recurrence_status"
     t.string "has_surgery_date"
+  end
+
+  create_table "pap_test_pathology_cases", force: :cascade do |t|
+    t.bigint "patient_ir_id"
+    t.string "accession_nbr_formatted"
+    t.date "accessioned_datetime"
+    t.date "case_collect_datetime"
+    t.string "group_desc"
+    t.string "has_cancer_histology_discrete"
+    t.string "has_cancer_histology"
   end
 
   create_table "pathology_accession_numbers", force: :cascade do |t|

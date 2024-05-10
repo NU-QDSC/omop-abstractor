@@ -1,0 +1,2 @@
+class PapTestPathologyCase < ApplicationRecord
+end

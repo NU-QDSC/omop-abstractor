@@ -13,9 +13,9 @@
 
   #abstraction will
   # bundle exec rake suggestor:do_multiple_will
-  # bundle exec rake esophogeal:create_pathology_cases_datamart
+  # bundle exec rake esophageal:create_pathology_cases_datamart
 
-namespace :esophogeal do
+namespace :esophageal do
   desc 'Load schemas'
   task(schemas: :environment) do |t, args|
     date_object_type = Abstractor::AbstractorObjectType.where(value: 'date').first
@@ -196,8 +196,8 @@ namespace :esophogeal do
     #End surgery date
   end
 
-  #bundle exec rake esophogeal:create_pathology_cases_datamart
-  desc "Create Esophogeal Pathology Cases Datamart"
+  #bundle exec rake esophageal:create_pathology_cases_datamart
+  desc "Create Esophageal Pathology Cases Datamart"
   task(create_pathology_cases_datamart: :environment) do |t, args|
     ActiveRecord::Base.connection.execute('TRUNCATE TABLE esophageal_pathology_cases CASCADE;')
     sql_file = "#{Rails.root}/lib/tasks/esophageal_pathology_cases.sql"

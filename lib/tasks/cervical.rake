@@ -44,21 +44,16 @@ namespace :cervical do
     abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comment')
     abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comments')
     abstractor_section_comment.save!
-    abstractor_section_staging_summary = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'STAGING SUMMARY', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name: 'BREAST CANCER STAGING SUMMARY')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name: 'Breast Cancer Staging Summary')
-    abstractor_section_staging_summary.save!
 
     abstractor_namespace_surgical_pathology = Abstractor::AbstractorNamespace.where(name: 'Surgical Pathology', subject_type: NoteStableIdentifier.to_s, joins_clause:
     "JOIN note_stable_identifier_full ON note_stable_identifier.stable_identifier_path = note_stable_identifier_full.stable_identifier_path AND note_stable_identifier.stable_identifier_value = note_stable_identifier_full.stable_identifier_value
      JOIN note ON note_stable_identifier_full.note_id = note.note_id
      JOIN fact_relationship ON fact_relationship.domain_concept_id_1 = 5085 AND fact_relationship.fact_id_1 = note.note_id AND fact_relationship.relationship_concept_id = 44818790
      JOIN procedure_occurrence ON fact_relationship.domain_concept_id_2 = 10 AND fact_relationship.fact_id_2 = procedure_occurrence.procedure_occurrence_id AND procedure_occurrence.procedure_concept_id = 4213297",
-    where_clause: "note.note_title in('Final Diagnosis', 'Final Pathologic Diagnosis', 'Final Diagnosis Rendered')").first_or_create
+    where_clause: "note.note_title in('Final Diagnosis', 'Final Pathologic Diagnosis', 'Final Diagnosis Rendered', 'Conversion Final Diagnosis')").first_or_create
 
     abstractor_namespace_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_specimen)
     abstractor_namespace_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_comment)
-    abstractor_namespace_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_staging_summary)
     abstractor_namespace_surgical_pathology.save!
 
     #Begin primary cancer
@@ -150,7 +145,6 @@ namespace :cervical do
 
     abstractor_namespace_outside_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_specimen)
     abstractor_namespace_outside_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_comment)
-    abstractor_namespace_outside_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_staging_summary)
     abstractor_namespace_outside_surgical_pathology.save!
 
     #Begin primary cancer
@@ -203,5 +197,93 @@ namespace :cervical do
     sql_file = "#{Rails.root}/lib/tasks/cervical_pathology_cases.sql"
     sql = File.read(sql_file)
     ActiveRecord::Base.connection.execute(sql)
+  end
+
+  #bundle exec rake cervical:load_pap_test_pathology_cases
+  desc "Load pap test pathology cases"
+  task(load_pap_test_pathology_cases: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE pap_test_pathology_cases CASCADE;')
+
+    file_name = 'NU-CHERS Pap Test Pathology Cases All Condensed'
+    file = "lib/setup/data/cervical/#{file_name}.csv"
+    file_clean = "lib/setup/data/cervical/#{file_name}_clean.csv"
+    open(file_clean, 'w') { |f|
+      File.open(file, 'r:bom|utf-8').each_line { |line|
+        line.encode!('UTF-8', invalid: :replace, undef: :replace)
+        f.puts line
+      }
+    }
+
+    pap_test_pathology_cases_from_file = CSV.new(File.open(file_clean), headers: true, col_sep: ",", return_headers: false,  quote_char: "\"")
+    pap_test_pathology_cases_from_file.each_with_index do |pap_test_pathology_case_from_file, i|
+      puts i
+      pap_test_pathology_case = PapTestPathologyCase.new
+      pap_test_pathology_case.patient_ir_id = pap_test_pathology_case_from_file['patient_ir_id']
+      pap_test_pathology_case.accession_nbr_formatted = pap_test_pathology_case_from_file['accession_nbr_formatted']
+      pap_test_pathology_case.accessioned_datetime = Date.parse(pap_test_pathology_case_from_file['accessioned_datetime'])
+      pap_test_pathology_case.case_collect_datetime = Date.parse(pap_test_pathology_case_from_file['case_collect_datetime'])
+      pap_test_pathology_case.group_desc = pap_test_pathology_case_from_file['group_desc']
+      pap_test_pathology_case.has_cancer_histology_discrete = pap_test_pathology_case_from_file['has_cancer_histology_discrete']
+      pap_test_pathology_case.has_cancer_histology = pap_test_pathology_case_from_file['has_cancer_histology']
+      pap_test_pathology_case.save!
+    end
+  end
+
+  #bundle exec rake cervical:load_cervical_patients
+  desc "Load cervical patients"
+  task(load_cervical_patients: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE cervical_patients CASCADE;')
+
+    file_name = 'NU-CHERS Cervical Patients'
+    file = "lib/setup/data/cervical/#{file_name}.csv"
+    file_clean = "lib/setup/data/cervical/#{file_name}_clean.csv"
+    open(file_clean, 'w') { |f|
+      File.open(file, 'r:bom|utf-8').each_line { |line|
+        line.encode!('UTF-8', invalid: :replace, undef: :replace)
+        f.puts line
+      }
+    }
+
+    cervical_patients_from_file = CSV.new(File.open(file_clean), headers: true, col_sep: ",", return_headers: false,  quote_char: "\"")
+    cervical_patients_from_file.each_with_index do |cervical_patient_from_file, i|
+      puts i
+      cervical_patient = CervicalPatient.new
+      cervical_patient.patient_ir_id = cervical_patient_from_file['patient_ir_id']
+      cervical_patient.west_mrn = cervical_patient_from_file['west_mrn']
+      cervical_patient.race_nih = cervical_patient_from_file['race_nih']
+      cervical_patient.ethnic_group_nih = cervical_patient_from_file['ethnic_group_nih']
+      cervical_patient.gender = cervical_patient_from_file['gender']
+      cervical_patient.birth_date = Date.parse(cervical_patient_from_file['birth_date'])
+      cervical_patient.save!
+    end
+  end
+
+  #bundle exec rake cervical:load_cervical_treatments
+  desc "Load cervical treatments"
+  task(load_cervical_treatments: :environment) do |t, args|
+    ActiveRecord::Base.connection.execute('TRUNCATE TABLE cervical_treatments CASCADE;')
+
+    file_name = 'treatments'
+    file = "lib/setup/data/cervical/#{file_name}.csv"
+    file_clean = "lib/setup/data/cervical/#{file_name}_clean.csv"
+    open(file_clean, 'w') { |f|
+      File.open(file, 'r:bom|utf-8').each_line { |line|
+        line.encode!('UTF-8', invalid: :replace, undef: :replace)
+        f.puts line
+      }
+    }
+
+    cervical_treatments_from_file = CSV.new(File.open(file_clean), headers: true, col_sep: ",", return_headers: false,  quote_char: "\"")
+    cervical_treatments_from_file.each_with_index do |cervical_treatment_from_file, i|
+      puts i
+      cervical_treatment = CervicalTreatment.new
+      cervical_treatment.patient_ir_id = cervical_treatment_from_file['patient_ir_id']
+      cervical_treatment.cpt_name = cervical_treatment_from_file['cpt_name']
+      cervical_treatment.treatment_type = cervical_treatment_from_file['treatment_type']
+      cervical_treatment.treatment_date = Date.parse(cervical_treatment_from_file['treatment_date'])
+      cervical_treatment.treatment_year = cervical_treatment_from_file['treatment_year']
+      cervical_treatment.treatment_provenance = cervical_treatment_from_file['treatment_provenance']
+      cervical_treatment.save!
+    end
   end
 end

@@ -1,100 +1,209 @@
-category,version,minor_version,icdo3_code,icdo3_description,icdo3_synonym_description
-metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastic
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",adenoid cystic carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)","carcinoma, metastatic"
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic breast carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear cell renal cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear-cell adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear-cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clearcell adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clearcell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic colon carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic colorectal carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic esophageal carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic esophagus carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high grade carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high-grade carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic highgrade carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic lung carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic moderately differentiated carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic moderately-differentiated carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic mucinous carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic non small cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic non smallcell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic non-small cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic papillary carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic poorly differentiated carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic poorly-differentiated carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic prostate carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic prostatic carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic rectal carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic renal carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic renal cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic serous carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic small cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic small-cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic smallcell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",moderately differentiated carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",moderately-differentiated carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",poorly differentiated carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",poorly differentiated carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",poorly-differentiated carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic moderately differentiated squamous cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic moderately-differentiated squamous cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic poorly differentiated squamous cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic poorly-differentiated squamous cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",moderately differentiated squamous cell carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",moderately-differentiated squamous cell carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",poorly differentiated squamous cell carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",poorly-differentiated squamous cell carcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)","squamous cell carcinoma, metastatic"
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)","adenocarcinoma, metastatic"
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic breast adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic clear cell adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic clear cell renal cell adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic colon adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic colorectal adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic esophageal adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic esophagus adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic high grade adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic high-grade adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic highgrade adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic lung adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic moderately differentiated adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic moderately-differentiated adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic mucinous adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic papillary adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic poorly differentiated adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic poorly-differentiated adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic prostate adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic prostatic adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic rectal adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic renal adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic renal cell adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic serous adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",moderately differentiated adenocarcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",moderately-differentiated adenocarcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",poorly differentiated adenocarcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",poorly-differentiated adenocarcinoma metastatic
-metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine ca
-metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine cancer
-metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine carcinomas
-metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine neoplasm
-metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine tumor
-metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine tumour
-metastatic histology,legacy,metastatic_diagnoses.csv,metastatic glioblastoma,metastatic glioblastoma,metastatic high grade glioma
-metastatic histology,legacy,metastatic_diagnoses.csv,metastatic leiomyosarcoma,metastatic leiomyosarcoma,metastatic epithelioid leiomyosarcoma
-metastatic histology,legacy,metastatic_diagnoses.csv,metastatic sarcoma,metastatic sarcoma,metastatic myxoid spindle cell sarcoma
-metastatic histology,legacy,metastatic_diagnoses.csv,metastatic sarcoma,metastatic sarcoma,metastatic spindle cell sarcoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic pancreatic adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,metastatic melanoma,"metastatic melanoma",unknown primary melanoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",unknown primary adenocarcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",unknown primary carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",unknown primary undifferentiated small cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",unknown primary squamous cell carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",ameloblastic carcinoma
-metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic high grade glioma
-metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)","metastatic, poorly differentiated adenocarcoma"
-metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)","metastic carcinoma"
+category,version,minor_version,icdo3_code,icdo3_description,icdo3_synonym_description,icdo3_site_code
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)","adenocarcinoma, metastatic",*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",adenoid cystic carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",ameloblastic carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)","carcinoma, metastatic",breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic bladder adenocarcinoma,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic bladder cancer,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic bladder carcinoma,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic brain adenocarcinoma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic brain cancer,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic brain carcinoma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic brain cell adenocarcinoma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic brain cell cancer,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic brain cell carcinoma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic breast adenocarcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic breast cancer,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic breast carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic carcinoid adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic carcinoid carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic cervical adenocarcinoma,cervix uteri (c53.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic cervical cancer,cervix uteri (c53.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic cervical carcinoma,cervix uteri (c53.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic clear cell adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic clear cell renal cell adenocarcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic clear cell renal cell cancer,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear cell renal cell carcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear-cell adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear-cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic clear-cell renal cell adenocarcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic clear-cell renal cell cancer,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clear-cell renal cell carcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clearcell adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic clearcell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic colon adenocarcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic colon cancer,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic colon carcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic colonic adenocarcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic colonic cancer,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic colonic carcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic colorectal adenocarcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic colorectal cancer,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic colorectal carcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic ductal adenocarcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic ductal cancer,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic ductal carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic endometrial adenocarcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic endometrial cancer,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic endometrial carcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic endometrium adenocarcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic endometrium cancer,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic endometrium carcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,metastatic leiomyosarcoma,metastatic leiomyosarcoma,metastatic epithelioid leiomyosarcoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic esophageal adenocarcinoma,esophagus (c15.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic esophageal cancer,esophagus (c15.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic esophageal carcinoma,esophagus (c15.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic esophagus adenocarcinoma,esophagus (c15.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic esophagus cancer,esophagus (c15.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic esophagus carcinoma,esophagus (c15.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic focally keratinizing squamous cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic glioma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic hepatic adenocarcinoma,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic hepatic cancer,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic hepatic carcinoma,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic high grade adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high grade carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic high grade glioma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic high-grade glioma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,metastatic glioblastoma,metastatic glioblastoma,metastatic high grade glioma,brain (c71.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic high-grade adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high-grade carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic highgrade adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic highgrade carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic liver adenocarcinoma,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic liver cancer,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic liver carcinoma,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic lung adenocarcinoma,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic lung cancer,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic lung carcinoma,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic malignant melanoma,skin (c44.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic melanoma,skin (c44.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic merkel cell adenocarcinoma,skin (c44.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic merkel cell cancer,skin (c44.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic merkel cell carcinoma,skin (c44.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic moderately differentiated adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic moderately differentiated carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic moderately differentiated squamous cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic moderately-differentiated adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic moderately-differentiated carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic moderately-differentiated squamous cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic mucinous adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic mucinous carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,metastatic sarcoma,metastatic sarcoma,metastatic myxoid spindle cell sarcoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic non small cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic non smallcell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic non-small cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic pancreatic adenocarcinoma,pancreas (c25.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic pancreatic cancer,pancreas (c25.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic pancreatic carcinoma,pancreas (c25.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic papillary adenocarcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic papillary cancer,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic papillary carcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic papillary thyroid adenocarcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic papillary thyroid cancer,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic papillary thyroid carcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic poorly differentiated adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic poorly differentiated carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic poorly differentiated squamous cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic poorly-differentiated adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic poorly-differentiated carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",metastatic poorly-differentiated squamous cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic prostate adenocarcinoma,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic prostate cancer,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic prostate carcinoma,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic prostatic adenocarcinoma,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic prostatic cancer,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic prostatic carcinoma,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic rectal adenocarcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic rectal cancer,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic rectal carcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic rectum adenocarcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic rectum cancer,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic rectum carcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic renal adenocarcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic renal cancer,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic renal carcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic renal cell adenocarcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic renal cell cancer,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic renal cell carcinoma,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic serous adenocarcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic serous cancer,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic serous carcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic small cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic small-cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic smallcell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,metastatic sarcoma,metastatic sarcoma,metastatic spindle cell sarcoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic stomach adenocarcinoma,stomach (c16.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic stomach cancer,stomach (c16.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic stomach carcinoma,stomach (c16.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic urothelial adenocarcinoma,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic urothelial cancer,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic urothelial carcinoma,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic urothelial cell carcinoma,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)","metastatic, poorly differentiated adenocarcoma",*
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastic carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",moderately differentiated adenocarcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",moderately differentiated carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",moderately differentiated squamous cell carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",moderately-differentiated adenocarcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",moderately-differentiated carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",moderately-differentiated squamous cell carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine ca,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine cancer,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine carcinomas,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine neoplasm,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine tumor,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8246/3,neuroendocrine carcinoma (8246/3),neuroendocrine tumour,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",poorly differentiated adenocarcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",poorly differentiated carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",poorly differentiated carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",poorly differentiated squamous cell carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",poorly-differentiated adenocarcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",poorly-differentiated carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",poorly-differentiated squamous cell carcinoma metastatic,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)","squamous cell carcinoma, metastatic",*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",unknown primary adenocarcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",unknown primary carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,metastatic melanoma,metastatic melanoma,unknown primary melanoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8070/6,"squamous cell carcinoma, metastatic (8070/6)",unknown primary squamous cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",unknown primary undifferentiated small cell carcinoma,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastasis,*
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic endometrioid adenocarcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic gastric adenocarcinoma,stomach (c16.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic moderately differentiated colorectal adenocarcinoma,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic moderately differentiated lung adenocarcinoma.,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic high grade serous adenocarcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic pulmonary adenocarcinoma.,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic breast ductal adenocarcinoma.,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic high-grade prostatic adenocarcinoma,prostate gland (c61.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8140/6,"adenocarcinoma, metastatic (8140/6)",metastatic pulmonary adenocarcinoma,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic lobular carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic mammary carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic hepatocellular carcinoma,liver (c22.0)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high-grade serous carcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high-grade urothelial carcinoma,bladder (c67.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic invasive ductal carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic low-grade serous carcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic thyroid papillary carcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic endometrial serous carcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic endometrioid carcinoma,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high grade papillary renal cell carcinoma ,kidney (c64.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic high grade serous carcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic medullary carcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic breast ductal carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic invasive lobular carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic medullary thyroid carcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic ovarian clear cell carcinoma,ovary (c56.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic pleomorphic lobular carcinoma,breast (c50.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic thyroid carcinoma,thyroid gland (c73.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",colonic metastasis,colon (c18.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",endocervical metastasis,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",pulmonary metastasis,lung (c34.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",uterine metastasis,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",pancreatic metastasis,pancreas (c25.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",Metastatic gastrointestinal stromal tumor,stomach (c16.9)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic endometrial serous,endometrium (c54.1)
+metastatic histology,legacy,metastatic_diagnoses.csv,8000/6,"neoplasm, metastatic (8000/6)",metastatic low-grade mucinous neoplasm,colon (c18.9)

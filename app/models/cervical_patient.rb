@@ -1,0 +1,2 @@
+class CervicalPatient < ApplicationRecord
+end

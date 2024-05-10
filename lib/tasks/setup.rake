@@ -385,19 +385,19 @@ namespace :setup do
     end
 
     # CIN 1
-    ['cin i', 'cin1', 'cin-1', 'cin-i', 'cervical intraepithelial neoplasia 1', 'cervical intra-epithelial neoplasia 1', 'cervical intraepithelial neoplasia i', 'cervical intra-epithelial neoplasia i', 'lsil', 'low grade squamous intraepithelial lesion', 'low grade squamous intra-epithelial lesion', 'low-grade squamous intraepithelial lesion', 'low-grade squamous intra-epithelial lesion', 'adenocarcinoma in situ 1', 'ais 1', 'ais1', 'ais-1'].each do |histology_synonym|
+    ['lsil/cin-1', 'cin i', 'cin1', 'cin-1', 'cin-i', 'cervical intraepithelial neoplasia 1', 'cervical intra-epithelial neoplasia 1', 'cervical intraepithelial neoplasia i', 'cervical intra-epithelial neoplasia i', 'lsil', 'low grade squamous intraepithelial lesion', 'low grade squamous intra-epithelial lesion', 'low-grade squamous intraepithelial lesion', 'low-grade squamous intra-epithelial lesion', 'adenocarcinoma in situ 1', 'ais 1', 'ais1', 'ais-1', 'lsil', 'low grade squamous intraepithelial lesion', 'low-grade squamous intraepithelial lesion'].each do |histology_synonym|
       icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: 'CIN 1', icdo3_name: 'CIN 1', icdo3_description: 'CIN 1').first_or_create
       Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
     end
 
     # CIN 2
-    ['cin ii', 'cin2', 'cin-2', 'cin-ii', 'cervical intraepithelial neoplasia 2', 'cervical intra-epithelial neoplasia 2', 'cervical intraepithelial neoplasia ii', 'cervical intra-epithelial neoplasia ii', 'hsil 2', 'hsil ii', 'hsil2', 'hgsil 2', 'hgsil ii', 'hgsil2', 'adenocarcinoma in situ 2', 'ais 2', 'ais2', 'ais-2'].each do |histology_synonym|
+    ['hsil/cin-2', 'cin ii', 'cin2', 'cin-2', 'cin-ii', 'cervical intraepithelial neoplasia 2', 'cervical intra-epithelial neoplasia 2', 'cervical intraepithelial neoplasia ii', 'cervical intra-epithelial neoplasia ii', 'hsil 2', 'hsil ii', 'hsil2', 'hgsil 2', 'hgsil ii', 'hgsil2', 'adenocarcinoma in situ 2', 'ais 2', 'ais2', 'ais-2'].each do |histology_synonym|
       icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: 'CIN 2', icdo3_name: 'CIN 2', icdo3_description: 'CIN 2').first_or_create
       Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
     end
 
     # CIN 3
-    ['cin iii', 'cin3', 'cin-3', 'CIN 2-3', 'CIN 2/3', 'cin-iii', 'cervical intraepithelial neoplasia 3', 'cervical intra-epithelial neoplasia 3', 'cervical intraepithelial neoplasia iii', 'cervical intra-epithelial neoplasia iii', 'hsil 3', 'hsil iii', 'hsil3', 'hgsil 3', 'hgsil iii', 'hgsil3', 'adenocarcinoma in situ 3', 'ais 3', 'ais3', 'ais-3'].each do |histology_synonym|
+    ['hsil/cin-3','cin iii', 'cin3', 'cin-3', 'CIN 2-3', 'CIN 2/3', 'cin-iii', 'cervical intraepithelial neoplasia 3', 'cervical intra-epithelial neoplasia 3', 'cervical intraepithelial neoplasia iii', 'cervical intra-epithelial neoplasia iii', 'hsil 3', 'hsil iii', 'hsil3', 'hgsil 3', 'hgsil iii', 'hgsil3', 'adenocarcinoma in situ 3', 'ais 3', 'ais3', 'ais-3', 'hsil', 'high grade squamous intraepithelial lesion', 'high-grade squamous intraepithelial lesion'].each do |histology_synonym|
       icdo3_histology = Icdo3Histology.where(version: 'new', minor_version: 'ICD-O-3.2.csv', icdo3_code: 'CIN 3', icdo3_name: 'CIN 3', icdo3_description: 'CIN 3').first_or_create
       Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology_synonym).first_or_create
     end
@@ -440,8 +440,8 @@ namespace :setup do
       Icdo3HistologySynonym.where(icdo3_histology_id: icdo3_histology.id, icdo3_synonym_description: histology['icdo3_code_synonym_description']).first_or_create
     end
 
-    new_2001_histology_synonyms = CSV.new(File.open('lib/setup/vocabulary/new_custom_2021_icdo3_histology_synonyms.csv'), headers: true, col_sep: ",", return_headers: false,  quote_char: "\"")
-    new_2001_histology_synonyms.each do |histology|
+    new_2201_histology_synonyms = CSV.new(File.open('lib/setup/vocabulary/new_custom_2021_icdo3_histology_synonyms.csv'), headers: true, col_sep: ",", return_headers: false,  quote_char: "\"")
+    new_2201_histology_synonyms.each do |histology|
       icdo3_histology = Icdo3Histology.where(version: '2021', minor_version: 'cap_ecc_primary_cns_histologies_2021.csv', icdo3_code: histology['icdo3_code']).first
       if icdo3_histology.blank?
         icdo3_histology = Icdo3Histology.where(version: '2021', minor_version: 'cap_ecc_primary_cns_histologies_2021.csv', icdo3_name: histology['name']).first
@@ -1575,6 +1575,18 @@ namespace :setup do
     puts 'you need to care'
     puts args[:west_mrn]
     directory_path = 'lib/setup/data/esophageal/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+
+    load_data_xml(files, west_mrn: args[:west_mrn])
+  end
+
+  # bundle exec rake setup:metastatic_data
+  desc "Metastatic data"
+  task :metastatic_data, [:west_mrn] => :environment do |t, args|
+    puts 'you need to care'
+    puts args[:west_mrn]
+    directory_path = 'lib/setup/data/metastatic/'
     files = Dir.glob(File.join(directory_path, '*.xml'))
     files = files.sort_by { |file| File.stat(file).mtime }
 
