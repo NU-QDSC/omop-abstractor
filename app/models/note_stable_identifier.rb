@@ -645,8 +645,7 @@ class NoteStableIdentifier < ApplicationRecord
          # end
          #
          named_entities = omop_abstractor_nlp_document.named_entities.select { |named_entity|  named_entity.semantic_tag_attribute == abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate }
-
-         if abstractor_abstraction.abstractor_subject.abstractor_subject_group.name == 'Metastatic Cancer'
+         if abstractor_abstraction.abstractor_subject.abstractor_subject_group && abstractor_abstraction.abstractor_subject.abstractor_subject_group.name == 'Metastatic Cancer'
            if abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate == 'has_cancer_site' && named_entities.empty?
              named_entities.concat(omop_abstractor_nlp_document.named_entities.select { |named_entity|  named_entity.semantic_tag_value_type == 'value' && named_entity.semantic_tag_attribute == 'has_metastatic_cancer_primary_site' })
            end
@@ -723,48 +722,76 @@ class NoteStableIdentifier < ApplicationRecord
                puts named_entity.sentence.section.section_range
                puts 'more'
                puts section_abstractor_abstraction_group_map
-               if section_abstractor_abstraction_group_map[named_entity.sentence.section.section_range].present?
-                 puts 'step 2'
-                 section_abstractor_abstraction_group_map[named_entity.sentence.section.section_range].each do |abstractor_abstraction_group|
-                   abstractor_abstraction_group.abstractor_abstraction_group_members.each do |abstractor_abstraction_group_member|
-                     if abstractor_abstraction_group_member.abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate == named_entity.semantic_tag_attribute
-                       puts 'hello ninny!'
-                       puts named_entity.semantic_tag_attribute
-                       aa = abstractor_abstraction_group_member.abstractor_abstraction
-                       section_name = named_entity.sentence.section.name
+               if aa.abstractor_abstraction_group_member
+                 if section_abstractor_abstraction_group_map[named_entity.sentence.section.section_range].present?
+                   puts 'step 2'
+                   section_abstractor_abstraction_group_map[named_entity.sentence.section.section_range].each do |abstractor_abstraction_group|
+                     abstractor_abstraction_group.abstractor_abstraction_group_members.each do |abstractor_abstraction_group_member|
+                       if abstractor_abstraction_group_member.abstractor_abstraction.abstractor_subject.abstractor_abstraction_schema.predicate == named_entity.semantic_tag_attribute
+                         puts 'hello ninny!'
+                         puts named_entity.semantic_tag_attribute
+                         aa = abstractor_abstraction_group_member.abstractor_abstraction
+                         section_name = named_entity.sentence.section.name
 
-                       suggested_value = named_entity.semantic_tag_value.gsub(' , ', ',')
-                       suggested_value = suggested_value.gsub(' - ', '-')
+                         suggested_value = named_entity.semantic_tag_value.gsub(' , ', ',')
+                         suggested_value = suggested_value.gsub(' - ', '-')
 
-                       abstractor_suggestion = aa.abstractor_subject.suggest(
-                       aa,
-                       abstractor_abstraction_source,
-                       omop_abstractor_nlp_document.text[named_entity.named_entity_begin..named_entity.named_entity_end], #suggestion_source[:match_value],
-                       omop_abstractor_nlp_document.text[named_entity.sentence.sentence_begin..named_entity.sentence.sentence_end], #suggestion_source[:sentence_match_value]
-                       self.id,
-                       self.class.to_s,
-                       'note_text',
-                       section_name, #suggestion_source[:section_name]
-                       suggested_value,    #suggestion[:value]
-                       false,                              #suggestion[:unknown].to_s.to_boolean
-                       false,                              #suggestion[:not_applicable].to_s.to_boolean
-                       nil,
-                       nil,
-                       named_entity.negated?               #suggestion[:negated].to_s.to_boolean
-                       )
-                       #save so this suggestion gets saved first
-                       #aa.save!
-                       abstractor_suggestion.save!
+                         abstractor_suggestion = aa.abstractor_subject.suggest(
+                         aa,
+                         abstractor_abstraction_source,
+                         omop_abstractor_nlp_document.text[named_entity.named_entity_begin..named_entity.named_entity_end], #suggestion_source[:match_value],
+                         omop_abstractor_nlp_document.text[named_entity.sentence.sentence_begin..named_entity.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+                         self.id,
+                         self.class.to_s,
+                         'note_text',
+                         section_name, #suggestion_source[:section_name]
+                         suggested_value,    #suggestion[:value]
+                         false,                              #suggestion[:unknown].to_s.to_boolean
+                         false,                              #suggestion[:not_applicable].to_s.to_boolean
+                         nil,
+                         nil,
+                         named_entity.negated?               #suggestion[:negated].to_s.to_boolean
+                         )
+                         #save so this suggestion gets saved first
+                         #aa.save!
+                         abstractor_suggestion.save!
+                       end
                      end
                    end
+                 else
+                   puts 'step 3'
+                   puts 'hello binny'
+                   suggested_value = named_entity.semantic_tag_value.gsub(' , ', ',')
+                   suggested_value = suggested_value.gsub(' - ', '-')
+                   section_name = named_entity.sentence.section.name
+                   section_name = nil
+                   abstractor_suggestion = aa.abstractor_subject.suggest(
+                   aa,
+                   abstractor_abstraction_source,
+                   omop_abstractor_nlp_document.text[named_entity.named_entity_begin..named_entity.named_entity_end], #suggestion_source[:match_value],
+                   omop_abstractor_nlp_document.text[named_entity.sentence.sentence_begin..named_entity.sentence.sentence_end], #suggestion_source[:sentence_match_value]
+                   self.id,
+                   self.class.to_s,
+                   'note_text',
+                   nil, #suggestion_source[:section_name]
+                   suggested_value,    #suggestion[:value]
+                   false,                              #suggestion[:unknown].to_s.to_boolean
+                   false,                              #suggestion[:not_applicable].to_s.to_boolean
+                   nil,
+                   nil,
+                   named_entity.negated?               #suggestion[:negated].to_s.to_boolean
+                   )
+                   #save so this suggestion gets saved first
+                   # aa.save!
+                   abstractor_suggestion.save!
                  end
                else
-                 puts 'step 3'
+                 puts 'Moomin is the way to go!'
+                 puts 'step 4'
                  puts 'hello binny'
                  suggested_value = named_entity.semantic_tag_value.gsub(' , ', ',')
                  suggested_value = suggested_value.gsub(' - ', '-')
                  section_name = named_entity.sentence.section.name
-                 section_name = nil
                  abstractor_suggestion = aa.abstractor_subject.suggest(
                  aa,
                  abstractor_abstraction_source,
@@ -773,7 +800,7 @@ class NoteStableIdentifier < ApplicationRecord
                  self.id,
                  self.class.to_s,
                  'note_text',
-                 nil, #suggestion_source[:section_name]
+                 section_name, #suggestion_source[:section_name]
                  suggested_value,    #suggestion[:value]
                  false,                              #suggestion[:unknown].to_s.to_boolean
                  false,                              #suggestion[:not_applicable].to_s.to_boolean

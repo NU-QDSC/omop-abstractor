@@ -14,7 +14,9 @@ require 'csv'
 
   #abstraction will
   # bundle exec rake suggestor:do_multiple_will
+  # bundle exec rake suggestor:do_multiple_will["?"]
   # bundle exec rake metastatic:create_pathology_cases_datamart
+  # bundle exec rake metastatic:normalize
 namespace :metastatic do
   desc 'Load schemas'
   task(schemas: :environment) do |t, args|
@@ -45,8 +47,66 @@ namespace :metastatic do
     abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comments')
     abstractor_section_comment.save!
     abstractor_section_staging_summary = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'STAGING SUMMARY', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name: 'BREAST CANCER STAGING SUMMARY')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name: 'Breast Cancer Staging Summary')
+
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'CANCER STAGING SUMMARY')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'TUMOR STAGING SUMMARY')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Tumor Staging Summary')
+
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Adrenal Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ampullary Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Anal (Excludes Rectal) Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal (Including Goblet Cell Adenocarcinoma) Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal (Including Goblet Cell Carcinoid Only) Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal (Including Goblet Cell Carcinoma Only) Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Bone Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Cervical Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Colorectal Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Distal/Extrahepatic Bile Duct Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Esophageal and Esophagogastric Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Extra hepatic cholangiocarcinoma Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gallbladder Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gastric Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gastrointestinal Stromal Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gestational Trophoblastic Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Invasive Breast Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Jejunum and Ileum Neuroendocrine Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'LEFT BREAST - Invasive Breast Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Laryngeal Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Lip and Oral Cavity Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'MALIGNANT PLEURAL MESOTHELIOMA: Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Microinvasive Breast Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Nasal Cavity and Paranasal Sinuses Cancer Staging Summary (AJCC 8th Edition, 2017)')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ovarian Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ovarian/Fallopian Tube Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pancreatic (Endocrine) Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pancreatic (Exocrine) Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pancreatic Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Parotid Gland Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Penile Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Perihilar Bile Duct Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pharynx (Oropharynx) Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pharynx (Oropharynx, Hypopharynx, Nasopharynx) Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Prostatic Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pulmonary Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'RIGHT BREAST - Invasive Breast Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Renal Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Renal Pelvic and Ureteral Tumor Staging')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Salivary Gland Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Skin Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Small Bowel Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Soft Tissue Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Testicular Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Thymic Epithelial Tumor Staging Summary (AJCC 8th Edition, 2017)')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Thyroid Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ureteral Tumor Staging')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Urethral Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Urinary Bladder Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Uterine Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Vaginal Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Vulvar Cancer Staging Summary')
     abstractor_section_staging_summary.save!
 
     abstractor_namespace_surgical_pathology = Abstractor::AbstractorNamespace.where(name: 'Surgical Pathology', subject_type: NoteStableIdentifier.to_s, joins_clause:
@@ -223,6 +283,21 @@ namespace :metastatic do
 
     #End Laterality
 
+    # #Begin Tumor Staging
+    # abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
+    #   predicate: 'tumor_staging',
+    #   display_name: 'Tumor Staging',
+    #   abstractor_object_type: list_object_type,
+    #   preferred_name: 'Tumor Staging').first_or_create
+    #
+    # abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'Cancer Staging', vocabulary_code: 'Cancer Staging').first_or_create
+    # Abstractor::AbstractorObjectValueVariant.where(:abstractor_object_value => abstractor_object_value, :value => 'Tumor Staging').first_or_create
+    # Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create
+    #
+    # abstractor_subject = Abstractor::AbstractorSubject.where(:subject_type => 'NoteStableIdentifier', :abstractor_abstraction_schema => abstractor_abstraction_schema, namespace_type: Abstractor::AbstractorNamespace.to_s, namespace_id: abstractor_namespace_surgical_pathology.id).first_or_create
+    # Abstractor::AbstractorAbstractionSource.where(abstractor_subject: abstractor_subject, from_method: 'note_text', :abstractor_rule_type => value_rule, abstractor_abstraction_source_type: source_type_custom_nlp_suggestion, custom_nlp_provider: 'custom_nlp_provider_will').first_or_create
+    # #End Tumor Staging
+
     # #Begin recurrent
     # abstractor_abstraction_schema = Abstractor::AbstractorAbstractionSchema.where(
     #   predicate: 'has_cancer_recurrence_status',
@@ -303,9 +378,12 @@ namespace :metastatic do
     sql = File.read(sql_file)
     ActiveRecord::Base.connection.execute(sql)
   end
+
   #bundle exec rake metastatic:normalize
   desc "Normalize"
   task(normalize: :environment) do |t, args|
+    MetastaticPathologyCase.where("has_cancer_histology IS NULL AND has_cancer_histology_suggestions  = 'carcinoma, metastatic (8010/6), neoplasm, metastatic (8000/6)'").update_all(has_cancer_histology: 'carcinoma, metastatic (8010/6)')
+
     MetastaticPathologyCase.where("has_cancer_histology IS NOT NULL AND has_cancer_histology != 'not applicable' AND has_metastatic_cancer_primary_site IS NOT NULL AND has_metastatic_cancer_primary_site != 'not applicable' AND has_cancer_site IS NULL AND has_cancer_site_suggestions IS NOT NULL").all.each do |metastatic_pathology_case|
       puts 'hello'
       puts "has_metastatic_cancer_primary_site: #{metastatic_pathology_case.has_metastatic_cancer_primary_site}"
@@ -349,123 +427,3 @@ namespace :metastatic do
     end
   end
 end
-
-# select  n.note_title
-#       , n.note_text
-#       , mpc.has_cancer_site
-#       , mpc.has_cancer_site_suggestions
-#       , mpc.has_metastatic_cancer_primary_site_suggestion_sentences
-#       , mpc.has_metastatic_cancer_primary_site
-#       , mpc.has_metastatic_cancer_primary_site_suggestion_sentences
-#       , mpc.has_cancer_site_suggestion_sentences
-# from metastatic_pathology_cases mpc join note n on mpc.note_id = n.note_id
-# where has_cancer_histology IS NOT NULL
-# AND has_cancer_histology != 'not applicable'
-# AND has_metastatic_cancer_primary_site IS NOT NULL
-# AND has_metastatic_cancer_primary_site != 'not applicable'
-#
-# --before
-# -- AND has_cancer_site IS NULL
-# -- AND has_cancer_site_suggestions IS NOT NULL
-# --after
-# AND has_cancer_site IS NOT NULL
-
-# --83   perfect guys before
-# --488 perfect guys after
-# --907 perfect guys after
-
-# --pefect guys
-# select  --   n.note_title
-#         --, n.note_text
-#         mpc.west_mrn
-#       , mpc.has_cancer_histology
-#       , mpc.has_cancer_site
-#       , mpc.has_metastatic_cancer_primary_site
-#       , mpc.has_cancer_histology_suggestion_sentences
-#       , mpc.has_cancer_site_suggestion_sentences
-#       , mpc.has_cancer_histology_suggestion_match_values
-#       , mpc.has_metastatic_cancer_primary_site_suggestion_sentences
-# from metastatic_pathology_cases mpc join note n on mpc.note_id = n.note_id
-# where has_cancer_histology IS NOT NULL
-# AND has_cancer_histology != 'not applicable'
-# AND has_metastatic_cancer_primary_site IS NOT NULL
-# AND has_metastatic_cancer_primary_site != 'not applicable'
-# --before
-# -- AND has_cancer_site IS NULL
-# -- AND has_cancer_site_suggestions IS NOT NULL
-# --after
-# AND has_cancer_site IS NOT NULL
-
-#
-# --not quite pefect guys
-# select  --   n.note_title
-#         --, n.note_text
-#         mpc.west_mrn
-#       , mpc.has_cancer_histology
-#       , mpc.has_cancer_site
-#       , mpc.has_metastatic_cancer_primary_site
-#       , mpc.has_cancer_histology_suggestion_sentences
-#       , mpc.has_cancer_site_suggestion_sentences
-#       , mpc.has_cancer_histology_suggestion_match_values
-#       , mpc.has_metastatic_cancer_primary_site_suggestion_sentences
-# from metastatic_pathology_cases mpc join note n on mpc.note_id = n.note_id
-# where has_cancer_histology IS NOT NULL
-# AND has_cancer_histology != 'not applicable'
-#
-# AND
-# (
-# has_cancer_site IS NOT NULL
-# OR
-# has_metastatic_cancer_primary_site IS NULL
-# )
-
-
-#2230 percect guys
-# changes
-
-# change 1
-# abstractor_object_value = abstractor_abstraction_schema.abstractor_object_values.where(vocabulary_code: '8010/6').first
-# abstractor_object_value.favor_more_specific = true
-# abstractor_object_value.save!
-
-# change 2
-# Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'consistent with').first_or_create
-
-#change 3
-# metastatic histology,legacy,metastatic_diagnoses.csv,8010/6,"carcinoma, metastatic (8010/6)",metastatic urothelial cell carcinoma,bladder (c67.9)
-
-
-# /*
-# -- full boat
-# select    aas.predicate
-#         , aa.value
-#         , asg.suggested_value
-#         , asg.accepted
-#         , asg.system_rejected
-#         , asg.system_rejected_reason
-#         , asg.system_accepted
-#         , asg.system_accepted_reason
-#         , ass.match_value
-#         , ass.sentence_match_value
-#         , nsf.note_id
-# */
-# select distinct ass.sentence_match_value
-# from note_stable_identifier_full nsf join note_stable_identifier nsi on nsf.stable_identifier_value = nsi.stable_identifier_value
-#                                      join abstractor_abstractions aa on nsi.id = aa.about_id
-#                                      join abstractor_suggestions asg on aa.id = asg.abstractor_abstraction_id
-#                                      join abstractor_suggestion_sources ass on asg.id = ass.abstractor_suggestion_id
-#                                      join abstractor_subjects asb on aa.abstractor_subject_id = asb.id
-#                                      join abstractor_abstraction_schemas aas on asb.abstractor_abstraction_schema_id = aas.id
-#                                      join abstractor_namespace_events on nsi.id = abstractor_namespace_events.eventable_id and abstractor_namespace_events.eventable_type = 'NoteStableIdentifier'
-#
-# where predicate = 'has_metastatic_cancer_histology'
-# and nsf.note_id in(
-# select distinct mpc.note_id
-# from metastatic_pathology_cases mpc join note n on mpc.note_id = n.note_id
-# where  mpc.has_cancer_histology is not null
-# and mpc.has_cancer_histology != 'not applicable'
-# and mpc.has_metastatic_cancer_primary_site is null
-# )
-# and ass.sentence_match_value is not null
-# and asg.system_rejected = false
-# order by ass.sentence_match_value

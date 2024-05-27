@@ -13,8 +13,19 @@ namespace :suggestor do
     abstractor_suggestor_biorepoisoty(multiple: true)
   end
 
-  task(do_multiple_will: :environment) do |t, args|
-    abstractor_suggestor_will(multiple: true)
+  # bundle exec rake suggestor:do_multiple_will["?"]
+  # task(do_multiple_will: :environment) do |t, args|
+  task :do_multiple_will, [:person_source_value] => [:environment] do |t, args|
+    if args[:person_source_value]
+      person = Person.where(person_source_value: args[:person_source_value]).first
+      person_id = person.person_id
+      puts 'hello jerk'
+      puts person.person_id
+    else
+       person_id = nil
+    end
+
+    abstractor_suggestor_will(multiple: true, person_id: person_id)
   end
 
   task(do_multiple_aml: :environment) do |t, args|
@@ -25,7 +36,7 @@ namespace :suggestor do
     abstractor_suggestor_aml_sufficiency(multiple: true)
   end
 
-  # RAILS_ENV=staging bundle exec rake suggestor:do_multiple_will_one["?"]
+  # bundle exec rake suggestor:do_multiple_will_one["?"]
   task :do_multiple_will_one, [:person_source_value] => [:environment] do |t, args|
     person = Person.where(person_source_value: args[:person_source_value]).first
     if person
@@ -531,6 +542,10 @@ def abstractor_suggestor_will(options = {})
     #All
     abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
 
+    if options[:person_id]
+      abstractable_events = abstractable_events.where('note.person_id = ?', options[:person_id])
+    end
+
     puts 'Begin backlog count'
     puts abstractable_events.size
     puts 'End backlog count'
@@ -594,6 +609,10 @@ def abstractor_suggestor_will(options = {})
     #All
     abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
 
+    if options[:person_id]
+      abstractable_events = abstractable_events.where('note.person_id = ?', options[:person_id])
+    end
+
     puts 'Begin backlog count'
     puts abstractable_events.size
     puts 'End backlog count'
@@ -653,6 +672,10 @@ def abstractor_suggestor_will(options = {})
     puts abstractor_namespace.name
     #All
     abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
+
+    if options[:person_id]
+      abstractable_events = abstractable_events.where('note.person_id = ?', options[:person_id])
+    end
 
     puts 'Begin backlog count'
     puts abstractable_events.size
@@ -718,6 +741,10 @@ def abstractor_suggestor_will(options = {})
     #All
     abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
 
+    if options[:person_id]
+      abstractable_events = abstractable_events.where('note.person_id = ?', options[:person_id])
+    end
+
     puts 'Begin backlog count'
     puts abstractable_events.size
     puts 'End backlog count'
@@ -777,6 +804,10 @@ def abstractor_suggestor_will(options = {})
     puts abstractor_namespace.name
     #All
     abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
+
+    if options[:person_id]
+      abstractable_events = abstractable_events.where('note.person_id = ?', options[:person_id])
+    end
 
     puts 'Begin backlog count'
     puts abstractable_events.size
@@ -840,6 +871,10 @@ def abstractor_suggestor_will(options = {})
     puts abstractor_namespace.name
     #All
     abstractable_events = abstractor_namespace.subject_type.constantize.missing_abstractor_namespace_event(abstractor_namespace.id).joins(abstractor_namespace.joins_clause).where(abstractor_namespace.where_clause).order('note.person_id ASC, note.note_date ASC')
+
+    if options[:person_id]
+      abstractable_events = abstractable_events.where('note.person_id = ?', options[:person_id])
+    end
 
     puts 'Begin backlog count'
     puts abstractable_events.size
