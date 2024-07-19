@@ -338,7 +338,7 @@ def abstractor_suggestor_aml(options = {})
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
               if other_note.note_title.present?
-                if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+                if other_note.note_title.present? && other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                   note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                   note.save!
                   note.reload
@@ -404,7 +404,7 @@ def abstractor_suggestor_aml(options = {})
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
               if other_note.note_title.present?
-                if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+                if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                   note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                   note.save!
                   note.reload
@@ -568,7 +568,7 @@ def abstractor_suggestor_will(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -635,7 +635,7 @@ def abstractor_suggestor_will(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -667,7 +667,7 @@ def abstractor_suggestor_will(options = {})
     end
   end
 
-  Abstractor::AbstractorNamespace.where(name: 'Surgical Pathology').all.each do |abstractor_namespace|
+  Abstractor::AbstractorNamespace.where(name: ['Metastatic Surgical Pathology', 'Surgical Pathology']).all.each do |abstractor_namespace|
     puts 'here is the namespace'
     puts abstractor_namespace.name
     #All
@@ -700,7 +700,7 @@ def abstractor_suggestor_will(options = {})
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
 
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -767,7 +767,7 @@ def abstractor_suggestor_will(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -831,7 +831,7 @@ def abstractor_suggestor_will(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -930,7 +930,7 @@ def abstractor_suggestor_will_one(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -992,7 +992,7 @@ def abstractor_suggestor_will_one(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -1052,7 +1052,7 @@ def abstractor_suggestor_will_one(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -1115,7 +1115,7 @@ def abstractor_suggestor_will_one(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload
@@ -1175,7 +1175,7 @@ def abstractor_suggestor_will_one(options = {})
           note_options[:except_notes] = [note]
           note.procedure_occurences(procedure_occurrence_options).each do |procedure_occurence|
             procedure_occurence.notes(note_options).each do |other_note|
-              if note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
+              if other_note.note_title.present? && note_titles.any? {|note_title| other_note.note_title.include?(note_title) }
                 note.note_text = "#{note.note_text}\n----------------------------------\n#{other_note.note_title}\n----------------------------------\n#{other_note.note_text}"
                 note.save!
                 note.reload

@@ -1592,6 +1592,24 @@ namespace :setup do
 
     load_data_xml(files, west_mrn: args[:west_mrn])
   end
+
+# RAILS_ENV=staging bundle exec rake setup:breast_spore_primary_data
+  desc "Breast SPORE primary data"
+  task(breast_spore_primary_data: :environment) do |t, args|
+    directory_path = 'lib/setup/data/breast_spore/primary/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+    load_data_xml(files)
+  end
+
+# RAILS_ENV=staging bundle exec rake setup:breast_spore_metastatic_data
+  desc "Breast SPORE metastatic data"
+  task(breast_spore_metastatic_data: :environment) do |t, args|
+    directory_path = 'lib/setup/data/breast_spore/metastatic/'
+    files = Dir.glob(File.join(directory_path, '*.xml'))
+    files = files.sort_by { |file| File.stat(file).mtime }
+    load_data_xml(files)
+  end
 end
 
 def load_data_xml(files, options= {})

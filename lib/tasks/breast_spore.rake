@@ -2,7 +2,8 @@
   # data
   # bundle exec rake setup:truncate_stable_identifiers
   # bundle exec rake omop:truncate_omop_clinical_data_tables
-  # bundle exec rake setup:breast_data
+  # bundle exec rake setup:breast_spore_primary_data
+  # bundle exec rake setup:breast_spore_metastatic_data
 
   #schemas
   # bundle exec rake abstractor:setup:system
@@ -14,7 +15,7 @@
   # bundle exec rake suggestor:do_multiple_will
   # bundle exec rake breast:create_pathology_cases_datamart
 
-namespace :breast_spore do
+namespace :breast do
   desc 'Load schemas'
   task(schemas: :environment) do |t, args|
     date_object_type = Abstractor::AbstractorObjectType.where(value: 'date').first
@@ -36,17 +37,18 @@ namespace :breast_spore do
     abstractor_section_mention_type_token = Abstractor::AbstractorSectionMentionType.where(name: Abstractor::Enum::ABSTRACTOR_SECTION_MENTION_TYPE_TOKEN).first
     abstractor_section_specimen = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'SPECIMEN', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_alphabetic).first_or_create
     abstractor_section_comment = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'COMMENT', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Comment')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Comments')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Note')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Notes')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comment')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comments')
-    abstractor_section_comment.save!
-    abstractor_section_staging_summary = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'STAGING SUMMARY', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name: 'BREAST CANCER STAGING SUMMARY')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name: 'Breast Cancer Staging Summary')
-    abstractor_section_staging_summary.save!
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Comment').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Comments').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Note').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Notes').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Additional comment').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Additional comments').first_or_create
+    # abstractor_section_comment.save!
+    abstractor_section_staging_summary = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'BREAST STAGING SUMMARY', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name: 'BREAST CANCER STAGING SUMMARY').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name: 'Breast Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name: 'Breast Tumor Staging Summary').first_or_create
+    # abstractor_section_staging_summary.save!
 
     abstractor_namespace_surgical_pathology = Abstractor::AbstractorNamespace.where(name: 'Surgical Pathology', subject_type: NoteStableIdentifier.to_s, joins_clause:
     "JOIN note_stable_identifier_full ON note_stable_identifier.stable_identifier_path = note_stable_identifier_full.stable_identifier_path AND note_stable_identifier.stable_identifier_value = note_stable_identifier_full.stable_identifier_value
@@ -880,15 +882,14 @@ namespace :breast_spore do
 
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'her2/neu').first_or_create
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'her-2/neu').first_or_create
-    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'erbb-2').first_or_create
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'erbb2').first_or_create
+    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'erbb-2').first_or_create
+    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'erbb').first_or_create
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'cerb-2').first_or_create
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'cerb2').first_or_create
+    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'cerb').first_or_create
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'cd340').first_or_create
-    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'tyrosine-protein kinase erbb-2').first_or_create
     Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'proto-oncogene neu').first_or_create
-    Abstractor::AbstractorAbstractionSchemaPredicateVariant.where(abstractor_abstraction_schema: abstractor_abstraction_schema, value: 'cerb-2').first_or_create
-
 
     abstractor_object_value = Abstractor::AbstractorObjectValue.where(value: 'positive', vocabulary_code: 'positive').first_or_create
     Abstractor::AbstractorAbstractionSchemaObjectValue.where(abstractor_abstraction_schema: abstractor_abstraction_schema, abstractor_object_value: abstractor_object_value).first_or_create

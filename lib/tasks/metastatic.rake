@@ -39,82 +39,84 @@ namespace :metastatic do
     abstractor_section_mention_type_token = Abstractor::AbstractorSectionMentionType.where(name: Abstractor::Enum::ABSTRACTOR_SECTION_MENTION_TYPE_TOKEN).first
     abstractor_section_specimen = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'SPECIMEN', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_alphabetic).first_or_create
     abstractor_section_comment = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'COMMENT', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Comment')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Comments')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Note')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Notes')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comment')
-    abstractor_section_comment.abstractor_section_name_variants.build(name: 'Additional comments')
-    abstractor_section_comment.save!
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Comment').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Comments').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Note').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Notes').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Additional comment').first_or_create
+    abstractor_section_comment.abstractor_section_name_variants.where(name: 'Additional comments').first_or_create
+    # abstractor_section_comment.save!
     abstractor_section_staging_summary = Abstractor::AbstractorSection.where(abstractor_section_type: abstractor_section_type_offsets, name: 'STAGING SUMMARY', source_type: NoteStableIdentifier.to_s, source_method: 'note_text', return_note_on_empty_section: true, abstractor_section_mention_type: abstractor_section_mention_type_token).first_or_create
 
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'CANCER STAGING SUMMARY')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'TUMOR STAGING SUMMARY')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Tumor Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'CANCER STAGING SUMMARY').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'TUMOR STAGING SUMMARY').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Tumor Staging Summary').first_or_create
 
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Adrenal Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ampullary Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Anal (Excludes Rectal) Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal (Including Goblet Cell Adenocarcinoma) Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal (Including Goblet Cell Carcinoid Only) Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal (Including Goblet Cell Carcinoma Only) Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Appendiceal Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Bone Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Cervical Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Colorectal Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Distal/Extrahepatic Bile Duct Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Esophageal and Esophagogastric Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Extra hepatic cholangiocarcinoma Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gallbladder Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gastric Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gastrointestinal Stromal Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Gestational Trophoblastic Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Invasive Breast Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Jejunum and Ileum Neuroendocrine Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'LEFT BREAST - Invasive Breast Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Laryngeal Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Lip and Oral Cavity Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'MALIGNANT PLEURAL MESOTHELIOMA: Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Microinvasive Breast Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Nasal Cavity and Paranasal Sinuses Cancer Staging Summary (AJCC 8th Edition, 2017)')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ovarian Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ovarian/Fallopian Tube Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pancreatic (Endocrine) Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pancreatic (Exocrine) Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pancreatic Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Parotid Gland Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Penile Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Perihilar Bile Duct Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pharynx (Oropharynx) Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pharynx (Oropharynx, Hypopharynx, Nasopharynx) Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Prostatic Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Pulmonary Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'RIGHT BREAST - Invasive Breast Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Renal Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Renal Pelvic and Ureteral Tumor Staging')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Salivary Gland Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Skin Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Small Bowel Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Soft Tissue Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Testicular Tumor Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Thymic Epithelial Tumor Staging Summary (AJCC 8th Edition, 2017)')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Thyroid Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Ureteral Tumor Staging')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Urethral Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Urinary Bladder Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Uterine Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Vaginal Cancer Staging Summary')
-    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Vulvar Cancer Staging Summary')
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Adrenal Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Ampullary Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Anal (Excludes Rectal) Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Appendiceal (Including Goblet Cell Adenocarcinoma) Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Appendiceal (Including Goblet Cell Carcinoid Only) Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Appendiceal (Including Goblet Cell Carcinoma Only) Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Appendiceal Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Appendiceal Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Bone Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Breast Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Breast Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Cervical Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Colorectal Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Distal/Extrahepatic Bile Duct Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Esophageal and Esophagogastric Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Extra hepatic cholangiocarcinoma Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Gallbladder Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Gastric Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Gastrointestinal Stromal Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Gestational Trophoblastic Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Invasive Breast Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Jejunum and Ileum Neuroendocrine Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'LEFT BREAST - Invasive Breast Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Laryngeal Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Lip and Oral Cavity Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'MALIGNANT PLEURAL MESOTHELIOMA: Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Microinvasive Breast Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Nasal Cavity and Paranasal Sinuses Cancer Staging Summary (AJCC 8th Edition, 2017)').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Ovarian Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Ovarian/Fallopian Tube Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Pancreatic (Endocrine) Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Pancreatic (Exocrine) Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Pancreatic Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Parotid Gland Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Penile Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Perihilar Bile Duct Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Pharynx (Oropharynx) Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Pharynx (Oropharynx, Hypopharynx, Nasopharynx) Cancer Staging Summary (pTNM, AJCC 8th Edition, 2017)').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Prostatic Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Pulmonary Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'RIGHT BREAST - Invasive Breast Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Renal Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Renal Pelvic and Ureteral Tumor Staging').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Salivary Gland Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Skin Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Small Bowel Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Soft Tissue Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Testicular Tumor Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Thymic Epithelial Tumor Staging Summary (AJCC 8th Edition, 2017)').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Thyroid Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Ureteral Tumor Staging').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Urethral Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Urinary Bladder Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Uterine Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.where(name:'Vaginal Cancer Staging Summary').first_or_create
+    abstractor_section_staging_summary.abstractor_section_name_variants.build(name:'Vulvar Cancer Staging Summary').first_or_create
     abstractor_section_staging_summary.save!
 
-    abstractor_namespace_surgical_pathology = Abstractor::AbstractorNamespace.where(name: 'Surgical Pathology', subject_type: NoteStableIdentifier.to_s, joins_clause:
+    abstractor_namespace_surgical_pathology = Abstractor::AbstractorNamespace.where(name: 'Metastatic Surgical Pathology', subject_type: NoteStableIdentifier.to_s, joins_clause:
     "JOIN note_stable_identifier_full ON note_stable_identifier.stable_identifier_path = note_stable_identifier_full.stable_identifier_path AND note_stable_identifier.stable_identifier_value = note_stable_identifier_full.stable_identifier_value
      JOIN note ON note_stable_identifier_full.note_id = note.note_id
      JOIN fact_relationship ON fact_relationship.domain_concept_id_1 = 5085 AND fact_relationship.fact_id_1 = note.note_id AND fact_relationship.relationship_concept_id = 44818790
      JOIN procedure_occurrence ON fact_relationship.domain_concept_id_2 = 10 AND fact_relationship.fact_id_2 = procedure_occurrence.procedure_occurrence_id AND procedure_occurrence.procedure_concept_id = 4213297",
-    where_clause: "note.note_title in('Final Diagnosis', 'Final Pathologic Diagnosis', 'Final Diagnosis Rendered')").first_or_create
+    where_clause: "note.note_title in('Conversion Final Diagnosis', 'Final Diagnosis', 'Final Diagnosis Rendered', 'Final Pathologic Diagnosis')").first_or_create
 
     abstractor_namespace_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_specimen)
     abstractor_namespace_surgical_pathology.abstractor_namespace_sections.build(abstractor_section: abstractor_section_comment)
